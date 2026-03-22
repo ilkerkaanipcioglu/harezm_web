@@ -1,7 +1,7 @@
 export const translations = {
   tr: {
     // -- Meta --
-    siteName: 'Finsoft SAP Consulting',
+    siteName: 'Harezm SAP Consulting',
 
     // -- Nav --
     navHome: 'Ana Sayfa',
@@ -28,7 +28,7 @@ export const translations = {
     psSectionTitle: 'Manuel Süreçlerden Otomasyona',
     psSectionDesc: 'SAP mimarisi ve AI destekli yaklaşımlarla finansal operasyonlardaki darboğazları çözüyor, veri odaklı bir altyapı kuruyoruz.',
     psProblems: 'Mevcut Zorluklar',
-    psSolutions: 'Finsoft Çözümü',
+    psSolutions: 'Harezm Çözümü',
     psP1Title: 'Yanlış Maliyetleme',
     psP1Desc: 'Hatalı CO yapılandırması sonucu ürün karlılığının şeffaf izlenememesi.',
     psP2Title: 'Veri Dağınıklığı',
@@ -53,8 +53,8 @@ export const translations = {
     svcS4Title: 'S/4HANA Geçişi',
     svcS4Desc: 'Eski sistemlerinizden S/4HANA\'ya güvenli ve hızlı veri transferi.',
 
-    // -- Why Finsoft --
-    whyTitle: 'Neden Finsoft?',
+    // -- Why Harezm --
+    whyTitle: 'Neden Harezm?',
     whyDesc: 'Biz sadece yazılım kurmuyoruz; işinizin finansal mimarisini tasarlıyoruz.',
     why1Title: 'Derin Teknik Bilgi',
     why1Desc: 'SAP FI/CO modüllerinde derinlemesine uzmanlaşmış kıdemli danışman kadrosu.',
@@ -90,7 +90,7 @@ export const translations = {
     footerNewsletter: 'Bülten Kaydı',
     footerNewsletterDesc: 'En güncel SAP finans haberleri ve mevzuat değişiklikleri için kaydolun.',
     footerEmailPlaceholder: 'E-posta adresiniz',
-    footerCopyright: '© 2026 Finsoft. Tüm Hakları Saklıdır.',
+    footerCopyright: '© 2026 Harezm. Tüm Hakları Saklıdır.',
     footerKvkk: 'KVKK',
     footerPrivacy: 'Gizlilik Politikası',
     footerCookies: 'Çerez Ayarları',
@@ -114,7 +114,7 @@ export const translations = {
     svcFiItem3: 'Banka Hesap Yönetimi',
     svcFiItem4: 'Vergi Yönetimi & E-Çözümler',
     svcCoTitle: 'SAP CO & Material Ledger',
-    svcCoBadge: 'Finsoft\'un Amiral Gemisi',
+    svcCoBadge: 'Harezm\'un Amiral Gemisi',
     svcCoDesc: 'Derinlemesine maliyet analizi ve üretim verimliliği için gelişmiş CO ve ML kurguları.',
     svcLocFullTitle: 'Türkiye Lokalizasyonu',
     svcLocFullDesc: 'Mevzuat uyumluluğu, e-Defter, e-Fatura ve beyanname süreçlerinin tam entegrasyonu.',
@@ -142,12 +142,12 @@ export const translations = {
     // -- References Page --
     refBadge: 'Kanıtlanmış Başarılar',
     refTitle: 'Gerçek Dönüşüm Hikayeleri',
-    refDesc: 'Türkiye ve Dünya\'nın önde gelen markaları SAP finans modüllerindeki zorlukları aşmak için Finsoft\'un derin sektörel uzmanlığına güvendi.',
+    refDesc: 'Türkiye ve Dünya\'nın önde gelen markaları SAP finans modüllerindeki zorlukları aşmak için Harezm\'un derin sektörel uzmanlığına güvendi.',
     refOtherTitle: 'Çözüm Ortaklığı Sunduğumuz Diğer Markalar',
 
     // -- About Page --
-    aboutTitle: 'Finsoft Hakkında',
-    aboutP1: 'Finsoft, SAP ERP Finansal uygulamalarında derinlemesine uzmanlaşma hedefiyle 2010 yılında kuruldu. Yolculuğumuza "en iyi bildiğimiz işi, en iyi şekilde yapma" prensibiyle başladık.',
+    aboutTitle: 'Harezm Hakkında',
+    aboutP1: 'Harezm, SAP ERP Finansal uygulamalarında derinlemesine uzmanlaşma hedefiyle 2010 yılında kuruldu. Yolculuğumuza "en iyi bildiğimiz işi, en iyi şekilde yapma" prensibiyle başladık.',
     aboutP2: 'Biz yalnızca bir yazılım tedarikçisi değiliz; müşterilerimizin iş süreçlerini analiz eden, darboğazlarını tespit eden ve "best practice" yaklaşımıyla en verimli çözüm yolunu inşa eden stratejik bir danışmanlık ortağıyız.',
     aboutP3: 'Sadece Türkiye\'ye değil, global çapta yurt dışına da hizmet veren bir firma olarak; pek çok sektörde elde ettiğimiz derin uzmanlık, kaliteli hizmet anlayışı ve SAP-Finans köprüsünü kuran vizyonumuzla fark yaratıyoruz.',
     aboutMission: 'Misyon',
@@ -179,7 +179,7 @@ export const translations = {
   },
 
   en: {
-    siteName: 'Finsoft SAP Consulting',
+    siteName: 'Harezm SAP Consulting',
 
     navHome: 'Home',
     navServices: 'Services',
@@ -203,7 +203,7 @@ export const translations = {
     psSectionTitle: 'From Manual to Automation',
     psSectionDesc: 'We resolve bottlenecks in financial operations with SAP architecture and AI, building a data-driven foundation.',
     psProblems: 'Current Challenges',
-    psSolutions: 'Finsoft Solution',
+    psSolutions: 'Harezm Solution',
     psP1Title: 'Incorrect Costing',
     psP1Desc: 'Inability to transparently monitor product profitability due to incorrect CO configuration.',
     psP2Title: 'Data Silos',
@@ -227,7 +227,7 @@ export const translations = {
     svcS4Title: 'S/4HANA Migration',
     svcS4Desc: 'Safe and rapid data transfer from legacy systems to S/4HANA.',
 
-    whyTitle: 'Why Finsoft?',
+    whyTitle: 'Why Harezm?',
     whyDesc: 'We don\'t just install software — we design the financial architecture of your business.',
     why1Title: 'Deep Technical Knowledge',
     why1Desc: 'A senior consultant team deeply specialized in SAP FI/CO modules.',
@@ -259,7 +259,7 @@ export const translations = {
     footerNewsletter: 'Newsletter',
     footerNewsletterDesc: 'Subscribe for the latest SAP finance news and regulatory updates.',
     footerEmailPlaceholder: 'Your email address',
-    footerCopyright: '© 2026 Finsoft. All Rights Reserved.',
+    footerCopyright: '© 2026 Harezm. All Rights Reserved.',
     footerKvkk: 'GDPR',
     footerPrivacy: 'Privacy Policy',
     footerCookies: 'Cookie Settings',
@@ -282,7 +282,7 @@ export const translations = {
     svcFiItem3: 'Bank Account Management',
     svcFiItem4: 'Tax Management & E-Solutions',
     svcCoTitle: 'SAP CO & Material Ledger',
-    svcCoBadge: 'Finsoft\'s Flagship',
+    svcCoBadge: 'Harezm\'s Flagship',
     svcCoDesc: 'Advanced CO and ML configurations for deep cost analysis and production efficiency.',
     svcLocFullTitle: 'Turkey Localization',
     svcLocFullDesc: 'Full integration of regulatory compliance, e-Ledger, e-Invoice and declaration processes.',
@@ -308,11 +308,11 @@ export const translations = {
 
     refBadge: 'Proven Success',
     refTitle: 'Real Transformation Stories',
-    refDesc: 'Leading brands in Turkey and worldwide have trusted Finsoft\'s deep industry expertise to overcome challenges in SAP financial modules.',
+    refDesc: 'Leading brands in Turkey and worldwide have trusted Harezm\'s deep industry expertise to overcome challenges in SAP financial modules.',
     refOtherTitle: 'Other Brands We\'ve Partnered With',
 
-    aboutTitle: 'About Finsoft',
-    aboutP1: 'Finsoft was founded in 2010 with the goal of deep specialization in SAP ERP Financial applications. We started our journey with the principle of "doing what we know best, in the best possible way."',
+    aboutTitle: 'About Harezm',
+    aboutP1: 'Harezm was founded in 2010 with the goal of deep specialization in SAP ERP Financial applications. We started our journey with the principle of "doing what we know best, in the best possible way."',
     aboutP2: 'We\'re not just a software supplier; we\'re a strategic consulting partner that analyzes our clients\' business processes, identifies bottlenecks, and builds the most efficient solution path with a "best practice" approach.',
     aboutP3: 'As a company that serves not only Turkey but also globally; we make a difference with our deep expertise gained in many industries, quality service understanding, and our vision of building the SAP-Finance bridge.',
     aboutMission: 'Mission',

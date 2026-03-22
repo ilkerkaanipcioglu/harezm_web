@@ -3,13 +3,13 @@ const { execSync } = require('child_process');
 
 try {
   console.log('Reading files...');
-  const svgContent = fs.readFileSync('public/images/finsoft-logo-full.svg');
+  const svgContent = fs.readFileSync('public/images/harezm-logo-full.svg');
   const base64Svg = svgContent.toString('base64');
   
   let mdContent = fs.readFileSync('cfo_ajandasi.md', 'utf8');
   
   console.log('Replacing image source with base64 data URI...');
-  mdContent = mdContent.replace('public/images/finsoft-logo-full.svg', `data:image/svg+xml;base64,${base64Svg}`);
+  mdContent = mdContent.replace('public/images/harezm-logo-full.svg', `data:image/svg+xml;base64,${base64Svg}`);
   
   fs.writeFileSync('cfo_ajandasi_temp.md', mdContent);
   
@@ -17,7 +17,7 @@ try {
   execSync('npx md-to-pdf cfo_ajandasi_temp.md', { stdio: 'inherit' });
   
   console.log('Moving PDF to public directory...');
-  fs.renameSync('cfo_ajandasi_temp.pdf', 'public/finsoft_cfo_ajandasi.pdf');
+  fs.renameSync('cfo_ajandasi_temp.pdf', 'public/harezm_cfo_ajandasi.pdf');
   
   console.log('Cleaning up...');
   fs.unlinkSync('cfo_ajandasi_temp.md');

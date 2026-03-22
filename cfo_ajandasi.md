@@ -1,6 +1,6 @@
 ---
 title: "Yapay Zeka Destekli Finans: Sinir Otesi Operasyonlar"
-author: "Finsoft - SAP Finans Donusum Uzmanlari"
+author: "Harezm - SAP Finans Donusum Uzmanlari"
 ---
 
 <style>
@@ -151,12 +151,12 @@ strong {
 
 <div class="cover-page">
     <div class="cover-logo">
-        <img src="public/images/finsoft-logo-full.svg" alt="Finsoft Logo" width="350" />
+        <img src="public/images/harezm-logo-full.svg" alt="Harezm Logo" width="350" />
     </div>
     <h1 class="cover-title">CFO'NUN<br/>DÖNÜŞÜM AJANDASI</h1>
     <div class="cover-accent"></div>
     <h3 class="cover-subtitle">Yapay Zeka Destekli Finans ve Sınır Ötesi Operasyonlar</h3>
-    <div class="cover-author">Finsoft Stratejik Danışmanlık Ekibi Tarafından Hazırlanmıştır</div>
+    <div class="cover-author">Harezm Stratejik Danışmanlık Ekibi Tarafından Hazırlanmıştır</div>
 </div>
 
 ## 1. Yönetici Özeti (Executive Summary)
@@ -178,7 +178,7 @@ Birçok büyük ölçekli ve çok uluslu şirkette finansal operasyonlar hala gi
 </div>
 
 ## 3. Finansal Dönüşüm Yaklaşımı: "Financial Data Fabric"
-Bu darboğazları aşmak, sadece bir yazılım kurulumu meselesi değil, finansal verinin baştan aşağı yeniden yapılandırılmasıdır. Finsoft olarak sunduğumuz çözüm, tüm fonksiyonların kesintisiz bir **Mali Veri Dokusu (Financial Data Fabric)** üzerinde birleştirilmesidir.
+Bu darboğazları aşmak, sadece bir yazılım kurulumu meselesi değil, finansal verinin baştan aşağı yeniden yapılandırılmasıdır. Harezm olarak sunduğumuz çözüm, tüm fonksiyonların kesintisiz bir **Mali Veri Dokusu (Financial Data Fabric)** üzerinde birleştirilmesidir.
 
 - **SAP S/4HANA ile Tek Doğru Kaynak:** Karmaşık veri tablolarını ortadan kaldıran Evrensel Kayıt (Universal Journal) mimarisi sayesinde raporlama hızı anlık hale gelir.
 - **Material Ledger ve Gerçek Maliyet:** Üretilen veya satılan her birimin tam maliyeti, tüm değer zinciri kur dalgalanmalarından arındırılarak hesaplanır.
@@ -220,7 +220,7 @@ Firmamızın "Kanıt İddiadan Üstündür" prensibine dayanarak elde ettiği sp
 - **Likidite Verimliliğinde %30 Artış:** Merkezi SAP TRM projesiyle dağınık hesaplardaki atıl nakit tespit edilerek hızlıca yatırıma veya borç kapatmaya yönlendirildi.
 
 <div class="doc-footer">
-    <h3>FINSOFT SAP FİNANS DANIŞMANLIĞI</h3>
+    <h3>HAREZM SAP FİNANS DANIŞMANLIĞI</h3>
     <p><strong>Stratejinizi Birlikte İnşa Edelim.</strong></p>
-    <p>www.finsoft.com.tr | info@finsoft.com.tr</p>
+    <p>www.harezm.com.tr | info@harezm.com.tr</p>
 </div>

@@ -1,6 +1,6 @@
-# Finsoft Kurumsal Web Sitesi
+# Harezm Kurumsal Web Sitesi
 
-Bu proje, Finsoft markasının kurumsal kimliğini yansıtan, yüksek performanslı ve modern bir web uygulamasıdır. **Astro JS** ve **Tailwind CSS** kullanılarak statik site üretici (SSG - Static Site Generation) mantığıyla oluşturulmuştur.
+Bu proje, Harezm markasının kurumsal kimliğini yansıtan, yüksek performanslı ve modern bir web uygulamasıdır. **Astro JS** ve **Tailwind CSS** kullanılarak statik site üretici (SSG - Static Site Generation) mantığıyla oluşturulmuştur.
 
 ## Teknolojiler
 - **Astro (v5)**: Sıfır JS konsepti ile hız odalı static rendering.
@@ -9,7 +9,7 @@ Bu proje, Finsoft markasının kurumsal kimliğini yansıtan, yüksek performans
 
 ## Geliştirici Kılavuzu
 
-Proje `b:\DEV\finsoft` dizinine kurulmuştur.
+Proje `b:\DEV\harezm` dizinine kurulmuştur.
 
 ### Sistem Gereksinimleri
 - Node.js (v18.17.1 veya daha yeni sürüm)
@@ -47,6 +47,6 @@ Oluşturulan statik dosyalar `dist/` klasörü altına çıkartılır. Bu dosyal
 │   ├── layouts/            # Ortak sayfa şablonları (Layout.astro)
 │   └── pages/              # Astro sayfaları tabanlı URL map (index.astro, hizmetler.astro vb.)
 ├── astro.config.mjs        # Astro yapılandırma dosyası
-├── tailwind.config.mjs     # Finsoft renklerini ve arayüzünü tanımlayan CSS mimari tablosu
+├── tailwind.config.mjs     # Harezm renklerini ve arayüzünü tanımlayan CSS mimari tablosu
 └── package.json            # Projenin paket kütüphaneleri
 ```

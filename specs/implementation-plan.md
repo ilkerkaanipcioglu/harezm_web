@@ -1,7 +1,7 @@
-# Finsoft Astro Web Site Implementation Plan
+# Harezm Astro Web Site Implementation Plan
 
 ## Goal Description
-Build a multi-page, SEO-friendly, and high-performance corporate website for Finsoft. We will use Astro and Tailwind CSS to convert the existing static HTML designs (`stitch_anasayfa.html` and files inside `assets/stitch_finsoft/`) and the content (`finsoft_site_icerik_v3.md`) into a modular, production-ready web application.
+Build a multi-page, SEO-friendly, and high-performance corporate website for Harezm. We will use Astro and Tailwind CSS to convert the existing static HTML designs (`stitch_anasayfa.html` and files inside `assets/stitch_harezm/`) and the content (`harezm_site_icerik_v3.md`) into a modular, production-ready web application.
 
 ## User Review Required
 Please review the proposed page architecture and folder structure. We are going to extract the common parts (Header, Footer) into reusable components and create individual Astro pages. The content from your Markdown file will be integrated directly into these pages.
@@ -33,19 +33,19 @@ The rich footer extracted from the HTML files with newsletter signup and contact
 The main landing page. Migrated from `assets/stitch_anasayfa.html`.
 
 #### [NEW] `src/pages/hizmetler.astro`
-The main services overview page. Migrated from `assets/stitch_finsoft/finsoft_hizmetler_v3.2_kapsaml_tasar_m/code.html`.
+The main services overview page. Migrated from `assets/stitch_harezm/harezm_hizmetler_v3.2_kapsaml_tasar_m/code.html`.
 
 #### [NEW] `src/pages/referanslar.astro`
-The references and case studies page. Migrated from `assets/stitch_finsoft/finsoft_referanslar_ve_vaka_analizleri_v3.1/code.html`.
+The references and case studies page. Migrated from `assets/stitch_harezm/harezm_referanslar_ve_vaka_analizleri_v3.1/code.html`.
 
 #### [NEW] `src/pages/lokalizasyon.astro`
-The Turkey Localization special page. Migrated from `assets/stitch_finsoft/finsoft_t_rkiye_lokalizasyonu_v3.2/code.html`.
+The Turkey Localization special page. Migrated from `assets/stitch_harezm/harezm_t_rkiye_lokalizasyonu_v3.2/code.html`.
 
 #### [NEW] `src/pages/hakkimizda.astro`
-About Us page, built using the layout components and populated with text from `finsoft_site_icerik_v3.md`.
+About Us page, built using the layout components and populated with text from `harezm_site_icerik_v3.md`.
 
 #### [NEW] `src/pages/iletisim.astro`
-Contact form page, built using the layout components and populated with the form structure defined in `finsoft_site_icerik_v3.md`.
+Contact form page, built using the layout components and populated with the form structure defined in `harezm_site_icerik_v3.md`.
 
 ## Verification Plan
 
@@ -57,3 +57,36 @@ Contact form page, built using the layout components and populated with the form
 - Visually inspect the local development server at `http://localhost:4321`.
 - Verify that navigation between `/`, `/hizmetler`, `/referanslar`, and `/lokalizasyon` works seamlessly.
 - Verify that responsive design (Tailwind classes) and typography match the original HTML files precisely.
+
+## Plan 2: Rebranding Harezm to Harezm
+
+### Goal Description
+Rebrand the entire application from "Harezm" to "Harezm" by replacing all text occurrences and renaming relevant files.
+
+### Proposed Changes
+
+#### Global Text Replacement
+Search through the codebase and perform case-preserving replacements:
+- Harezm -> Harezm
+- harezm -> harezm
+- HAREZM -> HAREZM
+- Harezm / harezm -> Harezm / harezm
+
+**Target Files:**
+- `src/pages/**/*.astro`
+- `src/components/**/*.astro`
+- `src/layouts/**/*.astro`
+- `src/i18n/translations.ts`
+- Text and Markdown contents (`cfo_ajandasi.md`, `README.md`)
+- Configuration files (`package.json`, `astro.config.mjs`, `tailwind.config.mjs`)
+
+#### File Renames
+Identify all files/folders with "harezm" in their name and rename them to use "harezm". Examples:
+- `public/images/harezm-logo-full.svg` -> `harezm-logo-full.svg`
+- `public/images/harezm-logo-icon.svg` -> `harezm-logo-icon.svg`
+- `harezm_book.pdf` -> `harezm_book.pdf`
+- Update all code referencing these filenames to point to the new `harezm` versions.
+
+### Verification Plan
+- `npm run build` succeeds without broken image links or import errors.
+- Visual check on `npm run dev` to ensure text, titles, footprints, and headers correctly display 'Harezm'.
