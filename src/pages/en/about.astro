@@ -1,0 +1,27 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const lang = 'en' as const;
+---
+<Layout title="About Finsoft" lang={lang}>
+    <section class="py-24 md:py-32 px-12 bg-surface">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="display-lg text-5xl font-semibold font-headline mb-8">About Finsoft</h1>
+            <div class="prose prose-lg dark:prose-invert">
+                <p>Finsoft was founded in 2010 with the goal of deep specialization in SAP ERP Financial applications. We started our journey with the principle of "doing what we know best, in the best possible way."</p>
+                <p>We are not just a software supplier; we are a strategic consulting partner that analyzes our clients' business processes, identifies bottlenecks, and builds the most efficient solution path with a "best practice" approach.</p>
+                <p>As a global service provider, we make a difference with our deep expertise gained across multiple sectors, our high-quality service approach, and our vision that seamlessly bridges SAP and Finance.</p>
+            </div>
+            
+            <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="bg-surface-container-low p-8 rounded-xl border border-outline-variant/20">
+                    <h3 class="text-2xl font-semibold font-headline mb-4">Mission</h3>
+                    <p class="text-on-surface-variant">To secure the success of our clients in financial SAP projects, reduce operational risks, and design sustainable, scalable systems.</p>
+                </div>
+                <div class="bg-surface-container-low p-8 rounded-xl border border-outline-variant/20">
+                    <h3 class="text-2xl font-semibold font-headline mb-4">Vision</h3>
+                    <p class="text-on-surface-variant">To be the most trusted and authoritative partner in strategic SAP Finance consulting across the region.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</Layout>

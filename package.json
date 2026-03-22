@@ -1,0 +1,16 @@
+{
+  "name": "finsoft-web",
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.2.2",
+    "astro": "^5.0.0",
+    "tailwindcss": "^4.2.2"
+  }
+}

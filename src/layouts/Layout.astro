@@ -1,0 +1,220 @@
+---
+export interface Props {
+  title: string;
+  lang?: 'tr' | 'en';
+}
+
+const { title, lang = 'tr' } = Astro.props;
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<!DOCTYPE html>
+<html class="light scroll-smooth" lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title} | Finsoft SAP Consulting</title>
+    <meta name="description" content="Finsoft — Türkiye'nin lider SAP FI/CO, Material Ledger ve Roll-Out danışmanlık firması. 15+ yıllık deneyim ile küresel finansal dönüşüm." />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Work+Sans:wght@700;800;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  </head>
+  <body class="selection:bg-primary/20 selection:text-primary bg-background text-on-background font-body antialiased">
+    <Header lang={lang} />
+    <main>
+        <slot />
+    </main>
+    <Footer lang={lang} />
+  </body>
+</html>
+
+<style is:global>
+  /* === BASE === */
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8f9fc;
+    color: #0a0f1e;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* === TYPOGRAPHY === */
+  .display-lg {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+  }
+
+  /* === ICONS === */
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+
+  /* === GLASSMORPHISM === */
+  .glass-nav {
+    background: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+  }
+
+  .ghost-border {
+    border: 1px solid rgba(187, 202, 191, 0.2);
+  }
+
+  /* === SCROLL REVEAL ANIMATIONS === */
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(32px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeInLeft {
+    from { opacity: 0; transform: translateX(-32px); }
+    to   { opacity: 1; transform: translateX(0); }
+  }
+
+  @keyframes fadeInRight {
+    from { opacity: 0; transform: translateX(32px); }
+    to   { opacity: 1; transform: translateX(0); }
+  }
+
+  @keyframes scaleIn {
+    from { opacity: 0; transform: scale(0.92); }
+    to   { opacity: 1; transform: scale(1); }
+  }
+
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+
+  .animate-fade-up {
+    animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  .animate-fade-left {
+    animation: fadeInLeft 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  .animate-fade-right {
+    animation: fadeInRight 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  /* Staggered Animation Delays */
+  .delay-1 { animation-delay: 0.1s; }
+  .delay-2 { animation-delay: 0.2s; }
+  .delay-3 { animation-delay: 0.3s; }
+  .delay-4 { animation-delay: 0.4s; }
+  .delay-5 { animation-delay: 0.5s; }
+  .delay-6 { animation-delay: 0.6s; }
+
+  /* === INLINE ICON ANIMATIONS (Subtle Shift) === */
+  .group-hover\:animate-icon-wiggle,
+  .group-hover\:animate-icon-bounce,
+  .group-hover\:animate-icon-float {
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .group:hover .group-hover\:animate-icon-wiggle,
+  .group:hover .group-hover\:animate-icon-bounce,
+  .group:hover .group-hover\:animate-icon-float {
+    transform: translateY(-4px);
+  }
+
+  /* === PREMIUM HOVER EFFECTS === */
+  .card-hover {
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px -12px rgba(0, 108, 73, 0.12),
+                0 8px 16px -8px rgba(0, 0, 0, 0.08);
+  }
+
+  /* === PREMIUM GLOW EFFECT === */
+  .glow-primary {
+    box-shadow: 0 0 0 1px rgba(0, 108, 73, 0.05),
+                0 4px 12px rgba(0, 108, 73, 0.08);
+  }
+
+  .glow-primary:hover {
+    box-shadow: 0 0 0 1px rgba(0, 108, 73, 0.15),
+                0 8px 32px rgba(0, 108, 73, 0.15);
+  }
+
+  /* === GRADIENT TEXT === */
+  .gradient-text {
+    background: linear-gradient(135deg, #006c49 0%, #10b981 50%, #4edea3 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    padding-right: 0.1em;
+  }
+
+  /* === SUBTLE GRID PATTERN === */
+  .bg-grid {
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.02) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
+    background-size: 64px 64px;
+  }
+
+  /* === SMOOTH SCROLL === */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* === SCROLLBAR === */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0, 108, 73, 0.2);
+    border-radius: 999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 108, 73, 0.4);
+  }
+
+  /* === SECTION TRANSITIONS === */
+  section {
+    position: relative;
+  }
+
+  /* === PREMIUM LINK UNDERLINE === */
+  .link-underline {
+    position: relative;
+    text-decoration: none;
+  }
+
+  .link-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: currentColor;
+    transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .link-underline:hover::after {
+    width: 100%;
+  }
+</style>

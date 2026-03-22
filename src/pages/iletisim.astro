@@ -1,0 +1,76 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="İletişim">
+    <section class="py-32 px-12 bg-surface">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
+            <div>
+                <h1 class="display-lg text-5xl font-bold font-headline mb-6">Doğru Yaklaşımı Değerlendirelim</h1>
+                <p class="text-xl text-on-surface-variant mb-12">Sizin için en doğru finansal dönüşüm stratejisini birlikte planlayalım. Kurumsal SAP ve AI destekli finans hedefleriniz için görüşelim.</p>
+                
+                <ul class="space-y-6">
+                    <li class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-primary/10 flex flex-col items-center justify-center text-primary">
+                            <span class="material-symbols-outlined">location_on</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Adres</h4>
+                            <p class="text-on-surface-variant text-sm">Barbaros Mah. Mor Sümbül Sok. 5/A Deluxia Palace D:223 Ataşehir, İSTANBUL</p>
+                        </div>
+                    </li>
+                    <li class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-primary/10 flex flex-col items-center justify-center text-primary">
+                            <span class="material-symbols-outlined">call</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Telefon</h4>
+                            <p class="text-on-surface-variant text-sm">+90 216 504 25 14</p>
+                        </div>
+                    </li>
+                    <li class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-primary/10 flex flex-col items-center justify-center text-primary">
+                            <span class="material-symbols-outlined">mail</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">E-posta</h4>
+                            <p class="text-on-surface-variant text-sm">info@finsoft.com.tr</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="bg-surface-container-lowest p-10 rounded-xl shadow-lg border border-outline-variant/10">
+                <form class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-bold mb-2">Ad Soyad</label>
+                            <input type="text" class="w-full bg-surface-container rounded-md px-4 py-3 border-none ring-1 ring-outline-variant/20 focus:ring-primary outline-none" placeholder="Adınız Soyadınız">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold mb-2">Şirket</label>
+                            <input type="text" class="w-full bg-surface-container rounded-md px-4 py-3 border-none ring-1 ring-outline-variant/20 focus:ring-primary outline-none" placeholder="Şirketiniz">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold mb-2">E-posta</label>
+                        <input type="email" class="w-full bg-surface-container rounded-md px-4 py-3 border-none ring-1 ring-outline-variant/20 focus:ring-primary outline-none" placeholder="kurumsal@email.com">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold mb-2">Projenizin Türü</label>
+                        <select class="w-full bg-surface-container rounded-md px-4 py-3 border-none ring-1 ring-outline-variant/20 focus:ring-primary outline-none">
+                            <option>Global Rollout — Türkiye Lokalizasyonu</option>
+                            <option>Türk Şirket Yurtdışı Rollout</option>
+                            <option>SAP FI/CO Danışmanlığı</option>
+                            <option>SAP S/4HANA Dönüşüm</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold mb-2">Mesaj</label>
+                        <textarea rows="4" class="w-full bg-surface-container rounded-md px-4 py-3 border-none ring-1 ring-outline-variant/20 focus:ring-primary outline-none" placeholder="Proje detaylarınızı kısaca anlatın..."></textarea>
+                    </div>
+                    <button type="button" class="w-full bg-primary text-on-primary py-4 rounded-md font-bold hover:bg-primary-container transition-colors">Gönder</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</Layout>

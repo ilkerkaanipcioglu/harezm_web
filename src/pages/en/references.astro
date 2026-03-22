@@ -1,0 +1,57 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const lang = 'en' as const;
+---
+<Layout title="References & Case Studies" lang={lang}>
+    <section class="relative pt-40 pb-20 bg-surface text-center">
+        <div class="max-w-7xl mx-auto px-8">
+            <span class="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-semibold tracking-widest mb-6 uppercase">Proven Success</span>
+            <h1 class="text-5xl md:text-6xl font-semibold font-headline text-on-background mb-8">Real Transformation Stories</h1>
+            <p class="text-xl text-on-surface-variant max-w-3xl mx-auto">Industry leaders rely on Finsoft's strategic expertise to automate and standardize complex SAP finance operations on a global scale.</p>
+        </div>
+    </section>
+
+    <section class="py-16 bg-surface-container-lowest">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Case Study 1 -->
+                <div class="group cursor-pointer">
+                    <div class="rounded-xl overflow-hidden aspect-video bg-surface-container mb-6 relative border border-outline-variant/20">
+                        <img src="/images/case-study-1.png" alt="Defense Industry" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 opacity-80 group-hover:opacity-100" />
+                        <div class="absolute inset-x-0 bottom-0 top-1/2 bg-gradient-to-t from-black/80 to-transparent"></div>
+                        <div class="absolute bottom-6 left-6 text-white font-headline text-2xl font-semibold drop-shadow-md">Defense Industry / Aselsan</div>
+                    </div>
+                    <div class="px-2">
+                        <span class="text-primary font-semibold text-sm tracking-wider uppercase mb-2 block">S/4HANA IFRS TRANSFORMATION</span>
+                        <h3 class="font-headline font-semibold text-2xl mb-3 text-on-background group-hover:text-primary transition-colors">Fully Compliant IFRS Reporting with UMS11/UMS21 Standards</h3>
+                        <p class="text-on-surface-variant line-clamp-3">Details of migrating complex production processes to IFRS standards, Material Ledger implementation, and statutory inventory revaluation project at Turkey's largest defense company.</p>
+                    </div>
+                </div>
+
+                <!-- Case Study 2 -->
+                <div class="group cursor-pointer">
+                    <div class="rounded-xl overflow-hidden aspect-video bg-surface-container mb-6 relative border border-outline-variant/20">
+                        <img src="/images/case-study-2.png" alt="Pharmaceuticals" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 opacity-80 group-hover:opacity-100" />
+                        <div class="absolute inset-x-0 bottom-0 top-1/2 bg-gradient-to-t from-black/80 to-transparent"></div>
+                        <div class="absolute bottom-6 left-6 text-white font-headline text-2xl font-semibold drop-shadow-md">Pharmaceuticals / Pfizer</div>
+                    </div>
+                    <div class="px-2">
+                        <span class="text-primary font-semibold text-sm tracking-wider uppercase mb-2 block">GLOBAL ROLLOUT</span>
+                        <h3 class="font-headline font-semibold text-2xl mb-3 text-on-background group-hover:text-primary transition-colors">Successful SAP Template Rollout and Localization in 5 Countries</h3>
+                        <p class="text-on-surface-variant line-clamp-3">Aligning the core template with local regulations in Turkey, Romania, Italy, Croatia, and Brazil, standardizing Profitability Analysis and Material Ledger globally.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Logistics Projects List -->
+    <section class="py-24 bg-surface">
+        <div class="max-w-7xl mx-auto px-8 text-center">
+            <h2 class="text-3xl font-headline font-semibold mb-12">Other Brands We Partner With</h2>
+            <p class="text-on-surface-variant text-sm max-w-4xl mx-auto leading-loose">
+                AAK Group (Unipro), Abalioglu Tekstil, Actega, Al Marai Poultry, Anadolu Isuzu, Antonio Carraro, Aselsan, ASM, Bahcesehir University, Borcelik, Boyner, Ceyo, CSA Holding, Della Gida, Dentas Paper, Eczacibasi (Evyap), Efes, Fagor Industrial, Ferrero, Hapimag, Hayat Holding, Hero Food, IDO, Lila Kagit, Medyasoft, Nuh Beton &amp; Cimento, Pakpen, Pfizer, Philip Morris, Sarkuysan, Sarsilmaz, SEDAS, Targe Electronic, TEMSA Global, TSKB, UCB Pharma, Ulker, Varrac, Wavin, Yapi Kredi Sigorta.
+            </p>
+        </div>
+    </section>
+</Layout>

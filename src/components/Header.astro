@@ -1,0 +1,162 @@
+---
+import { t, getLocalePath, getAlternateLangPath, type Lang } from '../i18n/utils';
+import type { TranslationKey } from '../i18n/translations';
+
+interface Props {
+  lang?: Lang;
+}
+
+const { lang = 'tr' } = Astro.props;
+const currentPath = Astro.url.pathname;
+
+const navItems: { key: TranslationKey; path: string }[] = [
+  { key: 'navHome', path: '/' },
+  { key: 'navServices', path: '/hizmetler' },
+  { key: 'navRollout', path: '/lokalizasyon' },
+  { key: 'navReferences', path: '/referanslar' },
+  { key: 'navAbout', path: '/hakkimizda' },
+  { key: 'navContact', path: '/iletisim' },
+];
+
+function isActivePath(itemPath: string): boolean {
+  const localePath = getLocalePath(itemPath, lang);
+  return currentPath === localePath || currentPath === localePath + '/';
+}
+
+const alternateLangPath = getAlternateLangPath(currentPath, lang);
+const otherLang = lang === 'tr' ? 'EN' : 'TR';
+---
+<nav class="fixed top-0 w-full z-50 glass-nav transition-all duration-300" id="main-nav">
+    <div class="flex justify-between items-center px-8 md:px-12 py-3.5 max-w-[1920px] mx-auto relative z-20 bg-transparent">
+        <!-- Logo -->
+        <div class="flex items-center">
+            <a href={getLocalePath('/', lang)} class="flex items-center group">
+                <img src="/images/finsoft-logo-icon.svg" alt="Finsoft" class="w-10 h-10 group-hover:scale-110 transition-transform duration-300" />
+                <div class="-ml-1.5 text-xl font-bold tracking-tight text-on-background font-headline">Finsoft</div>
+            </a>
+        </div>
+        <!-- Navigation (Desktop) -->
+        <div class="hidden md:flex items-center space-x-1">
+            {navItems.map((item) => (
+                <a
+                  class={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                    isActivePath(item.path)
+                      ? 'text-primary bg-primary/8 font-semibold'
+                      : 'text-on-surface-variant hover:text-on-background hover:bg-surface-container-high/50'
+                  }`}
+                  href={getLocalePath(item.path, lang)}
+                >
+                  {t(item.key, lang)}
+                </a>
+            ))}
+        </div>
+        <!-- Right Actions -->
+        <div class="flex items-center gap-3 md:gap-4">
+            <!-- Lang Toggle (Desktop) -->
+            <div class="hidden lg:flex items-center bg-surface-container rounded-full p-0.5 gap-0">
+                {lang === 'tr' ? (
+                    <>
+                        <span class="px-3 py-1.5 rounded-full bg-primary text-white text-xs font-bold tracking-wide">TR</span>
+                        <a href={alternateLangPath} class="px-3 py-1.5 rounded-full text-on-surface-variant text-xs font-bold tracking-wide hover:text-primary transition-colors">EN</a>
+                    </>
+                ) : (
+                    <>
+                        <a href={alternateLangPath} class="px-3 py-1.5 rounded-full text-on-surface-variant text-xs font-bold tracking-wide hover:text-primary transition-colors">TR</a>
+                        <span class="px-3 py-1.5 rounded-full bg-primary text-white text-xs font-bold tracking-wide">EN</span>
+                    </>
+                )}
+            </div>
+            <!-- CTA (Desktop) -->
+            <a href={getLocalePath('/iletisim', lang)} class="hidden sm:inline-block bg-primary text-on-primary px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-primary-container hover:shadow-lg hover:shadow-primary/20 transition-all duration-300">
+                {t('navCta', lang)}
+            </a>
+            
+            <!-- Hamburger Button (Mobile) -->
+            <button id="mobile-menu-btn" class="md:hidden flex flex-col items-center justify-center w-10 h-10 text-on-surface hover:bg-surface-container rounded-lg transition-colors focus:outline-none" aria-label="Menu Toggle">
+                <span class="material-symbols-outlined text-[28px]" id="menu-icon">menu</span>
+            </button>
+        </div>
+    </div>
+    
+    <!-- Mobile Menu Overlay / Accordion Dropdown -->
+    <div id="mobile-menu" class="absolute top-full left-0 w-full bg-surface/95 backdrop-blur-xl border-t border-outline-variant/10 shadow-2xl transition-all duration-300 ease-in-out opacity-0 -translate-y-4 pointer-events-none md:hidden flex flex-col px-8 py-6 gap-2 h-[calc(100vh-70px)] overflow-y-auto z-10">
+        {navItems.map((item) => (
+             <a
+               class={`flex items-center px-4 py-3.5 rounded-xl text-lg font-medium transition-all duration-200 ${
+                 isActivePath(item.path)
+                   ? 'text-primary bg-primary/10 font-bold border-l-4 border-primary'
+                   : 'text-on-surface hover:text-primary hover:bg-surface-container-high'
+               }`}
+               href={getLocalePath(item.path, lang)}
+             >
+               {t(item.key, lang)}
+             </a>
+        ))}
+        
+        <div class="mt-4 mb-2 h-px w-full bg-outline-variant/20"></div>
+        
+        <!-- CTA (Mobile) -->
+        <a href={getLocalePath('/iletisim', lang)} class="w-full text-center bg-primary text-on-primary px-6 py-4 rounded-xl font-bold text-base hover:bg-primary-container transition-all duration-300 shadow-md">
+            {t('navCta', lang)}
+        </a>
+        
+        <!-- Lang Toggle (Mobile) -->
+        <div class="mt-4 flex items-center justify-center bg-surface-container rounded-full p-1.5 gap-1 w-full max-w-[240px] mx-auto">
+             {lang === 'tr' ? (
+                 <>
+                     <span class="px-6 py-2.5 rounded-full bg-primary text-white text-sm font-bold tracking-wide w-1/2 text-center shadow-sm">TR</span>
+                     <a href={alternateLangPath} class="px-6 py-2.5 rounded-full text-on-surface-variant text-sm font-bold tracking-wide hover:text-primary transition-colors w-1/2 text-center">EN</a>
+                 </>
+             ) : (
+                 <>
+                     <a href={alternateLangPath} class="px-6 py-2.5 rounded-full text-on-surface-variant text-sm font-bold tracking-wide hover:text-primary transition-colors w-1/2 text-center">TR</a>
+                     <span class="px-6 py-2.5 rounded-full bg-primary text-white text-sm font-bold tracking-wide w-1/2 text-center shadow-sm">EN</span>
+                 </>
+             )}
+        </div>
+    </div>
+</nav>
+
+<script>
+  // Shrink header on scroll
+  let lastScroll = 0;
+  const nav = document.getElementById('main-nav');
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    if (nav) {
+      if (scrollY > 50) {
+        nav.style.boxShadow = '0 1px 3px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.04)';
+      } else {
+        nav.style.boxShadow = 'none';
+      }
+    }
+    lastScroll = scrollY;
+  });
+
+  // Mobile Menu Toggle Logic
+  const mobileBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const menuIcon = document.getElementById('menu-icon');
+  
+  if (mobileBtn && mobileMenu && menuIcon) {
+    mobileBtn.addEventListener('click', () => {
+      const isExpanded = mobileMenu.classList.contains('opacity-100');
+      
+      if (isExpanded) {
+        // Close menu
+        mobileMenu.classList.remove('opacity-100', 'translate-y-0', 'pointer-events-auto');
+        mobileMenu.classList.add('opacity-0', '-translate-y-4', 'pointer-events-none');
+        menuIcon.textContent = 'menu';
+        // Unlock body scroll
+        document.body.style.overflow = '';
+      } else {
+        // Open menu
+        mobileMenu.classList.remove('opacity-0', '-translate-y-4', 'pointer-events-none');
+        mobileMenu.classList.add('opacity-100', 'translate-y-0', 'pointer-events-auto');
+        menuIcon.textContent = 'close';
+        // Lock body scroll for nice UX inside generic overlay menus
+        document.body.style.overflow = 'hidden';
+      }
+    });
+  }
+</script>

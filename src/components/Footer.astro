@@ -1,0 +1,90 @@
+---
+import { t, getLocalePath, type Lang } from '../i18n/utils';
+import type { TranslationKey } from '../i18n/translations';
+
+interface Props {
+  lang?: Lang;
+}
+
+const { lang = 'tr' } = Astro.props;
+---
+<footer class="bg-on-background text-white pt-20 pb-8 px-8 md:px-12 relative overflow-hidden">
+    <!-- Subtle gradient overlay -->
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/20 pointer-events-none"></div>
+
+    <div class="max-w-[1920px] mx-auto relative z-10">
+        <!-- Main Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
+            <!-- Brand Column -->
+            <div class="md:col-span-4">
+                <div class="flex items-center mb-6">
+                    <img src="/images/finsoft-logo-icon.svg" alt="Finsoft" class="w-10 h-10" />
+                    <div class="-ml-1.5 text-xl font-bold tracking-tight font-headline">Finsoft</div>
+                </div>
+                <p class="text-slate-400 text-sm leading-relaxed mb-8 max-w-xs">
+                    {t('footerDesc', lang)}
+                </p>
+                <div class="flex gap-3">
+                    <a class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300" href="https://www.linkedin.com/company/finsoft-sap-financial/" target="_blank">
+                        <span class="material-symbols-outlined text-lg">work</span>
+                    </a>
+                    <a class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300" href="mailto:info@finsoft.com.tr">
+                        <span class="material-symbols-outlined text-lg">mail</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="md:col-span-2">
+                <h4 class="font-headline font-bold text-white text-sm uppercase tracking-widest mb-6">{t('footerQuickLinks', lang)}</h4>
+                <ul class="space-y-3">
+                    <li><a class="text-slate-400 text-sm hover:text-primary hover:translate-x-1 transition-all inline-block link-underline" href={getLocalePath('/hizmetler', lang)}>{t('footerServices', lang)}</a></li>
+                    <li><a class="text-slate-400 text-sm hover:text-primary hover:translate-x-1 transition-all inline-block link-underline" href={getLocalePath('/referanslar', lang)}>{t('footerCases', lang)}</a></li>
+                    <li><a class="text-slate-400 text-sm hover:text-primary hover:translate-x-1 transition-all inline-block link-underline" href={getLocalePath('/lokalizasyon', lang)}>Roll-out & Lokalizasyon</a></li>
+                    <li><a class="text-slate-400 text-sm hover:text-primary hover:translate-x-1 transition-all inline-block link-underline" href={getLocalePath('/hakkimizda', lang)}>{t('navAbout', lang)}</a></li>
+                </ul>
+            </div>
+
+            <!-- Services -->
+            <div class="md:col-span-3">
+                <h4 class="font-headline font-bold text-white text-sm uppercase tracking-widest mb-6">{lang === 'tr' ? 'Hizmetler' : 'Services'}</h4>
+                <ul class="space-y-3">
+                    <li><a class="text-slate-400 text-sm hover:text-primary transition-colors link-underline" href={getLocalePath('/hizmetler', lang)}>SAP FI/CO & Material Ledger</a></li>
+                    <li><a class="text-slate-400 text-sm hover:text-primary transition-colors link-underline" href="/sap-refx">SAP RE-FX</a></li>
+                    <li><a class="text-slate-400 text-sm hover:text-primary transition-colors link-underline" href="/sap-opentext">SAP & OpenText</a></li>
+                    <li><a class="text-slate-400 text-sm hover:text-primary transition-colors link-underline" href="/sap-checkup">SAP Check-Up</a></li>
+                    <li><a class="text-slate-400 text-sm hover:text-primary transition-colors link-underline" href="/danismanlik">{lang === 'tr' ? 'Danışmanlık' : 'Consulting'}</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div class="md:col-span-3">
+                <h4 class="font-headline font-bold text-white text-sm uppercase tracking-widest mb-6">{t('footerContact', lang)}</h4>
+                <ul class="space-y-4 text-slate-400 text-sm">
+                    <li class="flex gap-3 items-start">
+                        <span class="material-symbols-outlined text-primary text-base mt-0.5 shrink-0">location_on</span>
+                        <span>Barbaros Mah. Mor Sümbül Sok. 5/A Deluxia Palace D:223 Ataşehir, İSTANBUL</span>
+                    </li>
+                    <li class="flex gap-3 items-center">
+                        <span class="material-symbols-outlined text-primary text-base shrink-0">mail</span>
+                        <a href="mailto:info@finsoft.com.tr" class="hover:text-primary transition-colors">info@finsoft.com.tr</a>
+                    </li>
+                    <li class="flex gap-3 items-center">
+                        <span class="material-symbols-outlined text-primary text-base shrink-0">call</span>
+                        <a href="tel:+902165042514" class="hover:text-primary transition-colors">+90 216 504 25 14</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <span class="text-xs text-slate-500">{t('footerCopyright', lang)}</span>
+            <div class="flex gap-8 text-xs text-slate-500">
+                <a class="hover:text-primary transition-colors" href="#">{t('footerKvkk', lang)}</a>
+                <a class="hover:text-primary transition-colors" href="#">{t('footerPrivacy', lang)}</a>
+                <a class="hover:text-primary transition-colors" href="#">{t('footerCookies', lang)}</a>
+            </div>
+        </div>
+    </div>
+</footer>
