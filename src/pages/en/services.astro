@@ -1,7 +1,9 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from '../../layouts/Layout.astro';
+
+const lang = 'en' as const;
 ---
-<Layout title="Hizmetler">
+<Layout title="Services | Harezm" lang={lang}>
     <!-- HERO -->
     <header class="relative pt-40 pb-24 md:pt-48 md:pb-32 bg-bg overflow-hidden border-b border-border-main">
         <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--color-plum)_0%,_transparent_40%)] opacity-10 pointer-events-none"></div>
