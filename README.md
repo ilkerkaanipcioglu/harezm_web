@@ -38,6 +38,8 @@ npm run build
 ```
 Oluşturulan statik dosyalar `dist/` klasörü altına çıkartılır. Bu dosyaları cPanel, Vercel, Netlify, Github Pages veya standart Nginx/Apache sunucularında kolayca host edebilirsiniz.
 
+> **Not:** Projede kullanılan **Tailwind CSS v4 Vite Eklentisi** ile Astro tip denetleyicisi (`npx astro check`) arasında bilinen bir uyuşmazlık bulunmaktadır. Terminalde veya VS Code'da `.astro` dosyaları için görülen söz dizimi hataları (örn. `ts(1003)`) gerçeği yansıtmaz ve projenin `build` almasını veya çalışmasını engellemez.
+
 ## Proje Dizini Mimarisi
 ```text
 /

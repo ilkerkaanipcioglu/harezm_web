@@ -1,0 +1,541 @@
+<!DOCTYPE html>import Layout from '../layouts/Layout.astro';
+
+const modernOfficeImg = '/assets/Modern_office_building_202603240057.jpeg';
+const womanAnalyzingImg = '/assets/Woman_analyzing_data_202603240057.jpeg';
+const meetingGif = '/assets/Ekranda_trkiyeden_balanan_bir_toplant_odas.gif'
+<Layout title="Ana Sayfa">
+    <!-- Hero Section -->
+    <header class="relative pt-32 pb-20 px-8 md:px-12 flex flex-col justify-center min-h-[calc(100vh-80px)] overflow-hidden bg-bg border-b border-border-main">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--color-plum)_0%,_transparent_40%)] opacity-10 pointer-events-none"></div>
+        <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-plum/5 rounded-full blur-[120px] pointer-events-none"></div>
+
+        <div class="max-w-container w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-center relative z-10">
+            <!-- Left Content (7/12) -->
+            <div class="lg:col-span-7 animate-fade-up">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface text-text-70 text-label mb-8 border border-border">
+                    <span class="material-symbols-outlined text-sm">verified</span>
+                    SAP CERTIFIED PARTNER · ISTANBUL
+                </div>
+                
+                <h1 class="display-lg text-4xl md:text-5xl lg:text-h1 mb-6">
+                    SAP'ı tasarlarız. Türkiye'ye entegre ederiz.<br/> <em class="text-plum italic font-normal">Tek Elden.</em>
+                </h1>
+                
+                <p class="text-text-70 text-body-lg mb-10 font-light max-w-text">
+                    Danışmanlık değil, mimari üretiyoruz. Şirketinizin finansal gerçeğini tasarlıyor; SAP danışmanlığını, e-Dönüşümü, yapay zekayı ve banka entegrasyonlarını tek bir mimari altında birleştiriyoruz.
+                </p>
+                
+                <div class="flex flex-wrap gap-4">
+                    <a href="/iletisim" class="bg-plum text-white px-8 py-4 rounded-lg font-medium text-ui hover:bg-plum-hover transition-colors">
+                        Projeyi Başlat
+                    </a>
+                    <a href="/hizmetler" class="bg-transparent text-text-main px-8 py-4 rounded-lg font-medium text-ui border border-border-main hover:bg-bg2 transition-colors inline-flex items-center gap-2">
+                        Hizmetleri Keşfet
+                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Panel (5/12) - Trust Signals / Focus -->
+            <div class="lg:col-span-5 animate-fade-left delay-2 border border-border rounded-xl p-8 lg:p-10 bg-bg2 relative overflow-hidden">
+                <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--color-border)_0%,_transparent_60%)] opacity-20 pointer-events-none"></div>
+                
+                <!-- TMS 29 Badge -->
+                <div class="mb-8 p-4 rounded-lg border border-red-500/20 bg-red-500/5 flex items-start gap-3 relative z-10 group cursor-default">
+                    <span class="material-symbols-outlined text-red-500 text-xl group-hover:scale-110 transition-transform">gavel</span>
+                    <div>
+                        <p class="text-[10px] text-red-500 font-bold tracking-widest uppercase mb-1">Zorunlu Uyumluluk</p>
+                        <p class="text-sm text-text-main font-medium">TMS 29 Enflasyon Muhasebesi</p>
+                        <p class="text-xs text-text-70 mt-1">SAP üzerinde %100 uyumlu, yasal geçerli altyapı.</p>
+                    </div>
+                </div>
+
+                <h3 class="text-h4 mb-6 relative z-10">Gizli Gücümüz: Uçtan Uca Entegrasyon</h3>
+                
+                <div class="grid grid-cols-2 gap-4 mb-6 relative z-10">
+                    <div class="p-4 rounded-lg bg-bg border border-border">
+                        <p class="text-2xl font-serif text-teal mb-1">29</p>
+                        <p class="text-xs text-text-70 font-light">Türk bankasıyla hazır entegre mimari</p>
+                    </div>
+                    <div class="p-4 rounded-lg bg-bg border border-border">
+                        <p class="text-2xl font-serif text-teal mb-1">%94</p>
+                        <p class="text-xs text-text-70 font-light">Banka mutabakat süreçleri otomasyonu</p>
+                    </div>
+                </div>
+
+                <div class="pt-6 border-t border-border flex items-center justify-between relative z-10">
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-teal text-xl">architecture</span>
+                        <div>
+                            <p class="text-label text-text-40">SAP Certified Partner</p>
+                            <p class="text-sm text-text-70 font-medium">Finansal Teknoloji Çözümleri</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Architecture & Core Extension (Split Layout) -->
+    <section class="py-24 md:py-32 px-8 md:px-12 bg-bg relative overflow-hidden border-b border-border-main">
+        <div class="max-w-container mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="animate-fade-up">
+                    <span class="text-label text-teal uppercase mb-4 block">MİMARİ YAKLAŞIM</span>
+                    <h2 class="display-lg text-3xl md:text-4xl mb-6">Sistemi kuran mimari</h2>
+                    <p class="text-text-70 text-body-lg font-light mb-6">
+                        Harezm’in yaklaşımı tek bir sistem kurmak değil, finansal mimariyi doğru kurmaktır. SAP FI, AA, RE-FX ve yatırım yönetimi gibi çekirdek modüller bu yapının merkezinde yer alır.
+                    </p>
+                    <p class="text-text-70 text-body-lg font-light">
+                        Bu çekirdeği banka entegrasyonları, e-dönüşüm çözümleri, yapay zeka ve özel geliştirilmiş portallar ile tamamlarız. Tüm katmanlar birlikte çalışır ve <strong class="text-text-main font-medium">sistem tek bir yapı gibi davranır.</strong>
+                    </p>
+                </div>
+                <!-- Image/Diagram -->
+                <div class="relative group rounded-2xl overflow-hidden border border-border bg-bg2 shadow-md animate-fade-left delay-2">
+                    <div class="absolute inset-0 bg-plum/10 group-hover:bg-transparent transition-colors z-10 mix-blend-overlay"></div>
+                    <img src={modernOfficeImg} alt="Harezm Finansal Mimari" class="w-full h-auto object-cover scale-105 group-hover:scale-100 transition-transform duration-700" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Metrics Row -->
+    <section class="py-16 px-8 md:px-12 bg-bg2 border-b border-border-main">
+        <div class="max-w-container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+                <div class="p-6">
+                    <p class="text-5xl font-serif text-teal mb-4">%80</p>
+                    <p class="text-text-main font-medium mb-2">Daha Hızlı Kapanış</p>
+                    <p class="text-sm text-text-70 font-light">Uyguladığımız projelerde finansal kapanış süreleri %80’e kadar hızlanır.</p>
+                </div>
+                <div class="p-6 relative md:before:absolute md:before:w-px md:before:h-24 md:before:bg-border-main md:before:-left-4 md:before:top-1/2 md:before:-translate-y-1/2">
+                    <p class="text-5xl font-serif text-plum mb-4">%90+</p>
+                    <p class="text-text-main font-medium mb-2">Otomatik Mutabakat</p>
+                    <p class="text-sm text-text-70 font-light">Mutabakat süreçlerinin %90’dan fazlası AI ve RPA ile otomatik hale gelir.</p>
+                </div>
+                <div class="p-6 relative md:before:absolute md:before:w-px md:before:h-24 md:before:bg-border-main md:before:-left-4 md:before:top-1/2 md:before:-translate-y-1/2">
+                    <div class="text-5xl font-serif text-teal mb-4 flex items-center justify-center md:justify-start gap-2">
+                        <span class="material-symbols-outlined text-[40px]">sync</span>
+                    </div>
+                    <p class="text-text-main font-medium mb-2">Gerçek Zamanlı Nakit</p>
+                    <p class="text-sm text-text-70 font-light">Banka entegrasyonları ile nakit akışı anlık ve %100 şeffaf izlenebilir.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ERP Bağımsızlık & IFRS (Split with Woman_analyzing_data) -->
+    <section class="py-24 md:py-32 px-8 md:px-12 bg-bg relative overflow-hidden border-b border-border-main">
+        <div class="max-w-container mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="order-2 lg:order-1 relative group rounded-2xl overflow-hidden border border-border bg-bg2 shadow-md">
+                    <img src={womanAnalyzingImg} alt="Uzman Analiz" class="w-full h-auto object-cover opacity-90 group-hover:opacity-100 transition-opacity" />
+                </div>
+                <div class="order-1 lg:order-2">
+                    <div class="mb-12">
+                        <h3 class="text-2xl font-serif mb-4 text-text-main">ERP'ye Değil, Sisteme Bağlanın</h3>
+                        <p class="text-text-70 text-body font-light">
+                            Uzmanlığımız SAP üzerinedir. Ancak kurduğumuz sistemler hiçbir zaman tek bir ERP’ye bağımlı değildir. Aynı finansal mimariyi farklı ERP sistemlerine entegre edebilir, mevcut sistemlerle birlikte çalıştırabilir veya ihtiyaca yönelik özel çözümler geliştirebiliriz.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-serif mb-4 text-text-main">Doğrudan Çözüm Mimarıyla Çalışın</h3>
+                        <p class="text-text-70 text-body font-light">
+                            IFRS, e-Defter, KDV iade ve raporlama gibi süreçler ayrı hizmetler değil, <strong>tek bir sistemin parçalarıdır.</strong> Kritik kararlar doğrudan sistem tasarımını etkiler. Mimarimizle süreci en baştan hatasız ve ölçeklenebilir kurgularız.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Risk & Global (With GIF) -->
+    <section class="py-24 px-8 md:px-12 bg-bg2 relative box-border border-b border-border-main">
+        <div class="max-w-container mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+            <div class="md:col-span-6 lg:col-span-5">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/10 text-red-500 text-label mb-6 border border-red-500/20">
+                    <span class="material-symbols-outlined text-sm">warning</span> Gizli Risk Faktörü
+                </div>
+                <h2 class="display-lg text-3xl mb-6">Sisteminizin Çalışması Yetmez</h2>
+                <p class="text-text-70 font-light text-body mb-6">
+                    SAP sisteminiz çalışıyor olabilir. Ancak finansal süreçler en başından doğru kurgulanmadıysa bu bir avantaj değil, <strong>gizli bir risk</strong> oluşturur. En büyük entegrasyon hataları genellikle sistem tam kapasite çalışırken fark edilmez.
+                </p>
+                <div class="border-l-2 border-plum pl-4 py-1">
+                    <p class="text-sm font-medium text-text-main">Riski Fırsata Çevirin</p>
+                    <p class="text-xs font-light text-text-70">Sistem mimarisini gözden geçirerek maliyet sızıntılarını tespit ederiz.</p>
+                </div>
+            </div>
+            
+            <div class="md:col-span-6 lg:col-span-7">
+                <div class="rounded-2xl overflow-hidden border border-border shadow-xl relative group">
+                    <div class="absolute inset-0 bg-gradient-to-t from-bg2/80 via-transparent to-transparent z-10"></div>
+                    <!-- GIF Overlay for Global Reach -->
+                    <img src={meetingGif} alt="Global SAP Rollout" class="w-full aspect-video object-cover group-hover:scale-105 transition-transform duration-700" />
+                    <div class="absolute bottom-6 left-6 z-20">
+                        <p class="text-lg font-serif text-text-main">Türkiye'den Dünyaya</p>
+                        <p class="text-sm text-text-70 font-light drop-shadow-md">Kesintisiz ve uyumlu veri akışı</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hizmetler Section (6 Card Grid) -->
+    <section class="py-24 md:py-32 px-8 md:px-12 bg-bg2 relative box-border border-b border-border-main">
+        <div class="max-w-container mx-auto">
+            <div class="mb-16 max-w-text">
+                <h2 class="display-lg text-3xl md:text-h2 mb-6">Finansal sistemler mühendislik gerektirir</h2>
+                <p class="text-text-70 text-body-lg font-light">
+                    SAP danışmanlığının ötesinde: iş süreçlerinizin kalbini tasarlıyor, veri egemenliğinizi koruyuyor ve her finansal hareketi kontrol altında tutuyoruz.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="glass-card p-8 rounded-2xl group flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl border border-border flex items-center justify-center mb-6 bg-bg group-hover:border-teal/30 transition-colors">
+                            <span class="material-symbols-outlined text-teal">account_balance</span>
+                        </div>
+                        <h3 class="text-h4 mb-4">SAP Finansal Çekirdek</h3>
+                        <p class="text-text-70 text-body-sm font-light mb-8">
+                            New GL, Paralel Muhasebe, S/4HANA dönüşümü ve çok şirketli konsolidasyon. Hassasiyetle tasarlanmış — yaklaşıkla değil.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-[11px] border border-border text-text-40 px-2 py-1 rounded">SAP FI</span>
+                        <span class="text-[11px] border border-border text-text-40 px-2 py-1 rounded">SAP CO</span>
+                        <span class="text-[11px] border border-border text-text-40 px-2 py-1 rounded">S/4HANA</span>
+                        <span class="text-[11px] border border-border text-text-40 px-2 py-1 rounded">IFRS</span>
+                        <span class="text-[11px] border border-border text-text-40 px-2 py-1 rounded">AFC</span>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="glass-card p-8 rounded-2xl group flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl border border-border flex items-center justify-center mb-6 bg-bg group-hover:border-teal/30 transition-colors">
+                            <span class="material-symbols-outlined text-teal">monitoring</span>
+                        </div>
+                        <h3 class="text-h4 mb-4">Hazine & Risk Yönetimi</h3>
+                        <p class="text-text-70 text-body-sm font-light mb-8">
+                            Gerçek zamanlı nakit pozisyonu, likidite tahmini, döviz riski ve türev araç yönetimi. Sabah 7'de kasanızın durumunu bilirsiniz.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-[11px] border border-border text-text-40 px-2 py-1 rounded">SAP TRM</span>
+                        <span class="text-[11px] border border-border text-text-40 px-2 py-1 rounded">Cash Management</span>
+                        <span class="text-[11px] border border-border text-text-40 px-2 py-1 rounded">Banka Entegrasyon</span>
+                        <span class="text-[11px] border border-border text-text-40 px-2 py-1 rounded">Findeks</span>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="glass-card p-8 rounded-2xl group flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl border border-border flex items-center justify-center mb-6 bg-bg group-hover:border-teal/30 transition-colors">
+                            <span class="material-symbols-outlined text-teal">gavel</span>
+                        </div>
+                        <h3 class="text-h4 mb-4">Uyum & Vergi Mimarisi</h3>
+                        <p class="text-text-70 text-body-sm font-light mb-8">
+                            IFRS 16, TMS 29 Enflasyon Muhasebesi, KVKK ve tam e-Dönüşüm paketi. Uyum yönetilmez — sisteme gömülür.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-[11px] border border-border text-text-40 px-2 py-1 rounded">IFRS 16</span>
+                        <span class="text-[11px] border border-border text-text-40 px-2 py-1 rounded">TMS 29</span>
+                        <span class="text-[11px] border border-border text-text-40 px-2 py-1 rounded">e-Dönüşüm</span>
+                        <span class="text-[11px] border border-border text-text-40 px-2 py-1 rounded">DRC</span>
+                        <span class="text-[11px] border border-border text-text-40 px-2 py-1 rounded">Peppol</span>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="glass-card p-8 rounded-2xl group flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl border border-border flex items-center justify-center mb-6 bg-bg group-hover:border-teal/30 transition-colors">
+                            <span class="material-symbols-outlined text-teal">cloud</span>
+                        </div>
+                        <h3 class="text-h4 mb-4">Bulut & Platform</h3>
+                        <p class="text-text-70 text-body-sm font-light mb-8">
+                            SAP BTP, Signavio, S/4HANA Cloud ve Joule entegrasyonları. Platform kurmak değil — ekosistem inşa etmek.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-[11px] border border-border text-text-40 px-2 py-1 rounded">SAP BTP</span>
+                        <span class="text-[11px] border border-border text-text-40 px-2 py-1 rounded">Integration Suite</span>
+                        <span class="text-[11px] border border-border text-text-40 px-2 py-1 rounded">Signavio</span>
+                        <span class="text-[11px] border border-border text-text-40 px-2 py-1 rounded">Joule</span>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="glass-card p-8 rounded-2xl group flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl border border-border flex items-center justify-center mb-6 bg-bg group-hover:border-teal/30 transition-colors">
+                            <span class="material-symbols-outlined text-teal">smart_toy</span>
+                        </div>
+                        <h3 class="text-h4 mb-4">AI & Otomasyon</h3>
+                         <p class="text-text-70 text-body-sm font-light mb-8">
+                             Yapay zeka bizim için ayrı bir ürün değil, finansal sistemin bir parçasıdır. SAP Joule ve AgentandBot altyapısı ile mutabakat, tahminleme ve anomali tespiti gibi süreçleri otomatik hale getiririz. Böylece sistem sadece veri üretmez, aksiyon alır.
+                         </p>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-[11px] border border-border text-text-40 px-2 py-1 rounded">AI Agents</span>
+                        <span class="text-[11px] border border-border text-text-40 px-2 py-1 rounded">OCR</span>
+                        <span class="text-[11px] border border-border text-text-40 px-2 py-1 rounded">RPA</span>
+                        <span class="text-[11px] border border-border text-text-40 px-2 py-1 rounded">Predictive Tools</span>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="glass-card p-8 rounded-2xl group flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl border border-border flex items-center justify-center mb-6 bg-bg group-hover:border-teal/30 transition-colors">
+                            <span class="material-symbols-outlined text-teal">public</span>
+                        </div>
+                        <h3 class="text-h4 mb-4">Global Roll-out & AMS</h3>
+                        <p class="text-text-70 text-body-sm font-light mb-8">
+                            Çoklu ülke yerelleştirme, carve-out yönetimi ve SLA bazlı 7/24 destek. Sınırları aşarken yapıyı bozmayın.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-[11px] border border-border text-text-40 px-2 py-1 rounded">Multi-Country</span>
+                        <span class="text-[11px] border border-border text-text-40 px-2 py-1 rounded">Carve-out</span>
+                        <span class="text-[11px] border border-border text-text-40 px-2 py-1 rounded">AMS</span>
+                        <span class="text-[11px] border border-border text-text-40 px-2 py-1 rounded">T-Flow</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statement Section -->
+    <section class="py-32 md:py-48 px-8 md:px-12 bg-bg relative overflow-hidden flex justify-center items-center section-divider border-t border-border-main">
+        <!-- Subtle noise texture -->
+        <div class="absolute inset-0 opacity-[0.03] pointer-events-none mix-blend-overlay" style="background-image: url(&quot;data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' fill='transparent'/%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E&quot;);"></div>
+        
+        <!-- Large radial glow behind text -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-plum/5 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div class="max-w-container mx-auto text-center relative z-10">
+            <span class="material-symbols-outlined text-[80px] text-border mb-12 opacity-50">format_quote</span>
+            <h2 class="font-serif text-4xl md:text-5xl lg:text-h1 mb-12 leading-[1.1] max-w-[1000px] mx-auto tracking-tight">
+                <span class="text-text-70">CFO kontrolü sağlar. CTO sistemi kurar.</span><br/>
+                <span class="bg-clip-text text-transparent bg-gradient-to-r from-teal to-plum">Harezm ikisini birleştirir.</span> <br/>
+                <span class="text-text-main">Finansal mimari ve teknoloji aynı anda.</span>
+            </h2>
+            <p class="text-label text-text-40 tracking-[0.3em] uppercase">
+                Control + Architecture = Power
+            </p>
+        </div>
+    </section>
+
+    <!-- e-Solutions Section -->
+    <section class="py-24 md:py-32 px-8 md:px-12 bg-bg2 relative overflow-hidden border-t border-border-main">
+        <div class="max-w-container mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+                <!-- Left Title -->
+                <div class="lg:col-span-5 relative">
+                    <div class="lg:sticky lg:top-32">
+                        <span class="text-label text-teal uppercase mb-4 block">GÖMÜLÜ FİNANS</span>
+                        <h2 class="display-lg text-4xl md:text-h2 mb-6">SAP içine gömülü finansal teknoloji</h2>
+                        <p class="text-text-70 text-body-lg font-light mb-8 max-w-[400px]">
+                            Dış sistem bağımlılığı ortadan kalkar. Tüm finansal işlemler doğrudan SAP altyapısı üzerinden — anlık muhasebeleşme ile.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Right Products -->
+                <div class="lg:col-span-7 flex flex-col gap-6">
+                    <div class="glass-card p-8 rounded-2xl flex flex-col md:flex-row gap-6 md:items-center group">
+                        <div class="w-12 h-12 rounded-xl border border-border flex items-center justify-center shrink-0 bg-bg">
+                            <span class="material-symbols-outlined text-teal">payments</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-medium mb-2 text-text-main group-hover:text-teal transition-colors">SAP e-Tahsilat</h3>
+                            <p class="text-text-70 font-light text-sm">Bayi ve müşterilerden SAP üzerinden anlık tahsilat ve otomatik muhasebeleşme. Harici ödeme sistemi gerekmez.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="glass-card p-8 rounded-2xl flex flex-col md:flex-row gap-6 md:items-center group">
+                        <div class="w-12 h-12 rounded-xl border border-border flex items-center justify-center shrink-0 bg-bg">
+                            <span class="material-symbols-outlined text-teal">account_balance_wallet</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-medium mb-2 text-text-main group-hover:text-teal transition-colors">Banka Entegrasyon Hub</h3>
+                            <p class="text-text-70 font-light text-sm">Tüm banka hesaplarının tek panelden gerçek zamanlı nakit takibi. Her hareket otomatik eşleşir.</p>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-8 rounded-2xl flex flex-col md:flex-row gap-6 md:items-center group">
+                        <div class="w-12 h-12 rounded-xl border border-border flex items-center justify-center shrink-0 bg-bg">
+                            <span class="material-symbols-outlined text-teal">sync_alt</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-medium mb-2 text-text-main group-hover:text-teal transition-colors">SAP e-DBS</h3>
+                            <p class="text-text-70 font-light text-sm">Banka altyapısıyla doğrudan borçlandırma ve otomatik tahsilat yönetimi. Manuel takip sona erer.</p>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-8 rounded-2xl flex flex-col md:flex-row gap-6 md:items-center group">
+                        <div class="w-12 h-12 rounded-xl border border-border flex items-center justify-center shrink-0 bg-bg">
+                            <span class="material-symbols-outlined text-teal">currency_exchange</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-medium mb-2 text-text-main group-hover:text-teal transition-colors">e-Ödeme (TÖS)</h3>
+                            <p class="text-text-70 font-light text-sm">SAP onay mekanizmalarıyla toplu para transferi — hatasız, denetlenebilir, tam otomatik.</p>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-8 rounded-2xl flex flex-col md:flex-row gap-6 md:items-center group">
+                        <div class="w-12 h-12 rounded-xl border border-border flex items-center justify-center shrink-0 bg-bg">
+                            <span class="material-symbols-outlined text-teal">receipt_long</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-medium mb-2 text-text-main group-hover:text-teal transition-colors">e-Devlet Paketi</h3>
+                            <p class="text-text-70 font-light text-sm">e-Fatura, e-Arşiv, e-Defter, e-İrsaliye ve e-Müstahsil — Türkiye mevzuatına tam uyumlu, SAP içinden yönetilen tek paket.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTO Yol Haritası -->
+    <section class="py-24 md:py-32 px-8 md:px-12 bg-bg relative overflow-hidden border-t border-border-main">
+        <div class="max-w-container mx-auto">
+            <div class="mb-16">
+                <h2 class="display-lg text-3xl md:text-h2 mb-6">Dağınık Sistemlerden Birleşik Mimariye</h2>
+                <p class="text-text-70 text-body-lg font-light max-w-[600px]">
+                    Harezm, şirketinizin dijital sinir sistemini tasarlar. Sistemlere bağımlı değilsiniz — sistemler size bağımlıdır.
+                </p>
+            </div>
+
+            <div class="relative border-l border-border-main ml-4 md:ml-8 space-y-12 pb-4">
+                <div class="relative pl-10 md:pl-16 group">
+                    <div class="absolute -left-[17px] top-0 w-8 h-8 rounded-full bg-bg2 border border-border-main flex items-center justify-center text-xs font-medium text-text-40 group-hover:text-teal group-hover:border-teal transition-colors shadow-[0_0_0_8px_var(--bg)]">01</div>
+                    <h3 class="text-2xl font-serif mb-3 group-hover:text-teal transition-colors">API-First Mimari</h3>
+                    <p class="text-text-70 font-light leading-relaxed max-w-2xl">Tüm sistemler API ile konuşur. Vendor bağımlılığı sona erer. Gelecekteki her entegrasyon daha hızlı kurulur.</p>
+                </div>
+                
+                <div class="relative pl-10 md:pl-16 group">
+                    <div class="absolute -left-[17px] top-0 w-8 h-8 rounded-full bg-bg2 border border-border-main flex items-center justify-center text-xs font-medium text-text-40 group-hover:text-teal group-hover:border-teal transition-colors shadow-[0_0_0_8px_var(--bg)]">02</div>
+                    <h3 class="text-2xl font-serif mb-3 group-hover:text-teal transition-colors">SAP BTP & Entegrasyon</h3>
+                    <p class="text-text-70 font-light leading-relaxed max-w-2xl">SAP ve SAP dışı sistemlerin merkezi orkestrasyonu. Noktadan noktaya geçici çözümler (spaghetti mimari) ve veri çoğaltması tamamen ortadan kalkar.</p>
+                </div>
+
+                <div class="relative pl-10 md:pl-16 group">
+                    <div class="absolute -left-[17px] top-0 w-8 h-8 rounded-full bg-bg2 border border-border-main flex items-center justify-center text-xs font-medium text-text-40 group-hover:text-teal group-hover:border-teal transition-colors shadow-[0_0_0_8px_var(--bg)]">03</div>
+                    <h3 class="text-2xl font-serif mb-3 group-hover:text-teal transition-colors">Data Sovereignty</h3>
+                    <p class="text-text-70 font-light leading-relaxed max-w-2xl">Veriniz okyanus ötesine gitmez. Kontrol %100 sizde kalır. KVKK ve GDPR uyumu sonradan eklenen yamalar değil, baştan mimariye gömülü standartlardır.</p>
+                </div>
+
+                <div class="relative pl-10 md:pl-16 group">
+                    <div class="absolute -left-[17px] top-0 w-8 h-8 rounded-full bg-bg2 border border-border-main flex items-center justify-center text-xs font-medium text-text-40 group-hover:text-teal group-hover:border-teal transition-colors shadow-[0_0_0_8px_var(--bg)]">04</div>
+                    <h3 class="text-2xl font-serif mb-3 group-hover:text-teal transition-colors">AI-Ready Pipeline</h3>
+                    <p class="text-text-70 font-light leading-relaxed max-w-2xl">Machine learning ve predictive analytics için hazır, temiz, tekilleştirilmiş ve standartlaştırılmış veri mimarisi. Yapay zeka projeleriniz veriye takılmaz.</p>
+                </div>
+
+                <div class="relative pl-10 md:pl-16 group">
+                    <div class="absolute -left-[17px] top-0 w-8 h-8 rounded-full bg-bg2 border border-border-main flex items-center justify-center text-xs font-medium text-text-40 group-hover:text-teal group-hover:border-teal transition-colors shadow-[0_0_0_8px_var(--bg)]">05</div>
+                    <h3 class="text-2xl font-serif mb-3 group-hover:text-teal transition-colors">Zero Trust Security</h3>
+                    <p class="text-text-70 font-light leading-relaxed max-w-2xl">Kimlik doğrulama, mikro-segmentasyon ve rol bazlı erişim kontrolü (RBAC). Sistemdeki her hareket izlenir ve loglanır, denetim izi (audit trail) eksiksizdir.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sektörler -->
+    <section class="py-24 md:py-32 px-8 md:px-12 bg-bg2 relative overflow-hidden border-t border-border-main">
+        <div class="max-w-container mx-auto">
+            <h2 class="display-lg text-3xl md:text-h2 mb-16 text-center max-w-[800px] mx-auto">
+                Finansal Hatanın Opsiyonel Olmadığı Sektörler
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-x-8 max-w-[1000px] mx-auto">
+                <!-- Sektör 1 -->
+                <div class="border-t-2 border-border-main hover:border-plum bg-bg hover:bg-bg3 transition-all p-6 md:p-8 rounded-xl group">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="text-label text-text-40 group-hover:text-plum transition-colors">01</div>
+                        <span class="material-symbols-outlined text-text-40 group-hover:text-plum transition-colors opacity-50">vaccines</span>
+                    </div>
+                    <h3 class="text-xl font-medium mb-3 group-hover:text-plum transition-colors">İlaç & Sağlık</h3>
+                    <p class="text-text-70 font-light text-sm">Sıkı regülasyon, çok katmanlı maliyet yapısı ve uluslararası raporlama gereksinimleri.</p>
+                </div>
+
+                <!-- Sektör 2 -->
+                <div class="border-t-2 border-border-main hover:border-plum bg-bg hover:bg-bg3 transition-all p-6 md:p-8 rounded-xl group">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="text-label text-text-40 group-hover:text-plum transition-colors">02</div>
+                        <span class="material-symbols-outlined text-text-40 group-hover:text-plum transition-colors opacity-50">flight_takeoff</span>
+                    </div>
+                    <h3 class="text-xl font-medium mb-3 group-hover:text-plum transition-colors">Savunma & Havacılık</h3>
+                    <p class="text-text-70 font-light text-sm">Proje muhasebesi, maliyet kontrolü ve gizlilik gerektiren finansal mimariler.</p>
+                </div>
+
+                <!-- Sektör 3 -->
+                <div class="border-t-2 border-border-main hover:border-plum bg-bg hover:bg-bg3 transition-all p-6 md:p-8 rounded-xl group">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="text-label text-text-40 group-hover:text-plum transition-colors">03</div>
+                        <span class="material-symbols-outlined text-text-40 group-hover:text-plum transition-colors opacity-50">shopping_cart</span>
+                    </div>
+                    <h3 class="text-xl font-medium mb-3 group-hover:text-plum transition-colors">FMCG & Perakende</h3>
+                    <p class="text-text-70 font-light text-sm">Yüksek işlem hacmi, gerçek zamanlı mutabakat ve çok kanallı tahsilat yönetimi.</p>
+                </div>
+
+                <!-- Sektör 4 -->
+                <div class="border-t-2 border-border-main hover:border-plum bg-bg hover:bg-bg3 transition-all p-6 md:p-8 rounded-xl group">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="text-label text-text-40 group-hover:text-plum transition-colors">04</div>
+                        <span class="material-symbols-outlined text-text-40 group-hover:text-plum transition-colors opacity-50">bolt</span>
+                    </div>
+                    <h3 class="text-xl font-medium mb-3 group-hover:text-plum transition-colors">Enerji & Utilities</h3>
+                    <p class="text-text-70 font-light text-sm">Çoklu para birimi, emtia riski ve uzun vadeli sözleşme muhasebesi.</p>
+                </div>
+
+                <!-- Sektör 5 -->
+                <div class="border-t-2 border-border-main hover:border-plum bg-bg hover:bg-bg3 transition-all p-6 md:p-8 rounded-xl group">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="text-label text-text-40 group-hover:text-plum transition-colors">05</div>
+                        <span class="material-symbols-outlined text-text-40 group-hover:text-plum transition-colors opacity-50">directions_car</span>
+                    </div>
+                    <h3 class="text-xl font-medium mb-3 group-hover:text-plum transition-colors">Otomotiv & OEM</h3>
+                    <p class="text-text-70 font-light text-sm">Tedarik zinciri finansmanı, dealer network yönetimi ve global roll-out.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-32 md:py-48 px-8 md:px-12 bg-plum relative overflow-hidden text-center flex flex-col justify-center items-center">
+        <!-- Radial gradient background overlay -->
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--color-plum-hover)_0%,_transparent_70%)] opacity-50"></div>
+        
+        <div class="max-w-container mx-auto relative z-10 flex flex-col items-center">
+             <h2 class="display-lg text-4xl md:text-h1 mb-6 text-white">SAP sisteminizin mevcut durumunu birlikte değerlendirelim</h2>
+             <p class="text-white/80 text-xl md:text-2xl mb-12 font-light max-w-[600px]">
+                 30 dakikalık analiz ile eksik noktaları, riskleri ve geliştirme alanlarını net şekilde ortaya çıkaralım.
+             </p>
+            
+            <a href="/iletisim" class="bg-bg text-text-main px-10 py-5 rounded-lg font-medium text-lg hover:bg-bg2 transition-colors inline-block mb-16 border border-border">
+                Görüşme Talep Et
+            </a>
+
+            <div class="flex flex-col md:flex-row flex-wrap justify-center gap-8 md:gap-16 text-white/80 text-sm font-light">
+                <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-sm">mail</span>
+                    info@harezm.com
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-sm">location_on</span>
+                    Istanbul, Türkiye — Global Operasyonlar
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-sm">verified</span>
+                    SAP FI · CO · TRM · BTP · AI
+                </div>
+            </div>
+        </div>
+    </section>
+</Layout>

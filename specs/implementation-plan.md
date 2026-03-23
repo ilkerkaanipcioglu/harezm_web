@@ -11,6 +11,7 @@ Bu doküman, `harezm_strateji_v2.md` dokümanındaki yönlendirmeleri mevcut Har
 Aşağıdaki değişiklikler bileşen veya sayfa bazında gruplandırılmıştır:
 
 ### 1. Hızlı Kazanımlar (Immediate Fixes)
+- **Astro ve Tip Denetimi Güncellemesi:** Astro ve Tailwind v4 uyumsuzluğundan kaynaklanan 1705 syntax hatasını (`npx astro check`) gidermek için `astro`, `@astrojs/check` ve `typescript` bağımlılıklarının en son sürümlerine güncellenmesi.
 - **Footer Düzeltmeleri:** Metin kırılması sorununu ortadan kaldıran CSS/flex düzenlemeleri.
 - **İngilizce Sayfa 404 Çözümleri:** `/en/` route altındaki eksik sayfaların tespit edilip oluşturulması (veya eksik i18n link yönlendirmelerinin çözülmesi).
 - **Sayfa Sayaçları:** `hizmetler.astro` içerisindeki "Boş Sayaç" component verilerinin mantıklı benchmark'lar ile doldurulması.

@@ -53,70 +53,75 @@
 
 /* Tailwind v4 Theme Bridge */
 @theme {
-  --color-bg: var(--bg);
-  --color-bg2: var(--bg2);
-  --color-bg3: var(--bg3);
-  --color-plum: var(--plum);
-  --color-plum-hover: var(--plum-h);
-  --color-teal: var(--teal);
-  --color-text-main: var(--text);
-  --color-text-70: var(--text-70);
-  --color-text-40: var(--text-40);
-  --color-border-main: var(--border);
-  --color-border-hover: var(--border-2);
-  --color-border: var(--border);
-  --color-surface: var(--bg);
-  
-  /* === LOGO TOGGLE === */
-  [data-theme="light"] .hidden-in-light { display: none !important; }
-  [data-theme="dark"] .hidden-in-dark { display: none !important; }
+   --color-bg: var(--bg);
+   --color-bg2: var(--bg2);
+   --color-bg3: var(--bg3);
+   --color-plum: var(--plum);
+   --color-plum-hover: var(--plum-h);
+   --color-teal: var(--teal);
+   --color-text-main: var(--text);
+   --color-text-70: var(--text-70);
+   --color-text-40: var(--text-40);
+   --color-border-main: var(--border);
+   --color-border-hover: var(--border-2);
+   --color-border: var(--border);
+   --color-surface: var(--bg);
+   
+   /* === SECTION === */
+   --color-primary: var(--plum);
+   --color-primary-container: var(--plum-h);
+   --color-on-primary: #ffffff;
+   --color-on-primary-container: #ffffff;
+   --color-surface-container: var(--bg2);
+   --color-surface-container-low: var(--bg);
+   --color-surface-container-highest: var(--bg3);
+   --color-surface-variant: var(--bg2);
+   --color-on-surface: var(--text);
+   --color-on-surface-variant: var(--text-70);
+   --color-on-background: var(--text);
+   --color-outline: var(--border);
+   --color-outline-variant: var(--border-2);
 
-  /* === SECTION === */
-  section { position: relative; }
-  /* MD3 polyfill */
-  --color-primary: var(--plum);
-  --color-primary-container: var(--plum-h);
-  --color-on-primary: #ffffff;
-  --color-on-primary-container: #ffffff;
-  --color-surface-container: var(--bg2);
-  --color-surface-container-low: var(--bg);
-  --color-surface-container-highest: var(--bg3);
-  --color-surface-variant: var(--bg2);
-  --color-on-surface: var(--text);
-  --color-on-surface-variant: var(--text-70);
-  --color-on-background: var(--text);
-  --color-outline: var(--border);
-  --color-outline-variant: var(--border-2);
+   --font-serif: "DM Serif Display", serif;
+   --font-sans: "DM Sans", sans-serif;
 
-  --font-serif: "DM Serif Display", serif;
-  --font-sans: "DM Sans", sans-serif;
+   --text-h1: 64px;
+   --text-h1--line-height: 1.08;
+   --text-h1--letter-spacing: -0.02em;
+   --text-h2: 48px;
+   --text-h2--line-height: 1.1;
+   --text-h3: 24px;
+   --text-h3--line-height: 1.2;
+   --text-h4: 20px;
+   --text-h4--line-height: 1.3;
+   --text-body: 16px;
+   --text-body--line-height: 1.65;
+   --text-body-lg: 18px;
+   --text-body-lg--line-height: 1.6;
+   --text-body-sm: 14px;
+   --text-body-sm--line-height: 1.6;
+   --text-ui: 14px;
+   --text-ui--line-height: 1.4;
+   --text-label: 12px;
+   --text-label--line-height: 1.5;
+   --text-label--letter-spacing: 0.08em;
 
-  --text-h1: 64px;
-  --text-h1--line-height: 1.08;
-  --text-h1--letter-spacing: -0.02em;
-  --text-h2: 48px;
-  --text-h2--line-height: 1.1;
-  --text-h3: 24px;
-  --text-h3--line-height: 1.2;
-  --text-h4: 20px;
-  --text-h4--line-height: 1.3;
-  --text-body: 16px;
-  --text-body--line-height: 1.65;
-  --text-body-lg: 18px;
-  --text-body-lg--line-height: 1.6;
-  --text-body-sm: 14px;
-  --text-body-sm--line-height: 1.6;
-  --text-ui: 14px;
-  --text-ui--line-height: 1.4;
-  --text-label: 12px;
-  --text-label--line-height: 1.5;
-  --text-label--letter-spacing: 0.08em;
-
-  --spacing-xs: var(--sp-xs);
-  --spacing-sm: var(--sp-sm);
-  --spacing-md: var(--sp-md);
-  --spacing-lg: var(--sp-lg);
-  --spacing-xl: var(--sp-xl);
-  --spacing-2xl: var(--sp-2xl);
-  --spacing-3xl: var(--sp-3xl);
+   --spacing-xs: var(--sp-xs);
+   --spacing-sm: var(--sp-sm);
+   --spacing-md: var(--sp-md);
+   --spacing-lg: var(--sp-lg);
+   --spacing-xl: var(--sp-xl);
+   --spacing-2xl: var(--sp-2xl);
+   --spacing-3xl: var(--sp-3xl);
 }
+
+/* === LOGO TOGGLE === */
+[data-theme="light"] .hidden-in-light {
+  display: none !important;
+}
+[data-theme="dark"] .hidden-in-dark {
+  display: none !important;
+}
+
+/* === SECTION === */
+section { position: relative; }
