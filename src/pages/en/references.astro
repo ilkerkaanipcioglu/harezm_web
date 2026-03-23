@@ -1,4 +1,4 @@
----
+﻿---
 import Layout from '../../layouts/Layout.astro';
 const lang = 'en' as const;
 ---
@@ -16,10 +16,11 @@ const lang = 'en' as const;
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                 <!-- Case Study 1 -->
                 <div class="group cursor-pointer">
-                    <div class="rounded-xl overflow-hidden aspect-video bg-surface-container mb-6 relative border border-outline-variant/20">
-                        <img src="/images/case-study-1.png" alt="Defense Industry" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 opacity-80 group-hover:opacity-100" />
-                        <div class="absolute inset-x-0 bottom-0 top-1/2 bg-gradient-to-t from-black/80 to-transparent"></div>
-                        <div class="absolute bottom-6 left-6 text-white font-headline text-2xl font-semibold drop-shadow-md">Defense Industry / Aselsan</div>
+                    <div class="rounded-xl overflow-hidden aspect-video bg-surface-container mb-6 relative border border-outline-variant/20 flex items-center justify-center group-hover:bg-surface-container-high transition-colors">
+                        <div class="text-center px-6">
+                            <span class="material-symbols-outlined text-[64px] text-primary/30 mb-4 block">military_tech</span>
+                            <div class="text-on-surface font-headline text-2xl font-semibold">Defense Industry / Aselsan</div>
+                        </div>
                     </div>
                     <div class="px-2">
                         <span class="text-primary font-semibold text-sm tracking-wider uppercase mb-2 block">S/4HANA IFRS TRANSFORMATION</span>
@@ -30,10 +31,11 @@ const lang = 'en' as const;
 
                 <!-- Case Study 2 -->
                 <div class="group cursor-pointer">
-                    <div class="rounded-xl overflow-hidden aspect-video bg-surface-container mb-6 relative border border-outline-variant/20">
-                        <img src="/images/case-study-2.png" alt="Pharmaceuticals" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 opacity-80 group-hover:opacity-100" />
-                        <div class="absolute inset-x-0 bottom-0 top-1/2 bg-gradient-to-t from-black/80 to-transparent"></div>
-                        <div class="absolute bottom-6 left-6 text-white font-headline text-2xl font-semibold drop-shadow-md">Pharmaceuticals / Pfizer</div>
+                    <div class="rounded-xl overflow-hidden aspect-video bg-surface-container mb-6 relative border border-outline-variant/20 flex items-center justify-center group-hover:bg-surface-container-high transition-colors">
+                        <div class="text-center px-6">
+                            <span class="material-symbols-outlined text-[64px] text-primary/30 mb-4 block">science</span>
+                            <div class="text-on-surface font-headline text-2xl font-semibold">Pharmaceuticals / Pfizer</div>
+                        </div>
                     </div>
                     <div class="px-2">
                         <span class="text-primary font-semibold text-sm tracking-wider uppercase mb-2 block">GLOBAL ROLLOUT</span>

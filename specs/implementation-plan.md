@@ -1,92 +1,57 @@
-# Harezm Astro Web Site Implementation Plan
+# Harezm Brand Colors and Logo Integration Plan
 
 ## Goal Description
-Build a multi-page, SEO-friendly, and high-performance corporate website for Harezm. We will use Astro and Tailwind CSS to convert the existing static HTML designs (`stitch_anasayfa.html` and files inside `assets/stitch_harezm/`) and the content (`harezm_site_icerik_v3.md`) into a modular, production-ready web application.
+The goal is to apply the new Harezm Core Identity (Brand Colors and Logo) across the site as specified in `assets/brand__colour.txt` and the `assets/logo` directory. This involves switching from the current Material Design green-based light theme to the premium Dark Theme defined by the brand guidelines.
 
 ## User Review Required
-Please review the proposed page architecture and folder structure. We are going to extract the common parts (Header, Footer) into reusable components and create individual Astro pages. The content from your Markdown file will be integrated directly into these pages.
+> [!IMPORTANT]  
+> Please review this plan. The brand guidelines specify a dark theme as the primary look. This means `bg-background` will become "Deep Black" and text will become "Soft White". 
+> Do you prefer keeping Light and Dark mode options, or forcing the site into the pure Dark Theme as specified by the "Core Identity"? Since the identity specifies Deep Black as the main background, I will default to making the core look Dark.
 
 ## Proposed Changes
 
 ### Configuration
----
-#### [NEW] `tailwind.config.mjs`
-Initialize Astro with the `@astrojs/tailwind` integration and migrate the custom color palette and font families from the `<script id="tailwind-config">` present in the current HTML files.
+#### [MODIFY] `tailwind.config.mjs`(file:///b:/DEV/harezm._web/tailwind.config.mjs)
+- Redefine `colors` to include the branding:
+  - `background`: `#0B0B0D` (Deep Black)
+  - `surface`: `#1A1C1F` (Graphite Gray)
+  - `on-background`: `#F5F7FA` (Soft White)
+  - `on-surface`: `#F5F7FA` (Soft White)
+  - `primary`: `#C1121F` (Core Red)
+  - `outline`: `#C9CCD1` (Metal Silver)
+  - Adjust any other mapped surface colors to complement the deep black base.
 
-#### [NEW] `astro.config.mjs`
-Standard Astro configuration for building a static site (SSG).
+### Global Layout & CSS
+#### [MODIFY] `src/layouts/Layout.astro`(file:///b:/DEV/harezm._web/src/layouts/Layout.astro)
+- Change `<html class="light scroll-smooth" ...>` to `<html class="dark scroll-smooth" ...>`.
+- Update `body` styles: Background to Deep Black, color to Soft White.
+- Overhaul `is:global` CSS:
+  - Update `.glow-primary` box-shadows to use Core Red (`rgba(193, 18, 31, ...)`).
+  - Update `.gradient-text` to use subtle Core Red to darker red.
+  - Fix scrollbar thumb colors to Metal Silver or Core Red.
 
-### Layouts & Components
----
-#### [NEW] `src/layouts/Layout.astro`
-The main HTML shell containing `<head>`, fonts (IBM Plex Sans, Inter, Work Sans, Material Symbols), global CSS, and the `<slot />` for page content.
+### Layout Components (Header & Footer)
+#### [MODIFY] `src/components/Header.astro`(file:///b:/DEV/harezm._web/src/components/Header.astro)
+- Update logo `<img>` `src` to point to the new logo (e.g. `/images/harezm-logo-dark.svg`).
+- Adjust hover and active states of navigation to use `primary` (Core Red) and `surface` (Graphite Gray).
+- Ensure `.glass-nav` background matches the dark theme (e.g., `rgba(11, 11, 13, 0.82)` instead of white).
 
-#### [NEW] `src/components/Header.astro`
-The glassmorphic top navigation bar extracted from the HTML files. Includes routing links and language toggle UI.
+#### [MODIFY] `src/components/Footer.astro`(file:///b:/DEV/harezm._web/src/components/Footer.astro)
+- Update logo `<img>` `src`.
+- Review background classes (`bg-on-background`). If `on-background` is now Soft White, the footer background might become white, but the brand calls for Deep Black. I will map it strictly to `bg-background` or `bg-surface`.
 
-#### [NEW] `src/components/Footer.astro`
-The rich footer extracted from the HTML files with newsletter signup and contact information.
-
-### Pages
----
-#### [NEW] `src/pages/index.astro`
-The main landing page. Migrated from `assets/stitch_anasayfa.html`.
-
-#### [NEW] `src/pages/hizmetler.astro`
-The main services overview page. Migrated from `assets/stitch_harezm/harezm_hizmetler_v3.2_kapsaml_tasar_m/code.html`.
-
-#### [NEW] `src/pages/referanslar.astro`
-The references and case studies page. Migrated from `assets/stitch_harezm/harezm_referanslar_ve_vaka_analizleri_v3.1/code.html`.
-
-#### [NEW] `src/pages/lokalizasyon.astro`
-The Turkey Localization special page. Migrated from `assets/stitch_harezm/harezm_t_rkiye_lokalizasyonu_v3.2/code.html`.
-
-#### [NEW] `src/pages/hakkimizda.astro`
-About Us page, built using the layout components and populated with text from `harezm_site_icerik_v3.md`.
-
-#### [NEW] `src/pages/iletisim.astro`
-Contact form page, built using the layout components and populated with the form structure defined in `harezm_site_icerik_v3.md`.
+### Static Assets
+#### [NEW] `/public/images/harezm-logo-dark.svg`
+- Copy `b:\DEV\harezm._web\assets\logo\darktheme_logo.svg` to the public images directory for universal access.
 
 ## Verification Plan
 
 ### Automated Tests
-- Run `npm run build` after completing the port to verify that Astro can successfully statically generate all pages without compilation or typing errors.
+- Run `npm run build` or Astro's equivalent to ensure the build succeeds.
 
 ### Manual Verification
-- A browser subagent or local developer will run `npm run dev`.
-- Visually inspect the local development server at `http://localhost:4321`.
-- Verify that navigation between `/`, `/hizmetler`, `/referanslar`, and `/lokalizasyon` works seamlessly.
-- Verify that responsive design (Tailwind classes) and typography match the original HTML files precisely.
-
-## Plan 2: Rebranding Harezm to Harezm
-
-### Goal Description
-Rebrand the entire application from "Harezm" to "Harezm" by replacing all text occurrences and renaming relevant files.
-
-### Proposed Changes
-
-#### Global Text Replacement
-Search through the codebase and perform case-preserving replacements:
-- Harezm -> Harezm
-- harezm -> harezm
-- HAREZM -> HAREZM
-- Harezm / harezm -> Harezm / harezm
-
-**Target Files:**
-- `src/pages/**/*.astro`
-- `src/components/**/*.astro`
-- `src/layouts/**/*.astro`
-- `src/i18n/translations.ts`
-- Text and Markdown contents (`cfo_ajandasi.md`, `README.md`)
-- Configuration files (`package.json`, `astro.config.mjs`, `tailwind.config.mjs`)
-
-#### File Renames
-Identify all files/folders with "harezm" in their name and rename them to use "harezm". Examples:
-- `public/images/harezm-logo-full.svg` -> `harezm-logo-full.svg`
-- `public/images/harezm-logo-icon.svg` -> `harezm-logo-icon.svg`
-- `harezm_book.pdf` -> `harezm_book.pdf`
-- Update all code referencing these filenames to point to the new `harezm` versions.
-
-### Verification Plan
-- `npm run build` succeeds without broken image links or import errors.
-- Visual check on `npm run dev` to ensure text, titles, footprints, and headers correctly display 'Harezm'.
+- Start `npm run dev` and navigate to `http://localhost:4321`.
+- Verify the header and footer display the new logo.
+- Ensure the background is `#0B0B0D` and text is legible (`#F5F7FA`).
+- Hover over buttons and links to check that the highlighting uses `#C1121F` appropriately.
+- Check responsive mobile menu colors to ensure they translated well to the dark theme.

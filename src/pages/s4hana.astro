@@ -1,62 +1,21 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import ServiceDetailLayout from '../layouts/ServiceDetailLayout.astro';
 ---
-<Layout title="S/4HANA Cloud Geçişi">
-    <!-- Hero -->
-    <section class="relative pt-40 pb-24 bg-surface-container overflow-hidden">
-        <div class="max-w-[1920px] mx-auto px-12 md:px-24">
-            <div class="text-center max-w-4xl mx-auto">
-                <span class="inline-block px-4 py-1 rounded-full bg-primary/10 text-primary font-bold text-xs tracking-widest uppercase mb-6">SAP S/4HANA CLOUD</span>
-                <h1 class="text-5xl md:text-7xl font-bold font-headline text-on-background tracking-tight mb-8">S/4HANA Cloud Geçişi</h1>
-                <p class="text-xl text-on-surface-variant font-body leading-relaxed">Tüm iş süreçlerinizi bulut tabanlı tek bir platformda toplayarak maksimum verimlilik ve hız sağlayın.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Grow vs Rise -->
-    <section class="py-20 bg-surface">
-        <div class="max-w-7xl mx-auto px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <!-- Grow -->
-                <div class="bg-primary text-white p-12 rounded-xl relative overflow-hidden">
-                    <span class="absolute top-6 right-6 px-3 py-1 bg-white/20 text-white rounded-full text-[10px] font-bold tracking-widest">PUBLIC EDITION</span>
-                    <span class="material-symbols-outlined text-4xl mb-6">cloud</span>
-                    <h3 class="text-2xl font-bold font-headline mb-2">Grow with SAP</h3>
-                    <p class="text-sm text-white/60 mb-6">SAP S/4HANA Cloud Public Edition</p>
-                    <p class="text-white/80 text-sm leading-relaxed mb-8">Standart iş süreçlerine uygun, hızlı devreye alınabilir bulut çözümü.</p>
-                    <div class="space-y-3">
-                        <div class="flex items-center gap-3"><span class="material-symbols-outlined text-sm">bolt</span><span class="text-sm">Hızlı ve kolay ölçeklenebilir</span></div>
-                        <div class="flex items-center gap-3"><span class="material-symbols-outlined text-sm">security</span><span class="text-sm">Yüksek güvenlik standartları</span></div>
-                        <div class="flex items-center gap-3"><span class="material-symbols-outlined text-sm">update</span><span class="text-sm">Otomatik ve düzenli güncellemeler</span></div>
-                        <div class="flex items-center gap-3"><span class="material-symbols-outlined text-sm">savings</span><span class="text-sm">Düşük toplam sahip olma maliyeti</span></div>
-                    </div>
-                </div>
-                <!-- Rise -->
-                <div class="bg-on-background text-white p-12 rounded-xl relative overflow-hidden">
-                    <span class="absolute top-6 right-6 px-3 py-1 bg-primary-container/20 text-primary-container rounded-full text-[10px] font-bold tracking-widest">PRIVATE EDITION</span>
-                    <span class="material-symbols-outlined text-primary-container text-4xl mb-6">cloud_done</span>
-                    <h3 class="text-2xl font-bold font-headline mb-2">Rise with SAP</h3>
-                    <p class="text-sm text-slate-500 mb-6">SAP S/4HANA Cloud Private Edition</p>
-                    <p class="text-slate-400 text-sm leading-relaxed mb-8">İşletmenizin özel ihtiyaçlarına göre uyarlanabilir, tam kontrol sağlayan bulut çözümü.</p>
-                    <div class="space-y-3 text-slate-300">
-                        <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary-container text-sm">tune</span><span class="text-sm">İhtiyaçlarınıza göre tam özelleştirme</span></div>
-                        <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary-container text-sm">admin_panel_settings</span><span class="text-sm">Yüksek düzeyde veri ve süreç kontrolü</span></div>
-                        <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary-container text-sm">sync</span><span class="text-sm">Mevcut sistemlerle tam uyum</span></div>
-                        <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary-container text-sm">lock</span><span class="text-sm">Özel veri koruma ve güvenlik</span></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="py-20">
-        <div class="max-w-5xl mx-auto px-8">
-            <div class="bg-primary rounded-md p-12 text-center">
-                <h2 class="text-3xl font-bold font-headline text-white mb-4">Hangi Model Size Uygun?</h2>
-                <p class="text-white/70 mb-8">Greenfield veya Brownfield yaklaşımıyla S/4HANA geçişinizi planlayalım.</p>
-                <a href="/iletisim" class="bg-white text-primary px-8 py-3 rounded-md font-bold hover:bg-surface-container-low transition-colors shadow-lg">Bize Ulaşın</a>
-            </div>
-        </div>
-    </section>
-</Layout>
+<ServiceDetailLayout 
+    title="S/4HANA Cloud Geçişi"
+    description="Tüm iş süreçlerinizi bulut tabanlı tek bir platformda toplayarak maksimum verimlilik ve hız sağlayın."
+    icon="rocket_launch"
+    problemTitle="Yenilikçi ERP İhtiyacı"
+    problemText="Geleneksel on-premise ERP sistemleri günümüzün hızla değişen iş modellerine ayak uydurmakta yetersiz kalıyor. Şirketler, yüksek bakım maliyetleri, karmaşık donanım gereksinimleri ve veri adaları arasında karar alma süreçlerinde çevikliklerini kaybediyor."
+    solutionTitle="Grow ve Rise ile Kesintisiz Geçiş"
+    solutionText="Harezm olarak S/4HANA dönüşümünüzü iki model etrafında inşa ediyoruz: Greenfield dönüşümler için standart iş süreçlerine uyan Public Edition (Grow with SAP) ve mevcut sistemlerini buluta taşırken tam özelleştirme isteyenler için Private Edition (Rise with SAP)."
+    resultTitle="Geleceğe Hazır Mimari"
+    resultText="Kurumsal mimarinizin kalbine S/4HANA Cloud'u yerleştirerek yapay zeka (Joule) ve analitik bileşenlerini anında kullanmaya başlayın. Düşük Toplam Sahip Olma Maliyeti (TCO) ve sürekli güncellenen yapısıyla rekabette öne geçin."
+    insightTitle="01 · SAP STRATEGY"
+    insightContent="Kurumsal yazılım dünyası, son yirmi yılın en köklü mimari dönüşümünü yaşıyor. SAP'nin Clean Core stratejisi, ERP sistemlerinin nasıl inşa edildiğini ve sürdürüldüğünü yeniden tanımlıyor: çekirdek standart kalıyor, tüm özelleştirmeler SAP Business Technology Platform üzerinde konumlanıyor. Bu ayrışma bir kısıtlama değil — yapısal bir avantajdır. Bu yaklaşımı benimseyen şirketler daha hızlı güncelleme, daha düşük bakım maliyeti ve olgunlaştıkça yapay zeka yeteneklerini hazmedebilecek bir temel kazanır. ECC desteğinin 2027'de sona ermesiyle geçiş penceresi daralıyor. S/4HANA geçişini zoraki bir yükseltme değil, modernleşme fırsatı olarak gören organizasyonlar, önümüzdeki on yıla rekabetçi bir mimariyle girecek. Harezm bu geçişleri finansal sonuçları merkeze alarak tasarlar: maliyet kontrolü, veri sürekliliği ve operasyonel finansta sıfır kesinti."
+    tags={["Grow with SAP", "Rise with SAP", "Public Edition", "Private Edition", "Greenfield", "Brownfield"]}
+    relatedServices={[
+        { title: "SAP FI, CO & Material Ledger", href: "/hizmetler" },
+        { title: "SAP Treasury and Risk Management", href: "/sap-trm" }
+    ]}
+/>

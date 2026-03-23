@@ -1,234 +1,127 @@
 ---
 import Layout from '../layouts/Layout.astro';
 ---
-<Layout title="SAP Roll-Out & Lokalizasyon">
+<Layout title="Lokalizasyon | Harezm">
     <!-- Hero -->
     <section class="relative pt-40 pb-24 bg-surface-container overflow-hidden">
-        <div class="max-w-[1920px] mx-auto px-12 md:px-24">
-            <div class="text-center max-w-4xl mx-auto">
-                <span class="inline-block px-4 py-1 rounded-full bg-primary/10 text-primary font-bold text-xs tracking-widest uppercase mb-6">SAP ROLL-OUT & LOKALİZASYON</span>
-                <h1 class="text-5xl md:text-7xl font-bold font-headline text-on-background tracking-tight mb-8">Sınır Ötesi SAP Operasyonları ve Lokalizasyon</h1>
-                <p class="text-xl text-on-surface-variant font-body leading-relaxed">Global SAP mimarinizi yeni pazarlara uyarlarken, yerel mevzuat risklerini sıfırlayın ve operasyonel bütünlüğü koruyun.</p>
+        <div class="absolute inset-0 bg-primary/5 blur-[100px] -z-10 rounded-full w-[800px] h-[800px] right-0 top-0 translate-x-1/3"></div>
+        <div class="max-w-[1440px] mx-auto px-8 relative z-10 text-center">
+            <span class="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary font-bold text-xs tracking-[0.2em] uppercase mb-8">GLOBAL STANDART — YEREL UYUM</span>
+            <h1 class="display-lg text-5xl md:text-7xl font-bold font-headline mb-8 text-on-background">
+                SAP Lokalizasyon ve<br/>Sınır Ötesi Mimari
+            </h1>
+            <p class="text-xl md:text-2xl text-on-surface-variant font-light leading-relaxed max-w-3xl mx-auto">
+                Global SAP şablonunuzu Türkiye mevzuatına uyarlarken veya Türkiye'deki mimarinizi dünyaya açarken operasyonel bütünlüğü koruyun.
+            </p>
+        </div>
+    </section>
+
+    <!-- The Insight 09 Block (Centerpiece) -->
+    <section class="py-24 bg-surface-container-lowest border-t border-outline-variant/10">
+        <div class="max-w-6xl mx-auto px-8">
+            <div class="bg-surface-container-low p-10 md:p-16 rounded-3xl border border-outline-variant/20 relative overflow-hidden shadow-2xl">
+                <div class="absolute -left-20 -top-20 w-64 h-64 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+                <span class="material-symbols-outlined text-6xl text-primary/20 mb-8 block relative z-10">format_quote</span>
+                <h3 class="text-sm font-bold tracking-[0.2em] text-primary uppercase mb-8 relative z-10">09 · TURKEY LOCALIZATION</h3>
+                <p class="text-xl md:text-3xl text-on-background font-light leading-relaxed mb-10 relative z-10 italic">
+                    "Türkiye, dünyada en gelişmiş zorunlu e-dönüşüm çerçevelerinden birine sahip. e-Fatura, e-Arşiv, e-Defter, e-İrsaliye ve e-Müstahsil Makbuzu isteğe bağlı değil — Gelir İdaresi Başkanlığı'nın belirlediği teknik standartlara tabi yasal yükümlülükler. Türkiye pazarına giren uluslararası organizasyonlar ve operasyonlarını büyüten yerli şirketler için bu alanı SAP içinde yönetmek derin yerelleştirme uzmanlığı gerektiriyor. Harezm, S/4HANA ortamlarında Türkiye'nin eksiksiz e-dönüşüm portföyünü hayata geçirdi; SAP ekosisteminin en teknik zorlayıcı yerelleştirme gereksinimlerinden biri olan TMS 29 kapsamındaki enflasyon muhasebesi dahil. Gelen ve giden Peppol e-fatura çalışmamız bu yetkinliği sınır ötesi işlemlere uzatıyor. Uyumun ötesinde Türkiye yerelleştirmesi, yerel bankacılık altyapısının, vergi takvimlerinin ve yasal raporlama döngülerinin SAP'nin küresel mimarisiyle nasıl etkileşim kurduğunu anlamayı gerektiriyor. Bu konfigürasyon çalışması değil — finansal mimari çalışmasıdır."
+                </p>
+                <div class="flex items-center gap-4 relative z-10 mt-10 pt-10 border-t border-outline-variant/10">
+                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                        <span class="material-symbols-outlined">architecture</span>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-on-background text-lg">Harezm Insight Series</h4>
+                        <span class="text-xs text-on-surface-variant uppercase tracking-[0.2em]">Finansal Mimari Vizyonu</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- What is Roll-Out -->
-    <section class="py-20 bg-surface">
-        <div class="max-w-5xl mx-auto px-8">
-            <h2 class="text-3xl font-bold font-headline mb-6">SAP Roll-Out Nedir?</h2>
-            <p class="text-lg text-on-surface-variant leading-relaxed mb-6">SAP Roll-Out, mevcut bir SAP sisteminin sıfırdan kurulması değil; halihazırda çalışan bir yapının yeni ülkelere, şirketlere veya operasyonlara genişletilmesidir.</p>
-            <p class="text-lg text-on-surface-variant leading-relaxed">Bu süreçte temel referans, daha önce oluşturulmuş <strong class="text-on-background">global SAP şablonudur (global template)</strong>. Amaç, tüm organizasyonu tek bir standart altında toplarken yerel gereksinimleri de eksiksiz şekilde karşılamaktır.</p>
-        </div>
-    </section>
-
-    <!-- Standardization & Flexibility -->
-    <section class="py-20 bg-on-background text-white">
+    <!-- Services Grid Setup -->
+    <section class="py-24 bg-surface">
         <div class="max-w-7xl mx-auto px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <div>
-                    <h2 class="text-3xl font-bold font-headline mb-6">Standartlaşma ve Esneklik Dengesi</h2>
-                    <p class="text-slate-400 leading-relaxed">Roll-Out projelerinde en kritik nokta, global standardı korurken yerel ihtiyaçlara uyum sağlamaktır. Bu yaklaşım, hem kontrolü hem de sürdürülebilirliği garanti eder.</p>
-                </div>
-                <div class="space-y-4">
-                    <div class="bg-white/5 border border-white/10 p-5 rounded-xl flex items-start gap-4 hover:border-primary-container/50 transition-all">
-                        <span class="material-symbols-outlined text-primary-container text-xl mt-0.5">verified</span>
-                        <p class="text-sm text-slate-300">Mevcut SAP tasarımına bağlı kalınarak ilerlenir</p>
-                    </div>
-                    <div class="bg-white/5 border border-white/10 p-5 rounded-xl flex items-start gap-4 hover:border-primary-container/50 transition-all">
-                        <span class="material-symbols-outlined text-primary-container text-xl mt-0.5">compare</span>
-                        <p class="text-sm text-slate-300">Fit/Gap analizleri ile farklar belirlenir</p>
-                    </div>
-                    <div class="bg-white/5 border border-white/10 p-5 rounded-xl flex items-start gap-4 hover:border-primary-container/50 transition-all">
-                        <span class="material-symbols-outlined text-primary-container text-xl mt-0.5">tune</span>
-                        <p class="text-sm text-slate-300">Yerel gereksinimler kontrollü şekilde entegre edilir</p>
-                    </div>
-                    <div class="bg-white/5 border border-white/10 p-5 rounded-xl flex items-start gap-4 hover:border-primary-container/50 transition-all">
-                        <span class="material-symbols-outlined text-primary-container text-xl mt-0.5">shield</span>
-                        <p class="text-sm text-slate-300">Global yapı bozulmadan genişleme sağlanır</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Turkey & Global Localization -->
-    <section class="py-20 bg-surface-container-lowest">
-        <div class="max-w-7xl mx-auto px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <div>
-                    <span class="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary font-bold text-xs tracking-widest uppercase mb-4">LOKALİZASYON</span>
-                    <h2 class="text-3xl font-bold font-headline mb-6">Türkiye ve Global Lokalizasyon</h2>
-                    <p class="text-on-surface-variant leading-relaxed mb-4">Farklı ülkelere açılan şirketler için lokalizasyon, projenin en kritik parçalarından biridir. Özellikle Türkiye gibi dinamik regülasyonlara sahip pazarlarda tüm gereksinimler tek bir yapı altında ele alınır.</p>
-                    <p class="text-on-surface-variant leading-relaxed text-sm">Global template korunurken, tüm bu gereksinimler SAP üzerinde standart, denetlenebilir ve sürdürülebilir bir modele dönüştürülür.</p>
-                </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div class="bg-surface-container-low p-6 rounded-xl border border-outline-variant/20 hover:border-primary/50 transition-all">
-                        <span class="material-symbols-outlined text-primary text-3xl mb-3">gavel</span>
-                        <h4 class="font-bold text-sm mb-1">Vergi & Muhasebe</h4>
-                        <p class="text-on-surface-variant text-xs">Yerel vergi ve muhasebe mevzuatına tam uyum</p>
-                    </div>
-                    <div class="bg-surface-container-low p-6 rounded-xl border border-outline-variant/20 hover:border-primary/50 transition-all">
-                        <span class="material-symbols-outlined text-primary text-3xl mb-3">receipt_long</span>
-                        <h4 class="font-bold text-sm mb-1">e-Dönüşüm</h4>
-                        <p class="text-on-surface-variant text-xs">e-Fatura, e-Arşiv, e-İrsaliye, e-Defter</p>
-                    </div>
-                    <div class="bg-surface-container-low p-6 rounded-xl border border-outline-variant/20 hover:border-primary/50 transition-all">
-                        <span class="material-symbols-outlined text-primary text-3xl mb-3">assessment</span>
-                        <h4 class="font-bold text-sm mb-1">Raporlama</h4>
-                        <p class="text-on-surface-variant text-xs">Yerel raporlama ve beyan yükümlülükleri</p>
-                    </div>
-                    <div class="bg-surface-container-low p-6 rounded-xl border border-outline-variant/20 hover:border-primary/50 transition-all">
-                        <span class="material-symbols-outlined text-primary text-3xl mb-3">hub</span>
-                        <h4 class="font-bold text-sm mb-1">GİB Entegrasyonları</h4>
-                        <p class="text-on-surface-variant text-xs">GİB uyumlu entegrasyonlar</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Inbound / Outbound -->
-    <section class="py-20 bg-surface">
-        <div class="max-w-[1920px] mx-auto px-12 md:px-24">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <div class="bg-surface-container-lowest p-12 rounded-xl shadow-lg border border-outline-variant/20 hover:border-primary/50 transition-all group">
-                    <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-primary group-hover:text-white transition-all">
+                <!-- Inbound -->
+                <div class="bg-surface-container-low p-12 rounded-3xl border border-outline-variant/20 hover:border-primary/40 hover:-translate-y-2 transition-all duration-500 group relative overflow-hidden">
+                    <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-primary group-hover:text-white transition-all relative z-10">
                         <span class="material-symbols-outlined text-3xl text-primary group-hover:text-white">flight_land</span>
                     </div>
-                    <h3 class="text-2xl font-bold font-headline mb-4">Türkiye'ye Gelen Şirketler</h3>
-                    <p class="text-on-surface-variant leading-relaxed">Global SAP sistemlerinin Türkiye operasyonları için mevzuata tam uyumlu lokalizasyonu ve rollout projeleri. Merkezi mimariyi koruyarak yerel zorunlulukları karşılıyoruz.</p>
+                    <h3 class="text-3xl font-bold font-headline mb-6 text-on-background relative z-10">Inbound: Türkiye'ye Giriş</h3>
+                    <p class="text-lg text-on-surface-variant leading-relaxed mb-8 relative z-10">
+                        Global bir SAP şablonunuz var ve Türkiye operasyonunuzu kuruyorsunuz. GİB mevzuatlarına tam uyum, e-Dönüşüm paketlerinin global sisteme entegrasyonu ve TMS 29 Enflasyon Muhasebesi gereksinimlerini merkezi yapıyı bozmadan sisteminize dahil ediyoruz.
+                    </p>
+                    <ul class="space-y-4 relative z-10 mb-8">
+                        <li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> <span class="text-on-background font-medium">e-Fatura, e-Defter, e-Arşiv Uyum</span></li>
+                        <li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> <span class="text-on-background font-medium">Yerel Vergi Takvimi Adaptasyonu</span></li>
+                        <li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> <span class="text-on-background font-medium">Kurumlar Vergisi ve TMS 29</span></li>
+                    </ul>
                 </div>
-                <div class="bg-surface-container-lowest p-12 rounded-xl shadow-lg border border-outline-variant/20 hover:border-primary/50 transition-all group">
-                    <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-primary group-hover:text-white transition-all">
+                
+                <!-- Outbound -->
+                <div class="bg-surface-container-low p-12 rounded-3xl border border-outline-variant/20 hover:border-primary/40 hover:-translate-y-2 transition-all duration-500 group relative overflow-hidden">
+                    <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-primary group-hover:text-white transition-all relative z-10">
                         <span class="material-symbols-outlined text-3xl text-primary group-hover:text-white">flight_takeoff</span>
                     </div>
-                    <h3 class="text-2xl font-bold font-headline mb-4">Yurtdışına Açılan Şirketler</h3>
-                    <p class="text-on-surface-variant leading-relaxed">Türk şirketlerinin küresel operasyonları için merkez SAP yapısının uluslararası standartlara (IFRS) ve yabancı ülke mevzuatlarına uyarlanması.</p>
+                    <h3 class="text-3xl font-bold font-headline mb-6 text-on-background relative z-10">Outbound: Yurt Dışına Açılım</h3>
+                    <p class="text-lg text-on-surface-variant leading-relaxed mb-8 relative z-10">
+                        Türkiye merkezli SAP yapınızla Avrupa, Orta Doğu veya diğer bölgelere açılıyorsunuz. Peppol ağ entegrasyonları, IFRS raporlama gereksinimleri ve hedef ülkenin lokal mevzuatlarına uyum sağlayarak sınır tanımsız bir finans mimarisi inşa ediyoruz.
+                    </p>
+                    <ul class="space-y-4 relative z-10 mb-8">
+                        <li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> <span class="text-on-background font-medium">Peppol Inbound/Outbound e-Invoicing</span></li>
+                        <li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> <span class="text-on-background font-medium">IFRS ve Multi-GAAP Raporlama</span></li>
+                        <li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> <span class="text-on-background font-medium">Yerel Bankacılık Entegrasyonları</span></li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Typical Use Cases -->
-    <section class="py-20 bg-primary text-white">
-        <div class="max-w-7xl mx-auto px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold font-headline mb-4">Tipik Kullanım Senaryoları</h2>
-                <p class="text-white/60">Roll-Out projeleri genellikle şu durumlarda devreye alınır:</p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-white/10 border border-white/20 p-6 rounded-xl flex items-start gap-4">
-                    <span class="material-symbols-outlined text-xl mt-0.5">public</span>
-                    <p class="text-sm">Yeni bir ülkeye açılım</p>
+    <!-- Methodology -->
+    <section class="py-24 bg-surface-container-lowest border-t border-outline-variant/10">
+        <div class="max-w-7xl mx-auto px-8 text-center">
+            <h2 class="text-3xl md:text-5xl font-bold font-headline mb-16 text-on-background">Roll-Out Metodolojimiz</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="p-8">
+                    <div class="w-16 h-16 rounded-full bg-primary/10 text-primary flex items-center justify-center mx-auto mb-6 text-2xl font-black font-headline tracking-widest">1</div>
+                    <h4 class="font-bold text-lg text-on-background mb-3">Fit/Gap Analizi</h4>
+                    <p class="text-sm text-on-surface-variant leading-relaxed">Global template ile yerel mevzuat farklarının tespit edilmesi.</p>
                 </div>
-                <div class="bg-white/10 border border-white/20 p-6 rounded-xl flex items-start gap-4">
-                    <span class="material-symbols-outlined text-xl mt-0.5">corporate_fare</span>
-                    <p class="text-sm">Grup şirketlerinin merkezi SAP yapısına dahil edilmesi</p>
+                <div class="p-8 relative">
+                    <div class="hidden md:block absolute top-16 left-0 -ml-4 w-8 h-px bg-outline-variant/30"></div>
+                    <div class="w-16 h-16 rounded-full bg-primary/10 text-primary flex items-center justify-center mx-auto mb-6 text-2xl font-black font-headline tracking-widest">2</div>
+                    <h4 class="font-bold text-lg text-on-background mb-3">Mimari Tasarım</h4>
+                    <p class="text-sm text-on-surface-variant leading-relaxed">Çekirdek yapıyı bozmadan eklenecek lokal fonksiyonların haritalanması.</p>
                 </div>
-                <div class="bg-white/10 border border-white/20 p-6 rounded-xl flex items-start gap-4">
-                    <span class="material-symbols-outlined text-xl mt-0.5">factory</span>
-                    <p class="text-sm">Yeni fabrika, depo veya lojistik merkezlerinin entegrasyonu</p>
+                <div class="p-8 relative">
+                    <div class="hidden md:block absolute top-16 left-0 -ml-4 w-8 h-px bg-outline-variant/30"></div>
+                    <div class="w-16 h-16 rounded-full bg-primary/10 text-primary flex items-center justify-center mx-auto mb-6 text-2xl font-black font-headline tracking-widest">3</div>
+                    <h4 class="font-bold text-lg text-on-background mb-3">Lokalizasyon</h4>
+                    <p class="text-sm text-on-surface-variant leading-relaxed">GİB ve yasal otorite entegrasyonlarının SAP FI/CO üzerine kodlanması.</p>
                 </div>
-                <div class="bg-white/10 border border-white/20 p-6 rounded-xl flex items-start gap-4">
-                    <span class="material-symbols-outlined text-xl mt-0.5">merge</span>
-                    <p class="text-sm">Satın alınan şirketlerin mevcut sisteme uyarlanması</p>
-                </div>
-                <div class="bg-white/10 border border-white/20 p-6 rounded-xl flex items-start gap-4">
-                    <span class="material-symbols-outlined text-xl mt-0.5">upgrade</span>
-                    <p class="text-sm">Mevcut yapının kademeli olarak yeni SAP versiyonlarına taşınması</p>
-                </div>
-                <div class="bg-white/10 border border-white/20 p-6 rounded-xl flex items-center justify-center">
-                    <p class="text-center font-bold text-sm">Tek sistem, tek veri modeli,<br/>merkezi kontrol.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- End-to-End Methodology -->
-    <section class="py-20 bg-surface-container-lowest">
-        <div class="max-w-7xl mx-auto px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold font-headline mb-4">Uçtan Uca Roll-Out Metodolojisi</h2>
-                <p class="text-on-surface-variant">Yapılandırılmış ve kontrollü bir süreç, öngörülebilir ve başarılı sonuçlar sağlar.</p>
-            </div>
-            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
-                <div class="bg-surface-container-low p-6 rounded-xl border border-outline-variant/20 text-center hover:border-primary/50 transition-all">
-                    <div class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center mx-auto mb-3 text-sm font-bold">1</div>
-                    <h4 class="font-bold text-xs">Template Tasarımı</h4>
-                </div>
-                <div class="bg-surface-container-low p-6 rounded-xl border border-outline-variant/20 text-center hover:border-primary/50 transition-all">
-                    <div class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center mx-auto mb-3 text-sm font-bold">2</div>
-                    <h4 class="font-bold text-xs">Lokal Uyarlama</h4>
-                </div>
-                <div class="bg-surface-container-low p-6 rounded-xl border border-outline-variant/20 text-center hover:border-primary/50 transition-all">
-                    <div class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center mx-auto mb-3 text-sm font-bold">3</div>
-                    <h4 class="font-bold text-xs">Entegrasyon & Veri</h4>
-                </div>
-                <div class="bg-surface-container-low p-6 rounded-xl border border-outline-variant/20 text-center hover:border-primary/50 transition-all">
-                    <div class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center mx-auto mb-3 text-sm font-bold">4</div>
-                    <h4 class="font-bold text-xs">Fit/Gap Workshop</h4>
-                </div>
-                <div class="bg-surface-container-low p-6 rounded-xl border border-outline-variant/20 text-center hover:border-primary/50 transition-all">
-                    <div class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center mx-auto mb-3 text-sm font-bold">5</div>
-                    <h4 class="font-bold text-xs">Test & QA</h4>
-                </div>
-                <div class="bg-surface-container-low p-6 rounded-xl border border-outline-variant/20 text-center hover:border-primary/50 transition-all">
-                    <div class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center mx-auto mb-3 text-sm font-bold">6</div>
-                    <h4 class="font-bold text-xs">Cutover</h4>
-                </div>
-                <div class="bg-surface-container-low p-6 rounded-xl border border-outline-variant/20 text-center hover:border-primary/50 transition-all">
-                    <div class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center mx-auto mb-3 text-sm font-bold">7</div>
-                    <h4 class="font-bold text-xs">Hypercare</h4>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Key Benefits -->
-    <section class="py-20 bg-surface">
-        <div class="max-w-7xl mx-auto px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold font-headline mb-4">Sağladığı Temel Faydalar</h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-surface-container-low p-8 rounded-xl border border-outline-variant/20 hover:shadow-lg transition-all flex items-start gap-4">
-                    <span class="material-symbols-outlined text-primary text-2xl mt-0.5 shrink-0">public</span>
-                    <p class="text-on-surface-variant text-sm">Çok ülkeli yapıda standartlaşma ve merkezi yönetim</p>
-                </div>
-                <div class="bg-surface-container-low p-8 rounded-xl border border-outline-variant/20 hover:shadow-lg transition-all flex items-start gap-4">
-                    <span class="material-symbols-outlined text-primary text-2xl mt-0.5 shrink-0">gavel</span>
-                    <p class="text-on-surface-variant text-sm">Yerel mevzuatlara tam uyum</p>
-                </div>
-                <div class="bg-surface-container-low p-8 rounded-xl border border-outline-variant/20 hover:shadow-lg transition-all flex items-start gap-4">
-                    <span class="material-symbols-outlined text-primary text-2xl mt-0.5 shrink-0">savings</span>
-                    <p class="text-on-surface-variant text-sm">Entegrasyon ve geliştirme maliyetlerinde düşüş</p>
-                </div>
-                <div class="bg-surface-container-low p-8 rounded-xl border border-outline-variant/20 hover:shadow-lg transition-all flex items-start gap-4">
-                    <span class="material-symbols-outlined text-primary text-2xl mt-0.5 shrink-0">visibility</span>
-                    <p class="text-on-surface-variant text-sm">Global raporlama ve finansal görünürlük artışı</p>
-                </div>
-                <div class="bg-surface-container-low p-8 rounded-xl border border-outline-variant/20 hover:shadow-lg transition-all flex items-start gap-4">
-                    <span class="material-symbols-outlined text-primary text-2xl mt-0.5 shrink-0">share</span>
-                    <p class="text-on-surface-variant text-sm">Süreç iyileştirmelerinin tüm organizasyona yayılması</p>
-                </div>
-                <div class="bg-surface-container-low p-8 rounded-xl border border-outline-variant/20 hover:shadow-lg transition-all flex items-start gap-4">
-                    <span class="material-symbols-outlined text-primary text-2xl mt-0.5 shrink-0">trending_up</span>
-                    <p class="text-on-surface-variant text-sm">SAP yatırımının hızlı ve verimli şekilde ölçeklenmesi</p>
+                <div class="p-8 relative">
+                    <div class="hidden md:block absolute top-16 left-0 -ml-4 w-8 h-px bg-outline-variant/30"></div>
+                    <div class="w-16 h-16 rounded-full bg-primary flex items-center justify-center text-white mx-auto mb-6 text-2xl font-black font-headline tracking-widest shadow-lg shadow-primary/30">4</div>
+                    <h4 class="font-bold text-lg text-on-background mb-3">Cutover</h4>
+                    <p class="text-sm text-on-surface-variant leading-relaxed">Geçişin yapılması, veri aktarımı ve lokal ekiplere hypercare desteği.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CTA -->
-    <section class="py-20">
-        <div class="max-w-5xl mx-auto px-8">
-            <div class="bg-on-background rounded-md p-12 text-center relative overflow-hidden">
-                <h2 class="text-3xl font-bold font-headline text-white mb-6">Sınır Ötesi Dönüşüm Stratejinizi Planlayalım</h2>
-                <p class="text-slate-400 mb-8">Global SAP mimarinizi yeni pazarlara uyarlarken, yerel mevzuat risklerini uzman ekibimizle analiz edin.</p>
-                <div class="flex justify-center">
-                    <a href="/iletisim" class="bg-primary text-white px-8 py-3 rounded-md font-bold hover:bg-primary-container transition-colors shadow-lg">Değerlendirme Başlatın</a>
-                </div>
+    <section class="py-24 bg-surface">
+        <div class="max-w-4xl mx-auto px-8">
+            <div class="bg-primary rounded-3xl p-12 md:p-16 text-center text-white shadow-2xl relative overflow-hidden">
+                <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+                <h2 class="text-3xl md:text-5xl font-bold font-headline mb-6 relative z-10">Mevzuat Riski Almayın</h2>
+                <p class="text-white/80 text-lg mb-10 font-light relative z-10">
+                    Sınır ötesi ERP mimarinizin yasal standartlarla tam uyumlu çalışması için uzmanlarımızla projelerinizi değerlendirin.
+                </p>
+                <a href="/iletisim" class="inline-block bg-white text-primary px-10 py-4 rounded-xl font-bold hover:shadow-lg hover:-translate-y-1 transition-all relative z-10">
+                    Toplantı Planla
+                </a>
             </div>
         </div>
     </section>

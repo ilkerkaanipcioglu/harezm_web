@@ -1,0 +1,56 @@
+---
+const clients = [
+    { name: 'Pfizer', domain: 'pfizer.com.tr' },
+    { name: 'Abdi İbrahim', domain: 'abdiibrahim.com.tr' },
+    { name: 'Aselsan', domain: 'aselsan.com.tr' },
+    { name: 'Roketsan', domain: 'roketsan.com.tr' },
+    { name: 'Ülker', domain: 'ulker.com.tr' },
+    { name: 'Eti', domain: 'etigida.com.tr' },
+    { name: 'Tüpraş', domain: 'tupras.com.tr' },
+    { name: 'Enerjisa', domain: 'enerjisa.com.tr' },
+    { name: 'Ford Otosan', domain: 'fordotosan.com.tr' },
+    { name: 'Tofaş', domain: 'tofas.com.tr' }
+];
+
+// Duplicate for infinitely looping marquee effect
+const marqueeItems = [...clients, ...clients];
+---
+<div class="py-12 border-t border-b border-border-main bg-bg relative overflow-hidden flex flex-col items-center">
+    <div class="absolute inset-0 bg-gradient-to-r from-bg via-transparent to-bg z-10 pointer-events-none w-24 left-0 h-full"></div>
+    <div class="absolute inset-0 bg-gradient-to-l from-bg via-transparent to-bg z-10 pointer-events-none w-24 right-0 h-full"></div>
+    
+    <p class="text-text-40 text-xs uppercase tracking-[0.2em] mb-8 font-medium relative z-20">Sektör Liderleriyle Omuz Omuza</p>
+
+    <div class="flex overflow-hidden relative w-full opacity-60 hover:opacity-100 transition-opacity">
+        <div class="flex animate-marquee whitespace-nowrap gap-16 items-center w-max">
+            {marqueeItems.map(client => (
+                <div class="flex items-center gap-2 group grayscale hover:grayscale-0 transition-all duration-300">
+                    <img 
+                        src={`https://logo.clearbit.com/${client.domain}?size=80`} 
+                        alt={`${client.name} Logo`} 
+                        class="h-8 object-contain"
+                        loading="lazy"
+                        onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');"
+                    />
+                    <!-- Fallback if logo fails to load -->
+                    <span class="text-text-70 font-medium text-lg hidden">{client.name}</span>
+                </div>
+            ))}
+        </div>
+    </div>
+</div>
+
+<style>
+@keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+    animation: marquee 30s linear infinite;
+}
+
+.animate-marquee:hover {
+    animation-play-state: paused;
+}
+</style>

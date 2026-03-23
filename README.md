@@ -1,6 +1,6 @@
 # Harezm Kurumsal Web Sitesi
 
-Bu proje, Harezm markasının kurumsal kimliğini yansıtan, yüksek performanslı ve modern bir web uygulamasıdır. **Astro JS** ve **Tailwind CSS** kullanılarak statik site üretici (SSG - Static Site Generation) mantığıyla oluşturulmuştur.
+Bu proje, Harezm markasının kurumsal kimliğini yansıtan, yüksek performanslı ve modern bir web uygulamasıdır. **Astro JS** ve **Tailwind CSS** kullanılarak statik site üretici (SSG - Static Site Generation) mantığıyla oluşturulmuştur. Harezm'in güncellenmiş "Core Identity v2" yönergelerine uygun şekilde tasarlanmış, premium "Deep Plum & Electric Turquoise" tabanlı yapay zeka ve finans mimarisi temasına sahiptir.
 
 ## Teknolojiler
 - **Astro (v5)**: Sıfır JS konsepti ile hız odalı static rendering.

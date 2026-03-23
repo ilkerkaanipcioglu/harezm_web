@@ -1,0 +1,138 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="Sektörel Uzmanlığımız | Harezm">
+    <section class="pt-40 pb-24 bg-surface px-8 border-b border-outline-variant/10">
+        <div class="max-w-[1440px] mx-auto">
+            <h1 class="display-lg text-5xl md:text-7xl font-bold font-headline text-on-background tracking-tight mb-8">
+                Sektörünüzün Çetin<br/>Dinamiklerini Biliyoruz.
+            </h1>
+            <p class="text-xl md:text-2xl text-on-surface-variant font-light leading-relaxed max-w-3xl">
+                Genel geçer yazılım çözümleri sunmuyoruz. Her sektörün kendine has regülasyonlarını ve nakit döngülerini merkeze alan uyarlanmış mimariler inşa ediyoruz.
+            </p>
+        </div>
+    </section>
+
+    <!-- Sectors Detailed List -->
+    <section class="py-0">
+        <!-- 1: Perakende -->
+        <article class="py-24 px-8 border-b border-outline-variant/10 bg-surface-container-lowest hover:bg-surface transition-colors duration-700">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+                <div class="lg:col-span-4">
+                    <div class="w-16 h-16 rounded-2xl bg-teal-500/10 text-teal-600 flex items-center justify-center mb-6">
+                        <span class="material-symbols-outlined text-3xl">storefront</span>
+                    </div>
+                    <h2 class="text-4xl font-headline font-bold text-on-background mb-4">Perakende ve<br/>Hızlı Tüketim</h2>
+                </div>
+                <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div>
+                        <h4 class="text-sm tracking-widest text-on-surface-variant uppercase font-bold mb-4">Kritik Problem</h4>
+                        <p class="text-on-background leading-relaxed">Binlerce mağazadan, onlarca farklı POS cihazından aynı anda akan devasa işlemin mutabakatı, ciro primlerinin hesaplanması ve nakit lojistiğinin takibi korkunç bir operasyonel yüktür.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-sm tracking-widest text-on-surface-variant uppercase font-bold mb-4">Harezm Çözümü</h4>
+                        <p class="text-on-background leading-relaxed">SAP POS Data Transfer & Audit (POSDTA) ve SAP Cash Management entegrasyonuyla tüm nakit akışını anlık izleyen, mağaza bazlı kârlılık çıkaran otomatik yapılar kuruyoruz.</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- 2: Uretim -->
+        <article class="py-24 px-8 border-b border-outline-variant/10 bg-surface-container-lowest hover:bg-surface transition-colors duration-700">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+                <div class="lg:col-span-4">
+                    <div class="w-16 h-16 rounded-2xl bg-orange-500/10 text-orange-600 flex items-center justify-center mb-6">
+                        <span class="material-symbols-outlined text-3xl">precision_manufacturing</span>
+                    </div>
+                    <h2 class="text-4xl font-headline font-bold text-on-background mb-4">Üretim ve<br/>Otomotiv Sanayi</h2>
+                </div>
+                <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div>
+                        <h4 class="text-sm tracking-widest text-on-surface-variant uppercase font-bold mb-4">Kritik Problem</h4>
+                        <p class="text-on-background leading-relaxed">Hammadde fiyat dalgalanmaları, karmaşık tedarik zinciri finansmanı ve uzun vadeli yatırım kararlarının ürün bazlı gerçek maliyet (Material Ledger) analizini zorlaştırması.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-sm tracking-widest text-on-surface-variant uppercase font-bold mb-4">Harezm Çözümü</h4>
+                        <p class="text-on-background leading-relaxed">SAP TRM üzerinden emtia (commodity) risklerini heç eden ve SAP CO-PC/ML modülleriyle gerçek zamanlı kesin maliyet raporlaması sunan entegre fabrikalar inşa ediyoruz.</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- 3: Insaat Gayrimenkul -->
+        <article class="py-24 px-8 border-b border-outline-variant/10 bg-surface-container-lowest hover:bg-surface transition-colors duration-700">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+                <div class="lg:col-span-4">
+                    <div class="w-16 h-16 rounded-2xl bg-indigo-500/10 text-indigo-600 flex items-center justify-center mb-6">
+                        <span class="material-symbols-outlined text-3xl">domain</span>
+                    </div>
+                    <h2 class="text-4xl font-headline font-bold text-on-background mb-4">İnşaat ve<br/>Gayrimenkul (GYO)</h2>
+                </div>
+                <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div>
+                        <h4 class="text-sm tracking-widest text-on-surface-variant uppercase font-bold mb-4">Kritik Problem</h4>
+                        <p class="text-on-background leading-relaxed">Çok sayıda alışveriş merkezi veya ofis projesinde; yüzlerce kiracının sözleşmelerini, ciroya endeksli kira artışlarını ve ortak alan gider masraflarını hatasız yönetememek.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-sm tracking-widest text-on-surface-variant uppercase font-bold mb-4">Harezm Çözümü</h4>
+                        <p class="text-on-background leading-relaxed">Merkezi SAP RE-FX modülü uygulayarak IFRS 16 hesaplamalarını, m² bazlı faturalandırmayı ve tesis bakım uyarılarını tamamen otomatize ediyoruz.</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- 4: Bankacilik Finans -->
+        <article class="py-24 px-8 border-b border-outline-variant/10 bg-surface-container-lowest hover:bg-surface transition-colors duration-700">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+                <div class="lg:col-span-4">
+                    <div class="w-16 h-16 rounded-2xl bg-amber-500/10 text-amber-600 flex items-center justify-center mb-6">
+                        <span class="material-symbols-outlined text-3xl">account_balance</span>
+                    </div>
+                    <h2 class="text-4xl font-headline font-bold text-on-background mb-4">Finansal Hizmetler<br/>ve Holdingler</h2>
+                </div>
+                <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div>
+                        <h4 class="text-sm tracking-widest text-on-surface-variant uppercase font-bold mb-4">Kritik Problem</h4>
+                        <p class="text-on-background leading-relaxed">Holding bünyesindeki farklı alt şirketlerin nakdini tek bir havuzda yönetememek, grup içi fon transferlerinde zaman ve komisyon kaybı yaşamak.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-sm tracking-widest text-on-surface-variant uppercase font-bold mb-4">Harezm Çözümü</h4>
+                        <p class="text-on-background leading-relaxed">Gelişmiş In-House Cash (IHC) ve Cash Pooling stratejileriyle içeride sanal bir banka kurarak holding verimliliğini %40 artırıyoruz.</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- 5: Lojistik -->
+        <article class="py-24 px-8 border-b border-outline-variant/10 bg-surface-container-lowest hover:bg-surface transition-colors duration-700">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+                <div class="lg:col-span-4">
+                    <div class="w-16 h-16 rounded-2xl bg-blue-500/10 text-blue-600 flex items-center justify-center mb-6">
+                        <span class="material-symbols-outlined text-3xl">local_shipping</span>
+                    </div>
+                    <h2 class="text-4xl font-headline font-bold text-on-background mb-4">Lojistik ve<br/>Tedarik Zinciri</h2>
+                </div>
+                <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div>
+                        <h4 class="text-sm tracking-widest text-on-surface-variant uppercase font-bold mb-4">Kritik Problem</h4>
+                        <p class="text-on-background leading-relaxed">Karmaşık filo masrafları, yakıt maliyetleri ve gümrük faturalarının işlenmesinde yaşanan gecikmelerin şirket bütçesinde kör noktalar yaratması.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-sm tracking-widest text-on-surface-variant uppercase font-bold mb-4">Harezm Çözümü</h4>
+                        <p class="text-on-background leading-relaxed">SAP ve OpenText VIM sistemleriyle nakliye ve tedarikçi faturalarını OCR üzerinden saniyeler içinde işleyerek anlık gider görünürlüğü sağlıyoruz.</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+    
+    <!-- Final CTA -->
+    <section class="py-20 bg-surface">
+        <div class="max-w-4xl mx-auto px-8 text-center text-on-background">
+            <h2 class="text-3xl font-bold font-headline mb-6">Siz de Kendi Sektörünüzde<br/>Öncü Olmak İster misiniz?</h2>
+            <a href="/iletisim" class="inline-flex items-center gap-2 bg-on-background text-white px-8 py-3 rounded-lg font-bold hover:-translate-y-1 hover:shadow-xl transition-all">
+                Bizimle İletişime Geçin <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </a>
+        </div>
+    </section>
+</Layout>

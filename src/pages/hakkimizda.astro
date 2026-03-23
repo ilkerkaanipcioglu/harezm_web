@@ -1,26 +1,162 @@
 ---
 import Layout from '../layouts/Layout.astro';
 ---
-<Layout title="Hakkımızda">
-    <section class="py-32 px-12 bg-surface">
-        <div class="max-w-4xl mx-auto">
-            <h1 class="display-lg text-5xl font-bold font-headline mb-8">Harezm Hakkında</h1>
-            <div class="prose prose-lg dark:prose-invert">
-                <p>Harezm, SAP ERP Finansal uygulamalarında derinlemesine uzmanlaşma hedefiyle 2010 yılında kuruldu. Yolculuğumuza "en iyi bildiğimiz işi, en iyi şekilde yapma" prensibiyle başladık.</p>
-                <p>Biz yalnızca bir yazılım tedarikçisi değiliz; müşterilerimizin iş süreçlerini analiz eden, darboğazlarını tespit eden ve "best practice" yaklaşımıyla en verimli çözüm yolunu inşa eden stratejik bir danışmanlık ortağıyız.</p>
-                <p>Sadece Türkiye'ye değil, global çapta yurt dışına da hizmet veren bir firma olarak; pek çok sektörde elde ettiğimiz derin uzmanlık, kaliteli hizmet anlayışı ve SAP-Finans köprüsünü kuran vizyonumuzla fark yaratıyoruz.</p>
+<Layout title="Hakkımızda | Harezm">
+    <!-- Hero -->
+    <section class="relative pt-40 pb-24 bg-surface-container overflow-hidden">
+        <div class="max-w-[1920px] mx-auto px-12 md:px-24">
+            <div class="text-center max-w-5xl mx-auto">
+                <span class="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary font-bold text-xs tracking-widest uppercase mb-6">FELSEFEMİZ</span>
+                <h1 class="display-lg text-6xl md:text-8xl font-bold font-headline text-on-background tracking-tight mb-8">Danışmanlık değil.<br/><span class="text-primary italic">Mimari.</span></h1>
+                <p class="text-2xl text-on-surface-variant font-light leading-relaxed max-w-3xl mx-auto">
+                    Biz yalnızca bir yazılım tedarikçisi değiliz; işletmenizin finansal geleceğini inşa eden stratejik bir iş ortağıyız.
+                </p>
             </div>
-            
-            <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-12">
-                <div class="bg-surface-container-low p-8 rounded-xl border border-outline-variant/20">
-                    <h3 class="text-2xl font-bold font-headline mb-4">Misyon</h3>
-                    <p class="text-on-surface-variant">Finansal SAP projelerinde müşterilerimizin başarısını sağlamak, riskleri azaltmak ve sürdürülebilir sistem tasarımı yapmak.</p>
+        </div>
+    </section>
+
+    <!-- Philosophy Quote -->
+    <section class="py-32 bg-surface">
+        <div class="max-w-4xl mx-auto px-8 text-center">
+            <span class="material-symbols-outlined text-6xl text-primary/30 mb-8 block">format_quote</span>
+            <h2 class="text-3xl md:text-5xl font-headline font-bold text-on-background leading-tight mb-8">
+                "Algoritmalarımız Harezm'den doğuyor, nehirlerimiz tüm dünyaya akıyor."
+            </h2>
+            <p class="text-lg text-on-surface-variant uppercase tracking-widest font-bold">İlker Kaan İpcioğlu, Kurucu</p>
+        </div>
+    </section>
+
+    <!-- The Approach -->
+    <section class="py-24 bg-surface-container-lowest">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="display-lg text-4xl font-headline font-bold text-on-background mb-6">Neden Farklıyız?</h2>
+                    <p class="text-lg text-on-surface-variant leading-relaxed mb-6">
+                        Klasik danışmanlık firmalarında projenizi kıdemsiz ekipler yönetirken, Harezm'de doğrudan en az 10 yıl deneyimli kıdemli uzmanlarla çalışırsınız.
+                    </p>
+                    <p class="text-lg text-on-surface-variant leading-relaxed mb-8">
+                        Darboğazları tespit eder, "best practice" yaklaşımıyla en verimli çözüm yolunu bulur ve işletmenizin gerçek potansiyelini ortaya çıkarırız. Finansal mühendislik ile SAP tecrübesini birleştiriyoruz.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary">check_circle</span>
+                            <span class="text-on-background font-medium">Domain Uzmanlığı (Sadece Finans)</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary">check_circle</span>
+                            <span class="text-on-background font-medium">Boutique & Agile Yaklaşım</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary">check_circle</span>
+                            <span class="text-on-background font-medium">Tam Şeffaflık ve Proaktif İletişim</span>
+                        </li>
+                    </ul>
                 </div>
-                <div class="bg-surface-container-low p-8 rounded-xl border border-outline-variant/20">
-                    <h3 class="text-2xl font-bold font-headline mb-4">Vizyon</h3>
-                    <p class="text-on-surface-variant">SAP Finance danışmanlığında Türkiye'nin ve bölgenin güvenilir ortağı olmak.</p>
+                <!-- Visual / Icons -->
+                <div class="grid grid-cols-2 gap-6 relative">
+                    <!-- Decor element -->
+                    <div class="absolute -inset-10 bg-gradient-to-tr from-primary/10 to-transparent blur-3xl -z-10 rounded-full"></div>
+                    <div class="bg-surface-container-low p-8 rounded-2xl border border-outline-variant/20 shadow-lg transform translate-y-8">
+                        <span class="material-symbols-outlined text-4xl text-primary mb-4 block">star</span>
+                        <h4 class="font-bold text-on-background text-lg mb-2">15+ Yıl</h4>
+                        <p class="text-sm text-on-surface-variant">SAP Finans Uzmanlığı</p>
+                    </div>
+                    <div class="bg-surface-container-low p-8 rounded-2xl border border-outline-variant/20 shadow-lg">
+                        <span class="material-symbols-outlined text-4xl text-primary mb-4 block">public</span>
+                        <h4 class="font-bold text-on-background text-lg mb-2">Global Etki</h4>
+                        <p class="text-sm text-on-surface-variant">40+ Enterprise Proje, 5 Kıta</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Data Sovereignty Insight -->
+    <section class="py-24 bg-surface border-t border-outline-variant/10">
+        <div class="max-w-5xl mx-auto px-8">
+            <div class="bg-surface-container-low p-10 md:p-16 rounded-3xl border border-outline-variant/20 relative overflow-hidden shadow-2xl">
+                <div class="absolute w-[800px] h-[800px] bg-primary/5 rounded-full blur-3xl pointer-events-none -right-40 -top-40"></div>
+                <div class="absolute w-[400px] h-[400px] bg-primary/5 rounded-full blur-3xl pointer-events-none -left-20 -bottom-20"></div>
+                
+                <span class="material-symbols-outlined text-6xl text-primary/20 mb-8 block relative z-10">format_quote</span>
+                <h3 class="text-sm font-bold tracking-[0.2em] text-primary uppercase mb-8 relative z-10">08 · DATA SOVEREIGNTY</h3>
+                <p class="text-xl md:text-2xl text-on-background font-light leading-relaxed mb-10 relative z-10 italic">
+                    "Kurumsal sistemler giderek birbirine bağlandıkça ve yapay zeka yetenekleri hassas operasyonel verilere erişim gerektirdikçe, verinin nerede bulunduğu ve kimin kontrol ettiği sorusu IT politikasından yönetim kurulu risk yönetimine taşındı. GDPR, KVKK ve birden fazla yargı bölgesinde gelişmekte olan veri egemenliği gereklilikleri, veri yerleşimi ve işleme üzerine katı sınırlar getiriyor. SAP mimarisi, bilinçli bir tasarımla hayata geçirildiğinde güçlü veri egemenliği kontrolleri sağlar: genel bulutun uygulanabilir olmadığı organizasyonlar için yerinde ve özel bulut seçenekleri, tedarikçi kilitlenmesini önleyen API-first entegrasyon desenleri ve veri erişiminin her zaman kasıtlı olmasını güvence altına alan rol bazlı erişim mimarisi. Harezm'in veri egemenliğine yaklaşımı basit bir ilkeye dayanır: inşa ettiğimiz sistemler organizasyona hizmet etmeli — tersi değil. Her mimari karar, uzun vadeli kontrol sorusu karşısında değerlendirilir: veriniz, kurallarınız, koşullarınız."
+                </p>
+                <div class="flex items-center gap-4 relative z-10 mt-10 pt-10 border-t border-outline-variant/10">
+                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                        <span class="material-symbols-outlined">architecture</span>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-on-background">Harezm Insight Series</h4>
+                        <span class="text-xs text-on-surface-variant uppercase tracking-[0.2em]">Finansal Mimari Vizyonu</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Story -->
+    <section class="py-32 bg-surface">
+        <div class="max-w-4xl mx-auto px-8">
+            <h2 class="text-center display-lg text-4xl font-headline font-bold text-on-background mb-20">Yolculuğumuz</h2>
+            
+            <div class="relative border-l border-primary/30 ml-4 md:ml-0 md:border-none">
+                <!-- Vertical Line (Desktop) -->
+                <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-primary/20 -translate-x-1/2"></div>
+                
+                <!-- 2010 -->
+                <div class="relative flex flex-col md:flex-row items-center justify-between mb-16 px-6 md:px-0">
+                    <div class="hidden md:block w-5 h-5 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border-4 border-surface bg-primary z-10"></div>
+                    <!-- Right (Empty for desktop balance) -->
+                    <div class="md:w-1/2 md:pr-16 text-left md:text-right">
+                        <span class="text-primary font-bold text-xl tracking-widest font-headline mb-2 block">2010</span>
+                        <h3 class="text-2xl font-bold text-on-background mb-3">Temellerin Atılması</h3>
+                        <p class="text-on-surface-variant leading-relaxed">Harezm, SAP ERP Finansal uygulamalarında derinlemesine uzmanlaşma hedefiyle kuruldu. "En iyi bildiğimiz işi, en iyi şekilde yapma" prensibini benimsedik.</p>
+                    </div>
+                    <div class="md:w-1/2 md:pl-16 mt-4 md:mt-0 opacity-50 hidden md:block">
+                    </div>
+                </div>
+
+                <!-- 2015 -->
+                <div class="relative flex flex-col md:flex-row-reverse items-center justify-between mb-16 px-6 md:px-0">
+                    <div class="hidden md:block w-5 h-5 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border-4 border-surface bg-primary z-10"></div>
+                    <div class="md:w-1/2 md:pl-16 text-left">
+                        <span class="text-primary font-bold text-xl tracking-widest font-headline mb-2 block">2015</span>
+                        <h3 class="text-2xl font-bold text-on-background mb-3">İlk Büyük TRM Projesi</h3>
+                        <p class="text-on-surface-variant leading-relaxed">Türkiye'nin öncü holdinglerinden biri için ilk geniş ölçekli Treasury and Risk Management (TRM) sistemini sıfırdan tasarlayıp devreye aldık.</p>
+                    </div>
+                    <div class="md:w-1/2 md:pr-16 mt-4 md:mt-0 hidden md:block text-right">
+                    </div>
+                </div>
+
+                <!-- 2020 -->
+                <div class="relative flex flex-col md:flex-row items-center justify-between mb-16 px-6 md:px-0">
+                    <div class="hidden md:block w-5 h-5 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border-4 border-surface bg-primary z-10"></div>
+                    <div class="md:w-1/2 md:pr-16 text-left md:text-right">
+                        <span class="text-primary font-bold text-xl tracking-widest font-headline mb-2 block">2020</span>
+                        <h3 class="text-2xl font-bold text-on-background mb-3">Global Genişleme</h3>
+                        <p class="text-on-surface-variant leading-relaxed">Avrupa ve Orta Doğu'daki ilk yurt dışı projelerimizi başarıyla tamamladık. SAP-Finans köprüsünü kuran vizyonumuzu uluslararası arenaya taşıdık.</p>
+                    </div>
+                    <div class="md:w-1/2 md:pl-16 mt-4 md:mt-0 hidden md:block text-left">
+                    </div>
+                </div>
+
+                <!-- Today -->
+                <div class="relative flex flex-col md:flex-row-reverse items-center justify-between px-6 md:px-0">
+                    <div class="hidden md:block w-5 h-5 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border-4 border-surface bg-primary z-10 animate-pulse"></div>
+                    <div class="md:w-1/2 md:pl-16 text-left">
+                        <span class="text-primary font-bold text-xl tracking-widest font-headline mb-2 block">Bugün</span>
+                        <h3 class="text-2xl font-bold text-on-background mb-3">AI & Yeni Nesil Çözümler</h3>
+                        <p class="text-on-surface-variant leading-relaxed">S/4HANA Cloud, yapay zeka entegrasyonları ve e-Dönüşüm çözümlerimizle finansal mimariyi baştan tanımlamaya devam ediyoruz.</p>
+                    </div>
+                    <div class="md:w-1/2 md:pr-16 mt-4 md:mt-0 hidden md:block text-right">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
 </Layout>

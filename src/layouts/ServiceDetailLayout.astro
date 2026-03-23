@@ -1,0 +1,192 @@
+---
+import Layout from './Layout.astro';
+
+interface RelatedService {
+    title: string;
+    href: string;
+}
+
+interface Props {
+    title: string;
+    description: string;
+    icon: string;
+    
+    problemTitle?: string;
+    problemText?: string;
+    
+    solutionTitle?: string;
+    solutionText?: string;
+    
+    resultTitle?: string;
+    resultText?: string;
+    
+    insightTitle?: string;
+    insightContent?: string;
+    
+    tags?: string[];
+    relatedServices?: RelatedService[];
+}
+
+const { 
+    title, 
+    description, 
+    icon, 
+    problemTitle = "Mevcut Durum", 
+    problemText, 
+    solutionTitle = "Harezm Yaklaşımı", 
+    solutionText, 
+    resultTitle = "İş Sonuçları", 
+    resultText, 
+    insightTitle,
+    insightContent,
+    tags = [], 
+    relatedServices = [] 
+} = Astro.props;
+---
+<Layout title={`${title} | Hizmetler`}>
+    <!-- Mini Hero -->
+    <header class="pt-40 pb-20 md:pt-48 md:pb-24 bg-bg border-b border-border-main relative overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--color-plum)_0%,_transparent_50%)] opacity-5 pointer-events-none"></div>
+        <div class="max-w-container mx-auto px-8 md:px-12 relative z-10 animate-fade-up">
+            <div class="flex items-center gap-4 mb-8">
+                <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-bg2 border border-border">
+                    <span class="material-symbols-outlined text-teal text-2xl">{icon}</span>
+                </div>
+                <div class="h-px flex-1 max-w-[100px] bg-border-main"></div>
+                <a href="/hizmetler" class="text-text-40 text-sm font-medium hover:text-plum transition-colors uppercase tracking-wider">Tüm Hizmetler</a>
+            </div>
+            
+            <h1 class="display-lg text-4xl md:text-5xl lg:text-h1 mb-6 max-w-4xl">{title}</h1>
+            <p class="text-text-70 text-lg md:text-xl font-light max-w-2xl leading-relaxed">{description}</p>
+        </div>
+    </header>
+
+    <div class="max-w-container mx-auto px-8 md:px-12 py-24 md:py-32 grid grid-cols-1 lg:grid-cols-12 gap-16">
+        <!-- Main Content -->
+        <article class="lg:col-span-8 space-y-24">
+            
+            <!-- Problem -->
+            {problemText && (
+                <section>
+                    <div class="flex items-start gap-6">
+                        <span class="text-text-40 font-serif text-5xl opacity-30 mt-1">01</span>
+                        <div>
+                            <h2 class="text-2xl md:text-3xl mb-6 font-medium">{problemTitle}</h2>
+                            <div class="prose prose-lg prose-invert max-w-none text-text-70 font-light leading-relaxed">
+                                <p>{problemText}</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            )}
+
+            <!-- Solution -->
+            {solutionText && (
+                <section>
+                    <div class="flex items-start gap-6">
+                        <span class="text-plum font-serif text-5xl opacity-40 mt-1">02</span>
+                        <div>
+                            <h2 class="text-2xl md:text-3xl mb-6 font-medium text-plum">{solutionTitle}</h2>
+                            <div class="prose prose-lg prose-invert max-w-none text-text-main font-light leading-relaxed">
+                                <p>{solutionText}</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            )}
+
+            <!-- Result -->
+            {resultText && (
+                <section>
+                    <div class="flex items-start gap-6">
+                        <span class="text-teal font-serif text-5xl opacity-40 mt-1">03</span>
+                        <div>
+                            <h2 class="text-2xl md:text-3xl mb-6 font-medium">{resultTitle}</h2>
+                            <div class="glass-card p-8 rounded-2xl border-l-4 border-l-teal relative overflow-hidden">
+                                <span class="material-symbols-outlined absolute right-4 bottom-4 text-8xl text-bg opacity-50 pointer-events-none">trending_up</span>
+                                <div class="relative z-10 prose prose-lg prose-invert max-w-none text-text-70 font-light leading-relaxed">
+                                    <p>{resultText}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            )}
+
+            <!-- Insight Block -->
+            {insightContent && (
+                <section class="mt-24">
+                    <div class="glass-card p-10 rounded-2xl border border-border-main relative overflow-hidden bg-bg2">
+                        <span class="material-symbols-outlined text-6xl text-plum opacity-20 mb-6 block">format_quote</span>
+                        {insightTitle && (
+                            <h3 class="text-xs font-medium tracking-widest text-plum uppercase mb-6">{insightTitle}</h3>
+                        )}
+                        <p class="text-xl md:text-2xl text-text-main font-light leading-relaxed mb-8 relative z-10 italic">
+                            "{insightContent}"
+                        </p>
+                        <div class="flex items-center gap-4 relative z-10 mt-8 pt-6 border-t border-border-main/50">
+                            <span class="material-symbols-outlined text-teal text-2xl">architecture</span>
+                            <div>
+                                <h4 class="text-sm font-medium text-text-main">Harezm Insight Series</h4>
+                                <span class="text-xs text-text-70 uppercase tracking-widest">Finansal Mimari Vizyonu</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            )}
+
+        </article>
+
+        <!-- Sidebar -->
+        <aside class="lg:col-span-4 space-y-12">
+            <!-- Tag Cloud -->
+            {tags.length > 0 && (
+                <div class="glass-card p-8 rounded-2xl border border-border-main">
+                    <h3 class="text-sm font-medium text-text-40 tracking-widest uppercase mb-6">İlgili SAP Modülleri</h3>
+                    <div class="flex flex-wrap gap-2">
+                        {tags.map(tag => (
+                            <span class="px-3 py-1.5 rounded bg-bg border border-border text-text-70 text-sm">{tag}</span>
+                        ))}
+                    </div>
+                </div>
+            )}
+
+            <!-- Related Services -->
+            {relatedServices.length > 0 && (
+                <div class="glass-card p-8 rounded-2xl border border-border-main">
+                    <h3 class="text-sm font-medium text-text-40 tracking-widest uppercase mb-6">Benzer Çözümler</h3>
+                    <ul class="space-y-4">
+                        {relatedServices.map(service => (
+                            <li>
+                                <a href={service.href} class="flex items-center justify-between group">
+                                    <span class="text-text-70 group-hover:text-plum transition-colors">{service.title}</span>
+                                    <span class="material-symbols-outlined text-sm text-text-40 group-hover:text-plum transition-colors opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0">arrow_forward</span>
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            )}
+
+            <!-- Sidebar CTA -->
+            <div class="bg-plum p-8 rounded-2xl text-white">
+                <h3 class="text-xl font-medium mb-4">Ücretsiz Sistem Analizi</h3>
+                <p class="text-white/80 text-sm font-light mb-8">Finansal altyapınızdaki dar boğazları ve SAP potansiyelinizi değerlendirelim.</p>
+                <a href="/iletisim" class="block text-center w-full px-6 py-3 bg-white text-plum rounded-lg font-medium hover:bg-bg2 transition-colors">
+                    Randevu Alın
+                </a>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Bottom CTA -->
+    <section class="py-24 bg-bg2 border-t border-border-main flex justify-center text-center px-8">
+        <div class="max-w-2xl">
+            <h2 class="text-3xl font-medium mb-6">Mimari Değişim Başlasın</h2>
+            <p class="text-text-70 font-light mb-8">Finansal operasyonlarınızı otomatize etmek ve sistemlerinizi geleceğe hazırlamak için ilk adımı atın.</p>
+            <a href="/iletisim" class="inline-flex items-center gap-2 bg-plum text-text-main px-8 py-4 rounded-lg font-medium hover:bg-plum-hover transition-colors">
+                Görüşme Ayarla <span class="material-symbols-outlined text-sm">arrow_outward</span>
+            </a>
+        </div>
+    </section>
+</Layout>
