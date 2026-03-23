@@ -16,16 +16,16 @@ import Layout from '../layouts/Layout.astro';
                     SAP CERTIFIED PARTNER · ISTANBUL
                 </div>
                 
-                <h1 class="display-lg text-4xl md:text-h1 mb-6">
-                    Finansal Kontrol <br/> <em class="text-plum italic font-normal">Mimarisi</em>
+                <h1 class="display-lg text-4xl md:text-5xl lg:text-h1 mb-6">
+                    SAP'ı tasarlarız. Türkiye'ye entegre ederiz.<br/> <em class="text-plum italic font-normal">Tek Elden.</em>
                 </h1>
                 
                 <p class="text-text-70 text-body-lg mb-10 font-light max-w-text">
-                    Sistemler kurmuyoruz. Şirketinizin finansal gerçeğini tasarlıyoruz — likidite, risk, uyum ve karar mekanizması tek bir mimari altında.
+                    Danışmanlık değil, mimari üretiyoruz. Şirketinizin finansal gerçeğini tasarlıyor; SAP danışmanlığını, e-Dönüşümü, yapay zekayı ve banka entegrasyonlarını tek bir mimari altında birleştiriyoruz.
                 </p>
                 
                 <div class="flex flex-wrap gap-4">
-                    <a href="/iletisim" class="bg-plum text-text-main px-8 py-4 rounded-lg font-medium text-ui hover:bg-plum-hover transition-colors">
+                    <a href="/iletisim" class="bg-plum text-white px-8 py-4 rounded-lg font-medium text-ui hover:bg-plum-hover transition-colors">
                         Projeyi Başlat
                     </a>
                     <a href="/hizmetler" class="bg-transparent text-text-main px-8 py-4 rounded-lg font-medium text-ui border border-border-main hover:bg-bg2 transition-colors inline-flex items-center gap-2">
@@ -35,17 +35,31 @@ import Layout from '../layouts/Layout.astro';
                 </div>
             </div>
 
-            <!-- Right Panel (5/12) - Trust Signals -->
+            <!-- Right Panel (5/12) - Trust Signals / Focus -->
             <div class="lg:col-span-5 animate-fade-left delay-2 border border-border rounded-xl p-8 lg:p-10 bg-bg2 relative overflow-hidden">
                 <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--color-border)_0%,_transparent_60%)] opacity-20 pointer-events-none"></div>
-                <h3 class="text-h4 mb-6 relative z-10">Çalıştığımız Sektörler</h3>
                 
-                <div class="flex flex-wrap gap-3 mb-8 relative z-10">
-                    <span class="px-4 py-2 rounded-lg bg-bg text-text-70 text-sm border border-border">İlaç</span>
-                    <span class="px-4 py-2 rounded-lg bg-bg text-text-70 text-sm border border-border">Savunma</span>
-                    <span class="px-4 py-2 rounded-lg bg-bg text-text-70 text-sm border border-border">FMCG</span>
-                    <span class="px-4 py-2 rounded-lg bg-bg text-text-70 text-sm border border-border">Enerji</span>
-                    <span class="px-4 py-2 rounded-lg bg-bg text-text-70 text-sm border border-border">Otomotiv</span>
+                <!-- TMS 29 Badge -->
+                <div class="mb-8 p-4 rounded-lg border border-red-500/20 bg-red-500/5 flex items-start gap-3 relative z-10 group cursor-default">
+                    <span class="material-symbols-outlined text-red-500 text-xl group-hover:scale-110 transition-transform">gavel</span>
+                    <div>
+                        <p class="text-[10px] text-red-500 font-bold tracking-widest uppercase mb-1">Zorunlu Uyumluluk</p>
+                        <p class="text-sm text-text-main font-medium">TMS 29 Enflasyon Muhasebesi</p>
+                        <p class="text-xs text-text-70 mt-1">SAP üzerinde %100 uyumlu, yasal geçerli altyapı.</p>
+                    </div>
+                </div>
+
+                <h3 class="text-h4 mb-6 relative z-10">Gizli Gücümüz: Uçtan Uca Entegrasyon</h3>
+                
+                <div class="grid grid-cols-2 gap-4 mb-6 relative z-10">
+                    <div class="p-4 rounded-lg bg-bg border border-border">
+                        <p class="text-2xl font-serif text-teal mb-1">29</p>
+                        <p class="text-xs text-text-70 font-light">Türk bankasıyla hazır entegre mimari</p>
+                    </div>
+                    <div class="p-4 rounded-lg bg-bg border border-border">
+                        <p class="text-2xl font-serif text-teal mb-1">%94</p>
+                        <p class="text-xs text-text-70 font-light">Banka mutabakat süreçleri otomasyonu</p>
+                    </div>
                 </div>
 
                 <div class="pt-6 border-t border-border flex items-center justify-between relative z-10">
@@ -60,6 +74,41 @@ import Layout from '../layouts/Layout.astro';
             </div>
         </div>
     </header>
+
+    <!-- Product Width Map / 3 Column Summary -->
+    <section class="py-12 bg-bg relative box-border border-b border-border-main z-20 shadow-sm">
+        <div class="max-w-container mx-auto px-8 md:px-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-lg border border-border flex items-center justify-center shrink-0 bg-bg2 text-teal">
+                    <span class="material-symbols-outlined text-lg">account_balance</span>
+                </div>
+                <div>
+                    <h4 class="text-text-main font-medium mb-1">SAP Danışmanlığı</h4>
+                    <p class="text-sm font-light text-text-70">S/4HANA Cloud, FI/CO, TRM, RE-FX, Kar Konsolidasyonu</p>
+                </div>
+            </div>
+            
+            <div class="flex items-start gap-4 relative md:before:absolute md:before:w-px md:before:h-12 md:before:bg-border-main md:before:-left-4 md:before:top-2">
+                <div class="w-10 h-10 rounded-lg border border-border flex items-center justify-center shrink-0 bg-bg2 text-teal">
+                    <span class="material-symbols-outlined text-lg">sync_alt</span>
+                </div>
+                <div>
+                    <h4 class="text-text-main font-medium mb-1">e-Dönüşüm & Otomasyon</h4>
+                    <p class="text-sm font-light text-text-70">e-Fatura, e-Defter, Online DBS Yönetimi ve TÖS</p>
+                </div>
+            </div>
+
+            <div class="flex items-start gap-4 relative md:before:absolute md:before:w-px md:before:h-12 md:before:bg-border-main md:before:-left-4 md:before:top-2">
+                <div class="w-10 h-10 rounded-lg border border-border flex items-center justify-center shrink-0 bg-bg2 text-teal">
+                    <span class="material-symbols-outlined text-lg">smart_toy</span>
+                </div>
+                <div>
+                    <h4 class="text-text-main font-medium mb-1">AI & Eğitim Hizmetleri</h4>
+                    <p class="text-sm font-light text-text-70">SAP Joule Uyarlaması, Süreç Ajanları ve Modül Eğitimleri</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Hizmetler Section (6 Card Grid) -->
     <section class="py-24 md:py-32 px-8 md:px-12 bg-bg2 relative box-border border-b border-border-main">
@@ -394,8 +443,8 @@ import Layout from '../layouts/Layout.astro';
         <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--color-plum-hover)_0%,_transparent_70%)] opacity-50"></div>
         
         <div class="max-w-container mx-auto relative z-10 flex flex-col items-center">
-            <h2 class="display-lg text-4xl md:text-h1 mb-6 text-text-main">Sisteme girin</h2>
-            <p class="text-text-main/80 text-xl md:text-2xl mb-12 font-light max-w-[600px]">
+            <h2 class="display-lg text-4xl md:text-h1 mb-6 text-white">Sisteme girin</h2>
+            <p class="text-white/80 text-xl md:text-2xl mb-12 font-light max-w-[600px]">
                 Yaklaşım değil, kontrol isteyen şirketler için. İlk görüşmede mevcut sistemlerinizi analiz ediyoruz.
             </p>
             
@@ -403,7 +452,7 @@ import Layout from '../layouts/Layout.astro';
                 Görüşme Talep Et
             </a>
 
-            <div class="flex flex-col md:flex-row flex-wrap justify-center gap-8 md:gap-16 text-text-main/80 text-sm font-light">
+            <div class="flex flex-col md:flex-row flex-wrap justify-center gap-8 md:gap-16 text-white/80 text-sm font-light">
                 <div class="flex items-center gap-2">
                     <span class="material-symbols-outlined text-sm">mail</span>
                     info@harezm.com

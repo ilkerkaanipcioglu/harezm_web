@@ -22,7 +22,7 @@ import Layout from '../layouts/Layout.astro';
                 </p>
                 
                 <div class="flex flex-wrap gap-4">
-                    <a href="#hizmetler-grid" class="bg-plum text-text-main px-8 py-4 rounded-lg font-medium text-ui hover:bg-plum-hover transition-colors inline-flex items-center gap-2">
+                    <a href="#hizmetler-grid" class="bg-plum text-white px-8 py-4 rounded-lg font-medium text-ui hover:bg-plum-hover transition-colors inline-flex items-center gap-2">
                         Uzmanlık Alanlarını İncele
                         <span class="material-symbols-outlined text-sm">arrow_downward</span>
                     </a>
@@ -45,7 +45,16 @@ import Layout from '../layouts/Layout.astro';
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[auto]">
-                <!-- Card 1: SAP FI & CO / Material Ledger (Merged) -->
+
+                <!-- Kategori 1 Başlığı -->
+                <div class="md:col-span-12 mt-4 mb-2 border-b border-border-main pb-4">
+                    <h3 class="text-2xl font-serif text-teal flex items-center gap-3">
+                        <span class="material-symbols-outlined">account_tree</span>
+                        1. SAP Platformu
+                    </h3>
+                </div>
+
+<!-- Card 1: SAP FI & CO / Material Ledger (Merged) -->
                 <div class="md:col-span-8 md:row-span-2 bg-plum p-10 rounded-2xl flex flex-col justify-between text-white relative overflow-hidden group">
                     <div class="absolute right-0 top-0 w-1/2 h-full bg-gradient-to-l from-white/10 to-transparent pointer-events-none"></div>
                     <div class="relative z-10 w-full">
@@ -88,7 +97,8 @@ import Layout from '../layouts/Layout.astro';
                     </div>
                 </div>
 
-                <!-- Card 5: S/4HANA -->
+                
+<!-- Card 5: S/4HANA -->
                 <div class="md:col-span-4 md:row-span-1 glass-card p-8 rounded-2xl flex flex-col justify-between group hover:border-plum transition-all duration-300">
                     <div>
                         <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-bg border border-border mb-6 group-hover:border-plum transition-colors">
@@ -100,7 +110,8 @@ import Layout from '../layouts/Layout.astro';
                     <a href="/s4hana" class="inline-flex items-center gap-2 font-medium text-sm text-text-main group-hover:text-plum transition-colors">Detayları İncele <span class="material-symbols-outlined text-sm">arrow_outward</span></a>
                 </div>
 
-                <!-- Card 6: PS & BPC -->
+                
+<!-- Card 6: PS & BPC -->
                 <div class="md:col-span-4 md:row-span-1 glass-card p-8 rounded-2xl flex flex-col justify-between group hover:border-plum transition-all duration-300">
                     <div>
                         <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-bg border border-border mb-6 group-hover:border-plum transition-colors">
@@ -111,18 +122,8 @@ import Layout from '../layouts/Layout.astro';
                     </div>
                 </div>
 
-                <!-- Card 7: AMS Support & Outsourcing -->
-                <div class="md:col-span-4 md:row-span-1 glass-card p-8 rounded-2xl flex flex-col justify-between group hover:border-plum transition-all duration-300">
-                    <div>
-                        <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-bg border border-border mb-6 group-hover:border-plum transition-colors">
-                            <span class="material-symbols-outlined text-text-main group-hover:text-plum transition-colors">engineering</span>
-                        </div>
-                        <h3 class="text-xl font-medium mb-3 text-text-main group-hover:text-plum transition-colors">Stratejik AMS Desteği</h3>
-                        <p class="text-text-70 text-sm font-light leading-relaxed mb-6">Kurumsal SAP projeleriniz için kıdemli danışman ekibimizle uçtan uca, esnek SLA kurguları yönetiyoruz.</p>
-                    </div>
-                </div>
-
-                <!-- Card 8: SAP RE-FX -->
+                
+<!-- Card 8: SAP RE-FX -->
                 <div class="md:col-span-4 md:row-span-1 glass-card p-8 rounded-2xl flex flex-col justify-between group hover:border-plum transition-all duration-300">
                     <div>
                         <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-bg border border-border mb-6 group-hover:border-plum transition-colors">
@@ -134,43 +135,8 @@ import Layout from '../layouts/Layout.astro';
                     <a href="/sap-refx" class="inline-flex items-center gap-2 font-medium text-sm text-text-main group-hover:text-plum transition-colors">Detayları İncele <span class="material-symbols-outlined text-sm">arrow_outward</span></a>
                 </div>
 
-                <!-- Card 9: SAP & OpenText -->
-                <div class="md:col-span-4 md:row-span-1 glass-card p-8 rounded-2xl flex flex-col justify-between group hover:border-plum transition-all duration-300">
-                    <div>
-                        <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-bg border border-border mb-6 group-hover:border-plum transition-colors">
-                            <span class="material-symbols-outlined text-text-main group-hover:text-plum transition-colors">auto_awesome</span>
-                        </div>
-                        <h3 class="text-xl font-medium mb-3 text-text-main group-hover:text-plum transition-colors">SAP & OpenText</h3>
-                        <p class="text-text-70 text-sm font-light leading-relaxed mb-6">Yapay zeka destekli doküman yönetimi, VIM fatura otomasyonu ve SAP entegrasyonu ile dijital dönüşüm.</p>
-                    </div>
-                    <a href="/sap-opentext" class="inline-flex items-center gap-2 font-medium text-sm text-text-main group-hover:text-plum transition-colors">Detayları İncele <span class="material-symbols-outlined text-sm">arrow_outward</span></a>
-                </div>
-
-                <!-- Card 10: SAP Check-Up -->
-                <div class="md:col-span-4 md:row-span-1 glass-card p-8 rounded-2xl flex flex-col justify-between group hover:border-plum transition-all duration-300">
-                    <div>
-                        <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-bg border border-border mb-6 group-hover:border-plum transition-colors">
-                            <span class="material-symbols-outlined text-text-main group-hover:text-plum transition-colors">health_and_safety</span>
-                        </div>
-                        <h3 class="text-xl font-medium mb-3 text-text-main group-hover:text-plum transition-colors">Sistem Optimizasyonu & Check-Up</h3>
-                        <p class="text-text-70 text-sm font-light leading-relaxed mb-6">SAP Best Practice uyum analiziyle finansal süreçlerinizdeki gizli darboğazları tespit ediyor, haritanızı çıkarıyoruz.</p>
-                    </div>
-                    <a href="/sap-checkup" class="inline-flex items-center gap-2 font-medium text-sm text-text-main group-hover:text-plum transition-colors">Detayları İncele <span class="material-symbols-outlined text-sm">arrow_outward</span></a>
-                </div>
-
-                <!-- Card 11: Danışmanlık -->
-                <div class="md:col-span-4 md:row-span-1 glass-card p-8 rounded-2xl flex flex-col justify-between group hover:border-plum transition-all duration-300">
-                    <div>
-                        <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-bg border border-border mb-6 group-hover:border-plum transition-colors">
-                            <span class="material-symbols-outlined text-text-main group-hover:text-plum transition-colors">psychology</span>
-                        </div>
-                        <h3 class="text-xl font-medium mb-3 text-text-main group-hover:text-plum transition-colors">Danışmanlık Hizmetleri</h3>
-                        <p class="text-text-70 text-sm font-light leading-relaxed mb-6">IT stratejisi, dijital dönüşüm, yapay zeka danışmanlığı ve süreç optimizasyonu ile işinizi geleceğe taşıyın.</p>
-                    </div>
-                    <a href="/danismanlik" class="inline-flex items-center gap-2 font-medium text-sm text-text-main group-hover:text-plum transition-colors">Detayları İncele <span class="material-symbols-outlined text-sm">arrow_outward</span></a>
-                </div>
-
-                <!-- Card 12: SAP Cash Management -->
+                
+<!-- Card 12: SAP Cash Management -->
                 <div class="md:col-span-4 md:row-span-1 glass-card p-8 rounded-2xl flex flex-col justify-between group hover:border-plum transition-all duration-300">
                     <div>
                         <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-bg border border-border mb-6 group-hover:border-plum transition-colors">
@@ -182,7 +148,8 @@ import Layout from '../layouts/Layout.astro';
                     <a href="/sap-cash-management" class="inline-flex items-center gap-2 font-medium text-sm text-text-main group-hover:text-plum transition-colors">Detayları İncele <span class="material-symbols-outlined text-sm">arrow_outward</span></a>
                 </div>
 
-                <!-- Card 13: SAP TRM (Feature Card) -->
+                
+<!-- Card 13: SAP TRM (Feature Card) -->
                 <div class="md:col-span-12 md:row-span-1 glass-card p-10 md:p-12 rounded-2xl flex flex-col md:flex-row justify-between items-center group hover:border-plum transition-all duration-300 border-l-4 border-l-transparent hover:border-l-plum">
                     <div class="md:w-2/3 relative z-10">
                         <div class="w-16 h-16 rounded-xl flex items-center justify-center bg-bg border border-border mb-8 group-hover:border-plum transition-colors">
@@ -195,6 +162,180 @@ import Layout from '../layouts/Layout.astro';
                         <a href="/sap-trm" class="inline-flex items-center gap-2 font-medium text-sm bg-bg border border-border text-text-main hover:bg-plum hover:text-white px-8 py-4 rounded-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 whitespace-nowrap">Hemen İncele <span class="material-symbols-outlined text-sm">arrow_outward</span></a>
                     </div>
                 </div>
+            
+                <!-- Card: SAP Sabit Kıymet -->
+                <div class="md:col-span-6 md:row-span-1 glass-card p-8 rounded-2xl flex flex-col justify-between group hover:border-plum transition-all duration-300">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-bg border border-border mb-6 group-hover:border-plum transition-colors">
+                            <span class="material-symbols-outlined text-text-main group-hover:text-plum transition-colors">precision_manufacturing</span>
+                        </div>
+                        <h3 class="text-xl font-medium mb-3 text-text-main group-hover:text-plum transition-colors">SAP Sabit Kıymet Muhasebesi (AA)</h3>
+                        <p class="text-text-70 text-sm font-light leading-relaxed mb-6">Şirketinizin en büyük varlıklarını milimetrik hassasiyetle değerleyin, amortisman planlarınızı otomatikleştirin.</p>
+                    </div>
+                    <a href="/sap-aa" class="inline-flex items-center gap-2 font-medium text-sm text-text-main group-hover:text-plum transition-colors">Detayları İncele <span class="material-symbols-outlined text-sm">arrow_outward</span></a>
+                </div>
+
+                <!-- Card: SAP Finansal Konsolidasyon -->
+                <div class="md:col-span-6 md:row-span-1 glass-card p-8 rounded-2xl flex flex-col justify-between group hover:border-plum transition-all duration-300">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-bg border border-border mb-6 group-hover:border-plum transition-colors">
+                            <span class="material-symbols-outlined text-text-main group-hover:text-plum transition-colors">table_chart</span>
+                        </div>
+                        <h3 class="text-xl font-medium mb-3 text-text-main group-hover:text-plum transition-colors">SAP Finansal Konsolidasyon</h3>
+                        <p class="text-text-70 text-sm font-light leading-relaxed mb-6">Holding ve grup şirketinizin kârlılığını tek bakışta gerçek rakamlarla ölçün, süreci aydan güne indirin.</p>
+                    </div>
+                    <a href="/sap-finansal-konsolidasyon" class="inline-flex items-center gap-2 font-medium text-sm text-text-main group-hover:text-plum transition-colors">Detayları İncele <span class="material-symbols-outlined text-sm">arrow_outward</span></a>
+                </div>
+
+                <!-- Kategori 2 Başlığı -->
+                <div class="md:col-span-12 mt-12 mb-2 border-b border-border-main pb-4">
+                    <h3 class="text-2xl font-serif text-teal flex items-center gap-3">
+                        <span class="material-symbols-outlined">receipt_long</span>
+                        2. e-Dönüşüm & Dijitalleştirme
+                    </h3>
+                </div>
+
+<!-- Card 9: SAP & OpenText -->
+                <div class="md:col-span-4 md:row-span-1 glass-card p-8 rounded-2xl flex flex-col justify-between group hover:border-plum transition-all duration-300">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-bg border border-border mb-6 group-hover:border-plum transition-colors">
+                            <span class="material-symbols-outlined text-text-main group-hover:text-plum transition-colors">auto_awesome</span>
+                        </div>
+                        <h3 class="text-xl font-medium mb-3 text-text-main group-hover:text-plum transition-colors">SAP & OpenText</h3>
+                        <p class="text-text-70 text-sm font-light leading-relaxed mb-6">Yapay zeka destekli doküman yönetimi, VIM fatura otomasyonu ve SAP entegrasyonu ile dijital dönüşüm.</p>
+                    </div>
+                    <a href="/sap-opentext" class="inline-flex items-center gap-2 font-medium text-sm text-text-main group-hover:text-plum transition-colors">Detayları İncele <span class="material-symbols-outlined text-sm">arrow_outward</span></a>
+                </div>
+
+                <!-- Card: KDV İade -->
+                <div class="md:col-span-4 md:row-span-1 glass-card p-8 rounded-2xl flex flex-col justify-between group hover:border-plum transition-all duration-300">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-bg border border-border mb-6 group-hover:border-plum transition-colors">
+                            <span class="material-symbols-outlined text-text-main group-hover:text-plum transition-colors">autorenew</span>
+                        </div>
+                        <h3 class="text-xl font-medium mb-3 text-text-main group-hover:text-plum transition-colors">KDV İade Sistemi</h3>
+                        <p class="text-text-70 text-sm font-light leading-relaxed mb-6">KDV iade listelerinizi GİB formatına %100 uyumlu şekilde SAP üzerinden tek tıkla oluşturun.</p>
+                    </div>
+                    <a href="/kdv-iade-paketi" class="inline-flex items-center gap-2 font-medium text-sm text-text-main group-hover:text-plum transition-colors">Detayları İncele <span class="material-symbols-outlined text-sm">arrow_outward</span></a>
+                </div>
+
+                <!-- Card: e-Ticaret -->
+                <div class="md:col-span-4 md:row-span-1 glass-card p-8 rounded-2xl flex flex-col justify-between group hover:border-plum transition-all duration-300">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-bg border border-border mb-6 group-hover:border-plum transition-colors">
+                            <span class="material-symbols-outlined text-text-main group-hover:text-plum transition-colors">storefront</span>
+                        </div>
+                        <h3 class="text-xl font-medium mb-3 text-text-main group-hover:text-plum transition-colors">e-Ticaret Entegrasyonu</h3>
+                        <p class="text-text-70 text-sm font-light leading-relaxed mb-6">Sipariş, stok, kargo ve fatura verilerini satış kanallarından SAP altyapısına gerçek zamanlı akıtın.</p>
+                    </div>
+                    <a href="/e-ticaret" class="inline-flex items-center gap-2 font-medium text-sm text-text-main group-hover:text-plum transition-colors">Detayları İncele <span class="material-symbols-outlined text-sm">arrow_outward</span></a>
+                </div>
+                
+
+                <!-- Kategori 3 Başlığı -->
+                <div class="md:col-span-12 mt-12 mb-2 border-b border-border-main pb-4">
+                    <h3 class="text-2xl font-serif text-teal flex items-center gap-3">
+                        <span class="material-symbols-outlined">currency_exchange</span>
+                        3. Finansal Otomasyon & Banka Entegrasyonu
+                    </h3>
+                </div>
+
+                <!-- Card: Online DBS -->
+                <div class="md:col-span-6 md:row-span-1 glass-card p-8 rounded-2xl flex flex-col justify-between group hover:border-plum transition-all duration-300">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-bg border border-border mb-6 group-hover:border-plum transition-colors">
+                            <span class="material-symbols-outlined text-text-main group-hover:text-plum transition-colors">account_balance</span>
+                        </div>
+                        <h3 class="text-xl font-medium mb-3 text-text-main group-hover:text-plum transition-colors">Online DBS & Banka Ent.</h3>
+                        <p class="text-text-70 text-sm font-light leading-relaxed mb-6">Banka mutabakatlarınızı, DBS tahsilatlarınızı otomatize ederek ERP sisteminize anında yansıtın.</p>
+                    </div>
+                    <a href="/online-dbs" class="inline-flex items-center gap-2 font-medium text-sm text-text-main group-hover:text-plum transition-colors">Detayları İncele <span class="material-symbols-outlined text-sm">arrow_outward</span></a>
+                </div>
+
+                <!-- Card: TMS 29 -->
+                <div class="md:col-span-6 md:row-span-1 glass-card p-8 rounded-2xl flex flex-col justify-between group hover:border-plum transition-all duration-300">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-bg border border-border mb-6 group-hover:border-plum transition-colors">
+                            <span class="material-symbols-outlined text-text-main group-hover:text-plum transition-colors">gavel</span>
+                        </div>
+                        <h3 class="text-xl font-medium mb-3 text-text-main group-hover:text-plum transition-colors">TMS 29 Enflasyon Muh.</h3>
+                        <p class="text-text-70 text-sm font-light leading-relaxed mb-6">Yüksek enflasyonist ortamlarda yasal zorunlulukları karşılarken hesaplamaları SAP iş yükünden çıkarın.</p>
+                    </div>
+                    <a href="/enflasyon-muhasebesi" class="inline-flex items-center gap-2 font-medium text-sm text-text-main group-hover:text-plum transition-colors">Detayları İncele <span class="material-symbols-outlined text-sm">arrow_outward</span></a>
+                </div>
+
+                <!-- Kategori 4 Başlığı -->
+                <div class="md:col-span-12 mt-12 mb-2 border-b border-border-main pb-4">
+                    <h3 class="text-2xl font-serif text-teal flex items-center gap-3">
+                        <span class="material-symbols-outlined">smart_toy</span>
+                        4. AI & Strateji
+                    </h3>
+                </div>
+
+                <!-- Card: SAP Joule -->
+                <div class="md:col-span-12 md:row-span-1 glass-card p-8 rounded-2xl flex flex-col md:flex-row justify-between items-center group hover:border-plum transition-all duration-300 border-l-4 border-l-transparent hover:border-l-plum">
+                    <div class="md:w-2/3 relative z-10">
+                        <div class="w-16 h-16 rounded-xl flex items-center justify-center bg-bg border border-border mb-6 group-hover:border-plum transition-colors">
+                            <span class="material-symbols-outlined text-text-main group-hover:text-plum transition-colors text-3xl">smart_toy</span>
+                        </div>
+                        <h3 class="text-2xl font-serif mb-3 text-text-main group-hover:text-plum transition-colors">SAP Joule ve AI Ajanları</h3>
+                        <p class="text-text-70 text-sm font-light leading-relaxed mb-6">Şirketinizin ERP hafızasını yapay zeka ajanları ile komuta edin, süreç verimliliğini dönüştürün.</p>
+                    </div>
+                    <div class="md:w-1/3 flex md:justify-end mt-4 md:mt-0 relative z-10">
+                        <a href="/sap-joule-ai" class="inline-flex items-center gap-2 font-medium text-sm bg-bg border border-border text-text-main hover:bg-plum hover:text-white px-8 py-4 rounded-lg transition-all duration-300 whitespace-nowrap">Detayları İncele <span class="material-symbols-outlined text-sm">arrow_outward</span></a>
+                    </div>
+                </div>
+
+                <!-- Card: Eğitim -->
+                <div class="md:col-span-4 md:row-span-1 glass-card p-8 rounded-2xl flex flex-col justify-between group hover:border-plum transition-all duration-300">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-bg border border-border mb-6 group-hover:border-plum transition-colors">
+                            <span class="material-symbols-outlined text-text-main group-hover:text-plum transition-colors">school</span>
+                        </div>
+                        <h3 class="text-xl font-medium mb-3 text-text-main group-hover:text-plum transition-colors">SAP Eğitim Merkezi</h3>
+                        <p class="text-text-70 text-sm font-light leading-relaxed mb-6">Modüler ve vizyoner SAP eğitimlerimizle kurum içi yetkinliklerinizi zirveye taşıyın.</p>
+                    </div>
+                    <a href="/sap-egitimleri" class="inline-flex items-center gap-2 font-medium text-sm text-text-main group-hover:text-plum transition-colors">Detayları İncele <span class="material-symbols-outlined text-sm">arrow_outward</span></a>
+                </div>
+
+<!-- Card 10: SAP Check-Up -->
+                <div class="md:col-span-4 md:row-span-1 glass-card p-8 rounded-2xl flex flex-col justify-between group hover:border-plum transition-all duration-300">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-bg border border-border mb-6 group-hover:border-plum transition-colors">
+                            <span class="material-symbols-outlined text-text-main group-hover:text-plum transition-colors">health_and_safety</span>
+                        </div>
+                        <h3 class="text-xl font-medium mb-3 text-text-main group-hover:text-plum transition-colors">Sistem Optimizasyonu & Check-Up</h3>
+                        <p class="text-text-70 text-sm font-light leading-relaxed mb-6">SAP Best Practice uyum analiziyle finansal süreçlerinizdeki gizli darboğazları tespit ediyor, haritanızı çıkarıyoruz.</p>
+                    </div>
+                    <a href="/sap-checkup" class="inline-flex items-center gap-2 font-medium text-sm text-text-main group-hover:text-plum transition-colors">Detayları İncele <span class="material-symbols-outlined text-sm">arrow_outward</span></a>
+                </div>
+
+                
+<!-- Card 11: Danışmanlık -->
+                <div class="md:col-span-4 md:row-span-1 glass-card p-8 rounded-2xl flex flex-col justify-between group hover:border-plum transition-all duration-300">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-bg border border-border mb-6 group-hover:border-plum transition-colors">
+                            <span class="material-symbols-outlined text-text-main group-hover:text-plum transition-colors">psychology</span>
+                        </div>
+                        <h3 class="text-xl font-medium mb-3 text-text-main group-hover:text-plum transition-colors">Danışmanlık Hizmetleri</h3>
+                        <p class="text-text-70 text-sm font-light leading-relaxed mb-6">IT stratejisi, dijital dönüşüm, yapay zeka danışmanlığı ve süreç optimizasyonu ile işinizi geleceğe taşıyın.</p>
+                    </div>
+                    <a href="/danismanlik" class="inline-flex items-center gap-2 font-medium text-sm text-text-main group-hover:text-plum transition-colors">Detayları İncele <span class="material-symbols-outlined text-sm">arrow_outward</span></a>
+                </div>
+
+                
+<!-- Card 7: AMS Support & Outsourcing -->
+                <div class="md:col-span-4 md:row-span-1 glass-card p-8 rounded-2xl flex flex-col justify-between group hover:border-plum transition-all duration-300">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-bg border border-border mb-6 group-hover:border-plum transition-colors">
+                            <span class="material-symbols-outlined text-text-main group-hover:text-plum transition-colors">engineering</span>
+                        </div>
+                        <h3 class="text-xl font-medium mb-3 text-text-main group-hover:text-plum transition-colors">Stratejik AMS Desteği</h3>
+                        <p class="text-text-70 text-sm font-light leading-relaxed mb-6">Kurumsal SAP projeleriniz için kıdemli danışman ekibimizle uçtan uca, esnek SLA kurguları yönetiyoruz.</p>
+                    </div>
+                </div>
+
+                
             </div>
         </div>
     </section>
@@ -206,7 +347,7 @@ import Layout from '../layouts/Layout.astro';
             <h2 class="display-lg text-3xl md:text-h2 mb-6">Stratejinizi Birlikte İnşa Edelim</h2>
             <p class="text-text-70 font-light mb-10 max-w-2xl mx-auto text-lg">İşletmenizin finansal darboğazlarını detaylı bir analizle değerlendirelim ve otomasyon hedeflerinizi doğru planla hayata geçirelim.</p>
             
-            <a href="/iletisim" class="bg-plum text-text-main px-10 py-5 rounded-lg font-medium text-ui hover:bg-plum-hover transition-colors shadow-lg inline-block">
+            <a href="/iletisim" class="bg-plum text-white px-10 py-5 rounded-lg font-medium text-ui hover:bg-plum-hover transition-colors shadow-lg inline-block">
                 Değerlendirme Başlatın
             </a>
         </div>

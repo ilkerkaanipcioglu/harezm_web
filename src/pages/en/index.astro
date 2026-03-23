@@ -6,58 +6,58 @@ const lang = 'en' as const;
 
 <Layout title="Home" lang={lang}>
     <!-- Hero Section -->
-    <header class="relative pt-32 pb-20 px-8 md:px-12 overflow-hidden bg-surface bg-grid">
-        <!-- Subtle gradients -->
-        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px] pointer-events-none"></div>
-        <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary-container/10 rounded-full blur-[100px] pointer-events-none"></div>
+    <header class="relative pt-32 pb-20 px-8 md:px-12 flex flex-col justify-center min-h-[calc(100vh-80px)] overflow-hidden bg-bg border-b border-border-main">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--color-plum)_0%,_transparent_40%)] opacity-10 pointer-events-none"></div>
+        <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-plum/5 rounded-full blur-[120px] pointer-events-none"></div>
 
-        <div class="max-w-[1920px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-center relative z-10">
+        <div class="max-w-container w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-center relative z-10">
+            <!-- Left Content (7/12) -->
             <div class="lg:col-span-7 animate-fade-up">
-                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/8 text-primary text-xs font-semibold mb-8 tracking-wider uppercase border border-primary/15">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface text-text-70 text-label mb-8 border border-border">
                     <span class="material-symbols-outlined text-sm">verified</span>
-                    {t('heroBadge', lang)}
+                    SAP CERTIFIED PARTNER · ISTANBUL
                 </div>
-                <h1 class="display-lg text-5xl xl:text-7xl 2xl:text-8xl mb-8 text-on-background">
-                    {t('heroTitle1', lang)} <br/>
-                    <span class="gradient-text italic">{t('heroTitle2', lang)}</span>
+                
+                <h1 class="display-lg text-4xl md:text-h1 mb-6">
+                    Financial Control <br/> <em class="text-plum italic font-normal">Architecture</em>
                 </h1>
-                <p class="text-lg text-on-background/80 max-w-[520px] mb-12 font-body leading-relaxed font-light">
-                    {t('heroDesc', lang)}
+                
+                <p class="text-text-70 text-body-lg mb-10 font-light max-w-text">
+                    We don't just build systems. We design your company's financial reality — liquidity, risk, compliance, and decision mechanisms under a single architecture.
                 </p>
+                
                 <div class="flex flex-wrap gap-4">
-                    <a href="/en/hizmetler" class="bg-primary text-on-primary px-8 py-4 rounded-lg font-semibold text-base flex items-center gap-2 hover:bg-primary-container hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 group">
-                        {t('heroCtaPrimary', lang)}
-                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                    <a href="/en/iletisim" class="bg-plum text-white px-8 py-4 rounded-lg font-medium text-ui hover:bg-plum-hover transition-colors">
+                        Start Project
                     </a>
-                    <a href="/en/iletisim" class="bg-surface-container-high text-on-background px-8 py-4 rounded-lg font-semibold text-base hover:bg-surface-variant hover:shadow-lg transition-all duration-300">
-                        {t('heroCtaSecondary', lang)}
+                    <a href="/en/hizmetler" class="bg-transparent text-text-main px-8 py-4 rounded-lg font-medium text-ui border border-border-main hover:bg-bg2 transition-colors inline-flex items-center gap-2">
+                        Explore Services
+                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
                     </a>
                 </div>
             </div>
-            <div class="lg:col-span-5 relative mt-12 lg:mt-0 z-20 animate-fade-right delay-2">
-                <!-- Main Image Placeholder (Purged) -->
-                <div class="w-full aspect-[4/5] md:aspect-square rounded-2xl overflow-hidden relative shadow-2xl border border-outline-variant/10 bg-surface-container-high flex flex-col items-center justify-center">
-                    <div class="absolute inset-0 bg-gradient-to-tr from-primary/10 to-transparent pointer-events-none"></div>
-                    <span class="material-symbols-outlined text-[120px] text-primary/20">query_stats</span>
-                </div>
+
+            <!-- Right Panel (5/12) - Trust Signals -->
+            <div class="lg:col-span-5 animate-fade-left delay-2 border border-border rounded-xl p-8 lg:p-10 bg-bg2 relative overflow-hidden">
+                <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--color-border)_0%,_transparent_60%)] opacity-20 pointer-events-none"></div>
+                <h3 class="text-h4 mb-6 relative z-10">Industries We Serve</h3>
                 
-                <!-- Floating Stat Card -->
-                <div class="absolute -bottom-6 -left-4 md:-left-12 bg-white/95 backdrop-blur-xl p-6 md:p-8 rounded-2xl shadow-[0_20px_60px_-15px_rgba(0,0,0,0.12)] border border-white max-w-[280px] card-hover animate-scale-in delay-4">
-                    <div class="flex items-center gap-4 mb-3">
-                        <div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center shrink-0">
-                            <span class="material-symbols-outlined text-primary text-3xl">public</span>
-                        </div>
-                        <div class="text-primary text-5xl font-semibold font-headline tracking-tighter">{t('heroStat', lang)}</div>
-                    </div>
-                    <div class="text-on-surface font-semibold text-sm leading-snug">{t('heroStatLabel1', lang)}<br/>{t('heroStatLabel2', lang)}</div>
+                <div class="flex flex-wrap gap-3 mb-8 relative z-10">
+                    <span class="px-4 py-2 rounded-lg bg-bg text-text-70 text-sm border border-border">Pharma</span>
+                    <span class="px-4 py-2 rounded-lg bg-bg text-text-70 text-sm border border-border">Defense</span>
+                    <span class="px-4 py-2 rounded-lg bg-bg text-text-70 text-sm border border-border">FMCG</span>
+                    <span class="px-4 py-2 rounded-lg bg-bg text-text-70 text-sm border border-border">Energy</span>
+                    <span class="px-4 py-2 rounded-lg bg-bg text-text-70 text-sm border border-border">Automotive</span>
                 </div>
 
-                <!-- Secondary Floating Card -->
-                <div class="absolute top-12 -right-4 md:-right-8 bg-surface-container/80 backdrop-blur-md py-4 px-6 rounded-2xl shadow-2xl border border-outline/20 flex items-center gap-4 card-hover animate-scale-in delay-5">
-                    <div class="bg-accent/20 p-2.5 rounded-xl text-accent flex items-center justify-center">
-                        <span class="material-symbols-outlined text-xl">workspace_premium</span>
+                <div class="pt-6 border-t border-border flex items-center justify-between relative z-10">
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-teal text-xl">architecture</span>
+                        <div>
+                            <p class="text-label text-text-40">SAP Certified Partner</p>
+                            <p class="text-sm text-text-70 font-medium">Financial Tech Solutions</p>
+                        </div>
                     </div>
-                    <span class="text-on-background font-semibold text-sm tracking-wide">{t('heroExpBadge', lang)}</span>
                 </div>
             </div>
         </div>
@@ -159,36 +159,36 @@ const lang = 'en' as const;
                     </a>
                 </div>
                 <!-- Localization Highlight -->
-                <div class="bg-on-background p-10 rounded-2xl flex flex-col justify-between text-white card-hover">
+                <div class="bg-plum p-10 rounded-2xl flex flex-col justify-between text-white card-hover">
                     <div>
-                        <span class="material-symbols-outlined text-4xl text-primary-container mb-6 group-hover:animate-icon-wiggle">flag</span>
+                        <span class="material-symbols-outlined text-4xl text-white/80 mb-6 group-hover:animate-icon-wiggle">flag</span>
                         <h3 class="text-2xl font-semibold mb-4">{t('svcLocTitle', lang)}</h3>
-                        <p class="text-on-surface-variant text-sm font-light">{t('svcLocDesc', lang)}</p>
+                        <p class="text-white/80 text-sm font-light">{t('svcLocDesc', lang)}</p>
                     </div>
                     <span class="bg-primary/20 text-primary-container self-start px-3 py-1 rounded-full text-xs font-semibold uppercase">{t('svcLocBadge', lang)}</span>
                 </div>
                 <!-- Global Projects -->
-                <div class="bg-surface-container p-10 rounded-2xl flex flex-col justify-between group hover:bg-on-background hover:text-white transition-all duration-500 card-hover">
+                <div class="bg-surface-container p-10 rounded-2xl flex flex-col justify-between group hover:bg-plum hover:text-white transition-all duration-500 card-hover">
                     <div>
                         <span class="material-symbols-outlined text-4xl mb-6 group-hover:animate-icon-float">public</span>
                         <h3 class="text-2xl font-semibold mb-4">{t('svcGlobalTitle', lang)}</h3>
-                        <p class="text-on-surface-variant group-hover:text-on-surface text-sm font-light">{t('svcGlobalDesc', lang)}</p>
+                        <p class="text-on-surface-variant group-hover:text-white/90 text-sm font-light">{t('svcGlobalDesc', lang)}</p>
                     </div>
                 </div>
                 <!-- Support & Outsourcing -->
-                <div class="bg-surface-container p-10 rounded-2xl flex flex-col justify-between group hover:bg-on-background hover:text-white transition-all duration-500 card-hover">
+                <div class="bg-surface-container p-10 rounded-2xl flex flex-col justify-between group hover:bg-plum hover:text-white transition-all duration-500 card-hover">
                     <div>
                         <span class="material-symbols-outlined text-4xl mb-6 group-hover:animate-icon-wiggle">engineering</span>
                         <h3 class="text-2xl font-semibold mb-4">{t('svcOutsourceTitle', lang)}</h3>
-                        <p class="text-on-surface-variant group-hover:text-on-surface text-sm font-light">{t('svcOutsourceDesc', lang)}</p>
+                        <p class="text-on-surface-variant group-hover:text-white/90 text-sm font-light">{t('svcOutsourceDesc', lang)}</p>
                     </div>
                 </div>
                 <!-- S/4HANA -->
-                <div class="bg-surface-container p-10 rounded-2xl flex flex-col justify-between group hover:bg-on-background hover:text-white transition-all duration-500 card-hover">
+                <div class="bg-surface-container p-10 rounded-2xl flex flex-col justify-between group hover:bg-plum hover:text-white transition-all duration-500 card-hover">
                     <div>
                         <span class="material-symbols-outlined text-4xl mb-6 group-hover:animate-icon-bounce">rocket_launch</span>
                         <h3 class="text-2xl font-semibold mb-4">{t('svcS4Title', lang)}</h3>
-                        <p class="text-on-surface-variant group-hover:text-on-surface text-sm font-light">{t('svcS4Desc', lang)}</p>
+                        <p class="text-on-surface-variant group-hover:text-white/90 text-sm font-light">{t('svcS4Desc', lang)}</p>
                     </div>
                 </div>
             </div>
@@ -196,7 +196,7 @@ const lang = 'en' as const;
     </section>
 
     <!-- Why Harezm -->
-    <section class="py-24 md:py-32 px-8 md:px-12 bg-on-background text-white relative overflow-hidden">
+    <section class="py-24 md:py-32 px-8 md:px-12 bg-bg2 text-text-main relative overflow-hidden">
         <!-- Decorative -->
         <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[150px] pointer-events-none"></div>
 
@@ -254,7 +254,7 @@ const lang = 'en' as const;
                 <p class="text-on-surface-variant text-lg leading-relaxed font-light mb-8 max-w-xl">
                     {t('tlDesc', lang)}
                 </p>
-                <a href="/harezm_cfo_ajandasi.pdf" download class="inline-flex items-center gap-3 bg-on-background text-white px-8 py-4 rounded-lg font-semibold text-sm hover:shadow-2xl hover:-translate-y-1 transition-all">
+                <a href="/harezm_cfo_ajandasi.pdf" download class="inline-flex items-center gap-3 bg-plum text-white px-8 py-4 rounded-lg font-semibold text-sm hover:shadow-2xl hover:-translate-y-1 transition-all">
                     {t('tlBtn', lang)}
                     <span class="material-symbols-outlined text-base">download</span>
                 </a>

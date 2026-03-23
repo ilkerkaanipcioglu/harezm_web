@@ -1,6 +1,7 @@
 ---
 import { t, getLocalePath, type Lang } from '../i18n/utils';
 import type { TranslationKey } from '../i18n/translations';
+import ThemeToggle from './ThemeToggle.astro';
 
 interface Props {
   lang?: Lang;
@@ -15,7 +16,8 @@ const { lang = 'tr' } = Astro.props;
             <!-- Brand Column -->
             <div class="md:col-span-4">
                 <div class="flex items-center mb-6">
-                    <span class="font-serif text-2xl font-normal tracking-tight text-text-main">Harezm<span class="text-teal">.</span></span>
+                    <img src="/images/logo/darktheme_logo.svg" alt="Harezm Logo" class="h-8 w-auto object-contain hidden-in-light" />
+                    <img src="/images/logo/lighttheme_logo.svg" alt="Harezm Logo" class="h-8 w-auto object-contain hidden-in-dark" />
                 </div>
                 <p class="text-text-70 text-sm leading-relaxed mb-8 max-w-xs font-light">
                     {t('footerDesc', lang)}
@@ -77,9 +79,10 @@ const { lang = 'tr' } = Astro.props;
         </div>
 
         <!-- Bottom Bar -->
-        <div class="border-t border-border-main pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div class="border-t border-border-main pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
             <span class="text-xs text-text-40">{t('footerCopyright', lang)}</span>
-            <div class="flex gap-8 text-xs text-text-40">
+            <div class="flex flex-wrap justify-center md:justify-end items-center gap-4 md:gap-8 text-xs text-text-40">
+                <ThemeToggle />
                 <a class="hover:text-plum transition-colors" href="#">{t('footerKvkk', lang)}</a>
                 <a class="hover:text-plum transition-colors" href="#">{t('footerPrivacy', lang)}</a>
                 <a class="hover:text-plum transition-colors" href="#">{t('footerCookies', lang)}</a>

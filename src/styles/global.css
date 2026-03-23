@@ -65,7 +65,28 @@
   --color-border-main: var(--border);
   --color-border-hover: var(--border-2);
   --color-border: var(--border);
-  --color-surface: var(--bg2);
+  --color-surface: var(--bg);
+  
+  /* === LOGO TOGGLE === */
+  [data-theme="light"] .hidden-in-light { display: none !important; }
+  [data-theme="dark"] .hidden-in-dark { display: none !important; }
+
+  /* === SECTION === */
+  section { position: relative; }
+  /* MD3 polyfill */
+  --color-primary: var(--plum);
+  --color-primary-container: var(--plum-h);
+  --color-on-primary: #ffffff;
+  --color-on-primary-container: #ffffff;
+  --color-surface-container: var(--bg2);
+  --color-surface-container-low: var(--bg);
+  --color-surface-container-highest: var(--bg3);
+  --color-surface-variant: var(--bg2);
+  --color-on-surface: var(--text);
+  --color-on-surface-variant: var(--text-70);
+  --color-on-background: var(--text);
+  --color-outline: var(--border);
+  --color-outline-variant: var(--border-2);
 
   --font-serif: "DM Serif Display", serif;
   --font-sans: "DM Sans", sans-serif;

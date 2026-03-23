@@ -1,57 +1,60 @@
-# Harezm Brand Colors and Logo Integration Plan
+# Harezm Prestij Dönüşüm Stratejisi — v2 (Implementation Plan)
 
-## Goal Description
-The goal is to apply the new Harezm Core Identity (Brand Colors and Logo) across the site as specified in `assets/brand__colour.txt` and the `assets/logo` directory. This involves switching from the current Material Design green-based light theme to the premium Dark Theme defined by the brand guidelines.
+Bu doküman, `harezm_strateji_v2.md` dokümanındaki yönlendirmeleri mevcut Harezm web sitesine (Astro altyapısı) uygulamak için hazırlanmıştır. Kullanıcının "Architecture & Specs" (Phase 1) kuralına istinaden oluşturulmuştur.
 
 ## User Review Required
-> [!IMPORTANT]  
-> Please review this plan. The brand guidelines specify a dark theme as the primary look. This means `bg-background` will become "Deep Black" and text will become "Soft White". 
-> Do you prefer keeping Light and Dark mode options, or forcing the site into the pure Dark Theme as specified by the "Core Identity"? Since the identity specifies Deep Black as the main background, I will default to making the core look Dark.
+> [!IMPORTANT]
+> Lütfen bu planın adımlarını onaylayın. Onayınızın ardından kodlama aşamasına geçilecek ve `task.md` üzerinden ilerlenecektir. Olası İngilizce sayfa (`/en/...`) çevirileri de bu kapsama dahil edilecektir.
 
 ## Proposed Changes
 
-### Configuration
-#### [MODIFY] `tailwind.config.mjs`(file:///b:/DEV/harezm._web/tailwind.config.mjs)
-- Redefine `colors` to include the branding:
-  - `background`: `#0B0B0D` (Deep Black)
-  - `surface`: `#1A1C1F` (Graphite Gray)
-  - `on-background`: `#F5F7FA` (Soft White)
-  - `on-surface`: `#F5F7FA` (Soft White)
-  - `primary`: `#C1121F` (Core Red)
-  - `outline`: `#C9CCD1` (Metal Silver)
-  - Adjust any other mapped surface colors to complement the deep black base.
+Aşağıdaki değişiklikler bileşen veya sayfa bazında gruplandırılmıştır:
 
-### Global Layout & CSS
-#### [MODIFY] `src/layouts/Layout.astro`(file:///b:/DEV/harezm._web/src/layouts/Layout.astro)
-- Change `<html class="light scroll-smooth" ...>` to `<html class="dark scroll-smooth" ...>`.
-- Update `body` styles: Background to Deep Black, color to Soft White.
-- Overhaul `is:global` CSS:
-  - Update `.glow-primary` box-shadows to use Core Red (`rgba(193, 18, 31, ...)`).
-  - Update `.gradient-text` to use subtle Core Red to darker red.
-  - Fix scrollbar thumb colors to Metal Silver or Core Red.
+### 1. Hızlı Kazanımlar (Immediate Fixes)
+- **Footer Düzeltmeleri:** Metin kırılması sorununu ortadan kaldıran CSS/flex düzenlemeleri.
+- **İngilizce Sayfa 404 Çözümleri:** `/en/` route altındaki eksik sayfaların tespit edilip oluşturulması (veya eksik i18n link yönlendirmelerinin çözülmesi).
+- **Sayfa Sayaçları:** `hizmetler.astro` içerisindeki "Boş Sayaç" component verilerinin mantıklı benchmark'lar ile doldurulması.
+- **Türkçeleştirme:** Hero section'daki "49% Faster Closing", "100+ Projects" gibi kutucukların Türkçe karşılıklarıyla (`%49 Daha Hızlı Kapanış`, `100+ Proje` vb.) güncellenmesi (Sadece tr route'da).
+- **Hizmet Sayfalarına Ölçülebilir Sonuçlar (Measurables):** `s4hana.astro`, `sap-trm.astro` gibi var olan sayfalara statik/ölçülebilir iyileştirme yüzdeleri eklenmesi.
 
-### Layout Components (Header & Footer)
-#### [MODIFY] `src/components/Header.astro`(file:///b:/DEV/harezm._web/src/components/Header.astro)
-- Update logo `<img>` `src` to point to the new logo (e.g. `/images/harezm-logo-dark.svg`).
-- Adjust hover and active states of navigation to use `primary` (Core Red) and `surface` (Graphite Gray).
-- Ensure `.glass-nav` background matches the dark theme (e.g., `rgba(11, 11, 13, 0.82)` instead of white).
+### 2. Ana Sayfa (`src/pages/index.astro`)
+- **Hero Sloganı:** "SAP'ı tasarlarız. Türkiye'ye entegre ederiz. Dünyaya açarız, Yapay zeka ile otomatize ederiz." olarak revize edilmesi.
+- **Ürün Genişlik Haritası:** Hero altında 3 kolonlu (SAP Danışmanlığı, e-Dönüşüm & Otomasyon, AI & Strateji) bir snippet bölümü oluşturulması.
+- **TMS 29 Vurgusu:** Enflasyon Muhasebesi (TMS 29) konusunda uyarı/farkındalık sağlayan dikkat çekici bir kart (badge) eklenmesi.
+- **Finrota Rakamları:** "29 Türk bankasıyla entegre", "Banka mutabakat otomasyonu: %94" verilerini gösteren özet panelleri.
 
-#### [MODIFY] `src/components/Footer.astro`(file:///b:/DEV/harezm._web/src/components/Footer.astro)
-- Update logo `<img>` `src`.
-- Review background classes (`bg-on-background`). If `on-background` is now Soft White, the footer background might become white, but the brand calls for Deep Black. I will map it strictly to `bg-background` or `bg-surface`.
+### 3. Hizmetler Sayfası (`src/pages/hizmetler.astro`)
+- Var olan 8 hizmenin grid yapısını, **4 ana başlık** altında alt kırılımlara ayıracak biçimde yeniden yapılandırmak:
+  1. SAP Platformu (FI/CO, RE-FX, TRM, Cash, vb.)
+  2. e-Dönüşüm & Dijitalleştirme (e-Something) (e-Fatura, e-Defter, e-Mutabakat vb.)
+  3. Finansal Otomasyon & Banka Entegrasyonu (Online DBS, POS Raporlama, TMS 29 vb.)
+  4. AI & Strateji (SAP Joule, Süreç Otomasyonu, AgentandBot)
 
-### Static Assets
-#### [NEW] `/public/images/harezm-logo-dark.svg`
-- Copy `b:\DEV\harezm._web\assets\logo\darktheme_logo.svg` to the public images directory for universal access.
+### 4. Hakkımızda & Lokalizasyon Sayfaları
+- **`src/pages/hakkimizda.astro`**: Ekip listesini genişletecek, her uzmanın SAP sertifikasyonu ve geçmiş tecrübe/proje yelpazesini (uzmanlık alanlarını) yansıtan bir timeline/ekip grid'i eklemek. Ürün ekosistemindeki gizli gücü (Finrota iş ortaklığı benzeri) ima eden metinler eklemek.
+- **`src/pages/lokalizasyon.astro`**: Roll-out hizmetinin kapsamına "Online DBS ve Banka Entegrasyonu, aynı proje içerisinde teslim edilir" mesajının eklenmesi. Orta Doğu, Avrupa ülkelerini ismen zikrederek lokalizasyon gücünün altının çizilmesi.
+
+### 5. Yeni Sayfaların Eklenmesi
+`src/pages/` ve `src/pages/en/` dizinlerine aşağıdaki yeni Astro sayfaları tasarlanıp eklenecektir:
+- `enflasyon-muhasebesi.astro` (Enflasyon Muhasebesi TMS 29)
+- `online-dbs.astro` (Online DBS & Banka Entegrasyonu)
+- `sap-joule-ai.astro` (SAP Joule ve AI Ajanları)
+- `sap-finansal-konsolidasyon.astro`
+- `sap-aa.astro` (Sabit Kıymet Muhasebesi)
+- `sap-egitimleri.astro`
+- `kdv-iade-paketi.astro`
+- `e-ticaret.astro`
+
+### 6. e-Something ve AgentAndBot Landing Yönlendirmeleri
+Yeni marka konumlandırması doğrultusunda, sitede uygun menü linkleri yaratılarak ("e-Çözümler", "AI & Otomasyon") kullanıcının doğrudan bu çözümleri keşfedebileceği landing-page blokları (veya ayrı sayfalar) hazırlanması.
 
 ## Verification Plan
 
-### Automated Tests
-- Run `npm run build` or Astro's equivalent to ensure the build succeeds.
+### Automated / UI Tests
+- `npm run dev` ile sitenin tüm yeni sayfaları local'de görüntülenecektir.
+- UI responsive kontrolleri yapılacak, footer düzeltmelerinin mobilde de geçerli olduğuna bakılacaktır.
+- İngilizce rotalardaki (`/en/...`) bütün yeni ve eski linklerin `/en/404` atmadığı doğrulanacaktır.
+- Tarayıcı aracı (Browser Subagent) ile sayfalar dolaşılacak ve "Walkthrough" artefaktına ekran görüntüleri ve/veya video kanıtları eklenecektir.
 
 ### Manual Verification
-- Start `npm run dev` and navigate to `http://localhost:4321`.
-- Verify the header and footer display the new logo.
-- Ensure the background is `#0B0B0D` and text is legible (`#F5F7FA`).
-- Hover over buttons and links to check that the highlighting uses `#C1121F` appropriately.
-- Check responsive mobile menu colors to ensure they translated well to the dark theme.
+- Kullanıcının, kodlama bittikten sonra yerelde siteyi kendi tarayacısında `npm run start` veya `dev` ile kontrol etmesi, yeni metinleri ve tasarımlarını incelemesi.

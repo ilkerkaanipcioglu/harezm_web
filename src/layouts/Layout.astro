@@ -18,12 +18,24 @@ import Footer from '../components/Footer.astro';
     <title>{title} | Harezm Technology</title>
     <meta name="description" content="Harezm Technology — SAP Danışmanlık & Finansal Mimari | Istanbul" />
     
-    <!-- Theme: prevent flash of wrong theme -->
+    <!-- Theme: track OS preference dynamically -->
     <script is:inline>
       (function() {
-        const stored = localStorage.getItem('harezm-theme');
-        const preferred = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
-        document.documentElement.setAttribute('data-theme', stored || preferred);
+        const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+        
+        function applyTheme() {
+          const stored = localStorage.getItem('harezm-theme');
+          const preferred = mediaQuery.matches ? 'dark' : 'light';
+          document.documentElement.setAttribute('data-theme', stored || preferred);
+        }
+        
+        applyTheme();
+
+        // If user changes Windows setting, instantly apply it and override manual toggle
+        mediaQuery.addEventListener('change', (e) => {
+          localStorage.removeItem('harezm-theme');
+          document.documentElement.setAttribute('data-theme', e.matches ? 'dark' : 'light');
+        });
       })();
     </script>
 

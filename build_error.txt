@@ -1,0 +1,99 @@
+
+> harezm-web@1.0.0 build
+> astro build
+
+[2m22:29:11[22m [34m[content][39m Syncing content
+[2m22:29:11[22m [34m[content][39m Synced content
+[2m22:29:11[22m [34m[types][39m Generated [2m79ms[22m
+[2m22:29:11[22m [34m[build][39m output: [34m"static"[39m
+[2m22:29:11[22m [34m[build][39m mode: [34m"static"[39m
+[2m22:29:11[22m [34m[build][39m directory: [34mB:\DEV\harezm._web\dist\[39m
+[2m22:29:11[22m [34m[build][39m Collecting build info...
+[2m22:29:11[22m [34m[build][39m [32m✓ Completed in 126ms.[39m
+[2m22:29:11[22m [34m[build][39m Building static entrypoints...
+[2m22:29:15[22m [34m[vite][39m [32m✓ built in 3.37s[39m
+[2m22:29:15[22m [34m[build][39m [32m✓ Completed in 3.45s.[39m
+
+[42m[30m building client (vite) [39m[49m
+[2m22:29:15[22m [34m[vite][39m transforming...
+[2m22:29:15[22m [34m[vite][39m [32m✓[39m 2 modules transformed.
+[2m22:29:15[22m [34m[vite][39m rendering chunks...
+[2m22:29:15[22m [34m[vite][39m [32m✓ built in 34ms[39m
+
+[42m[30m generating static routes [39m[49m
+[2m22:29:15[22m [32m▶[39m src/pages/danismanlik.astro
+[2m22:29:15[22m   [34m└─[39m [2m/danismanlik/index.html[22m [2m(+31ms)[22m 
+[2m22:29:15[22m [32m▶[39m src/pages/e-ticaret.astro
+[2m22:29:15[22m   [34m└─[39m [2m/e-ticaret/index.html[22m [2m(+6ms)[22m 
+[2m22:29:15[22m [32m▶[39m src/pages/en/about.astro
+[2m22:29:15[22m   [34m└─[39m [2m/en/about/index.html[22m [2m(+5ms)[22m 
+[2m22:29:15[22m [32m▶[39m src/pages/en/consulting.astro
+[2m22:29:15[22m   [34m└─[39m [2m/en/consulting/index.html[22m [2m(+6ms)[22m 
+[2m22:29:15[22m [32m▶[39m src/pages/en/contact.astro
+[2m22:29:15[22m   [34m└─[39m [2m/en/contact/index.html[22m [2m(+7ms)[22m 
+[2m22:29:15[22m [32m▶[39m src/pages/en/rollout.astro
+[2m22:29:15[22m   [34m└─[39m [2m/en/rollout/index.html[22m [2m(+7ms)[22m 
+[2m22:29:15[22m [32m▶[39m src/pages/en/s4hana.astro
+[2m22:29:15[22m   [34m└─[39m [2m/en/s4hana/index.html[22m [2m(+6ms)[22m 
+[2m22:29:15[22m [32m▶[39m src/pages/en/sap-cash-management.astro
+[2m22:29:15[22m   [34m└─[39m [2m/en/sap-cash-management/index.html[22m [2m(+3ms)[22m 
+[2m22:29:15[22m [32m▶[39m src/pages/en/sap-checkup.astro
+[2m22:29:15[22m   [34m└─[39m [2m/en/sap-checkup/index.html[22m [2m(+6ms)[22m 
+[2m22:29:15[22m [32m▶[39m src/pages/en/sap-opentext.astro
+[2m22:29:15[22m   [34m└─[39m [2m/en/sap-opentext/index.html[22m [2m(+4ms)[22m 
+[2m22:29:15[22m [32m▶[39m src/pages/en/sap-refx.astro
+[2m22:29:15[22m   [34m└─[39m [2m/en/sap-refx/index.html[22m [2m(+5ms)[22m 
+[2m22:29:15[22m [32m▶[39m src/pages/en/sap-trm.astro
+[2m22:29:15[22m   [34m└─[39m [2m/en/sap-trm/index.html[22m [2m(+6ms)[22m 
+[2m22:29:15[22m [32m▶[39m src/pages/en/services.astro
+[2m22:29:15[22m   [34m└─[39m [2m/en/services/index.html[22m [2m(+5ms)[22m 
+[2m22:29:15[22m [32m▶[39m src/pages/en/index.astro
+[2m22:29:15[22m   [34m└─[39m [2m/en/index.html[22m [2m(+4ms)[22m 
+[2m22:29:15[22m [32m▶[39m src/pages/enflasyon-muhasebesi.astro
+[2m22:29:15[22m   [34m└─[39m [2m/enflasyon-muhasebesi/index.html[22m [2m(+3ms)[22m 
+[2m22:29:15[22m [32m▶[39m src/pages/hakkimizda.astro
+[2m22:29:15[22m   [34m└─[39m [2m/hakkimizda/index.html[22m [2m(+3ms)[22m 
+[2m22:29:15[22m [32m▶[39m src/pages/hizmetler.astro
+[2m22:29:15[22m   [34m└─[39m [2m/hizmetler/index.html[22m [2m(+4ms)[22m 
+[2m22:29:15[22m [32m▶[39m src/pages/iletisim.astro
+[2m22:29:15[22m   [34m└─[39m [2m/iletisim/index.html[22m [2m(+5ms)[22m 
+[2m22:29:15[22m [32m▶[39m src/pages/insight.astro
+[2m22:29:15[22m   [34m└─[39m [2m/insight/index.html[22m [2m(+3ms)[22m 
+[2m22:29:15[22m [32m▶[39m src/pages/kdv-iade-paketi.astro
+[2m22:29:15[22m   [34m└─[39m [2m/kdv-iade-paketi/index.html[22m [2m(+4ms)[22m 
+[2m22:29:15[22m [32m▶[39m src/pages/lokalizasyon.astro
+[2m22:29:15[22m   [34m└─[39m [2m/lokalizasyon/index.html[22m [2m(+6ms)[22m 
+[2m22:29:15[22m [32m▶[39m src/pages/online-dbs.astro
+[2m22:29:15[22m   [34m└─[39m [2m/online-dbs/index.html[22m [2m(+4ms)[22m 
+[2m22:29:15[22m [32m▶[39m src/pages/s4hana.astro
+[2m22:29:15[22m   [34m└─[39m [2m/s4hana/index.html[22m [2m(+4ms)[22m 
+[2m22:29:15[22m [32m▶[39m src/pages/sap-aa.astro
+[2m22:29:15[22m   [34m└─[39m [2m/sap-aa/index.html[22m [2m(+6ms)[22m 
+[2m22:29:15[22m [32m▶[39m src/pages/sap-cash-management.astro
+[2m22:29:15[22m   [34m└─[39m [2m/sap-cash-management/index.html[22m [2m(+5ms)[22m 
+[2m22:29:15[22m [32m▶[39m src/pages/sap-checkup.astro
+[2m22:29:15[22m   [34m└─[39m [2m/sap-checkup/index.html[22m [2m(+4ms)[22m 
+[2m22:29:15[22m [32m▶[39m src/pages/sap-egitimleri.astro
+[2m22:29:15[22m   [34m└─[39m [2m/sap-egitimleri/index.html[22m [2m(+6ms)[22m 
+[2m22:29:15[22m [32m▶[39m src/pages/sap-finansal-konsolidasyon.astro
+[2m22:29:15[22m   [34m└─[39m [2m/sap-finansal-konsolidasyon/index.html[22m [2m(+6ms)[22m 
+[2m22:29:15[22m [32m▶[39m src/pages/sap-joule-ai.astro
+[2m22:29:15[22m   [34m└─[39m [2m/sap-joule-ai/index.html[22m [2m(+7ms)[22m 
+[2m22:29:15[22m [32m▶[39m src/pages/sap-opentext.astro
+[2m22:29:15[22m   [34m└─[39m [2m/sap-opentext/index.html[22m [2m(+3ms)[22m 
+[2m22:29:15[22m [32m▶[39m src/pages/sap-refx.astro
+[2m22:29:15[22m   [34m└─[39m [2m/sap-refx/index.html[22m [2m(+4ms)[22m 
+[2m22:29:16[22m [32m▶[39m src/pages/sap-trm.astro
+[2m22:29:16[22m   [34m└─[39m [2m/sap-trm/index.html[22m [2m(+4ms)[22m 
+[2m22:29:16[22m [32m▶[39m src/pages/sektorler.astro
+[2m22:29:16[22m   [34m└─[39m [2m/sektorler/index.html[22m [2m(+4ms)[22m 
+[2m22:29:16[22m [32m▶[39m src/pages/teknoloji.astro
+[2m22:29:16[22m   [34m└─[39m [2m/teknoloji/index.html[22m [2m(+5ms)[22m 
+[2m22:29:16[22m [32m▶[39m src/pages/urunler.astro
+[2m22:29:16[22m   [34m└─[39m [2m/urunler/index.html[22m [2m(+11ms)[22m 
+[2m22:29:16[22m [32m▶[39m src/pages/index.astro
+[2m22:29:16[22m   [34m└─[39m [2m/index.html[22m [2m(+6ms)[22m 
+[2m22:29:16[22m [32m✓ Completed in 816ms.
+[39m
+[2m22:29:16[22m [34m[build][39m 36 page(s) built in [1m4.52s[22m
+[2m22:29:16[22m [34m[build][39m [1mComplete![22m

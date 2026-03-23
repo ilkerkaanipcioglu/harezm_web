@@ -8,9 +8,10 @@ export const translations = {
     navServices: 'Hizmetler',
     navRollout: 'Roll-out & Lokalizasyon',
     navReferences: 'Referanslar',
+    navInsight: 'Insight Serisi',
     navAbout: 'Hakkımızda',
     navContact: 'İletişim',
-    navCta: 'Projenizi Konuşalım',
+    navCta: 'Görüşelim',
 
     // -- Hero --
     heroBadge: 'SAP FİNANS VE LOKALİZASYON UZMANLIĞI',
@@ -185,6 +186,7 @@ export const translations = {
     navServices: 'Services',
     navRollout: 'Roll-out & Localization',
     navReferences: 'References',
+    navInsight: 'Insight Series',
     navAbout: 'About',
     navContact: 'Contact',
     navCta: 'Let\'s Talk',

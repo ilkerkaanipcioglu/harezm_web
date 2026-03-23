@@ -1,0 +1,122 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="Harezm Insight Series">
+    <!-- HERO SECTION -->
+    <header class="relative pt-40 pb-24 md:pt-48 md:pb-32 bg-bg overflow-hidden border-b border-border-main">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--color-plum)_0%,_transparent_40%)] opacity-10 pointer-events-none"></div>
+        <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-plum/5 rounded-full blur-[120px] pointer-events-none"></div>
+
+        <div class="max-w-container mx-auto px-8 md:px-12 relative z-10">
+            <div class="w-full md:w-3/4 animate-fade-up">
+                <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface text-text-70 text-label mb-8 border border-border">
+                    <span class="material-symbols-outlined text-sm">menu_book</span>
+                    HAREZM INSIGHT SERIES
+                </span>
+                
+                <h1 class="display-lg text-4xl md:text-h1 mb-6">
+                    Mühendislik Perspektifinden<br/><span class="bg-clip-text text-transparent bg-gradient-to-r from-teal to-plum">Finansal Stratejiler.</span>
+                </h1>
+                <p class="text-text-70 text-body-lg max-w-2xl font-light leading-relaxed mb-10">
+                    CFO'lar ve IT Liderleri için teknik rehberler, implementasyon analizleri ve "Clean Core" dönüşüm notları.
+                </p>
+                
+            </div>
+        </div>
+    </header>
+
+    <!-- INSIGHTS GRID -->
+    <section class="py-24 md:py-32 bg-bg2 relative border-b border-border-main">
+        <div class="max-w-container mx-auto px-8 md:px-12">
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Article Placeholder 1 -->
+                <article class="glass-card rounded-2xl overflow-hidden group hover:border-plum transition-all duration-300 flex flex-col h-full">
+                    <div class="p-8 flex-grow flex flex-col">
+                        <div class="flex items-center gap-3 mb-6">
+                            <span class="px-3 py-1 bg-bg border border-border text-xs text-text-70 rounded-full font-medium">Finansal Mimari</span>
+                            <span class="text-xs text-text-40">5 dk okuma</span>
+                        </div>
+                        <h3 class="text-xl font-medium mb-3 text-text-main group-hover:text-plum transition-colors line-clamp-3">SAP VUK ve IFRS Paralel Defter Geçişlerinde Nakit Akışını Korumak</h3>
+                        <p class="text-text-70 text-sm font-light leading-relaxed mb-6 line-clamp-3">Paralel muhasebe standartlarına geçiş yaparken şirketlerin en sık yaptığı mimari hatalar ve Ledger yapısının doğru kurgulanması.</p>
+                        
+                        <div class="mt-auto pt-6 border-t border-border flex items-center justify-between">
+                            <div class="w-full">
+                                <span class="text-xs text-border block mb-2">Çok Yakında</span>
+                                <div class="w-full h-1 bg-bg rounded overflow-hidden">
+                                    <div class="w-1/3 h-full bg-plum rounded"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article Placeholder 2 -->
+                <article class="glass-card rounded-2xl overflow-hidden group hover:border-plum transition-all duration-300 flex flex-col h-full">
+                    <div class="p-8 flex-grow flex flex-col">
+                        <div class="flex items-center gap-3 mb-6">
+                            <span class="px-3 py-1 bg-bg border border-border text-xs text-text-70 rounded-full font-medium">AI & Otomasyon</span>
+                            <span class="text-xs text-text-40">7 dk okuma</span>
+                        </div>
+                        <h3 class="text-xl font-medium mb-3 text-text-main group-hover:text-plum transition-colors line-clamp-3">Holdinglerde Banka Mutabakatını AI ile %99'a Çıkarmak</h3>
+                        <p class="text-text-70 text-sm font-light leading-relaxed mb-6 line-clamp-3">Banka entegrasyon havuzunun yapılandırılması, açık kalem eşleştirmelerinde makine öğrenmesinin (Machine Learning) SAP FI üzerinde kullanımı.</p>
+                        
+                        <div class="mt-auto pt-6 border-t border-border flex items-center justify-between">
+                            <div class="w-full">
+                                <span class="text-xs text-border block mb-2">Çok Yakında</span>
+                                <div class="w-full h-1 bg-bg rounded overflow-hidden">
+                                    <div class="w-1/3 h-full bg-teal rounded"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article Placeholder 3 -->
+                <article class="glass-card rounded-2xl overflow-hidden group hover:border-plum transition-all duration-300 flex flex-col h-full">
+                    <div class="p-8 flex-grow flex flex-col">
+                        <div class="flex items-center gap-3 mb-6">
+                            <span class="px-3 py-1 bg-bg border border-border text-xs text-text-70 rounded-full font-medium">Enflasyon Muhasebesi</span>
+                            <span class="text-xs text-text-40">6 dk okuma</span>
+                        </div>
+                        <h3 class="text-xl font-medium mb-3 text-text-main group-hover:text-plum transition-colors line-clamp-3">TMS 29 ve SAP TRM: Enflasyonist Ortamda Kur Riskinin Yönetimi</h3>
+                        <p class="text-text-70 text-sm font-light leading-relaxed mb-6 line-clamp-3">Enflasyon muhasebesi zorunluluğu altında olan holding süreçlerinde SAP Treasury modülü ile döviz riskinin otomatik hedeflenmesi (hedging).</p>
+                        
+                        <div class="mt-auto pt-6 border-t border-border flex items-center justify-between">
+                            <div class="w-full">
+                                <span class="text-xs text-border block mb-2">Çok Yakında</span>
+                                <div class="w-full h-1 bg-bg rounded overflow-hidden">
+                                    <div class="w-1/3 h-full bg-border-main rounded"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article Placeholder 4 -->
+                <article class="glass-card rounded-2xl overflow-hidden group hover:border-plum transition-all duration-300 flex flex-col h-full">
+                    <div class="p-8 flex-grow flex flex-col">
+                        <div class="flex items-center gap-3 mb-6">
+                            <span class="px-3 py-1 bg-bg border border-border text-xs text-text-70 rounded-full font-medium">BTP Mimari</span>
+                            <span class="text-xs text-text-40">8 dk okuma</span>
+                        </div>
+                        <h3 class="text-xl font-medium mb-3 text-text-main group-hover:text-plum transition-colors line-clamp-3">Clean Core Stratejisi Bize Ne Söylüyor? Eklentilerden Platforma Geçiş</h3>
+                        <p class="text-text-70 text-sm font-light leading-relaxed mb-6 line-clamp-3">S/4HANA Public Cloud geçiş planlarında SAP BTP (Business Technology Platform) kullanımının neden zorunlu hale geldiğine dair mimari bir özet.</p>
+                        
+                        <div class="mt-auto pt-6 border-t border-border flex items-center justify-between">
+                            <div class="w-full">
+                                <span class="text-xs text-border block mb-2">Çok Yakında</span>
+                                <div class="w-full h-1 bg-bg rounded overflow-hidden">
+                                    <div class="w-1/3 h-full bg-border-main rounded"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                
+            </div>
+            
+        </div>
+    </section>
+</Layout>

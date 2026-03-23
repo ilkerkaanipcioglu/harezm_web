@@ -26,6 +26,8 @@ export function getLocalePath(path: string, lang: Lang): string {
     '/sap-checkup': '/en/sap-checkup',
     '/danismanlik': '/en/consulting',
     '/s4hana': '/en/s4hana',
+    '/sap-cash-management': '/en/sap-cash-management',
+    '/sap-trm': '/en/sap-trm',
   };
   return pathMap[path] || `/en${path}`;
 }
@@ -45,6 +47,8 @@ export function getAlternateLangPath(currentPath: string, currentLang: Lang): st
       '/sap-checkup': '/en/sap-checkup',
       '/danismanlik': '/en/consulting',
       '/s4hana': '/en/s4hana',
+      '/sap-cash-management': '/en/sap-cash-management',
+      '/sap-trm': '/en/sap-trm',
     };
     return map[currentPath] || `/en${currentPath}`;
   } else {
@@ -62,6 +66,8 @@ export function getAlternateLangPath(currentPath: string, currentLang: Lang): st
       '/en/sap-checkup': '/sap-checkup',
       '/en/consulting': '/danismanlik',
       '/en/s4hana': '/s4hana',
+      '/en/sap-cash-management': '/sap-cash-management',
+      '/en/sap-trm': '/sap-trm',
     };
     return map[currentPath] || currentPath.replace('/en', '');
   }
