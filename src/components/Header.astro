@@ -1,6 +1,7 @@
 ---
 import { t, getLocalePath, getAlternateLangPath, type Lang } from '../i18n/utils';
 import type { TranslationKey } from '../i18n/translations';
+import ThemeToggle from './ThemeToggle.astro';
 
 interface Props {
   lang?: Lang;
@@ -48,7 +49,12 @@ const otherLang = lang === 'tr' ? 'EN' : 'TR';
             ))}
         </div>
         <!-- Right Actions -->
-        <div class="flex items-center gap-3 md:gap-4">
+        <div class="flex items-center gap-2 md:gap-4">
+            <!-- Theme Toggle -->
+             <div class="hidden md:block">
+                 <ThemeToggle />
+             </div>
+             
             <!-- Lang Toggle (Desktop) -->
             <div class="hidden lg:flex items-center bg-bg2 rounded-full p-0.5 gap-0 border border-border-main">
                 {lang === 'tr' ? (
@@ -97,6 +103,11 @@ const otherLang = lang === 'tr' ? 'EN' : 'TR';
             {t('navCta', lang)}
         </a>
         
+        <!-- Theme Toggle (Mobile) -->
+        <div class="mt-2 flex items-center justify-center">
+            <ThemeToggle />
+        </div>
+
         <!-- Lang Toggle (Mobile) -->
         <div class="mt-4 flex items-center justify-center bg-bg2 rounded-full p-1.5 gap-1 w-full max-w-[240px] mx-auto border border-border-main">
              {lang === 'tr' ? (
