@@ -10,10 +10,11 @@ interface Props {
 const { lang = 'tr' } = Astro.props;
 const currentPath = Astro.url.pathname;
 
-const navItems: { key: TranslationKey; path: string }[] = [
-  { key: 'navServices', path: '/hizmetler' },
-  { key: 'navRollout', path: '/lokalizasyon' },
-  { key: 'navInsight', path: '/insight' },
+const navItems: { label: string; enLabel: string; path: string }[] = [
+  { label: 'Çözümler', enLabel: 'Solutions', path: '/urunler' },
+  { label: 'Hizmetler', enLabel: 'Services', path: '/hizmetler' },
+  { label: 'Kurumsal', enLabel: 'Corporate', path: '/hakkimizda' },
+  { label: 'Harezm Insight', enLabel: 'Insight', path: '/insight' },
 ];
 
 function isActivePath(itemPath: string): boolean {
@@ -109,18 +110,102 @@ const otherLang = lang === 'tr' ? 'EN' : 'TR';
                 </div>
             </div>
 
-            {navItems.map((item) => (
-                <a
-                  class={`px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200 ${
-                    isActivePath(item.path)
-                      ? 'text-plum font-semibold'
-                      : 'text-text-70 hover:text-text-main'
-                  }`}
-                  href={getLocalePath(item.path, lang)}
-                >
-                  {t(item.key, lang)}
-                </a>
-            ))}
+            <!-- Hizmetlerimiz Dropdown (Mega Menu) -->
+            <div class="relative group h-full flex items-center">
+                <button class={`flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium transition-colors duration-200 cursor-default ${isActivePath('/hizmetler') ? 'text-plum font-semibold' : 'text-text-70 group-hover:text-text-main'}`}>
+                    {lang === 'tr' ? 'Hizmetlerimiz' : 'Services'}
+                    <span class="material-symbols-outlined text-[18px] text-text-40 group-hover:rotate-180 transition-transform duration-300">keyboard_arrow_down</span>
+                </button>
+                
+                <div class="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0 translate-y-3 transition-all duration-300 z-[60]">
+                    <div class="absolute -top-4 left-0 w-full h-4"></div>
+                    <div class="bg-bg shadow-[0_16px_50px_rgba(0,0,0,0.15)] border border-border rounded-2xl w-[850px] flex overflow-hidden backdrop-blur-3xl">
+                        
+                        <!-- Left Side: Service Links -->
+                        <div class="flex-[3] p-8 bg-bg/95 grid grid-cols-2 gap-8">
+                            <!-- Col 1 -->
+                            <div>
+                                <h4 class="text-[11px] font-bold tracking-widest text-[#26A5E4] uppercase mb-5 flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-[16px]">account_tree</span> {lang === 'tr' ? 'Mimari Danışmanlık' : 'Architecture'}
+                                </h4>
+                                <ul class="space-y-3.5">
+                                    <li><a href={getLocalePath('/s4hana', lang)} class="text-[14px] text-text-main hover:text-plum transition-colors font-semibold">{lang === 'tr' ? 'S/4HANA Dönüşümü' : 'S/4HANA Transition'}</a></li>
+                                    <li><a href={getLocalePath('/danismanlik', lang)} class="text-[14px] text-text-main hover:text-plum transition-colors font-medium">{lang === 'tr' ? 'Uçtan Uca SAP Danışmanlığı' : 'End-to-End SAP Consulting'}</a></li>
+                                    <li><a href={getLocalePath('/sap-checkup', lang)} class="text-[14px] text-text-main hover:text-plum transition-colors font-medium">SAP Check-up</a></li>
+                                    <li><a href={getLocalePath('/lokalizasyon', lang)} class="text-[14px] text-text-main hover:text-plum transition-colors font-medium">{lang === 'tr' ? 'Türkiye Lokalizasyonu & Roll-out' : 'Turkey Localization & Roll-out'}</a></li>
+                                    <li><a href={getLocalePath('/sap-egitimleri', lang)} class="text-[14px] text-text-main hover:text-plum transition-colors font-medium">{lang === 'tr' ? 'Kurumsal SAP Eğitimleri' : 'Corporate SAP Trainings'}</a></li>
+                                    <li><a href={getLocalePath('/sap-joule-ai', lang)} class="text-[14px] text-text-main hover:text-plum transition-colors font-medium">SAP Joule AI {lang === 'tr' ? 'Entegrasyonu' : 'Integration'}</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Col 2 -->
+                            <div>
+                                <h4 class="text-[11px] font-bold tracking-widest text-[#26A5E4] uppercase mb-5 flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-[16px]">domain</span> {lang === 'tr' ? 'Modüler Uzmanlık' : 'Modular Expertise'}
+                                </h4>
+                                <ul class="space-y-3.5">
+                                    <li><a href={getLocalePath('/sap-refx', lang)} class="text-[14px] text-text-main hover:text-plum transition-colors font-medium">{lang === 'tr' ? 'Gayrimenkul ve İhtilaf (RE-FX)' : 'Real Estate (RE-FX)'}</a></li>
+                                    <li><a href={getLocalePath('/sap-trm', lang)} class="text-[14px] text-text-main hover:text-plum transition-colors font-medium">{lang === 'tr' ? 'Hazine ve Risk (TRM)' : 'Treasury & Risk (TRM)'}</a></li>
+                                    <li><a href={getLocalePath('/enflasyon-muhasebesi', lang)} class="text-[14px] text-text-main hover:text-plum transition-colors font-medium">{lang === 'tr' ? 'TMS 29 Enflasyon Muhasebesi' : 'Inflation Accounting'}</a></li>
+                                    <li><a href={getLocalePath('/sap-aa', lang)} class="text-[14px] text-text-main hover:text-plum transition-colors font-medium">{lang === 'tr' ? 'Duran Varlık Yönetimi (AA)' : 'Asset Accounting (AA)'}</a></li>
+                                    <li><a href={getLocalePath('/sap-finansal-konsolidasyon', lang)} class="text-[14px] text-text-main hover:text-plum transition-colors font-medium">{lang === 'tr' ? 'Grup Raporlaması ve Konsolidasyon' : 'Group Reporting & Consolidation'}</a></li>
+                                    <li><a href={getLocalePath('/sap-opentext', lang)} class="text-[14px] text-text-main hover:text-plum transition-colors font-medium">SAP & OpenText</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Right Side: Promo Action Card -->
+                        <div class="flex-[1.2] bg-bg2 p-8 relative flex flex-col overflow-hidden border-l border-border">
+                            <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-teal/10 rounded-full blur-[40px]"></div>
+                            <div class="relative z-10 text-left h-full flex flex-col">
+                                <span class="material-symbols-outlined text-teal text-3xl mb-4">architecture</span>
+                                <h4 class="font-bold text-lg mb-2 text-text-main">{lang === 'tr' ? 'Mükemmel Mimari' : 'Flawless Architecture'}</h4>
+                                <p class="text-[13px] text-text-70 leading-relaxed font-light flex-grow">
+                                    {lang === 'tr' ? 'Tüm finansal yapınızı uçtan uca tek sistem üzerinde sıfır manuel iş prensibiyle tasarlıyoruz.' : 'We design your entire financial structure end-to-end on a single system with zero manual work.'}
+                                </p>
+                                <a href={getLocalePath('/hizmetler', lang)} class="inline-flex items-center gap-1.5 text-xs font-bold text-teal hover:text-plum transition-colors">
+                                    {lang === 'tr' ? 'Tüm Hizmetleri Gör' : 'View All Services'} <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kurumsal Dropdown -->
+            <div class="relative group h-full flex items-center">
+                <button class={`flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium transition-colors duration-200 cursor-default ${(isActivePath('/hakkimizda') || isActivePath('/sektorler') || isActivePath('/insight')) ? 'text-plum font-semibold' : 'text-text-70 group-hover:text-text-main'}`}>
+                    {lang === 'tr' ? 'Kurumsal' : 'Corporate'}
+                    <span class="material-symbols-outlined text-[18px] text-text-40 group-hover:rotate-180 transition-transform duration-300">keyboard_arrow_down</span>
+                </button>
+                
+                <div class="absolute top-full -translate-x-2/3 pt-4 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0 translate-y-3 transition-all duration-300 z-[60]">
+                    <div class="absolute -top-4 left-0 w-full h-4"></div>
+                    <div class="bg-bg/95 shadow-[0_16px_50px_rgba(0,0,0,0.15)] border border-border rounded-2xl w-[500px] flex overflow-hidden backdrop-blur-3xl p-8 grid grid-cols-2 gap-8">
+                        <div>
+                            <h4 class="text-[11px] font-bold tracking-widest text-text-40 uppercase mb-5 flex items-center gap-2">
+                                <span class="material-symbols-outlined text-[16px]">corporate_fare</span> {lang === 'tr' ? 'Hakkımızda' : 'About Us'}
+                            </h4>
+                            <ul class="space-y-3.5">
+                                <li><a href={getLocalePath('/hakkimizda', lang)} class="text-[14px] text-text-main hover:text-plum transition-colors font-semibold">{lang === 'tr' ? 'Biz Kimiz?' : 'Who We Are'}</a></li>
+                                <li><a href={getLocalePath('/sektorler', lang)} class="text-[14px] text-text-main hover:text-plum transition-colors font-medium">{lang === 'tr' ? 'Hizmet Verdiğimiz Sektörler' : 'Industries We Serve'}</a></li>
+                                <li><a href={getLocalePath('/iletisim', lang)} class="text-[14px] text-text-main hover:text-plum transition-colors font-medium">{lang === 'tr' ? 'İletişim & Konum' : 'Contact & Location'}</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-[11px] font-bold tracking-widest text-text-40 uppercase mb-5 flex items-center gap-2">
+                                <span class="material-symbols-outlined text-[16px]">library_books</span> {lang === 'tr' ? 'İçerik & Yasal' : 'Insights & Legal'}
+                            </h4>
+                            <ul class="space-y-3.5">
+                                <li><a href={getLocalePath('/insight', lang)} class="text-[14px] text-text-main hover:text-plum transition-colors font-medium">Harezm Insight</a></li>
+                                <li><a href={getLocalePath('/kvkk', lang)} class="text-[14px] text-text-main hover:text-plum transition-colors font-medium text-text-70">KVKK / Aydınlatma</a></li>
+                                <li><a href={getLocalePath('/gizlilik-politikasi', lang)} class="text-[14px] text-text-main hover:text-plum transition-colors font-medium text-text-70">{lang === 'tr' ? 'Gizlilik Politikası' : 'Privacy Policy'}</a></li>
+                                <li><a href={getLocalePath('/cerez-politikasi', lang)} class="text-[14px] text-text-main hover:text-plum transition-colors font-medium text-text-70">{lang === 'tr' ? 'Çerez Politikası' : 'Cookie Policy'}</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- Right Actions -->
         <div class="flex items-center gap-2 md:gap-4">
