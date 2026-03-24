@@ -1,0 +1,138 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const lang = 'en' as const;
+---
+<Layout title="Products | Harezm" lang={lang}>
+    <!-- Hero -->
+    <section class="relative pt-40 pb-32 bg-surface text-center overflow-hidden">
+        <div class="absolute inset-0 bg-primary/5 blur-[100px] -z-10 rounded-full w-[600px] h-[600px] left-1/2 -translate-x-1/2 top-0"></div>
+        <div class="max-w-[1440px] mx-auto px-8 relative z-10">
+            <span class="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary font-bold text-xs tracking-widest uppercase mb-6">Financial Technology Suite</span>
+            <h1 class="display-lg text-5xl md:text-7xl font-bold font-headline mb-8 text-on-background">
+                Financial Infrastructure<br/>Operating Inside SAP.
+            </h1>
+            <p class="text-xl md:text-2xl text-on-surface-variant font-light leading-relaxed max-w-3xl mx-auto">
+                Manage all your operations, from bank integrations to e-Government packages, directly from the heart of your SAP FI/CO architecture without the need for external software.
+            </p>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="py-24 bg-surface-container-lowest border-t border-outline-variant/10">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- 1 -->
+                <div class="bg-surface-container-low p-10 rounded-3xl border border-outline-variant/20 hover:border-primary/40 hover:shadow-xl transition-all group flex flex-col h-full">
+                    <div class="w-16 h-16 rounded-2xl bg-primary/10 text-primary flex justify-center items-center mb-8 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-3xl">payments</span>
+                    </div>
+                    <h3 class="text-2xl font-bold font-headline mb-4 text-on-background">e-Collection</h3>
+                    <p class="text-on-surface-variant leading-relaxed mb-8 flex-grow">
+                        Digitize your collection processes with virtual POS integrations. Incoming payments are automatically matched and accounted for within the SAP FI module.
+                    </p>
+                    <a href="/en/contact" class="inline-flex items-center gap-2 text-primary font-bold text-sm tracking-wide group-hover:underline">
+                        Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </a>
+                </div>
+
+                <!-- 2 -->
+                <div class="bg-surface-container-low p-10 rounded-3xl border border-outline-variant/20 hover:border-primary/40 hover:shadow-xl transition-all group flex flex-col h-full lg:col-span-2 relative overflow-hidden">
+                    <div class="absolute right-0 top-0 w-64 h-64 bg-primary/5 blur-3xl group-hover:bg-primary/10 transition-colors pointer-events-none"></div>
+                    <div class="w-16 h-16 rounded-2xl bg-primary text-white flex justify-center items-center mb-8 group-hover:scale-110 transition-transform relative z-10">
+                        <span class="material-symbols-outlined text-3xl">hub</span>
+                    </div>
+                    <h3 class="text-3xl font-bold font-headline mb-4 text-on-background relative z-10">Bank Hub (Multi-Bank Connectivity)</h3>
+                    <p class="text-on-surface-variant leading-relaxed mb-8 text-lg max-w-2xl relative z-10">
+                        Stop logging into separate bank portals. Perform all your account movements, MT940 reconciliations, and real-time balance views from a single screen, directly through SAP. Guaranteed 95% automated matching powered by AI.
+                    </p>
+                    <a href="/en/contact" class="inline-flex items-center gap-2 text-primary font-bold text-sm tracking-wide group-hover:underline mt-auto relative z-10">
+                        Request Demo <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </a>
+                </div>
+
+                <!-- 3 -->
+                <div class="bg-surface-container-low p-10 rounded-3xl border border-outline-variant/20 hover:border-primary/40 hover:shadow-xl transition-all group flex flex-col h-full">
+                    <div class="w-16 h-16 rounded-2xl bg-primary/10 text-primary flex justify-center items-center mb-8 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-3xl">account_balance_wallet</span>
+                    </div>
+                    <h3 class="text-2xl font-bold font-headline mb-4 text-on-background">e-DBS</h3>
+                    <p class="text-on-surface-variant leading-relaxed mb-8 flex-grow">
+                        Secure your collections from your dealer networks with the Direct Debit System and fully automate credit limit monitoring.
+                    </p>
+                    <a href="/en/contact" class="inline-flex items-center gap-2 text-primary font-bold text-sm tracking-wide group-hover:underline">
+                        Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </a>
+                </div>
+
+                <!-- 4 -->
+                <div class="bg-surface-container-low p-10 rounded-3xl border border-outline-variant/20 hover:border-primary/40 hover:shadow-xl transition-all group flex flex-col h-full">
+                    <div class="w-16 h-16 rounded-2xl bg-primary/10 text-primary flex justify-center items-center mb-8 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-3xl">account_balance</span>
+                    </div>
+                    <h3 class="text-2xl font-bold font-headline mb-4 text-on-background">e-Payment</h3>
+                    <p class="text-on-surface-variant leading-relaxed mb-8 flex-grow">
+                        Send vendor payments, tax, and payroll transfers directly from SAP screens to the bank according to the approval hierarchy.
+                    </p>
+                    <a href="/en/contact" class="inline-flex items-center gap-2 text-primary font-bold text-sm tracking-wide group-hover:underline">
+                        Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </a>
+                </div>
+
+                <!-- 5 -->
+                <div class="bg-surface-container-low p-10 rounded-3xl border border-outline-variant/20 hover:border-primary/40 hover:shadow-xl transition-all group flex flex-col h-full">
+                    <div class="w-16 h-16 rounded-2xl bg-primary/10 text-primary flex justify-center items-center mb-8 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-3xl">gavel</span>
+                    </div>
+                    <h3 class="text-2xl font-bold font-headline mb-4 text-on-background">e-Government Series</h3>
+                    <p class="text-on-surface-variant leading-relaxed mb-8 flex-grow">
+                        e-Invoice, e-Ledger, e-Delivery, and e-Archive processes with 100% compliance to Turkish Revenue Administration (GİB) regulations and seamless SAP integration.
+                    </p>
+                    <a href="/en/contact" class="inline-flex items-center gap-2 text-primary font-bold text-sm tracking-wide group-hover:underline">
+                        Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Harezm Insights Series -->
+    <section class="py-24 bg-surface-container-lowest border-t border-outline-variant/10">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="bg-surface-container-low p-10 md:p-14 rounded-3xl border border-outline-variant/20 relative overflow-hidden">
+                <div class="absolute w-64 h-64 bg-primary/5 rounded-full blur-3xl pointer-events-none -right-10 -bottom-10"></div>
+                <span class="material-symbols-outlined text-6xl text-primary/20 mb-6 block">format_quote</span>
+                <h3 class="text-sm font-bold tracking-widest text-primary uppercase mb-6">06 · SAP GROUP REPORTING</h3>
+                <p class="text-xl md:text-2xl text-on-background font-light leading-relaxed mb-8 relative z-10 italic">
+                    "For organizations operating across multiple legal entities, subsidiaries, or geographies, financial close is typically the most labor-intensive process in the finance calendar. Intercompany eliminations, currency translations, and multi-GAAP reporting requirements can turn into a weeks-long process still requiring manual intervention. SAP Group Reporting, natively integrated into S/4HANA, addresses this by embedding consolidation logic directly into the Universal Journal. The new rule engines introduced in the 2025 and 2026 releases automate the most complex allocation and elimination scenarios, reducing dependency on offline workbooks and consolidation specialists. Central Finance extends this architecture to heterogeneous environments—organizations running multiple ERP systems can aggregate financial data into a single S/4HANA core without requiring subsidiary system migrations. The outcome: a single, auditable financial truth across the entire organization—and real-time access to that truth."
+                </p>
+                <div class="flex items-center gap-4 relative z-10 mt-8 pt-8 border-t border-outline-variant/10">
+                    <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                        <span class="material-symbols-outlined text-sm">architecture</span>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-bold text-on-background">Harezm Insight Series</h4>
+                        <span class="text-xs text-on-surface-variant uppercase tracking-widest">Financial Architecture Vision</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA -->
+    <section class="py-24 bg-surface">
+        <div class="max-w-4xl mx-auto px-8">
+            <div class="bg-primary rounded-3xl p-12 md:p-16 text-center text-white shadow-2xl relative overflow-hidden">
+                <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+                <h2 class="text-3xl md:text-5xl font-bold font-headline mb-6 relative z-10">Build Your Own Ecosystem</h2>
+                <p class="text-white/80 text-lg mb-10 font-light relative z-10">
+                    Contact our experts for a custom interface demo session. Let's instantly calculate the integration costs specific to your business.
+                </p>
+                <a href="/en/contact" class="inline-block bg-white text-primary px-10 py-4 rounded-xl font-bold hover:shadow-lg hover:-translate-y-1 transition-all relative z-10">
+                    Integrate Systems
+                </a>
+            </div>
+        </div>
+    </section>
+</Layout>
