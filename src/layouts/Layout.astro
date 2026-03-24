@@ -49,6 +49,25 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://harezm.c
     <meta property="twitter:title" content={`${title} | Harezm Technology`} />
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={new URL(image, canonicalURL.origin).href} />
+
+    <!-- JSON-LD Structure for AI & Search Engines -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Harezm Technology",
+      "url": canonicalURL.href,
+      "logo": new URL(image, canonicalURL.origin).href,
+      "description": description,
+      "sameAs": [
+        "https://www.linkedin.com/company/harezm/"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "info@harezm.com.tr",
+        "contactType": "customer service",
+        "availableLanguage": ["Turkish", "English"]
+      }
+    })} />
     
     <!-- Theme: track OS preference dynamically -->
     <script is:inline>
