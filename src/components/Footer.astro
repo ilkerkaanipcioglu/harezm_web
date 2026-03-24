@@ -80,9 +80,9 @@ const { lang = 'tr' } = Astro.props;
             <span class="text-xs text-text-40">{t('footerCopyright', lang)}</span>
             <div class="flex flex-wrap justify-center md:justify-end items-center gap-4 md:gap-8 text-xs text-text-40">
                 <ThemeToggle />
-                <a class="hover:text-plum transition-colors" href="#">{t('footerKvkk', lang)}</a>
-                <a class="hover:text-plum transition-colors" href="#">{t('footerPrivacy', lang)}</a>
-                <a class="hover:text-plum transition-colors" href="#">{t('footerCookies', lang)}</a>
+                <a class="hover:text-plum transition-colors" href={getLocalePath('/kvkk', lang)}>{t('footerKvkk', lang)}</a>
+                <a class="hover:text-plum transition-colors" href={getLocalePath('/gizlilik-politikasi', lang)}>{t('footerPrivacy', lang)}</a>
+                <a class="hover:text-plum transition-colors" href={getLocalePath('/cerez-politikasi', lang)}>{t('footerCookies', lang)}</a>
             </div>
         </div>
     </div>

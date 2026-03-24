@@ -30,6 +30,9 @@ export function getLocalePath(path: string, lang: Lang): string {
     '/s4hana': '/en/s4hana',
     '/sap-cash-management': '/en/sap-cash-management',
     '/sap-trm': '/en/sap-trm',
+    '/kvkk': '/en/kvkk',
+    '/gizlilik-politikasi': '/en/privacy-policy',
+    '/cerez-politikasi': '/en/cookie-policy',
   };
   return pathMap[path] || `/en${path}`;
 }
@@ -51,6 +54,9 @@ export function getAlternateLangPath(currentPath: string, currentLang: Lang): st
       '/s4hana': '/en/s4hana',
       '/sap-cash-management': '/en/sap-cash-management',
       '/sap-trm': '/en/sap-trm',
+      '/kvkk': '/en/kvkk',
+      '/gizlilik-politikasi': '/en/privacy-policy',
+      '/cerez-politikasi': '/en/cookie-policy',
     };
     return map[currentPath] || `/en${currentPath}`;
   } else {
@@ -70,6 +76,9 @@ export function getAlternateLangPath(currentPath: string, currentLang: Lang): st
       '/en/s4hana': '/s4hana',
       '/en/sap-cash-management': '/sap-cash-management',
       '/en/sap-trm': '/sap-trm',
+      '/en/kvkk': '/kvkk',
+      '/en/privacy-policy': '/gizlilik-politikasi',
+      '/en/cookie-policy': '/cerez-politikasi',
     };
     return map[currentPath] || currentPath.replace('/en', '');
   }
