@@ -251,7 +251,7 @@ const otherLang = lang === 'tr' ? 'EN' : 'TR';
                }`}
                href={getLocalePath(item.path, lang)}
              >
-               {t(item.key, lang)}
+               {lang === 'tr' ? item.label : item.enLabel}
              </a>
         ))}
         
