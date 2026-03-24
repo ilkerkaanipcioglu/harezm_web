@@ -2,14 +2,14 @@
 // ThemeToggle.astro — Dark/Light switch with localStorage persistence
 ---
 <button
-  class="theme-toggle-btn w-9 h-9 flex-shrink-0 rounded-full flex items-center justify-center border border-border-main bg-surface hover:border-plum/40 transition-colors cursor-pointer text-text-70 hover:text-plum relative"
+  class="theme-toggle-btn w-9 h-9 flex-shrink-0 rounded-lg flex items-center justify-center text-text-70 hover:text-text-main hover:bg-bg2 transition-colors cursor-pointer"
   aria-label="Toggle theme"
   title="Toggle dark/light theme"
 >
   <!-- Sun icon (shown in dark mode) -->
-  <span class="material-symbols-outlined text-[18px] theme-icon-sun">light_mode</span>
+  <span class="material-symbols-outlined text-[20px] theme-icon-sun">light_mode</span>
   <!-- Moon icon (shown in light mode) -->
-  <span class="material-symbols-outlined text-[18px] theme-icon-moon hidden">dark_mode</span>
+  <span class="material-symbols-outlined text-[20px] theme-icon-moon hidden">dark_mode</span>
 </button>
 
 <style>

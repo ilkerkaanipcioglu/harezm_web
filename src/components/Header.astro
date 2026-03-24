@@ -210,23 +210,30 @@ const otherLang = lang === 'tr' ? 'EN' : 'TR';
         <!-- Right Actions -->
         <div class="flex items-center gap-2 md:gap-4">
             <!-- Theme Toggle -->
-             <div class="hidden md:block">
+             <div class="hidden md:flex h-full items-center">
                  <ThemeToggle />
              </div>
              
-            <!-- Lang Toggle (Desktop) -->
-            <div class="hidden lg:flex items-center bg-bg2 rounded-full p-0.5 gap-0 border border-border-main">
-                {lang === 'tr' ? (
-                    <>
-                        <span class="px-3 py-1.5 rounded-full bg-plum text-white text-xs font-bold tracking-wide">TR</span>
-                        <a href={alternateLangPath} class="px-3 py-1.5 rounded-full text-text-40 text-xs font-bold tracking-wide hover:text-text-main transition-colors">EN</a>
-                    </>
-                ) : (
-                    <>
-                        <a href={alternateLangPath} class="px-3 py-1.5 rounded-full text-text-40 text-xs font-bold tracking-wide hover:text-text-main transition-colors">TR</a>
-                        <span class="px-3 py-1.5 rounded-full bg-plum text-white text-xs font-bold tracking-wide">EN</span>
-                    </>
-                )}
+            <!-- Lang Dropdown (Desktop) -->
+            <div class="relative group hidden lg:flex h-full items-center">
+                <button class="flex items-center gap-1.5 px-2 py-2 rounded-lg text-sm font-medium text-text-70 group-hover:text-text-main hover:bg-bg2 transition-colors duration-200">
+                    <span class="material-symbols-outlined text-[18px]">language</span>
+                    {lang === 'tr' ? 'TR' : 'EN'}
+                    <span class="material-symbols-outlined text-[18px] text-text-40 group-hover:rotate-180 transition-transform duration-300">keyboard_arrow_down</span>
+                </button>
+                <div class="absolute top-full right-0 pt-4 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0 translate-y-3 transition-all duration-300 z-[60]">
+                    <div class="absolute -top-4 right-0 w-full h-4"></div>
+                    <div class="bg-bg/95 shadow-[0_16px_50px_rgba(0,0,0,0.15)] border border-border rounded-xl w-[140px] flex py-2 flex-col overflow-hidden backdrop-blur-3xl">
+                        <a href={getAlternateLangPath(currentPath, 'en')} class={`px-4 py-2.5 text-sm font-medium transition-colors flex items-center justify-between ${lang === 'tr' ? 'text-plum bg-plum/5 font-bold' : 'text-text-70 hover:bg-bg2 hover:text-text-main'}`}>
+                            Türkçe 
+                            {lang === 'tr' && <span class="material-symbols-outlined text-[16px]">check</span>}
+                        </a>
+                        <a href={getAlternateLangPath(currentPath, 'tr')} class={`px-4 py-2.5 text-sm font-medium transition-colors flex items-center justify-between ${lang === 'en' ? 'text-plum bg-plum/5 font-bold' : 'text-text-70 hover:bg-bg2 hover:text-text-main'}`}>
+                            English
+                            {lang === 'en' && <span class="material-symbols-outlined text-[16px]">check</span>}
+                        </a>
+                    </div>
+                </div>
             </div>
             <!-- CTA (Desktop) -->
             <a href={getLocalePath('/iletisim', lang)} class="hidden sm:inline-block bg-plum text-white px-5 py-2.5 rounded-lg font-medium text-sm hover:bg-plum-hover transition-colors">
