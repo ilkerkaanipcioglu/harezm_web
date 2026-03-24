@@ -75,8 +75,24 @@ const { lang = 'tr' } = Astro.props;
         </div>
         </div>
 
+        <!-- Ecosystem / Brands (Subtle) -->
+        <div class="border-t border-border-main py-6 flex flex-wrap items-center justify-center md:justify-start gap-3 md:gap-6 text-xs text-text-40">
+            <span class="font-medium text-text-70 tracking-widest uppercase text-[10px]">Harezm Ecosystem</span>
+            <a href="https://www.linkedin.com/showcase/agentandbot/" target="_blank" rel="noopener noreferrer" class="hover:text-plum transition-colors flex items-center gap-1.5 grayscale opacity-70 hover:grayscale-0 hover:opacity-100">
+                <span class="material-symbols-outlined text-[14px]">smart_toy</span> AgentAndBot
+            </a>
+            <span class="opacity-20">•</span>
+            <a href="/urunler" class="hover:text-plum transition-colors flex items-center gap-1.5 grayscale opacity-70 hover:grayscale-0 hover:opacity-100">
+                <span class="material-symbols-outlined text-[14px]">receipt_long</span> e-Dönüşüm Ürünleri
+            </a>
+            <span class="opacity-20">•</span>
+            <a href="/sap-cash-management" class="hover:text-plum transition-colors flex items-center gap-1.5 grayscale opacity-70 hover:grayscale-0 hover:opacity-100">
+                <span class="material-symbols-outlined text-[14px]">account_balance_wallet</span> T-Flow Nakit Yönetimi
+            </a>
+        </div>
+
         <!-- Bottom Bar -->
-        <div class="border-t border-border-main pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+        <div class="border-t border-border-main pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
             <span class="text-xs text-text-40">{t('footerCopyright', lang)}</span>
             <div class="flex flex-wrap justify-center md:justify-end items-center gap-4 md:gap-8 text-xs text-text-40">
                 <ThemeToggle />
