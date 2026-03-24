@@ -6,19 +6,19 @@
 
 :root,
 [data-theme="dark"] {
-  --bg:        #0B0B0D;
-  --bg2:       #1A1C1F;
-  --bg3:       #282A2E;
-  --plum:      #580F41;
-  --plum-h:    #7A1559;
-  --teal:      #40E0D0;
-  --text:      #F5F7FA;
-  --text-70:   rgba(245,247,250,0.70);
-  --text-40:   rgba(245,247,250,0.40);
-  --border:    rgba(201,204,209,0.12);
-  --border-2:  rgba(201,204,209,0.22);
-  --card-shadow: 0 1px 3px rgba(0,0,0,0.3);
-  --nav-bg:    rgba(11,11,13,0.92);
+  --bg:        #060508; /* Deepest premium black with a microscopic plum hue */
+  --bg2:       #110E15; /* Elegant elevated surface */
+  --bg3:       #1C1722; /* High-level cards */
+  --plum:      #82165F; /* Brighter plum for dark-mode visibility and popping accents */
+  --plum-h:    #A81C7A;
+  --teal:      #2DD4BF; /* Sophisticated, modern electric teal */
+  --text:      #F8FAFC; /* Crisp, clean white */
+  --text-70:   rgba(248, 250, 252, 0.70);
+  --text-40:   rgba(248, 250, 252, 0.40);
+  --border:    rgba(255, 255, 255, 0.06); /* Sophisticated, barely-there borders */
+  --border-2:  rgba(255, 255, 255, 0.12);
+  --card-shadow: 0 10px 40px -10px rgba(0,0,0,0.7); /* Deep, expensive shadow */
+  --nav-bg:    rgba(6, 5, 8, 0.85);
   color-scheme: dark;
 }
 
