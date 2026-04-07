@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurumsal Renk Paletleri V2</title>
+    <style>
+        :root {
+            --harezm: #82165F;
+            --eny: #D0FD17;
+            --eny-text: #6B820B;
+            --agentbot: #00E5FF;
+            --agentbot-dark: #00B8D4;
+            --purple: #6200EA;
+        }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 40px;
+            color: #1a1a1a;
+        }
+        .container { max-width: 1100px; margin: auto; }
+        h1 { text-align: center; margin-bottom: 40px; color: #333; }
+        .company-card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+        .header-row { display: flex; align-items: center; border-bottom: 2px solid #eee; padding-bottom: 15px; margin-bottom: 25px; }
+        .dot { width: 15px; height: 15px; border-radius: 50%; margin-right: 15px; }
+        .theme-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+        .theme-box { padding: 25px; border-radius: 12px; border: 1px solid #e0e0e0; transition: transform 0.2s; }
+        .theme-box:hover { transform: translateY(-5px); }
+        .light { background: #ffffff; color: #1f1f1f; }
+        .dark { background: #010B13; color: #ffffff; }
+        
+        .swatch { display: flex; align-items: center; margin-bottom: 15px; font-family: monospace; font-size: 0.9em; }
+        .color-box { width: 45px; height: 45px; border-radius: 8px; margin-right: 15px; border: 1px solid rgba(0,0,0,0.1); }
+        .btn { display: inline-block; padding: 12px 24px; border-radius: 8px; font-weight: 700; text-decoration: none; margin-top: 15px; transition: opacity 0.2s; }
+        .btn:hover { opacity: 0.9; }
+        
+        .badge { display: inline-block; padding: 4px 10px; border-radius: 20px; font-size: 0.75em; font-weight: bold; margin-bottom: 10px; text-transform: uppercase; }
+        .strategy { background: #fff9db; border-left: 4px solid #fcc419; padding: 15px; margin-top: 20px; font-size: 0.85em; border-radius: 0 8px 8px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Kurumsal Renk Sistemleri - Versiyon 2</h1>
+
+        <!-- Harezm -->
+        <div class="company-card">
+            <div class="header-row">
+                <div class="dot" style="background:var(--harezm)"></div>
+                <h2>Harezm - Finansal Mimari</h2>
+            </div>
+            <div class="theme-grid">
+                <div class="theme-box light">
+                    <span class="badge" style="background:#f3e5f5; color:var(--harezm)">Light Mode</span>
+                    <div class="swatch"><div class="color-box" style="background:var(--harezm)"></div> #82165F (Primary)</div>
+                    <div class="swatch"><div class="color-box" style="background:#F5F0F2"></div> #F5F0F2 (Surface)</div>
+                    <a href="#" class="btn" style="background:var(--harezm); color:white;">İşlem Yap</a>
+                </div>
+                <div class="theme-box dark" style="background:#1A0B14">
+                    <span class="badge" style="background:rgba(179,78,143,0.2); color:#B34E8F">Dark Mode</span>
+                    <div class="swatch"><div class="color-box" style="background:#B34E8F"></div> #B34E8F (Primary)</div>
+                    <div class="swatch"><div class="color-box" style="background:#2D1824"></div> #2D1824 (Surface)</div>
+                    <a href="#" class="btn" style="background:#B34E8F; color:white;">İşlem Yap</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Eny -->
+        <div class="company-card">
+            <div class="header-row">
+                <div class="dot" style="background:var(--eny)"></div>
+                <h2>Eny - Teknoloji & Enerji</h2>
+            </div>
+            <div class="theme-grid">
+                <div class="theme-box light">
+                    <span class="badge" style="background:#f4ffcc; color:var(--eny-text)">Light Mode</span>
+                    <div class="swatch"><div class="color-box" style="background:var(--eny)"></div> #D0FD17 (Accent)</div>
+                    <div class="swatch" style="color:var(--eny-text)"><div class="color-box" style="background:var(--eny-text)"></div> #6B820B (Text)</div>
+                    <p style="color:var(--eny-text); font-size:0.9em;">Okunabilirlik için koyulaştırılmış lime metin.</p>
+                    <a href="#" class="btn" style="background:var(--eny); color:black;">Enerji Al</a>
+                </div>
+                <div class="theme-box dark" style="background:#050701">
+                    <span class="badge" style="background:rgba(208,253,23,0.08); color:var(--eny)">Dark Mode</span>
+                    <div class="swatch"><div class="color-box" style="background:var(--eny)"></div> #D0FD17 (Primary)</div>
+                    <div class="swatch"><div class="color-box" style="background:#0c0e03; border:1px solid rgba(208,253,23,0.2)"></div> #0c0e03 (BG2)</div>
+                    <div class="swatch"><div class="color-box" style="background:#151706; border:1px solid rgba(208,253,23,0.2)"></div> #151706 (Surface)</div>
+                    <a href="#" class="btn" style="background:var(--eny); color:black;">Enerji Al</a>
+                </div>
+            </div>
+            <div class="strategy">
+                <strong>Strateji:</strong> #D0FD17 rengi açık temada sadece geniş butonlarda (siyah metinle) veya grafik öğelerde kullanılır. Metinlerde mutlaka #6B820B tercih edilir.
+                <br><strong style="color:#c00">⚠️ Olive uyarısı:</strong> Dark mode BG renkleri olive/yeşil görünmemeli. Zemin neredeyse siyah, mikro lime hint ile sınırlı olmalı (#050701 / #0c0e03 / #151706).
+            </div>
+        </div>
+
+        <!-- AgentandBot -->
+        <div class="company-card">
+            <div class="header-row">
+                <div class="dot" style="background:var(--agentbot)"></div>
+                <h2>AgentandBot - Robotik & Otomasyon (Yeni)</h2>
+            </div>
+            <div class="theme-grid">
+                <div class="theme-box light" style="background:#F0F4F8">
+                    <span class="badge" style="background:#e0f7fa; color:var(--agentbot-dark)">Light Mode</span>
+                    <div class="swatch"><div class="color-box" style="background:var(--agentbot-dark)"></div> #00B8D4 (Primary)</div>
+                    <div class="swatch"><div class="color-box" style="background:var(--purple)"></div> #6200EA (Accent)</div>
+                    <p style="color:#102A43; font-size:0.9em;">Robotik arayüz hissi veren buz mavisi yüzey.</p>
+                    <a href="#" class="btn" style="background:var(--agentbot-dark); color:white;">Botu Başlat</a>
+                </div>
+                <div class="theme-box dark">
+                    <span class="badge" style="background:rgba(0,229,255,0.1); color:var(--agentbot)">Dark Mode</span>
+                    <div class="swatch"><div class="color-box" style="background:var(--agentbot)"></div> #00E5FF (Primary)</div>
+                    <div class="swatch"><div class="color-box" style="background:#AA00FF"></div> #AA00FF (Accent)</div>
+                    <a href="#" class="btn" style="background:var(--agentbot); color:black;">Botu Başlat</a>
+                </div>
+            </div>
+            <div class="strategy" style="background:#e3f2fd; border-left-color:#2196f3;">
+                <strong>Robotik Kimlik:</strong> AgentandBot için "Cyber Blue" (#00E5FF) seçildi. Bu renk, Harezm'in mürdümü ve Eny'nin neon lime rengiyle yüksek kontrastlı bir teknoloji üçlüsü oluşturur.
+            </div>
+        </div>
+    </div>
+</body>
+</html>
