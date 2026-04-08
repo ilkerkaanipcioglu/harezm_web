@@ -6,36 +6,40 @@
 
 :root,
 [data-theme="dark"] {
-  --bg:        #060508; /* Deepest premium black with a microscopic plum hue */
-  --bg2:       #110E15; /* Elegant elevated surface */
-  --bg3:       #1C1722; /* High-level cards */
-  --plum:      #82165F; /* Brighter plum for dark-mode visibility and popping accents */
-  --plum-h:    #A81C7A;
+  /* === Shared Dark BG System (V4.4 Palette) === */
+  --bg:        #1A1A1A; /* Ortak ana arka plan — premium mat koyu gri */
+  --bg2:       #242424; /* Ortak surface / kart */
+  --bg3:       #333333; /* Ortak border / yüksek kartlar */
+  --plum:      #B34E8F; /* V4.4: Dark mode — parlayan mürdüm */
+  --plum-h:    #C47AAE; /* V4.4: Muted — ikon / tag */
+  --plum-tinted: #2A0B20; /* V4.4: Tinted surface (dark) */
   --teal:      #2DD4BF; /* Sophisticated, modern electric teal */
   --text:      #F8FAFC; /* Crisp, clean white */
   --text-70:   rgba(248, 250, 252, 0.70);
   --text-40:   rgba(248, 250, 252, 0.40);
-  --border:    rgba(255, 255, 255, 0.06); /* Sophisticated, barely-there borders */
+  --border:    #333333;  /* V4.4: Ortak border rengi */
   --border-2:  rgba(255, 255, 255, 0.12);
   --card-shadow: 0 10px 40px -10px rgba(0,0,0,0.7); /* Deep, expensive shadow */
-  --nav-bg:    rgba(6, 5, 8, 0.85);
+  --nav-bg:    rgba(26, 26, 26, 0.88); /* V4.4: #1A1A1A based nav */
   color-scheme: dark;
 }
 
 [data-theme="light"] {
-  --bg:        #FFFFFF;
-  --bg2:       #F5F5F7;
-  --bg3:       #ECECEE;
-  --plum:      #580F41;
-  --plum-h:    #7A1559;
+  /* === Shared Light BG System (V4.4 Palette) === */
+  --bg:        #F5F4F2; /* V4.4: Ortak ana arka plan — beyaza yakın, ılık mat gri */
+  --bg2:       #EDECEA; /* V4.4: Ortak surface / kart */
+  --bg3:       #DDDBD8; /* V4.4: Ortak border */
+  --plum:      #82165F; /* V4.4: Primary — Kurumsal Mürdüm */
+  --plum-h:    #5e0f45; /* Hover/pressed darker mürdüm */
+  --plum-tinted: #F5ECF2; /* V4.4: Tinted surface (light) */
   --teal:      #0F9B8E;
   --text:      #1A1C1F;
   --text-70:   rgba(26,28,31,0.65);
   --text-40:   rgba(26,28,31,0.40);
-  --border:    rgba(0,0,0,0.08);
+  --border:    #DDDBD8;  /* V4.4: Ortak border rengi */
   --border-2:  rgba(0,0,0,0.14);
   --card-shadow: 0 1px 4px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.04);
-  --nav-bg:    rgba(255,255,255,0.92);
+  --nav-bg:    rgba(245, 244, 242, 0.95); /* V4.4: #F5F4F2 based nav */
   color-scheme: light;
 }
 
