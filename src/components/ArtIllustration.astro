@@ -1,0 +1,75 @@
+---
+/**
+ * ArtIllustration — Aylık sergi illüstrasyon bileşeni
+ * Absurd Design tarzı görselleri site renkleriyle gösterir.
+ * CSS filter ile sarı splash → site accent rengine dönüşür.
+ */
+export interface Props {
+  src: string;
+  alt?: string;
+  size?: 'sm' | 'md' | 'lg' | 'xl';
+  class?: string;
+  decorative?: boolean;
+}
+
+const { 
+  src, 
+  alt = 'İllüstrasyon', 
+  size = 'md', 
+  class: className = '',
+  decorative = false
+} = Astro.props;
+
+const sizeMap = {
+  sm: '120px',
+  md: '200px',
+  lg: '320px',
+  xl: '480px'
+};
+---
+
+<div class={`art-illustration art-${size} ${className}`} role={decorative ? 'presentation' : undefined}>
+  <img 
+    src={src} 
+    alt={decorative ? '' : alt} 
+    loading="lazy"
+    aria-hidden={decorative ? 'true' : undefined}
+  />
+</div>
+
+<style>
+  .art-illustration {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .art-illustration:hover {
+    transform: scale(1.04) rotate(-1deg);
+  }
+
+  .art-illustration img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* Sarı splash'ı site rengine dönüştür — Harezm mürdüm: hue-rotate + saturate */
+    filter: var(--art-filter, none);
+    mix-blend-mode: var(--art-blend, normal);
+    transition: filter 0.4s ease;
+  }
+
+  /* Boyutlar */
+  .art-sm { width: 120px; height: 120px; }
+  .art-md { width: 200px; height: 200px; }
+  .art-lg { width: 320px; height: 320px; }
+  .art-xl { width: 480px; height: 480px; }
+
+  @media (max-width: 768px) {
+    .art-sm { width: 80px; height: 80px; }
+    .art-md { width: 140px; height: 140px; }
+    .art-lg { width: 220px; height: 220px; }
+    .art-xl { width: 320px; height: 320px; }
+  }
+</style>
