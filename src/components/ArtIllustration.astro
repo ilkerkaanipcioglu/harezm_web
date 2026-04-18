@@ -2,7 +2,12 @@
 /**
  * ArtIllustration — Aylık sergi illüstrasyon bileşeni
  * Absurd Design tarzı görselleri site renkleriyle gösterir.
- * CSS filter ile sarı splash → site accent rengine dönüşür.
+ * 
+ * V4.4 Palette Renkleri:
+ *   brand    → #82165F Mürdüm (hue-rotate: 280deg)
+ *   minimal  → Çok hafif mürdüm tint (düşük saturate)
+ *   secondary→ #2DD4BF Teal (hue-rotate: 150deg)
+ *   bw       → Siyah-beyaz (grayscale)
  */
 export interface Props {
   src: string;
@@ -10,6 +15,7 @@ export interface Props {
   size?: 'sm' | 'md' | 'lg' | 'xl';
   class?: string;
   decorative?: boolean;
+  variant?: 'brand' | 'minimal' | 'secondary' | 'bw';
 }
 
 const { 
@@ -17,18 +23,14 @@ const {
   alt = 'İllüstrasyon', 
   size = 'md', 
   class: className = '',
-  decorative = false
+  decorative = false,
+  variant = 'brand'
 } = Astro.props;
 
-const sizeMap = {
-  sm: '120px',
-  md: '200px',
-  lg: '320px',
-  xl: '480px'
-};
+const variantClass = `art-variant-${variant}`;
 ---
 
-<div class={`art-illustration art-${size} ${className}`} role={decorative ? 'presentation' : undefined}>
+<div class={`art-illustration art-${size} ${variantClass} ${className}`} role={decorative ? 'presentation' : undefined}>
   <img 
     src={src} 
     alt={decorative ? '' : alt} 
@@ -54,10 +56,29 @@ const sizeMap = {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    /* Sarı splash'ı site rengine dönüştür — Harezm mürdüm: hue-rotate + saturate */
-    filter: var(--art-filter, none);
-    mix-blend-mode: var(--art-blend, normal);
     transition: filter 0.4s ease;
+  }
+
+  /* === Variant Filters (V4.4 Palette) === */
+
+  /* Brand: Mürdüm #82165F — ana renk, ama abartısız */
+  .art-variant-brand img {
+    filter: hue-rotate(280deg) saturate(1.2);
+  }
+
+  /* Minimal: Çok hafif mürdüm tint — neredeyse orijinal */
+  .art-variant-minimal img {
+    filter: hue-rotate(280deg) saturate(0.4) brightness(1.02);
+  }
+
+  /* Secondary: Teal #2DD4BF — 1-2 damla farklı renk */
+  .art-variant-secondary img {
+    filter: hue-rotate(150deg) saturate(0.8);
+  }
+
+  /* B&W: Siyah-beyaz — boyasız orijinal */
+  .art-variant-bw img {
+    filter: grayscale(1);
   }
 
   /* Boyutlar */

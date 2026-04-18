@@ -4,42 +4,50 @@
    HAREZM DESIGN SYSTEM — DUAL THEME
    ======================================== */
 
+:root {
+  /* Contract Base (V7.1) */
+  --bg-light: #F5F4F2;
+  --bg-dark: #1A1A1A;
+}
+
+[data-brand="harezm"],
+:root:not([data-brand]) {
+  --h: 324;
+  --s: 71%;
+  --l: 30%;
+}
+
+/* Global State Engine */
+[data-state="hover"]      { --l: calc(var(--l) + 4%); }
+[data-state="active"]     { --l: 50%; --s: 39%; } /* Controlled glow */
+[data-state="processing"] { --h: 186; --s: 100%; --l: 50%; }
+
 :root,
 [data-theme="dark"] {
   /* === Shared Dark BG System (V4.4 Palette) === */
-  --bg:        #1A1A1A; /* Ortak ana arka plan — premium mat koyu gri */
-  --bg2:       #242424; /* Ortak surface / kart */
-  --bg3:       #333333; /* Ortak border / yüksek kartlar */
-  --plum:      #B34E8F; /* V4.4: Dark mode — parlayan mürdüm */
-  --plum-h:    #C47AAE; /* V4.4: Muted — ikon / tag */
-  --plum-tinted: #2A0B20; /* V4.4: Tinted surface (dark) */
-  --teal:      #2DD4BF; /* Sophisticated, modern electric teal */
-  --text:      #F8FAFC; /* Crisp, clean white */
+  --bg:        var(--bg-dark);
+  --bg2:       #242424; 
+  --bg3:       #333333; 
+  --primary:   hsl(var(--h), var(--s), var(--l));
+  --text:      #F8FAFC; 
   --text-70:   rgba(248, 250, 252, 0.70);
   --text-40:   rgba(248, 250, 252, 0.40);
-  --border:    #333333;  /* V4.4: Ortak border rengi */
-  --border-2:  rgba(255, 255, 255, 0.12);
-  --card-shadow: 0 10px 40px -10px rgba(0,0,0,0.7); /* Deep, expensive shadow */
-  --nav-bg:    rgba(26, 26, 26, 0.88); /* V4.4: #1A1A1A based nav */
+  --border:    #333333; 
+  --nav-bg:    rgba(26, 26, 26, 0.88);
   color-scheme: dark;
 }
 
 [data-theme="light"] {
   /* === Shared Light BG System (V4.4 Palette) === */
-  --bg:        #F5F4F2; /* V4.4: Ortak ana arka plan — beyaza yakın, ılık mat gri */
-  --bg2:       #EDECEA; /* V4.4: Ortak surface / kart */
-  --bg3:       #DDDBD8; /* V4.4: Ortak border */
-  --plum:      #82165F; /* V4.4: Primary — Kurumsal Mürdüm */
-  --plum-h:    #5e0f45; /* Hover/pressed darker mürdüm */
-  --plum-tinted: #F5ECF2; /* V4.4: Tinted surface (light) */
-  --teal:      #0F9B8E;
+  --bg:        var(--bg-light);
+  --bg2:       #EDECEA; 
+  --bg3:       #DDDBD8; 
+  --primary:   hsl(var(--h), var(--s), var(--l));
   --text:      #1A1C1F;
   --text-70:   rgba(26,28,31,0.65);
   --text-40:   rgba(26,28,31,0.40);
-  --border:    #DDDBD8;  /* V4.4: Ortak border rengi */
-  --border-2:  rgba(0,0,0,0.14);
-  --card-shadow: 0 1px 4px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.04);
-  --nav-bg:    rgba(245, 244, 242, 0.95); /* V4.4: #F5F4F2 based nav */
+  --border:    #DDDBD8;  
+  --nav-bg:    rgba(245, 244, 242, 0.95);
   color-scheme: light;
 }
 
@@ -57,23 +65,18 @@
 
 /* Tailwind v4 Theme Bridge */
 @theme {
-   --color-bg: var(--bg);
-   --color-bg2: var(--bg2);
-   --color-bg3: var(--bg3);
-   --color-plum: var(--plum);
-   --color-plum-hover: var(--plum-h);
-   --color-teal: var(--teal);
+   --color-primary: var(--primary);
+   --color-teal: #2DD4BF;
    --color-text-main: var(--text);
    --color-text-70: var(--text-70);
    --color-text-40: var(--text-40);
    --color-border-main: var(--border);
-   --color-border-hover: var(--border-2);
+   --color-border-hover: rgba(255, 255, 255, 0.12);
    --color-border: var(--border);
    --color-surface: var(--bg);
    
    /* === SECTION === */
-   --color-primary: var(--plum);
-   --color-primary-container: var(--plum-h);
+   --color-primary-container: var(--primary);
    --color-on-primary: #ffffff;
    --color-on-primary-container: #ffffff;
    --color-surface-container: var(--bg2);
@@ -84,7 +87,7 @@
    --color-on-surface-variant: var(--text-70);
    --color-on-background: var(--text);
    --color-outline: var(--border);
-   --color-outline-variant: var(--border-2);
+   --color-outline-variant: var(--border);
 
    --font-serif: "DM Serif Display", serif;
    --font-sans: "DM Sans", sans-serif;

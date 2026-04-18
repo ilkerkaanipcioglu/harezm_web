@@ -10,12 +10,12 @@ const exhibition = {
   description: "El çizimi, minimal ve absürd illüstrasyonlar. Siyah mürekkep çizgileri ve tek renk splash ile karakterize edilen, sıra dışı bir görsel dil. Her ay farklı bir sanatçı veya akım, grup sitelerimizin görsel kimliğine eşlik ediyor.",
   link: "https://lesstupid.com",
   illustrations: [
-    { id: "vision", file: "/art/vision.png", title: "Vizyon" },
-    { id: "workspace", file: "/art/workspace.png", title: "Çalışma Alanı" },
-    { id: "growth", file: "/art/growth.png", title: "Büyüme" },
-    { id: "connection", file: "/art/connection.png", title: "Bağlantı" },
-    { id: "strategy", file: "/art/strategy.png", title: "Strateji" },
-    { id: "innovation", file: "/art/innovation.png", title: "İnovasyon" },
+    { id: "vision", file: "/art/vision.png", title: "Vizyon", variant: "bw" as const },
+    { id: "workspace", file: "/art/workspace.png", title: "Çalışma Alanı", variant: "brand" as const },
+    { id: "growth", file: "/art/growth.png", title: "Büyüme", variant: "bw" as const },
+    { id: "connection", file: "/art/connection.png", title: "Bağlantı", variant: "secondary" as const },
+    { id: "strategy", file: "/art/strategy.png", title: "Strateji", variant: "minimal" as const },
+    { id: "innovation", file: "/art/innovation.png", title: "İnovasyon", variant: "brand" as const },
   ]
 };
 ---
@@ -36,7 +36,7 @@ const exhibition = {
         </p>
       </div>
       <div class="tuval-hero-art">
-        <ArtIllustration src="/art/vision.png" alt="Vizyon illüstrasyonu" size="xl" />
+        <ArtIllustration src="/art/vision.png" alt="Vizyon illüstrasyonu" size="xl" variant="minimal" />
       </div>
     </div>
   </header>
@@ -71,7 +71,7 @@ const exhibition = {
         {exhibition.illustrations.map((ill) => (
           <div class="tuval-gallery-item">
             <div class="tuval-gallery-img">
-              <ArtIllustration src={ill.file} alt={ill.title} size="lg" />
+              <ArtIllustration src={ill.file} alt={ill.title} size="lg" variant={ill.variant} />
             </div>
             <p class="tuval-gallery-label">{ill.title}</p>
           </div>
@@ -135,13 +135,7 @@ const exhibition = {
 <style>
   /* ================ TUVAL PAGE STYLES ================ */
   
-  /* Art filter — Yellow → Plum (Harezm) */
-  :root {
-    --art-filter: hue-rotate(280deg) saturate(1.4);
-  }
-  [data-theme="light"] {
-    --art-filter: hue-rotate(280deg) saturate(1.2) brightness(0.95);
-  }
+  /* Art filter variants are now handled by ArtIllustration component */
 
   /* Hero */
   .tuval-hero {

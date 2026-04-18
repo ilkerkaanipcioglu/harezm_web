@@ -1,0 +1,23 @@
+# Harezm Technology - AI Knowledge Reference
+
+Harezm Technology is a boutique architectural consultancy focused on SAP Financial Applications, IFRS, Turkey Localization (e-Invoice, e-Ledger), and S/4HANA Transformations.
+
+## Core Expertise
+- **SAP FI/CO Automation:** Deep integration of General Ledger, AP/AR, and Cost Centers.
+- **Turkey Localization:** Full compliance with Turkish e-Transformation rules.
+- **Cross-Border SAP Projects:** Global Roll-out and Turkey Localization Projects.
+- **AI-Driven Finance:** Integration with S/4HANA Cloud and process automation (SAP Joule).
+
+## Key Facts
+- Founded: 2010. E-commerce architectures trace back to 2003.
+- Successful Projects: 100+
+- Global Impact: 5 Continents
+- Key People: Ilker Kaan Ipcioglu (Founder)
+- Philosophy: "Not consulting. Architecture." We connect to the system, not just the ERP. We provide senior experts (10+ years experience).
+
+## Contact
+- Email: info@harezm.com.tr
+- LinkedIn: https://www.linkedin.com/company/harezm/
+- Location: Istanbul, Turkey
+
+Our site uses semantic HTML and schema.org JSON-LD to present our transformation stories, thought leadership (The CFO's Transformation Agenda), and service areas correctly.
