@@ -4,23 +4,14 @@
    HAREZM DESIGN SYSTEM — DUAL THEME
    ======================================== */
 
-:root {
-  /* Contract Base (V7.1) */
-  --bg-light: #F5F4F2;
-  --bg-dark: #1A1A1A;
-}
+@import "./tokens.css";
 
-[data-brand="harezm"],
+/* Project context: Data Brand (Harezem) is the default for this repo */
 :root:not([data-brand]) {
   --h: 324;
   --s: 71%;
   --l: 30%;
 }
-
-/* Global State Engine */
-[data-state="hover"]      { --l: calc(var(--l) + 4%); }
-[data-state="active"]     { --l: 50%; --s: 39%; } /* Controlled glow */
-[data-state="processing"] { --h: 186; --s: 100%; --l: 50%; }
 
 :root,
 [data-theme="dark"] {
