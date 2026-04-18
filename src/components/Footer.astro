@@ -2,6 +2,7 @@
 import { t, getLocalePath, type Lang } from '../i18n/utils';
 import type { TranslationKey } from '../i18n/translations';
 import ThemeToggle from './ThemeToggle.astro';
+import Icon from './Icon.astro';
 
 interface Props {
   lang?: Lang;
@@ -25,10 +26,10 @@ const { lang = 'tr' } = Astro.props;
             <div class="md:col-span-2">
                 <h4 class="font-sans font-medium text-text-main text-sm uppercase tracking-widest mb-6">{t('footerQuickLinks', lang)}</h4>
                 <ul class="space-y-3">
-                    <li><a class="text-text-70 text-sm hover:text-plum transition-colors font-light" href={getLocalePath('/hizmetler', lang)}>{t('footerServices', lang)}</a></li>
-                    <li><a class="text-text-70 text-sm hover:text-plum transition-colors font-light" href={getLocalePath('/lokalizasyon', lang)}>Roll-out & Lokalizasyon</a></li>
-                    <li><a class="text-text-70 text-sm hover:text-plum transition-colors font-light" href={getLocalePath('/hakkimizda', lang)}>{t('navAbout', lang)}</a></li>
-                    <li><a class="text-text-70 text-sm hover:text-plum transition-colors font-light" href={getLocalePath('/iletisim', lang)}>{t('navContact', lang)}</a></li>
+                    <li><a class="text-text-70 text-sm hover:text-primary transition-colors font-light" href={getLocalePath('/hizmetler', lang)}>{t('footerServices', lang)}</a></li>
+                    <li><a class="text-text-70 text-sm hover:text-primary transition-colors font-light" href={getLocalePath('/lokalizasyon', lang)}>Roll-out & Lokalizasyon</a></li>
+                    <li><a class="text-text-70 text-sm hover:text-primary transition-colors font-light" href={getLocalePath('/hakkimizda', lang)}>{t('navAbout', lang)}</a></li>
+                    <li><a class="text-text-70 text-sm hover:text-primary transition-colors font-light" href={getLocalePath('/iletisim', lang)}>{t('navContact', lang)}</a></li>
                 </ul>
             </div>
 
@@ -36,11 +37,11 @@ const { lang = 'tr' } = Astro.props;
             <div class="md:col-span-3">
                 <h4 class="font-sans font-medium text-text-main text-sm uppercase tracking-widest mb-6">{lang === 'tr' ? 'Hizmetler' : 'Services'}</h4>
                 <ul class="space-y-3">
-                    <li><a class="text-text-70 text-sm hover:text-plum transition-colors font-light" href={getLocalePath('/hizmetler', lang)}>SAP FI/CO & Material Ledger</a></li>
-                    <li><a class="text-text-70 text-sm hover:text-plum transition-colors font-light" href="/sap-refx">SAP RE-FX</a></li>
-                    <li><a class="text-text-70 text-sm hover:text-plum transition-colors font-light" href="/sap-opentext">SAP & OpenText</a></li>
-                    <li><a class="text-text-70 text-sm hover:text-plum transition-colors font-light" href="/sap-checkup">SAP Check-Up</a></li>
-                    <li><a class="text-text-70 text-sm hover:text-plum transition-colors font-light" href="/danismanlik">{lang === 'tr' ? 'Danışmanlık' : 'Consulting'}</a></li>
+                    <li><a class="text-text-70 text-sm hover:text-primary transition-colors font-light" href={getLocalePath('/hizmetler', lang)}>SAP FI/CO & Material Ledger</a></li>
+                    <li><a class="text-text-70 text-sm hover:text-primary transition-colors font-light" href="/sap-refx">SAP RE-FX</a></li>
+                    <li><a class="text-text-70 text-sm hover:text-primary transition-colors font-light" href="/sap-opentext">SAP & OpenText</a></li>
+                    <li><a class="text-text-70 text-sm hover:text-primary transition-colors font-light" href="/sap-checkup">SAP Check-Up</a></li>
+                    <li><a class="text-text-70 text-sm hover:text-primary transition-colors font-light" href="/danismanlik">{lang === 'tr' ? 'Danışmanlık' : 'Consulting'}</a></li>
                 </ul>
             </div>
 
@@ -68,8 +69,8 @@ const { lang = 'tr' } = Astro.props;
                     <svg class="w-4 h-4 fill-current text-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                 </a>
                 {/* 4 - Email */}
-                <a href="mailto:info@harezm.com.tr" class="w-10 h-10 rounded-xl bg-bg3 border border-border-main flex items-center justify-center text-text-40 hover:bg-plum hover:text-white transition-colors" title="Email">
-                    <span class="material-symbols-outlined text-lg">mail</span>
+                <a href="mailto:info@harezm.com.tr" class="w-10 h-10 rounded-xl bg-bg3 border border-border-main flex items-center justify-center text-text-40 hover:bg-primary hover:text-white transition-colors" title="Email">
+                    <Icon name="icon_09_mail" size={18} />
                 </a>
             </div>
         </div>
@@ -79,28 +80,28 @@ const { lang = 'tr' } = Astro.props;
         <div class="border-t border-border-main py-6 flex flex-wrap items-center justify-center md:justify-start gap-3 md:gap-5 text-xs text-text-40">
             <span class="font-medium text-text-70 tracking-widest uppercase text-[10px]">Harezm Ecosystem</span>
             
-            <a href="https://www.linkedin.com/showcase/agentandbot/" target="_blank" rel="noopener noreferrer" class="hover:text-plum transition-colors flex items-center gap-1.5 grayscale opacity-70 hover:grayscale-0 hover:opacity-100">
-                <span class="material-symbols-outlined text-[14px]">smart_toy</span> AgentAndBot
+            <a href="https://www.linkedin.com/showcase/agentandbot/" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors flex items-center gap-1.5 grayscale opacity-70 hover:grayscale-0 hover:opacity-100">
+                <Icon name="icon_08_chat" size={14} /> AgentAndBot
             </a>
             
             <span class="opacity-20 hidden md:inline">•</span>
-            <a href={getLocalePath('/urunler', lang)} class="hover:text-plum transition-colors flex items-center gap-1.5 grayscale opacity-70 hover:grayscale-0 hover:opacity-100">
-                <span class="material-symbols-outlined text-[14px]">receipt_long</span> e-Someting
+            <a href={getLocalePath('/urunler', lang)} class="hover:text-primary transition-colors flex items-center gap-1.5 grayscale opacity-70 hover:grayscale-0 hover:opacity-100">
+                <Icon name="icon_05_settings" size={14} /> e-Someting
             </a>
             
             <span class="opacity-20 hidden md:inline">•</span>
-            <a href={getLocalePath('/sap-cash-management', lang)} class="hover:text-plum transition-colors flex items-center gap-1.5 grayscale opacity-70 hover:grayscale-0 hover:opacity-100">
-                <span class="material-symbols-outlined text-[14px]">account_balance_wallet</span> {lang === 'tr' ? 'Nakit Yönetimi' : 'Cash Management'}
+            <a href={getLocalePath('/sap-cash-management', lang)} class="hover:text-primary transition-colors flex items-center gap-1.5 grayscale opacity-70 hover:grayscale-0 hover:opacity-100">
+                <Icon name="icon_18_lock" size={14} /> {lang === 'tr' ? 'Nakit Yönetimi' : 'Cash Management'}
             </a>
             
             <span class="opacity-20 hidden md:inline">•</span>
-            <span class="hover:text-plum transition-colors flex items-center gap-1.5 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 cursor-default">
-                <span class="material-symbols-outlined text-[14px]">inventory_2</span> {lang === 'tr' ? 'SAP Paketleri' : 'SAP Packages'}
+            <span class="hover:text-primary transition-colors flex items-center gap-1.5 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 cursor-default">
+                <Icon name="icon_05_settings" size={14} /> {lang === 'tr' ? 'SAP Paketleri' : 'SAP Packages'}
             </span>
             
             <span class="opacity-20 hidden md:inline">•</span>
-            <span class="hover:text-plum transition-colors flex items-center gap-1.5 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 cursor-default">
-                <span class="material-symbols-outlined text-[14px]">hub</span> {lang === 'tr' ? 'Diğer ERP Entegrasyonları' : 'Other ERP Integrations'}
+            <span class="hover:text-primary transition-colors flex items-center gap-1.5 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 cursor-default">
+                <Icon name="icon_05_settings" size={14} /> {lang === 'tr' ? 'Diğer ERP Entegrasyonları' : 'Other ERP Integrations'}
             </span>
         </div>
 
@@ -109,7 +110,7 @@ const { lang = 'tr' } = Astro.props;
             <a href="/tuval" class="flex items-center gap-3 group text-decoration-none">
                 <img src="/art/innovation.png" alt="" class="w-8 h-8 object-contain opacity-60 group-hover:opacity-100 transition-opacity" style="filter: hue-rotate(280deg) saturate(1.4);" />
                 <div>
-                    <span class="text-[10px] font-bold tracking-widest uppercase text-plum block">{lang === 'tr' ? 'Tuval · Aylık Sergi' : 'Tuval · Monthly Exhibition'}</span>
+                    <span class="text-[10px] font-bold tracking-widest uppercase text-primary block">{lang === 'tr' ? 'Tuval · Aylık Sergi' : 'Tuval · Monthly Exhibition'}</span>
                     <span class="text-xs text-text-40 group-hover:text-text-70 transition-colors">lesstupid · {lang === 'tr' ? 'Nisan 2026' : 'April 2026'}</span>
                 </div>
             </a>
@@ -121,9 +122,9 @@ const { lang = 'tr' } = Astro.props;
             <span class="text-xs text-text-40">{t('footerCopyright', lang)}</span>
             <div class="flex flex-wrap justify-center md:justify-end items-center gap-4 md:gap-8 text-xs text-text-40">
                 <ThemeToggle />
-                <a class="hover:text-plum transition-colors" href={getLocalePath('/kvkk', lang)}>{t('footerKvkk', lang)}</a>
-                <a class="hover:text-plum transition-colors" href={getLocalePath('/gizlilik-politikasi', lang)}>{t('footerPrivacy', lang)}</a>
-                <a class="hover:text-plum transition-colors" href={getLocalePath('/cerez-politikasi', lang)}>{t('footerCookies', lang)}</a>
+                <a class="hover:text-primary transition-colors" href={getLocalePath('/kvkk', lang)}>{t('footerKvkk', lang)}</a>
+                <a class="hover:text-primary transition-colors" href={getLocalePath('/gizlilik-politikasi', lang)}>{t('footerPrivacy', lang)}</a>
+                <a class="hover:text-primary transition-colors" href={getLocalePath('/cerez-politikasi', lang)}>{t('footerCookies', lang)}</a>
             </div>
         </div>
     </div>

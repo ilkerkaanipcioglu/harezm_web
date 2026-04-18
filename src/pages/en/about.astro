@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Icon from '../../components/Icon.astro';
 const lang = 'en' as const;
 ---
 <Layout title="About Us | Harezm" lang={lang}>
@@ -30,15 +31,15 @@ const lang = 'en' as const;
                     </p>
                     <ul class="space-y-4">
                         <li class="flex items-center gap-3">
-                            <span class="material-symbols-outlined text-primary">check_circle</span>
+                            <Icon name="icon_24_check_done" size={20} class="text-primary" />
                             <span class="text-on-background font-medium">Domain Expertise (Finance Only)</span>
                         </li>
                         <li class="flex items-center gap-3">
-                            <span class="material-symbols-outlined text-primary">check_circle</span>
+                            <Icon name="icon_24_check_done" size={20} class="text-primary" />
                             <span class="text-on-background font-medium">Boutique & Agile Approach</span>
                         </li>
                         <li class="flex items-center gap-3">
-                            <span class="material-symbols-outlined text-primary">check_circle</span>
+                            <Icon name="icon_24_check_done" size={20} class="text-primary" />
                             <span class="text-on-background font-medium">Full Transparency and Proactive Communication</span>
                         </li>
                     </ul>
@@ -46,12 +47,12 @@ const lang = 'en' as const;
                 <div class="grid grid-cols-2 gap-6 relative">
                     <div class="absolute -inset-10 bg-gradient-to-tr from-primary/10 to-transparent blur-3xl -z-10 rounded-full"></div>
                     <div class="bg-surface-container-low p-8 rounded-2xl border border-outline-variant/20 shadow-lg transform translate-y-8">
-                        <span class="material-symbols-outlined text-4xl text-primary mb-4 block">star</span>
+                        <Icon name="icon_12_star" size={40} class="text-primary mb-4 block" animate />
                         <h4 class="font-bold text-on-background text-lg mb-2">15+ Years</h4>
                         <p class="text-sm text-on-surface-variant">SAP Finance Expertise</p>
                     </div>
                     <div class="bg-surface-container-low p-8 rounded-2xl border border-outline-variant/20 shadow-lg">
-                        <span class="material-symbols-outlined text-4xl text-primary mb-4 block">public</span>
+                        <Icon name="icon_17_share" size={40} class="text-primary mb-4 block" animate />
                         <h4 class="font-bold text-on-background text-lg mb-2">Global Impact</h4>
                         <p class="text-sm text-on-surface-variant">40+ Enterprise Projects, 5 Continents</p>
                     </div>
@@ -66,14 +67,14 @@ const lang = 'en' as const;
                 <div class="absolute w-[800px] h-[800px] bg-primary/5 rounded-full blur-3xl pointer-events-none -right-40 -top-40"></div>
                 <div class="absolute w-[400px] h-[400px] bg-primary/5 rounded-full blur-3xl pointer-events-none -left-20 -bottom-20"></div>
                 
-                <span class="material-symbols-outlined text-6xl text-primary/20 mb-8 block relative z-10">format_quote</span>
+                <Icon name="icon_08_chat" size={60} class="text-primary/20 mb-8 block relative z-10" animate />
                 <h3 class="text-sm font-bold tracking-[0.2em] text-primary uppercase mb-8 relative z-10">08 · DATA SOVEREIGNTY</h3>
                 <p class="text-xl md:text-2xl text-on-background font-light leading-relaxed mb-10 relative z-10 italic">
                     "As corporate systems become increasingly interconnected and AI capabilities require access to sensitive operational data, the question of where data resides and who controls it has moved from IT policy to board-level risk management. GDPR, KVKK, and evolving data sovereignty requirements across multiple jurisdictions impose strict boundaries on data residency and processing. SAP architecture, when implemented with deliberate design, provides robust data sovereignty controls: on-premise and private cloud options for organizations where public cloud is not viable, API-first integration patterns that prevent vendor lock-in, and role-based access architectures that ensure data access is always intentional. Harezm's approach to data sovereignty is built on a simple principle: the systems we build must serve the organization — not the other way around. Every architectural decision is weighed against the long-term question of control: your data, your rules, your terms."
                 </p>
                 <div class="flex items-center gap-4 relative z-10 mt-10 pt-10 border-t border-outline-variant/10">
                     <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                        <span class="material-symbols-outlined">architecture</span>
+                        <Icon name="icon_05_settings" size={24} animate />
                     </div>
                     <div>
                         <h4 class="font-bold text-on-background">Harezm Insight Series</h4>
@@ -103,8 +104,8 @@ const lang = 'en' as const;
                     <h3 class="font-bold text-xl text-on-background mb-2">Senior SAP FI/CO Architect</h3>
                     <p class="text-sm text-primary font-medium tracking-wide uppercase mb-6">Joined Harezm: 2011</p>
                     <ul class="space-y-3 text-sm text-on-surface-variant mb-6">
-                        <li class="flex items-start gap-2"><span class="material-symbols-outlined text-base text-primary shrink-0">verified</span> SAP S/4HANA Financial Accounting Certification</li>
-                        <li class="flex items-start gap-2"><span class="material-symbols-outlined text-base text-primary shrink-0">verified</span> SAP Management Accounting Certification</li>
+                        <li class="flex items-start gap-2"><Icon name="icon_24_check_done" size={16} class="text-primary shrink-0" /> SAP S/4HANA Financial Accounting Certification</li>
+                        <li class="flex items-start gap-2"><Icon name="icon_24_check_done" size={16} class="text-primary shrink-0" /> SAP Management Accounting Certification</li>
                     </ul>
                     <div class="border-t border-outline-variant/20 pt-4">
                         <p class="text-xs font-bold text-on-background uppercase mb-2">Expertise & Projects</p>
@@ -116,8 +117,8 @@ const lang = 'en' as const;
                     <h3 class="font-bold text-xl text-on-background mb-2">SAP TRM & Cash Management Lead</h3>
                     <p class="text-sm text-primary font-medium tracking-wide uppercase mb-6">Joined Harezm: 2015</p>
                     <ul class="space-y-3 text-sm text-on-surface-variant mb-6">
-                        <li class="flex items-start gap-2"><span class="material-symbols-outlined text-base text-primary shrink-0">verified</span> SAP Treasury and Risk Management Certification</li>
-                        <li class="flex items-start gap-2"><span class="material-symbols-outlined text-base text-primary shrink-0">verified</span> SAP Cash Management Certification</li>
+                        <li class="flex items-start gap-2"><Icon name="icon_24_check_done" size={16} class="text-primary shrink-0" /> SAP Treasury and Risk Management Certification</li>
+                        <li class="flex items-start gap-2"><Icon name="icon_24_check_done" size={16} class="text-primary shrink-0" /> SAP Cash Management Certification</li>
                     </ul>
                     <div class="border-t border-outline-variant/20 pt-4">
                         <p class="text-xs font-bold text-on-background uppercase mb-2">Expertise & Projects</p>
@@ -129,8 +130,8 @@ const lang = 'en' as const;
                     <h3 class="font-bold text-xl text-on-background mb-2">e-Transformation & AI Solutions Lead</h3>
                     <p class="text-sm text-primary font-medium tracking-wide uppercase mb-6">Joined Harezm: 2019</p>
                     <ul class="space-y-3 text-sm text-on-surface-variant mb-6">
-                        <li class="flex items-start gap-2"><span class="material-symbols-outlined text-base text-primary shrink-0">verified</span> SAP BTP Integration Suite Certification</li>
-                        <li class="flex items-start gap-2"><span class="material-symbols-outlined text-base text-primary shrink-0">verified</span> Document Reporting Compliance (DRC)</li>
+                        <li class="flex items-start gap-2"><Icon name="icon_24_check_done" size={16} class="text-primary shrink-0" /> SAP BTP Integration Suite Certification</li>
+                        <li class="flex items-start gap-2"><Icon name="icon_24_check_done" size={16} class="text-primary shrink-0" /> Document Reporting Compliance (DRC)</li>
                     </ul>
                     <div class="border-t border-outline-variant/20 pt-4">
                         <p class="text-xs font-bold text-on-background uppercase mb-2">Expertise & Projects</p>
@@ -142,8 +143,8 @@ const lang = 'en' as const;
                     <h3 class="font-bold text-xl text-on-background mb-2">Senior IFRS/UFRS Expert</h3>
                     <p class="text-sm text-primary font-medium tracking-wide uppercase mb-6">Joined Harezm: 2012</p>
                     <ul class="space-y-3 text-sm text-on-surface-variant mb-6">
-                        <li class="flex items-start gap-2"><span class="material-symbols-outlined text-base text-primary shrink-0">verified</span> Capital Markets Board Audit License</li>
-                        <li class="flex items-start gap-2"><span class="material-symbols-outlined text-base text-primary shrink-0">verified</span> IFRS/UFRS Reporting Expertise</li>
+                        <li class="flex items-start gap-2"><Icon name="icon_24_check_done" size={16} class="text-primary shrink-0" /> Capital Markets Board Audit License</li>
+                        <li class="flex items-start gap-2"><Icon name="icon_24_check_done" size={16} class="text-primary shrink-0" /> IFRS/UFRS Reporting Expertise</li>
                     </ul>
                     <div class="border-t border-outline-variant/20 pt-4">
                         <p class="text-xs font-bold text-on-background uppercase mb-2">Expertise & Projects</p>

@@ -1,6 +1,5 @@
----
 import Layout from '../layouts/Layout.astro';
----
+import Icon from '../components/Icon.astro';
 <Layout title="İletişim | Harezm">
     <section class="pt-40 pb-32 px-8 bg-surface text-center">
         <div class="max-w-4xl mx-auto flex flex-col items-center">
@@ -41,7 +40,7 @@ import Layout from '../layouts/Layout.astro';
                 <!-- E-posta -->
                 <a href="mailto:info@harezm.com.tr" class="bg-surface-container-low p-10 rounded-3xl border border-outline-variant/30 hover:border-primary/50 hover:-translate-y-2 hover:shadow-xl transition-all group flex flex-col items-center justify-center text-center">
                     <div class="w-16 h-16 rounded-2xl bg-primary/10 text-primary mb-6 flex justify-center items-center group-hover:bg-primary group-hover:text-white transition-colors">
-                        <span class="material-symbols-outlined text-3xl">mail</span>
+                        <Icon name="icon_09_mail" size={32} animate />
                     </div>
                     <h3 class="text-2xl font-bold font-headline text-on-background mb-3">E-posta</h3>
                     <p class="text-on-surface-variant text-sm font-medium tracking-wide group-hover:text-primary transition-colors">Resmi Talepler &rarr;</p>

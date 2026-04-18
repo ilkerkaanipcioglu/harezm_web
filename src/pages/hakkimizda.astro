@@ -1,6 +1,5 @@
----
 import Layout from '../layouts/Layout.astro';
----
+import Icon from '../components/Icon.astro';
 <Layout title="Hakkımızda | Harezm">
     <!-- Hero -->
     <section class="relative pt-40 pb-24 bg-surface-container overflow-hidden">
@@ -31,15 +30,15 @@ import Layout from '../layouts/Layout.astro';
                     </p>
                     <ul class="space-y-4">
                         <li class="flex items-center gap-3">
-                            <span class="material-symbols-outlined text-primary">check_circle</span>
+                            <Icon name="icon_24_check_done" size={20} class="text-primary" />
                             <span class="text-on-background font-medium">Domain Uzmanlığı (Sadece Finans)</span>
                         </li>
                         <li class="flex items-center gap-3">
-                            <span class="material-symbols-outlined text-primary">check_circle</span>
+                            <Icon name="icon_24_check_done" size={20} class="text-primary" />
                             <span class="text-on-background font-medium">Boutique & Agile Yaklaşım</span>
                         </li>
                         <li class="flex items-center gap-3">
-                            <span class="material-symbols-outlined text-primary">check_circle</span>
+                            <Icon name="icon_24_check_done" size={20} class="text-primary" />
                             <span class="text-on-background font-medium">Tam Şeffaflık ve Proaktif İletişim</span>
                         </li>
                     </ul>
@@ -49,12 +48,12 @@ import Layout from '../layouts/Layout.astro';
                     <!-- Decor element -->
                     <div class="absolute -inset-10 bg-gradient-to-tr from-primary/10 to-transparent blur-3xl -z-10 rounded-full"></div>
                     <div class="bg-surface-container-low p-8 rounded-2xl border border-outline-variant/20 shadow-lg transform translate-y-8">
-                        <span class="material-symbols-outlined text-4xl text-primary mb-4 block">star</span>
+                        <Icon name="icon_12_sun" size={40} class="text-primary mb-4 block" animate />
                         <h4 class="font-bold text-on-background text-lg mb-2">15+ Yıl</h4>
                         <p class="text-sm text-on-surface-variant">SAP Finans Uzmanlığı</p>
                     </div>
                     <div class="bg-surface-container-low p-8 rounded-2xl border border-outline-variant/20 shadow-lg">
-                        <span class="material-symbols-outlined text-4xl text-primary mb-4 block">public</span>
+                        <Icon name="icon_17_share" size={40} class="text-primary mb-4 block rotate-[-45deg]" animate />
                         <h4 class="font-bold text-on-background text-lg mb-2">Global Etki</h4>
                         <p class="text-sm text-on-surface-variant">40+ Enterprise Proje, 5 Kıta</p>
                     </div>
@@ -70,14 +69,14 @@ import Layout from '../layouts/Layout.astro';
                 <div class="absolute w-[800px] h-[800px] bg-primary/5 rounded-full blur-3xl pointer-events-none -right-40 -top-40"></div>
                 <div class="absolute w-[400px] h-[400px] bg-primary/5 rounded-full blur-3xl pointer-events-none -left-20 -bottom-20"></div>
                 
-                <span class="material-symbols-outlined text-6xl text-primary/20 mb-8 block relative z-10">format_quote</span>
+                <Icon name="icon_08_chat" size={60} class="text-primary/20 mb-8 block relative z-10" animate />
                 <h3 class="text-sm font-bold tracking-[0.2em] text-primary uppercase mb-8 relative z-10">08 · DATA SOVEREIGNTY</h3>
                 <p class="text-xl md:text-2xl text-on-background font-light leading-relaxed mb-10 relative z-10 italic">
                     "Kurumsal sistemler giderek birbirine bağlandıkça ve yapay zeka yetenekleri hassas operasyonel verilere erişim gerektirdikçe, verinin nerede bulunduğu ve kimin kontrol ettiği sorusu IT politikasından yönetim kurulu risk yönetimine taşındı. GDPR, KVKK ve birden fazla yargı bölgesinde gelişmekte olan veri egemenliği gereklilikleri, veri yerleşimi ve işleme üzerine katı sınırlar getiriyor. SAP mimarisi, bilinçli bir tasarımla hayata geçirildiğinde güçlü veri egemenliği kontrolleri sağlar: genel bulutun uygulanabilir olmadığı organizasyonlar için yerinde ve özel bulut seçenekleri, tedarikçi kilitlenmesini önleyen API-first entegrasyon desenleri ve veri erişiminin her zaman kasıtlı olmasını güvence altına alan rol bazlı erişim mimarisi. Harezm'in veri egemenliğine yaklaşımı basit bir ilkeye dayanır: inşa ettiğimiz sistemler organizasyona hizmet etmeli — tersi değil. Her mimari karar, uzun vadeli kontrol sorusu karşısında değerlendirilir: veriniz, kurallarınız, koşullarınız."
                 </p>
                 <div class="flex items-center gap-4 relative z-10 mt-10 pt-10 border-t border-outline-variant/10">
                     <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                        <span class="material-symbols-outlined">architecture</span>
+                        <Icon name="icon_05_settings" size={24} animate />
                     </div>
                     <div>
                         <h4 class="font-bold text-on-background">Harezm Insight Series</h4>
@@ -110,8 +109,8 @@ import Layout from '../layouts/Layout.astro';
                     <h3 class="font-bold text-xl text-on-background mb-2">Senior SAP FI/CO Mimarı</h3>
                     <p class="text-sm text-primary font-medium tracking-wide uppercase mb-6">Harezm'e Katılım: 2011</p>
                     <ul class="space-y-3 text-sm text-on-surface-variant mb-6">
-                        <li class="flex items-start gap-2"><span class="material-symbols-outlined text-base text-primary shrink-0">verified</span> SAP S/4HANA Financial Accounting Certification</li>
-                        <li class="flex items-start gap-2"><span class="material-symbols-outlined text-base text-primary shrink-0">verified</span> SAP Management Accounting Certification</li>
+                        <li class="flex items-start gap-2"><Icon name="icon_24_check_done" size={16} class="text-primary shrink-0" /> SAP S/4HANA Financial Accounting Certification</li>
+                        <li class="flex items-start gap-2"><Icon name="icon_24_check_done" size={16} class="text-primary shrink-0" /> SAP Management Accounting Certification</li>
                     </ul>
                     <div class="border-t border-outline-variant/20 pt-4">
                         <p class="text-xs font-bold text-on-background uppercase mb-2">Uzmanlık & Projeler</p>
@@ -124,8 +123,8 @@ import Layout from '../layouts/Layout.astro';
                     <h3 class="font-bold text-xl text-on-background mb-2">SAP TRM & Nakit Yönetimi Lideri</h3>
                     <p class="text-sm text-primary font-medium tracking-wide uppercase mb-6">Harezm'e Katılım: 2015</p>
                     <ul class="space-y-3 text-sm text-on-surface-variant mb-6">
-                        <li class="flex items-start gap-2"><span class="material-symbols-outlined text-base text-primary shrink-0">verified</span> SAP Treasury and Risk Management Certification</li>
-                        <li class="flex items-start gap-2"><span class="material-symbols-outlined text-base text-primary shrink-0">verified</span> SAP Cash Management Certification</li>
+                        <li class="flex items-start gap-2"><Icon name="icon_24_check_done" size={16} class="text-primary shrink-0" /> SAP Treasury and Risk Management Certification</li>
+                        <li class="flex items-start gap-2"><Icon name="icon_24_check_done" size={16} class="text-primary shrink-0" /> SAP Cash Management Certification</li>
                     </ul>
                     <div class="border-t border-outline-variant/20 pt-4">
                         <p class="text-xs font-bold text-on-background uppercase mb-2">Uzmanlık & Projeler</p>
@@ -138,8 +137,8 @@ import Layout from '../layouts/Layout.astro';
                     <h3 class="font-bold text-xl text-on-background mb-2">e-Dönüşüm & AI Çözümleri Lideri</h3>
                     <p class="text-sm text-primary font-medium tracking-wide uppercase mb-6">Harezm'e Katılım: 2019</p>
                     <ul class="space-y-3 text-sm text-on-surface-variant mb-6">
-                        <li class="flex items-start gap-2"><span class="material-symbols-outlined text-base text-primary shrink-0">verified</span> SAP BTP Integration Suite Certification</li>
-                        <li class="flex items-start gap-2"><span class="material-symbols-outlined text-base text-primary shrink-0">verified</span> Document Reporting Compliance (DRC)</li>
+                        <li class="flex items-start gap-2"><Icon name="icon_24_check_done" size={16} class="text-primary shrink-0" /> SAP BTP Integration Suite Certification</li>
+                        <li class="flex items-start gap-2"><Icon name="icon_24_check_done" size={16} class="text-primary shrink-0" /> Document Reporting Compliance (DRC)</li>
                     </ul>
                     <div class="border-t border-outline-variant/20 pt-4">
                         <p class="text-xs font-bold text-on-background uppercase mb-2">Uzmanlık & Projeler</p>
@@ -152,8 +151,8 @@ import Layout from '../layouts/Layout.astro';
                     <h3 class="font-bold text-xl text-on-background mb-2">Kıdemli UFRS/IFRS Uzmanı</h3>
                     <p class="text-sm text-primary font-medium tracking-wide uppercase mb-6">Harezm'e Katılım: 2012</p>
                     <ul class="space-y-3 text-sm text-on-surface-variant mb-6">
-                        <li class="flex items-start gap-2"><span class="material-symbols-outlined text-base text-primary shrink-0">verified</span> SPK Bağımsız Denetim Lisansı</li>
-                        <li class="flex items-start gap-2"><span class="material-symbols-outlined text-base text-primary shrink-0">verified</span> IFRS/UFRS Raporlama Uzmanlığı</li>
+                        <li class="flex items-start gap-2"><Icon name="icon_24_check_done" size={16} class="text-primary shrink-0" /> SPK Bağımsız Denetim Lisansı</li>
+                        <li class="flex items-start gap-2"><Icon name="icon_24_check_done" size={16} class="text-primary shrink-0" /> IFRS/UFRS Raporlama Uzmanlığı</li>
                     </ul>
                     <div class="border-t border-outline-variant/20 pt-4">
                         <p class="text-xs font-bold text-on-background uppercase mb-2">Uzmanlık & Projeler</p>

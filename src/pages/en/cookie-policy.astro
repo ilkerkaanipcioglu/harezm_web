@@ -1,54 +1,63 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Icon from '../../components/Icon.astro';
 const lang = 'en';
 ---
 <Layout title="Cookie Policy | Harezm Technology" lang={lang}>
-    <div class="pt-32 pb-24 bg-surface min-h-screen">
+    <div class="pt-40 pb-24 bg-surface min-h-screen">
         <div class="max-w-4xl mx-auto px-8 md:px-0">
-            <h1 class="text-4xl font-headline font-bold text-on-background mb-4">Cookie Policy</h1>
-            <p class="text-sm text-text-40 uppercase tracking-widest mb-12">Last Updated: March 24, 2026</p>
+            <h1 class="text-5xl md:text-6xl font-headline font-bold text-on-background mb-4 tracking-tight">Cookie Policy</h1>
+            <p class="text-sm text-on-surface-variant uppercase tracking-widest mb-16 opacity-60">Last Updated: March 24, 2026</p>
             
-            <div class="space-y-8 text-on-surface-variant leading-relaxed font-light text-lg">
+            <div class="space-y-12 text-on-surface-variant leading-relaxed font-light text-lg">
                 
                 <section>
-                    <p>Consistent with our vision focused on high-end technology and strict architectural principles, the Harezm corporate website <strong>rejects the philosophy of aggressive targeted marketing codes and adheres strictly to the "Minimal and Analytical Data" principle.</strong></p>
+                    <p class="text-xl leading-relaxed">Consistent with our vision focused on high-end technology and strict architectural principles, the Harezm corporate website <strong class="text-on-background">rejects the philosophy of aggressive targeted marketing codes</strong> and adheres strictly to the "Minimal and Analytical Data" principle.</p>
                     <p class="mt-4">This policy explains the technical reasons and limitations for the utilization of small data files (cookies) that may be sent to your browser when you examine our website.</p>
                 </section>
 
                 <section>
-                    <h2 class="text-2xl font-bold text-on-background mb-4">1. What is a Cookie?</h2>
+                    <h2 class="text-3xl font-bold text-on-background mb-6 tracking-tight">1. What is a Cookie?</h2>
                     <p>Cookies are minute memory fragments stored by your internet browser (Google Chrome, Safari, Edge, etc.) on your computer, tablet, or mobile device during your connection. Their sole objective is to allow complex websites to function efficiently and to locally memorize user-specific interface settings (for example: Dark/Light theme mode persistence).</p>
                 </section>
 
                 <section>
-                    <h2 class="text-2xl font-bold text-on-background mb-4">2. Categories of Cookies Used by Us</h2>
+                    <h2 class="text-3xl font-bold text-on-background mb-6 tracking-tight">2. Categories of Cookies Used by Us</h2>
                     <p>Our infrastructure deploys only the essentially required files classified into two specific categories:</p>
-                    <div class="mt-6 space-y-6">
-                        <div class="p-6 bg-surface-container-low rounded-xl border border-border-main">
-                            <h3 class="font-bold text-on-background mb-2 flex items-center gap-2"><span class="material-symbols-outlined text-plum text-xl">shield</span> Strictly Necessary (System) Cookies</h3>
-                            <p class="text-base text-text-70">These are critical technical elements needed for the reliable performance of the website's modern framework. They are mainly responsible for fetching out your preferred operating system mode (Dark/Light mode detection keys), preserving translation states, and handling secure network routing tasks. They cannot be toggled off and they don't scrape your personal identity.</p>
+                    <div class="mt-8 space-y-6">
+                        <div class="p-8 bg-surface-container-low rounded-[2rem] border border-outline-variant/30 group hover:border-primary/50 transition-all">
+                            <h3 class="font-bold text-on-background mb-4 flex items-center gap-4 text-xl">
+                                <Icon name="icon_18_lock" size={24} class="text-primary" animate={true} />
+                                Strictly Necessary (System) Cookies
+                            </h3>
+                            <p class="text-base text-on-surface-variant font-light">These are critical technical elements needed for the reliable performance of the website's modern framework. They are mainly responsible for localizing your preferred operating system mode (Dark/Light mode detection), preserving translation states, and handling secure network routing tasks.</p>
                         </div>
-                        <div class="p-6 bg-surface-container-low rounded-xl border border-border-main">
-                            <h3 class="font-bold text-on-background mb-2 flex items-center gap-2"><span class="material-symbols-outlined text-teal text-xl">analytics</span> Analytic Performance Cookies</h3>
-                            <p class="text-base text-text-70">Used internally to generate generic traffic flow analysis—to identify whether clients prefer exploring the SAP TRM documentation over S/4HANA solutions—and to accordingly refine server efficiency. All metric records gathered translate strictly into anonymized analytical datasets.</p>
+                        <div class="p-8 bg-surface-container-low rounded-[2rem] border border-outline-variant/30 group hover:border-primary/50 transition-all">
+                            <h3 class="font-bold text-on-background mb-4 flex items-center gap-4 text-xl">
+                                <Icon name="icon_27_chart" size={24} class="text-primary" animate={true} />
+                                Analytic Performance Cookies
+                            </h3>
+                            <p class="text-base text-on-surface-variant font-light">Used internally to generate generic traffic flow analysis and to accordingly refine server efficiency. All metric records gathered translate strictly into anonymized analytical datasets that help us understand content relevance.</p>
                         </div>
                     </div>
                 </section>
 
                 <section>
-                    <h2 class="text-2xl font-bold text-on-background mb-4">3. Which Cookies DO WE NOT Use?</h2>
-                    <p>Contrary to the broader corporate sector, it lies at the core of our technical policy that <strong>third-party profiling, advertising, and invasive re-targeting scripts (e.g. Google Ads/Analytics trackers, Facebook Pixels) are strictly non-existent</strong> on our platform. We don't trace individuals to enforce display advertisements elsewhere relying on past digital footprints.</p>
+                    <h2 class="text-3xl font-bold text-on-background mb-6 tracking-tight">3. Which Cookies DO WE NOT Use?</h2>
+                    <p>Contrary to the broader corporate sector, it lies at the core of our technical policy that <strong class="text-primary font-bold">third-party profiling, advertising, and invasive re-targeting scripts are strictly non-existent</strong> on our platform. We don't trace individuals to enforce display advertisements elsewhere relying on past digital footprints.</p>
                 </section>
 
-                <section>
-                    <h2 class="text-2xl font-bold text-on-background mb-4">4. Managing Your Cookie Settings</h2>
+                <section class="pb-12">
+                    <h2 class="text-3xl font-bold text-on-background mb-6 tracking-tight">4. Managing Your Cookie Settings</h2>
                     <p>If you firmly wish to prevent any local storage interaction, you hold the definitive control to wipe existing cookies and block future acceptances via the privacy configurations embedded in your web browser:</p>
-                    <ul class="list-disc pl-6 space-y-2 mt-4 text-base">
-                        <li><strong>Google Chrome:</strong> Hardware Options &gt; Privacy and Security &gt; Cookies tab.</li>
-                        <li><strong>Safari:</strong> Preferences &gt; Privacy &gt; Block all cookies switch.</li>
-                        <li><strong>Firefox:</strong> Options &gt; Privacy &gt; Cookies menu.</li>
+                    <ul class="list-disc pl-8 space-y-4 mt-8 text-base font-light">
+                        <li><strong class="text-on-background">Google Chrome:</strong> Settings &gt; Privacy and Security &gt; Cookies and other site data.</li>
+                        <li><strong class="text-on-background">Safari:</strong> Settings &gt; Privacy &gt; Block all cookies switch.</li>
+                        <li><strong class="text-on-background">Firefox:</strong> Settings &gt; Privacy &gt; Enhanced Tracking Protection.</li>
                     </ul>
-                    <p class="mt-4 text-base italic text-text-40">Note: Blocking necessary system cookies entirely may trigger slight interface disruptions on our site; the color theme synchronizations or language logic may reset across manual page transitions.</p>
+                    <div class="mt-8 p-6 bg-primary/5 border-l-4 border-primary rounded-r-xl">
+                         <p class="text-base italic text-on-surface-variant">Note: Blocking necessary system cookies entirely may trigger slight interface disruptions on our site; the color theme synchronizations or language logic may reset across manual page transitions.</p>
+                    </div>
                 </section>
 
             </div>

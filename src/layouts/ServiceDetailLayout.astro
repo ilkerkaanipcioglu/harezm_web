@@ -1,5 +1,6 @@
 ---
 import Layout from './Layout.astro';
+import Icon from '../components/Icon.astro';
 
 interface RelatedService {
     title: string;
@@ -46,14 +47,14 @@ const {
 <Layout title={`${title} | Hizmetler`}>
     <!-- Mini Hero -->
     <header class="pt-40 pb-20 md:pt-48 md:pb-24 bg-bg border-b border-border-main relative overflow-hidden">
-        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--color-plum)_0%,_transparent_50%)] opacity-5 pointer-events-none"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--color-primary)_0%,_transparent_50%)] opacity-5 pointer-events-none"></div>
         <div class="max-w-container mx-auto px-8 md:px-12 relative z-10 animate-fade-up">
             <div class="flex items-center gap-4 mb-8">
                 <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-bg2 border border-border">
-                    <span class="material-symbols-outlined text-teal text-2xl">{icon}</span>
+                    <Icon name={icon as any} size={24} class="text-teal" />
                 </div>
                 <div class="h-px flex-1 max-w-[100px] bg-border-main"></div>
-                <a href="/hizmetler" class="text-text-40 text-sm font-medium hover:text-plum transition-colors uppercase tracking-wider">Tüm Hizmetler</a>
+                <a href="/hizmetler" class="text-text-40 text-sm font-medium hover:text-primary transition-colors uppercase tracking-wider">Tüm Hizmetler</a>
             </div>
             
             <h1 class="display-lg text-4xl md:text-5xl lg:text-h1 mb-6 max-w-4xl">{title}</h1>
@@ -84,9 +85,9 @@ const {
             {solutionText && (
                 <section>
                     <div class="flex items-start gap-6">
-                        <span class="text-plum font-serif text-5xl opacity-40 mt-1">02</span>
+                        <span class="text-primary font-serif text-5xl opacity-40 mt-1">02</span>
                         <div>
-                            <h2 class="text-2xl md:text-3xl mb-6 font-medium text-plum">{solutionTitle}</h2>
+                            <h2 class="text-2xl md:text-3xl mb-6 font-medium text-primary">{solutionTitle}</h2>
                             <div class="prose prose-lg prose-invert max-w-none text-text-main font-light leading-relaxed">
                                 <p>{solutionText}</p>
                             </div>
@@ -103,7 +104,9 @@ const {
                         <div>
                             <h2 class="text-2xl md:text-3xl mb-6 font-medium">{resultTitle}</h2>
                             <div class="glass-card p-8 rounded-2xl border-l-4 border-l-teal relative overflow-hidden">
-                                <span class="material-symbols-outlined absolute right-4 bottom-4 text-8xl text-bg opacity-50 pointer-events-none">trending_up</span>
+                                <div class="absolute right-4 bottom-4 opacity-10 pointer-events-none">
+                                    <Icon name="icon_27_chart" size={120} />
+                                </div>
                                 <div class="relative z-10 prose prose-lg prose-invert max-w-none text-text-70 font-light leading-relaxed">
                                     <p>{resultText}</p>
                                 </div>
@@ -117,15 +120,15 @@ const {
             {insightContent && (
                 <section class="mt-24">
                     <div class="glass-card p-10 rounded-2xl border border-border-main relative overflow-hidden bg-bg2">
-                        <span class="material-symbols-outlined text-6xl text-plum opacity-20 mb-6 block">format_quote</span>
+                        <Icon name="icon_08_chat" size={40} class="text-primary opacity-20 mb-6 block" />
                         {insightTitle && (
-                            <h3 class="text-xs font-medium tracking-widest text-plum uppercase mb-6">{insightTitle}</h3>
+                            <h3 class="text-xs font-medium tracking-widest text-primary uppercase mb-6">{insightTitle}</h3>
                         )}
                         <p class="text-xl md:text-2xl text-text-main font-light leading-relaxed mb-8 relative z-10 italic">
                             "{insightContent}"
                         </p>
                         <div class="flex items-center gap-4 relative z-10 mt-8 pt-6 border-t border-border-main/50">
-                            <span class="material-symbols-outlined text-teal text-2xl">architecture</span>
+                            <Icon name="icon_05_settings" size={24} class="text-teal" />
                             <div>
                                 <h4 class="text-sm font-medium text-text-main">Harezm Insight Series</h4>
                                 <span class="text-xs text-text-70 uppercase tracking-widest">Finansal Mimari Vizyonu</span>
@@ -159,8 +162,8 @@ const {
                         {relatedServices.map(service => (
                             <li>
                                 <a href={service.href} class="flex items-center justify-between group">
-                                    <span class="text-text-70 group-hover:text-plum transition-colors">{service.title}</span>
-                                    <span class="material-symbols-outlined text-sm text-text-40 group-hover:text-plum transition-colors opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0">arrow_forward</span>
+                                    <span class="text-text-70 group-hover:text-primary transition-colors">{service.title}</span>
+                                    <Icon name="icon_17_share" size={14} class="text-text-40 group-hover:text-primary transition-colors opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 rotate-[-45deg]" />
                                 </a>
                             </li>
                         ))}
@@ -169,10 +172,10 @@ const {
             )}
 
             <!-- Sidebar CTA -->
-            <div class="bg-plum p-8 rounded-2xl text-white">
+            <div class="bg-primary p-8 rounded-2xl text-white">
                 <h3 class="text-xl font-medium mb-4">Ücretsiz Sistem Analizi</h3>
                 <p class="text-white/80 text-sm font-light mb-8">Finansal altyapınızdaki dar boğazları ve SAP potansiyelinizi değerlendirelim.</p>
-                <a href="/iletisim" class="block text-center w-full px-6 py-3 bg-white text-plum rounded-lg font-medium hover:bg-bg2 transition-colors">
+                <a href="/iletisim" class="block text-center w-full px-6 py-3 bg-white text-primary rounded-lg font-medium hover:bg-bg2 transition-colors">
                     Randevu Alın
                 </a>
             </div>
@@ -184,8 +187,8 @@ const {
         <div class="max-w-2xl">
             <h2 class="text-3xl font-medium mb-6">Mimari Değişim Başlasın</h2>
             <p class="text-text-70 font-light mb-8">Finansal operasyonlarınızı otomatize etmek ve sistemlerinizi geleceğe hazırlamak için ilk adımı atın.</p>
-            <a href="/iletisim" class="inline-flex items-center gap-2 bg-plum text-white px-8 py-4 rounded-lg font-medium hover:bg-plum-hover transition-colors">
-                Görüşme Ayarla <span class="material-symbols-outlined text-sm">arrow_outward</span>
+            <a href="/iletisim" class="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-lg font-medium hover:bg-primary-hover transition-colors">
+                Görüşme Ayarla <Icon name="icon_17_share" size={16} class="rotate-[-45deg]" />
             </a>
         </div>
     </section>

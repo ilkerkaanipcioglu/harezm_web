@@ -1,6 +1,5 @@
----
 import Layout from '../layouts/Layout.astro';
----
+import Icon from '../components/Icon.astro';
 <Layout title="Ürünler | Harezm">
     <!-- Hero -->
     <section class="relative pt-40 pb-32 bg-surface text-center overflow-hidden">
@@ -24,14 +23,14 @@ import Layout from '../layouts/Layout.astro';
                 <!-- 1 -->
                 <div class="bg-surface-container-low p-10 rounded-3xl border border-outline-variant/20 hover:border-primary/40 hover:shadow-xl transition-all group flex flex-col h-full">
                     <div class="w-16 h-16 rounded-2xl bg-primary/10 text-primary flex justify-center items-center mb-8 group-hover:scale-110 transition-transform">
-                        <span class="material-symbols-outlined text-3xl">payments</span>
+                        <Icon name="icon_21_phone" size={32} />
                     </div>
                     <h3 class="text-2xl font-bold font-headline mb-4 text-on-background">e-Tahsilat</h3>
                     <p class="text-on-surface-variant leading-relaxed mb-8 flex-grow">
                         Sanal POS entegrasyonları ile tahsilat süreçlerinizi dijitalleştirin. Gelen ödemeler otomatik olarak SAP FI modülüyle eşleşir ve muhasebelesir.
                     </p>
                     <a href="/iletisim" class="inline-flex items-center gap-2 text-primary font-bold text-sm tracking-wide group-hover:underline">
-                        Detaylı Bilgi <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        Detaylı Bilgi <Icon name="icon_17_share" size={12} class="rotate-[-45deg]" />
                     </a>
                 </div>
 
@@ -39,56 +38,56 @@ import Layout from '../layouts/Layout.astro';
                 <div class="bg-surface-container-low p-10 rounded-3xl border border-outline-variant/20 hover:border-primary/40 hover:shadow-xl transition-all group flex flex-col h-full lg:col-span-2 relative overflow-hidden">
                     <div class="absolute right-0 top-0 w-64 h-64 bg-primary/5 blur-3xl group-hover:bg-primary/10 transition-colors pointer-events-none"></div>
                     <div class="w-16 h-16 rounded-2xl bg-primary text-white flex justify-center items-center mb-8 group-hover:scale-110 transition-transform relative z-10">
-                        <span class="material-symbols-outlined text-3xl">hub</span>
+                        <Icon name="icon_05_settings" size={32} animate />
                     </div>
                     <h3 class="text-3xl font-bold font-headline mb-4 text-on-background relative z-10">Banka Hub (Multi-Bank Connectivity)</h3>
                     <p class="text-on-surface-variant leading-relaxed mb-8 text-lg max-w-2xl relative z-10">
                         Ayrı ayrı banka portallarına girmeye son. Tüm hesap hareketlerinizi, MT940 mutabakatlarınızı ve anlık bakiye görüntülemelerinizi tek bir ekrandan, doğrudan SAP üzerinden gerçekleştirin. Yapay zeka ile %95 otomatik eşleştirme garantisi.
                     </p>
                     <a href="/iletisim" class="inline-flex items-center gap-2 text-primary font-bold text-sm tracking-wide group-hover:underline mt-auto relative z-10">
-                        Demo Talep Et <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        Demo Talep Et <Icon name="icon_17_share" size={12} class="rotate-[-45deg]" />
                     </a>
                 </div>
 
                 <!-- 3 -->
                 <div class="bg-surface-container-low p-10 rounded-3xl border border-outline-variant/20 hover:border-primary/40 hover:shadow-xl transition-all group flex flex-col h-full">
                     <div class="w-16 h-16 rounded-2xl bg-primary/10 text-primary flex justify-center items-center mb-8 group-hover:scale-110 transition-transform">
-                        <span class="material-symbols-outlined text-3xl">account_balance_wallet</span>
+                        <Icon name="icon_18_lock" size={32} />
                     </div>
                     <h3 class="text-2xl font-bold font-headline mb-4 text-on-background">e-DBS</h3>
                     <p class="text-on-surface-variant leading-relaxed mb-8 flex-grow">
                         Doğrudan Borçlandırma Sistemi ile bayi ağınızdan yapacağınız tahsilatları garanti altına alın ve limit takibini otomatikleştirin.
                     </p>
                     <a href="/iletisim" class="inline-flex items-center gap-2 text-primary font-bold text-sm tracking-wide group-hover:underline">
-                        Detaylı Bilgi <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        Detaylı Bilgi <Icon name="icon_17_share" size={12} class="rotate-[-45deg]" />
                     </a>
                 </div>
 
                 <!-- 4 -->
                 <div class="bg-surface-container-low p-10 rounded-3xl border border-outline-variant/20 hover:border-primary/40 hover:shadow-xl transition-all group flex flex-col h-full">
                     <div class="w-16 h-16 rounded-2xl bg-primary/10 text-primary flex justify-center items-center mb-8 group-hover:scale-110 transition-transform">
-                        <span class="material-symbols-outlined text-3xl">account_balance</span>
+                        <Icon name="icon_01_home" size={32} />
                     </div>
                     <h3 class="text-2xl font-bold font-headline mb-4 text-on-background">e-Ödeme</h3>
                     <p class="text-on-surface-variant leading-relaxed mb-8 flex-grow">
                         Satıcı ödemelerinizi, vergi ve maaş transferlerinizi onay hiyerarşisine uygun olarak doğrudan SAP ekranlarından bankaya iletin.
                     </p>
                     <a href="/iletisim" class="inline-flex items-center gap-2 text-primary font-bold text-sm tracking-wide group-hover:underline">
-                        Detaylı Bilgi <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        Detaylı Bilgi <Icon name="icon_17_share" size={12} class="rotate-[-45deg]" />
                     </a>
                 </div>
 
                 <!-- 5 -->
                 <div class="bg-surface-container-low p-10 rounded-3xl border border-outline-variant/20 hover:border-primary/40 hover:shadow-xl transition-all group flex flex-col h-full">
                     <div class="w-16 h-16 rounded-2xl bg-primary/10 text-primary flex justify-center items-center mb-8 group-hover:scale-110 transition-transform">
-                        <span class="material-symbols-outlined text-3xl">gavel</span>
+                        <Icon name="icon_24_check_done" size={32} />
                     </div>
                     <h3 class="text-2xl font-bold font-headline mb-4 text-on-background">e-Devlet Serisi</h3>
                     <p class="text-on-surface-variant leading-relaxed mb-8 flex-grow">
                         e-Fatura, e-Defter, e-İrsaliye ve e-Arşiv süreçlerinizde GİB mevzuatlarıyla %100 uyumlu, kesintisiz SAP entegrasyonu.
                     </p>
                     <a href="/iletisim" class="inline-flex items-center gap-2 text-primary font-bold text-sm tracking-wide group-hover:underline">
-                        Detaylı Bilgi <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        Detaylı Bilgi <Icon name="icon_17_share" size={12} class="rotate-[-45deg]" />
                     </a>
                 </div>
 
@@ -101,14 +100,14 @@ import Layout from '../layouts/Layout.astro';
         <div class="max-w-7xl mx-auto px-8">
             <div class="bg-surface-container-low p-10 md:p-14 rounded-3xl border border-outline-variant/20 relative overflow-hidden">
                 <div class="absolute w-64 h-64 bg-primary/5 rounded-full blur-3xl pointer-events-none -right-10 -bottom-10"></div>
-                <span class="material-symbols-outlined text-6xl text-primary/20 mb-6 block">format_quote</span>
+                <Icon name="icon_08_chat" size={60} class="text-primary/20 mb-6 block" animate />
                 <h3 class="text-sm font-bold tracking-widest text-primary uppercase mb-6">06 · SAP GROUP REPORTING</h3>
                 <p class="text-xl md:text-2xl text-on-background font-light leading-relaxed mb-8 relative z-10 italic">
                     "Birden fazla tüzel kişilik, bağlı ortaklık veya coğrafyada faaliyet gösteren organizasyonlar için finansal kapanış, genellikle finans takvimininin en emek yoğun sürecidir. Şirketlerarası eliminasyonlar, kur çevrimi ve çok standartlı raporlama gereksinimleri, haftalar süren ve yine de manuel müdahale gerektiren bir sürece dönüşebilir. S/4HANA içine doğal olarak entegre edilmiş SAP Group Reporting, konsolidasyon mantığını doğrudan Universal Journal'a gömerek bu sorunu ele alır. 2025 ve 2026 sürümlerinde tanıtılan yeni kural motorları, en karmaşık dağıtım ve eliminasyon senaryolarını otomatize ederek çevrimdışı çalışma kitaplarına ve konsolidasyon uzmanlarına olan bağımlılığı azaltır. Central Finance bu mimariyi heterojen ortamlara genişletir — birden fazla ERP sistemi işleten organizasyonlar, yan kuruluşların sistem geçişi gerektirmeksizin finansal verileri tek bir S/4HANA merkezinde toplayabilir. Sonuç: tüm organizasyonda tek, denetlenebilir bir finansal gerçek — ve bu gerçeğe gerçek zamanlı erişim."
                 </p>
                 <div class="flex items-center gap-4 relative z-10 mt-8 pt-8 border-t border-outline-variant/10">
                     <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                        <span class="material-symbols-outlined text-sm">architecture</span>
+                        <Icon name="icon_05_settings" size={16} animate />
                     </div>
                     <div>
                         <h4 class="text-sm font-bold text-on-background">Harezm Insight Series</h4>

@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Icon from '../../components/Icon.astro';
 
 const modernOfficeImg = '/assets/Modern_office_building_202603240057.jpeg';
 const womanAnalyzingImg = '/assets/Woman_analyzing_data_202603240057.jpeg';
@@ -10,19 +11,19 @@ const lang = 'en' as const;
 <Layout title="Home | Harezm" lang={lang}>
     <!-- Hero Section -->
     <header class="relative pt-32 pb-20 px-8 md:px-12 flex flex-col justify-center min-h-[calc(100vh-80px)] overflow-hidden bg-bg border-b border-border-main">
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--color-plum)_0%,_transparent_40%)] opacity-10 pointer-events-none"></div>
-        <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-plum/5 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--color-primary)_0%,_transparent_40%)] opacity-10 pointer-events-none"></div>
+        <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[120px] pointer-events-none"></div>
 
         <div class="max-w-container w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-center relative z-10">
             <!-- Left Content (7/12) -->
             <div class="lg:col-span-7 animate-fade-up">
                 <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface text-text-70 text-label mb-8 border border-border">
-                    <span class="material-symbols-outlined text-sm">verified</span>
+                    <Icon name="icon_24_check_done" size={14} />
                     SAP FINANCE ARCHITECTURE · ISTANBUL
                 </div>
                 
                 <h1 class="display-lg text-4xl md:text-5xl lg:text-h1 mb-6">
-                    SAP'ı tasarlarız. Türkiye'ye entegre ederiz.<br/> <em class="text-plum italic font-normal">Tek Elden.</em>
+                    SAP'ı tasarlarız. Türkiye'ye entegre ederiz.<br/> <em class="text-primary italic font-normal">Tek Elden.</em>
                 </h1>
                 
                 <p class="text-text-70 text-body-lg mb-10 font-light max-w-text">
@@ -30,12 +31,12 @@ const lang = 'en' as const;
                 </p>
                 
                 <div class="flex flex-wrap gap-4">
-                    <a href="/iletisim" class="bg-plum text-white px-8 py-4 rounded-lg font-medium text-ui hover:bg-plum-hover transition-colors">
+                    <a href="/iletisim" class="bg-primary text-white px-8 py-4 rounded-lg font-medium text-ui hover:bg-primary-hover transition-colors">
                         Projeyi Başlat
                     </a>
                     <a href="/hizmetler" class="bg-transparent text-text-main px-8 py-4 rounded-lg font-medium text-ui border border-border-main hover:bg-bg2 transition-colors inline-flex items-center gap-2">
                         Hizmetleri Keşfet
-                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        <Icon name="icon_17_share" size={14} class="rotate-[-45deg]" />
                     </a>
                 </div>
             </div>
@@ -45,10 +46,10 @@ const lang = 'en' as const;
                 <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--color-border)_0%,_transparent_60%)] opacity-20 pointer-events-none"></div>
                 
                 <!-- TMS 29 Badge -->
-                <div class="mb-8 p-4 rounded-xl border border-border bg-bg/40 backdrop-blur-md flex items-start gap-3 relative z-10 group cursor-default hover:border-plum/40 transition-colors">
-                    <span class="material-symbols-outlined text-plum text-xl group-hover:scale-110 transition-transform">gavel</span>
+                <div class="mb-8 p-4 rounded-xl border border-border bg-bg/40 backdrop-blur-md flex items-start gap-3 relative z-10 group cursor-default hover:border-primary/40 transition-colors">
+                    <Icon name="icon_18_lock" size={20} class="text-primary group-hover:scale-110 transition-transform" />
                     <div>
-                        <p class="text-[10px] text-plum font-bold tracking-widest uppercase mb-1">Zorunlu Uyumluluk</p>
+                        <p class="text-[10px] text-primary font-bold tracking-widest uppercase mb-1">Zorunlu Uyumluluk</p>
                         <p class="text-sm text-text-main font-medium">TMS 29 Enflasyon Muhasebesi</p>
                         <p class="text-xs text-text-70 mt-1">SAP üzerinde %100 uyumlu, yasal geçerli altyapı.</p>
                     </div>
@@ -69,7 +70,7 @@ const lang = 'en' as const;
 
                 <div class="pt-6 border-t border-border flex items-center justify-between relative z-10">
                     <div class="flex items-center gap-3">
-                        <span class="material-symbols-outlined text-teal text-xl">architecture</span>
+                        <Icon name="icon_05_settings" size={20} class="text-teal" />
                         <div>
                             <p class="text-label text-text-40">End-to-End SAP Consulting</p>
                             <p class="text-sm text-text-70 font-medium">Finansal Teknoloji Çözümleri</p>
@@ -96,7 +97,7 @@ const lang = 'en' as const;
                 </div>
                 <!-- Image/Diagram -->
                 <div class="relative group rounded-2xl overflow-hidden border border-border bg-bg2 shadow-md animate-fade-left delay-2">
-                    <div class="absolute inset-0 bg-plum/10 group-hover:bg-transparent transition-colors z-10 mix-blend-overlay"></div>
+                    <div class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors z-10 mix-blend-overlay"></div>
                     <img src={modernOfficeImg} alt="Harezm Finansal Mimari" class="w-full h-auto object-cover scale-105 group-hover:scale-100 transition-transform duration-700" />
                 </div>
             </div>
@@ -113,13 +114,13 @@ const lang = 'en' as const;
                     <p class="text-sm text-text-70 font-light">Uyguladığımız projelerde finansal kapanış süreleri %80’e kadar hızlanır.</p>
                 </div>
                 <div class="p-6 relative md:before:absolute md:before:w-px md:before:h-24 md:before:bg-border-main md:before:-left-4 md:before:top-1/2 md:before:-translate-y-1/2">
-                    <p class="text-5xl font-serif text-plum mb-4">%90+</p>
+                    <p class="text-5xl font-serif text-primary mb-4">%90+</p>
                     <p class="text-text-main font-medium mb-2">Otomatik Mutabakat</p>
                     <p class="text-sm text-text-70 font-light">Mutabakat süreçlerinin %90’dan fazlası AI ve RPA ile otomatik hale gelir.</p>
                 </div>
                 <div class="p-6 relative md:before:absolute md:before:w-px md:before:h-24 md:before:bg-border-main md:before:-left-4 md:before:top-1/2 md:before:-translate-y-1/2">
                     <div class="text-5xl font-serif text-teal mb-4 flex items-center justify-center md:justify-start gap-2">
-                        <span class="material-symbols-outlined text-[40px]">sync</span>
+                        <Icon name="icon_17_share" size={40} />
                     </div>
                     <p class="text-text-main font-medium mb-2">Gerçek Zamanlı Nakit</p>
                     <p class="text-sm text-text-70 font-light">Banka entegrasyonları ile nakit akışı anlık ve %100 şeffaf izlenebilir.</p>
@@ -134,14 +135,14 @@ const lang = 'en' as const;
     <section class="py-24 px-8 md:px-12 bg-bg2 relative box-border border-b border-border-main">
         <div class="max-w-container mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
             <div class="md:col-span-6 lg:col-span-5">
-                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-bg text-text-main text-label mb-6 border border-border hover:border-plum/30 transition-colors">
-                    <span class="material-symbols-outlined text-sm text-plum">warning</span> Gizli Risk Faktörü
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-bg text-text-main text-label mb-6 border border-border hover:border-primary/30 transition-colors">
+                    <Icon name="icon_03_notification" size={14} class="text-primary" /> Gizli Risk Faktörü
                 </div>
                 <h2 class="display-lg text-3xl mb-6">Sisteminizin Çalışması Yetmez</h2>
                 <p class="text-text-70 font-light text-body mb-6">
                     SAP sisteminiz çalışıyor olabilir. Ancak finansal süreçler en başından doğru kurgulanmadıysa bu bir avantaj değil, <strong>gizli bir risk</strong> oluşturur. En büyük entegrasyon hataları genellikle sistem tam kapasite çalışırken fark edilmez.
                 </p>
-                <div class="border-l-2 border-plum pl-4 py-1">
+                <div class="border-l-2 border-primary pl-4 py-1">
                     <p class="text-sm font-medium text-text-main">Riski Fırsata Çevirin</p>
                     <p class="text-xs font-light text-text-70">Sistem mimarisini gözden geçirerek maliyet sızıntılarını tespit ederiz.</p>
                 </div>
@@ -176,7 +177,7 @@ const lang = 'en' as const;
                 <div class="glass-card p-8 rounded-2xl group flex flex-col justify-between">
                     <div>
                         <div class="w-12 h-12 rounded-xl border border-border flex items-center justify-center mb-6 bg-bg group-hover:border-teal/30 transition-colors">
-                            <span class="material-symbols-outlined text-teal">account_balance</span>
+                            <Icon name="icon_01_home" size={24} class="text-teal" />
                         </div>
                         <h3 class="text-h4 mb-4">SAP Finansal Çekirdek</h3>
                         <p class="text-text-70 text-body-sm font-light mb-8">
@@ -196,7 +197,7 @@ const lang = 'en' as const;
                 <div class="glass-card p-8 rounded-2xl group flex flex-col justify-between">
                     <div>
                         <div class="w-12 h-12 rounded-xl border border-border flex items-center justify-center mb-6 bg-bg group-hover:border-teal/30 transition-colors">
-                            <span class="material-symbols-outlined text-teal">monitoring</span>
+                            <Icon name="icon_27_chart" size={24} class="text-teal" />
                         </div>
                         <h3 class="text-h4 mb-4">Hazine & Risk Yönetimi</h3>
                         <p class="text-text-70 text-body-sm font-light mb-8">
@@ -215,7 +216,7 @@ const lang = 'en' as const;
                 <div class="glass-card p-8 rounded-2xl group flex flex-col justify-between">
                     <div>
                         <div class="w-12 h-12 rounded-xl border border-border flex items-center justify-center mb-6 bg-bg group-hover:border-teal/30 transition-colors">
-                            <span class="material-symbols-outlined text-teal">gavel</span>
+                            <Icon name="icon_18_lock" size={24} class="text-teal" />
                         </div>
                         <h3 class="text-h4 mb-4">Uyum & Vergi Mimarisi</h3>
                         <p class="text-text-70 text-body-sm font-light mb-8">
@@ -235,7 +236,7 @@ const lang = 'en' as const;
                 <div class="glass-card p-8 rounded-2xl group flex flex-col justify-between">
                     <div>
                         <div class="w-12 h-12 rounded-xl border border-border flex items-center justify-center mb-6 bg-bg group-hover:border-teal/30 transition-colors">
-                            <span class="material-symbols-outlined text-teal">cloud</span>
+                            <Icon name="icon_15_upload" size={24} class="text-teal" />
                         </div>
                         <h3 class="text-h4 mb-4">Bulut & Platform</h3>
                         <p class="text-text-70 text-body-sm font-light mb-8">
@@ -254,7 +255,7 @@ const lang = 'en' as const;
                 <div class="glass-card p-8 rounded-2xl group flex flex-col justify-between">
                     <div>
                         <div class="w-12 h-12 rounded-xl border border-border flex items-center justify-center mb-6 bg-bg group-hover:border-teal/30 transition-colors">
-                            <span class="material-symbols-outlined text-teal">smart_toy</span>
+                            <Icon name="icon_19_camera" size={24} class="text-teal" />
                         </div>
                         <h3 class="text-h4 mb-4">AI & Otomasyon</h3>
                          <p class="text-text-70 text-body-sm font-light mb-8">
@@ -273,7 +274,7 @@ const lang = 'en' as const;
                 <div class="glass-card p-8 rounded-2xl group flex flex-col justify-between">
                     <div>
                         <div class="w-12 h-12 rounded-xl border border-border flex items-center justify-center mb-6 bg-bg group-hover:border-teal/30 transition-colors">
-                            <span class="material-symbols-outlined text-teal">public</span>
+                            <Icon name="icon_20_location" size={24} class="text-teal" />
                         </div>
                         <h3 class="text-h4 mb-4">Global Roll-out & AMS</h3>
                         <p class="text-text-70 text-body-sm font-light mb-8">
@@ -297,13 +298,13 @@ const lang = 'en' as const;
         <div class="absolute inset-0 opacity-[0.03] pointer-events-none mix-blend-overlay" style="background-image: url(&quot;data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' fill='transparent'/%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E&quot;);"></div>
         
         <!-- Large radial glow behind text -->
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-plum/5 rounded-full blur-[100px] pointer-events-none"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[100px] pointer-events-none"></div>
 
         <div class="max-w-container mx-auto text-center relative z-10">
-            <span class="material-symbols-outlined text-[80px] text-border mb-12 opacity-50">format_quote</span>
+            <Icon name="icon_08_chat" size={80} class="text-border mb-12 opacity-50 mx-auto" />
             <h2 class="font-serif text-4xl md:text-5xl lg:text-h1 mb-12 leading-[1.1] max-w-[1000px] mx-auto tracking-tight">
                 <span class="text-text-70">CFO kontrolü sağlar. CTO sistemi kurar.</span><br/>
-                <span class="bg-clip-text text-transparent bg-gradient-to-r from-teal to-plum">Harezm ikisini birleştirir.</span> <br/>
+                <span class="bg-clip-text text-transparent bg-gradient-to-r from-teal to-primary">Harezm ikisini birleştirir.</span> <br/>
                 <span class="text-text-main">Finansal mimari ve teknoloji aynı anda.</span>
             </h2>
             <p class="text-label text-text-40 tracking-[0.3em] uppercase">
@@ -331,7 +332,7 @@ const lang = 'en' as const;
                 <div class="lg:col-span-7 flex flex-col gap-6">
                     <div class="glass-card p-8 rounded-2xl flex flex-col md:flex-row gap-6 md:items-center group">
                         <div class="w-12 h-12 rounded-xl border border-border flex items-center justify-center shrink-0 bg-bg">
-                            <span class="material-symbols-outlined text-teal">payments</span>
+                            <Icon name="icon_15_upload" size={24} class="text-teal" />
                         </div>
                         <div>
                             <h3 class="text-xl font-medium mb-2 text-text-main group-hover:text-teal transition-colors">SAP e-Tahsilat</h3>
@@ -341,7 +342,7 @@ const lang = 'en' as const;
                     
                     <div class="glass-card p-8 rounded-2xl flex flex-col md:flex-row gap-6 md:items-center group">
                         <div class="w-12 h-12 rounded-xl border border-border flex items-center justify-center shrink-0 bg-bg">
-                            <span class="material-symbols-outlined text-teal">account_balance_wallet</span>
+                            <Icon name="icon_18_lock" size={24} class="text-teal" />
                         </div>
                         <div>
                             <h3 class="text-xl font-medium mb-2 text-text-main group-hover:text-teal transition-colors">Banka Entegrasyon Hub</h3>
@@ -351,7 +352,7 @@ const lang = 'en' as const;
 
                     <div class="glass-card p-8 rounded-2xl flex flex-col md:flex-row gap-6 md:items-center group">
                         <div class="w-12 h-12 rounded-xl border border-border flex items-center justify-center shrink-0 bg-bg">
-                            <span class="material-symbols-outlined text-teal">sync_alt</span>
+                            <Icon name="icon_17_share" size={24} class="text-teal" />
                         </div>
                         <div>
                             <h3 class="text-xl font-medium mb-2 text-text-main group-hover:text-teal transition-colors">SAP e-DBS</h3>
@@ -361,7 +362,7 @@ const lang = 'en' as const;
 
                     <div class="glass-card p-8 rounded-2xl flex flex-col md:flex-row gap-6 md:items-center group">
                         <div class="w-12 h-12 rounded-xl border border-border flex items-center justify-center shrink-0 bg-bg">
-                            <span class="material-symbols-outlined text-teal">currency_exchange</span>
+                            <Icon name="icon_17_share" size={24} class="text-teal rotate-[-45deg]" />
                         </div>
                         <div>
                             <h3 class="text-xl font-medium mb-2 text-text-main group-hover:text-teal transition-colors">e-Ödeme (TÖS)</h3>
@@ -371,7 +372,7 @@ const lang = 'en' as const;
 
                     <div class="glass-card p-8 rounded-2xl flex flex-col md:flex-row gap-6 md:items-center group">
                         <div class="w-12 h-12 rounded-xl border border-border flex items-center justify-center shrink-0 bg-bg">
-                            <span class="material-symbols-outlined text-teal">receipt_long</span>
+                            <Icon name="icon_09_mail" size={24} class="text-teal" />
                         </div>
                         <div>
                             <h3 class="text-xl font-medium mb-2 text-text-main group-hover:text-teal transition-colors">e-Devlet Paketi</h3>
@@ -436,52 +437,52 @@ const lang = 'en' as const;
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-x-8 max-w-[1000px] mx-auto">
                 <!-- Sektör 1 -->
-                <div class="border-t-2 border-border-main hover:border-plum bg-bg hover:bg-bg3 transition-all p-6 md:p-8 rounded-xl group">
+                <div class="border-t-2 border-border-main hover:border-primary bg-bg hover:bg-bg3 transition-all p-6 md:p-8 rounded-xl group">
                     <div class="flex justify-between items-start mb-6">
-                        <div class="text-label text-text-40 group-hover:text-plum transition-colors">01</div>
-                        <span class="material-symbols-outlined text-text-40 group-hover:text-plum transition-colors opacity-50">vaccines</span>
+                        <div class="text-label text-text-40 group-hover:text-primary transition-colors">01</div>
+                        <Icon name="icon_12_star" size={24} class="text-text-40 group-hover:text-primary transition-colors opacity-50" />
                     </div>
-                    <h3 class="text-xl font-medium mb-3 group-hover:text-plum transition-colors">İlaç & Sağlık</h3>
+                    <h3 class="text-xl font-medium mb-3 group-hover:text-primary transition-colors">İlaç & Sağlık</h3>
                     <p class="text-text-70 font-light text-sm">Sıkı regülasyon, çok katmanlı maliyet yapısı ve uluslararası raporlama gereksinimleri.</p>
                 </div>
 
                 <!-- Sektör 2 -->
-                <div class="border-t-2 border-border-main hover:border-plum bg-bg hover:bg-bg3 transition-all p-6 md:p-8 rounded-xl group">
+                <div class="border-t-2 border-border-main hover:border-primary bg-bg hover:bg-bg3 transition-all p-6 md:p-8 rounded-xl group">
                     <div class="flex justify-between items-start mb-6">
-                        <div class="text-label text-text-40 group-hover:text-plum transition-colors">02</div>
-                        <span class="material-symbols-outlined text-text-40 group-hover:text-plum transition-colors opacity-50">flight_takeoff</span>
+                        <div class="text-label text-text-40 group-hover:text-primary transition-colors">02</div>
+                        <Icon name="icon_07_send" size={24} class="text-text-40 group-hover:text-primary transition-colors opacity-50 rotate-[-45deg]" />
                     </div>
-                    <h3 class="text-xl font-medium mb-3 group-hover:text-plum transition-colors">Savunma & Havacılık</h3>
+                    <h3 class="text-xl font-medium mb-3 group-hover:text-primary transition-colors">Savunma & Havacılık</h3>
                     <p class="text-text-70 font-light text-sm">Proje muhasebesi, maliyet kontrolü ve gizlilik gerektiren finansal mimariler.</p>
                 </div>
 
                 <!-- Sektör 3 -->
-                <div class="border-t-2 border-border-main hover:border-plum bg-bg hover:bg-bg3 transition-all p-6 md:p-8 rounded-xl group">
+                <div class="border-t-2 border-border-main hover:border-primary bg-bg hover:bg-bg3 transition-all p-6 md:p-8 rounded-xl group">
                     <div class="flex justify-between items-start mb-6">
-                        <div class="text-label text-text-40 group-hover:text-plum transition-colors">03</div>
-                        <span class="material-symbols-outlined text-text-40 group-hover:text-plum transition-colors opacity-50">shopping_cart</span>
+                        <div class="text-label text-text-40 group-hover:text-primary transition-colors">03</div>
+                        <Icon name="icon_02_search" size={24} class="text-text-40 group-hover:text-primary transition-colors opacity-50" />
                     </div>
-                    <h3 class="text-xl font-medium mb-3 group-hover:text-plum transition-colors">FMCG & Perakende</h3>
+                    <h3 class="text-xl font-medium mb-3 group-hover:text-primary transition-colors">FMCG & Perakende</h3>
                     <p class="text-text-70 font-light text-sm">Yüksek işlem hacmi, gerçek zamanlı mutabakat ve çok kanallı tahsilat yönetimi.</p>
                 </div>
 
                 <!-- Sektör 4 -->
-                <div class="border-t-2 border-border-main hover:border-plum bg-bg hover:bg-bg3 transition-all p-6 md:p-8 rounded-xl group">
+                <div class="border-t-2 border-border-main hover:border-primary bg-bg hover:bg-bg3 transition-all p-6 md:p-8 rounded-xl group">
                     <div class="flex justify-between items-start mb-6">
-                        <div class="text-label text-text-40 group-hover:text-plum transition-colors">04</div>
-                        <span class="material-symbols-outlined text-text-40 group-hover:text-plum transition-colors opacity-50">bolt</span>
+                        <div class="text-label text-text-40 group-hover:text-primary transition-colors">04</div>
+                        <Icon name="icon_12_star" size={24} class="text-text-40 group-hover:text-primary transition-colors opacity-50" />
                     </div>
-                    <h3 class="text-xl font-medium mb-3 group-hover:text-plum transition-colors">Enerji & Utilities</h3>
+                    <h3 class="text-xl font-medium mb-3 group-hover:text-primary transition-colors">Enerji & Utilities</h3>
                     <p class="text-text-70 font-light text-sm">Çoklu para birimi, emtia riski ve uzun vadeli sözleşme muhasebesi.</p>
                 </div>
 
                 <!-- Sektör 5 -->
-                <div class="border-t-2 border-border-main hover:border-plum bg-bg hover:bg-bg3 transition-all p-6 md:p-8 rounded-xl group">
+                <div class="border-t-2 border-border-main hover:border-primary bg-bg hover:bg-bg3 transition-all p-6 md:p-8 rounded-xl group">
                     <div class="flex justify-between items-start mb-6">
-                        <div class="text-label text-text-40 group-hover:text-plum transition-colors">05</div>
-                        <span class="material-symbols-outlined text-text-40 group-hover:text-plum transition-colors opacity-50">directions_car</span>
+                        <div class="text-label text-text-40 group-hover:text-primary transition-colors">05</div>
+                        <Icon name="icon_05_settings" size={24} class="text-text-40 group-hover:text-primary transition-colors opacity-50" />
                     </div>
-                    <h3 class="text-xl font-medium mb-3 group-hover:text-plum transition-colors">Otomotiv & OEM</h3>
+                    <h3 class="text-xl font-medium mb-3 group-hover:text-primary transition-colors">Otomotiv & OEM</h3>
                     <p class="text-text-70 font-light text-sm">Tedarik zinciri finansmanı, dealer network yönetimi ve global roll-out.</p>
                 </div>
             </div>
@@ -489,9 +490,9 @@ const lang = 'en' as const;
     </section>
 
     <!-- Final CTA -->
-    <section class="py-32 md:py-48 px-8 md:px-12 bg-plum relative overflow-hidden text-center flex flex-col justify-center items-center">
+    <section class="py-32 md:py-48 px-8 md:px-12 bg-primary relative overflow-hidden text-center flex flex-col justify-center items-center">
         <!-- Radial gradient background overlay -->
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--color-plum-hover)_0%,_transparent_70%)] opacity-50"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--color-primary-hover)_0%,_transparent_70%)] opacity-50"></div>
         
         <div class="max-w-container mx-auto relative z-10 flex flex-col items-center">
              <h2 class="display-lg text-4xl md:text-h1 mb-6 text-white">SAP sisteminizin mevcut durumunu birlikte değerlendirelim</h2>
@@ -505,15 +506,15 @@ const lang = 'en' as const;
 
             <div class="flex flex-col md:flex-row flex-wrap justify-center gap-8 md:gap-16 text-white/80 text-sm font-light">
                 <div class="flex items-center gap-2">
-                    <span class="material-symbols-outlined text-sm">mail</span>
+                    <Icon name="icon_09_mail" size={14} />
                     info@harezm.com
                 </div>
                 <div class="flex items-center gap-2">
-                    <span class="material-symbols-outlined text-sm">location_on</span>
+                    <Icon name="icon_20_location" size={14} />
                     Istanbul, Türkiye — Global Operasyonlar
                 </div>
                 <div class="flex items-center gap-2">
-                    <span class="material-symbols-outlined text-sm">verified</span>
+                    <Icon name="icon_24_check_done" size={14} />
                     SAP FI · CO · TRM · BTP · AI
                 </div>
             </div>

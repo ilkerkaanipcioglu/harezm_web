@@ -19,7 +19,7 @@
   --bg:        var(--bg-dark);
   --bg2:       #242424; 
   --bg3:       #333333; 
-  --primary:   hsl(var(--h), var(--s), var(--l));
+  --primary:   hsl(var(--h), var(--s), calc(var(--l) + 25%));
   --text:      #F8FAFC; 
   --text-70:   rgba(248, 250, 252, 0.70);
   --text-40:   rgba(248, 250, 252, 0.40);

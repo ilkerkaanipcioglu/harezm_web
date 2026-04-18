@@ -1,5 +1,6 @@
-﻿---
+---
 import Layout from '../../layouts/Layout.astro';
+import Icon from '../../components/Icon.astro';
 const lang = 'en' as const;
 ---
 <Layout title="SAP & OpenText Consulting" lang={lang}>
@@ -7,51 +8,62 @@ const lang = 'en' as const;
     <section class="relative pt-40 pb-24 bg-surface-container overflow-hidden">
         <div class="max-w-[1920px] mx-auto px-12 md:px-24">
             <div class="text-center max-w-4xl mx-auto">
-                <span class="inline-block px-4 py-1 rounded-full bg-primary/10 text-primary font-bold text-xs tracking-widest uppercase mb-6">SAP & OPENTEXT</span>
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary font-bold text-xs tracking-widest uppercase mb-6 border border-primary/20">
+                     <Icon name="icon_05_settings" size={14} class="opacity-70" />
+                     SAP & OPENTEXT
+                </div>
                 <h1 class="text-5xl md:text-7xl font-bold font-headline text-on-background tracking-tight mb-8">SAP & OpenText Consulting Services</h1>
-                <p class="text-xl text-on-surface-variant font-body leading-relaxed">End-to-end solutions designed to streamline operations and maximize business performance.</p>
+                <p class="text-xl text-on-surface-variant font-body leading-relaxed max-w-2xl mx-auto">End-to-end solutions designed to streamline operations and maximize business performance.</p>
             </div>
         </div>
     </section>
 
     <!-- Digital Transformation -->
     <section class="py-20 bg-surface">
-        <div class="max-w-5xl mx-auto px-8">
+        <div class="max-w-5xl mx-auto px-8 text-center md:text-left">
             <h2 class="text-3xl font-bold font-headline mb-6">Driving Digital Transformation</h2>
             <p class="text-lg text-on-surface-variant leading-relaxed mb-6">Modern enterprises require more than just working systems ” they need intelligent, connected, and scalable platforms. By combining SAP and OpenText technologies, we unify your financial processes, document management, and operational workflows into a seamless ecosystem.</p>
-            <p class="text-lg text-on-surface-variant leading-relaxed">Our consultants approach each project with a structured methodology, covering analysis, design, implementation, and optimization. Instead of generic solutions, we build flexible architectures tailored to your organization's unique needs.</p>
+            <p class="text-lg text-on-surface-variant leading-relaxed font-light">Our consultants approach each project with a structured methodology, covering analysis, design, implementation, and optimization. Instead of generic solutions, we build flexible architectures tailored to your organization's unique needs.</p>
         </div>
     </section>
 
     <!-- AI-Powered -->
-    <section class="py-20 bg-surface-container-lowest">
+    <section class="py-24 bg-surface-container-lowest">
         <div class="max-w-7xl mx-auto px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div>
                     <span class="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary font-bold text-xs tracking-widest uppercase mb-4">NEXT-GEN</span>
-                    <h2 class="text-3xl font-bold font-headline mb-6">AI-Powered Business Processes</h2>
-                    <p class="text-on-surface-variant leading-relaxed mb-8">We enhance traditional ERP and content management systems with artificial intelligence capabilities.</p>
+                    <h2 class="text-4xl font-bold font-headline mb-6">AI-Powered Business Processes</h2>
+                    <p class="text-on-surface-variant leading-relaxed font-light text-lg mb-8">We enhance traditional ERP and content management systems with artificial intelligence capabilities to extract value from unstructured data.</p>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div class="bg-surface-container-low p-6 rounded-xl border border-outline-variant/20 hover:border-primary/50 transition-all">
-                        <span class="material-symbols-outlined text-primary text-3xl mb-3">auto_awesome</span>
-                        <h4 class="font-bold text-sm mb-1">Auto Classification</h4>
-                        <p class="text-on-surface-variant text-xs">Automated document classification</p>
+                    <div class="bg-surface-container-low p-8 rounded-3xl border border-outline-variant/20 hover:border-primary/50 transition-all group">
+                        <div class="text-primary mb-4 p-3 rounded-2xl bg-primary/5 inline-block group-hover:bg-primary/10 transition-colors">
+                            <Icon name="icon_22_menu" size={32} />
+                        </div>
+                        <h4 class="font-bold text-sm mb-1 uppercase tracking-wide">Auto Classification</h4>
+                        <p class="text-on-surface-variant text-xs font-light tracking-wide">Automated document classification</p>
                     </div>
-                    <div class="bg-surface-container-low p-6 rounded-xl border border-outline-variant/20 hover:border-primary/50 transition-all">
-                        <span class="material-symbols-outlined text-primary text-3xl mb-3">database</span>
-                        <h4 class="font-bold text-sm mb-1">Data Extraction</h4>
-                        <p class="text-on-surface-variant text-xs">Intelligent extraction and validation</p>
+                    <div class="bg-surface-container-low p-8 rounded-3xl border border-outline-variant/20 hover:border-primary/50 transition-all group">
+                        <div class="text-primary mb-4 p-3 rounded-2xl bg-primary/5 inline-block group-hover:bg-primary/10 transition-colors">
+                            <Icon name="icon_02_search" size={32} />
+                        </div>
+                        <h4 class="font-bold text-sm mb-1 uppercase tracking-wide">Data Extraction</h4>
+                        <p class="text-on-surface-variant text-xs font-light tracking-wide">Intelligent extraction and validation</p>
                     </div>
-                    <div class="bg-surface-container-low p-6 rounded-xl border border-outline-variant/20 hover:border-primary/50 transition-all">
-                        <span class="material-symbols-outlined text-primary text-3xl mb-3">shield</span>
-                        <h4 class="font-bold text-sm mb-1">Exception Detection</h4>
-                        <p class="text-on-surface-variant text-xs">Risk prevention and anomalies</p>
+                    <div class="bg-surface-container-low p-8 rounded-3xl border border-outline-variant/20 hover:border-primary/50 transition-all group">
+                        <div class="text-primary mb-4 p-3 rounded-2xl bg-primary/5 inline-block group-hover:bg-primary/10 transition-colors">
+                            <Icon name="icon_18_lock" size={32} />
+                        </div>
+                        <h4 class="font-bold text-sm mb-1 uppercase tracking-wide">Exception Detection</h4>
+                        <p class="text-on-surface-variant text-xs font-light tracking-wide">Risk prevention and anomalies</p>
                     </div>
-                    <div class="bg-surface-container-low p-6 rounded-xl border border-outline-variant/20 hover:border-primary/50 transition-all">
-                        <span class="material-symbols-outlined text-primary text-3xl mb-3">lightbulb</span>
-                        <h4 class="font-bold text-sm mb-1">Smart Insights</h4>
-                        <p class="text-on-surface-variant text-xs">Process optimization recommendations</p>
+                    <div class="bg-surface-container-low p-8 rounded-3xl border border-outline-variant/20 hover:border-primary/50 transition-all group">
+                        <div class="text-primary mb-4 p-3 rounded-2xl bg-primary/5 inline-block group-hover:bg-primary/10 transition-colors">
+                            <Icon name="icon_12_star" size={32} />
+                        </div>
+                        <h4 class="font-bold text-sm mb-1 uppercase tracking-wide">Smart Insights</h4>
+                        <p class="text-on-surface-variant text-xs font-light tracking-wide">Process optimization recommendations</p>
                     </div>
                 </div>
             </div>
@@ -59,78 +71,83 @@ const lang = 'en' as const;
     </section>
 
     <!-- VIM -->
-    <section class="py-20 bg-on-background text-white">
-        <div class="max-w-5xl mx-auto px-8">
-            <div class="text-center mb-12">
-                <span class="material-symbols-outlined text-primary-container text-5xl mb-4">receipt_long</span>
-                <h2 class="text-3xl font-bold font-headline mb-4">Vendor Invoice Management (VIM)</h2>
-                <p class="text-on-surface-variant">Managing supplier invoices efficiently is critical for financial accuracy and compliance.</p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="bg-white/5 border border-white/10 p-6 rounded-xl backdrop-blur-sm">
-                    <span class="material-symbols-outlined text-primary-container text-2xl mb-3">bolt</span>
-                    <h4 class="font-bold text-sm mb-2">Automation</h4>
-                    <p class="text-on-surface-variant text-xs">Invoice processing becomes automated</p>
+    <section class="py-24 bg-on-background text-white relative overflow-hidden">
+        <div class="absolute -top-32 -left-32 w-96 h-96 bg-primary/10 rounded-full blur-[100px]"></div>
+        <div class="max-w-7xl mx-auto px-8 relative z-10 text-center">
+            <Icon name="icon_23_large_language_model" size={60} class="text-primary mx-auto mb-8" animate={true} />
+            <h2 class="text-4xl font-bold font-headline mb-4 tracking-tight">Vendor Invoice Management (VIM)</h2>
+            <p class="text-white/60 mb-16 max-w-2xl mx-auto font-light">Managing supplier invoices efficiently is critical for financial accuracy and compliance. We architect the most advanced VIM landscapes in the industry.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div class="bg-white/5 border border-white/10 p-8 rounded-3xl text-center group hover:bg-primary/10 transition-all">
+                    <Icon name="icon_07_send" size={32} class="text-primary-container mb-4 mx-auto" />
+                    <h4 class="font-bold text-xs uppercase tracking-widest text-primary-container/70 mb-2">Automation</h4>
+                    <p class="text-white/50 text-xs font-light leading-relaxed">Invoice processing becomes autonomous.</p>
                 </div>
-                <div class="bg-white/5 border border-white/10 p-6 rounded-xl backdrop-blur-sm">
-                    <span class="material-symbols-outlined text-primary-container text-2xl mb-3">speed</span>
-                    <h4 class="font-bold text-sm mb-2">Speed</h4>
-                    <p class="text-on-surface-variant text-xs">Approval cycles are accelerated</p>
+                <div class="bg-white/5 border border-white/10 p-8 rounded-3xl text-center group hover:bg-primary/10 transition-all">
+                    <Icon name="icon_11_clock" size={32} class="text-primary-container mb-4 mx-auto" />
+                    <h4 class="font-bold text-xs uppercase tracking-widest text-primary-container/70 mb-2">Speed</h4>
+                    <p class="text-white/50 text-xs font-light leading-relaxed">Approval cycles are significantly accelerated.</p>
                 </div>
-                <div class="bg-white/5 border border-white/10 p-6 rounded-xl backdrop-blur-sm">
-                    <span class="material-symbols-outlined text-primary-container text-2xl mb-3">sync</span>
-                    <h4 class="font-bold text-sm mb-2">Full Integration</h4>
-                    <p class="text-on-surface-variant text-xs">Seamless SAP FI integration</p>
+                <div class="bg-white/5 border border-white/10 p-8 rounded-3xl text-center group hover:bg-primary/10 transition-all">
+                    <Icon name="icon_17_share" size={32} class="text-primary-container mb-4 mx-auto" />
+                    <h4 class="font-bold text-xs uppercase tracking-widest text-primary-container/70 mb-2">Full Integration</h4>
+                    <p class="text-white/50 text-xs font-light leading-relaxed">Seamless and native SAP FI matching.</p>
                 </div>
-                <div class="bg-white/5 border border-white/10 p-6 rounded-xl backdrop-blur-sm">
-                    <span class="material-symbols-outlined text-primary-container text-2xl mb-3">visibility</span>
-                    <h4 class="font-bold text-sm mb-2">Transparency</h4>
-                    <p class="text-on-surface-variant text-xs">Full auditability and traceability</p>
+                <div class="bg-white/5 border border-white/10 p-8 rounded-3xl text-center group hover:bg-primary/10 transition-all">
+                    <Icon name="icon_02_search" size={32} class="text-primary-container mb-4 mx-auto" />
+                    <h4 class="font-bold text-xs uppercase tracking-widest text-primary-container/70 mb-2">Transparency</h4>
+                    <p class="text-white/50 text-xs font-light leading-relaxed">Full auditability and localized traceability.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Support Services -->
-    <section class="py-20 bg-surface">
+    <section class="py-24 bg-surface">
         <div class="max-w-7xl mx-auto px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold font-headline mb-4">SAP & OpenText Support Services</h2>
-                <p class="text-on-surface-variant">Ensuring continuity, stability, and continuous improvement of your systems.</p>
+            <div class="text-center mb-20">
+                <h2 class="text-4xl font-bold font-headline mb-4 tracking-tight">SAP & OpenText Support Services</h2>
+                <p class="text-on-surface-variant text-lg font-light">Ensuring continuity, stability, and continuous improvement of your systems.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-surface-container-low p-10 rounded-xl border border-outline-variant/20 hover:shadow-lg transition-all">
-                    <span class="material-symbols-outlined text-primary text-4xl mb-6">support_agent</span>
+                <div class="bg-surface-container-low p-12 rounded-[2.5rem] border border-outline-variant/20 hover:shadow-2xl transition-all group">
+                    <Icon name="icon_04_user" size={48} class="text-primary mb-8" animate={true} />
                     <h3 class="font-bold text-xl font-headline mb-4">Reliable Operations</h3>
-                    <ul class="space-y-3 text-on-surface-variant text-sm">
-                        <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span>End-user support</li>
-                        <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span>Issue resolution and troubleshooting</li>
-                        <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span>Process enhancements</li>
-                        <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span>System adaptation for new requirements</li>
+                    <ul class="space-y-4 text-on-surface-variant text-sm font-light">
+                        <li class="flex items-start gap-2"><Icon name="icon_24_check_done" size={16} class="text-primary mt-1" /> End-user support</li>
+                        <li class="flex items-start gap-2"><Icon name="icon_24_check_done" size={16} class="text-primary mt-1" /> Issue resolution & troubleshooting</li>
+                        <li class="flex items-start gap-2"><Icon name="icon_24_check_done" size={16} class="text-primary mt-1" /> Process enhancements</li>
                     </ul>
                 </div>
-                <div class="bg-surface-container-low p-10 rounded-xl border border-outline-variant/20 hover:shadow-lg transition-all">
-                    <span class="material-symbols-outlined text-primary text-4xl mb-6">sync_alt</span>
+                <div class="bg-surface-container-low p-12 rounded-[2.5rem] border border-outline-variant/20 hover:shadow-2xl transition-all group">
+                    <Icon name="icon_22_menu" size={48} class="text-primary mb-8" animate={true} />
                     <h3 class="font-bold text-xl font-headline mb-4">Continuous Adaptation</h3>
-                    <p class="text-on-surface-variant text-sm leading-relaxed">As your organization evolves, your systems must evolve with it. We assist with onboarding new users, adapting to organizational changes, and implementing new functionalities when needed.</p>
+                    <p class="text-on-surface-variant text-sm leading-relaxed font-light">As your organization evolves, your systems must evolve with it. We assist with onboarding new users and adapting to organizational changes.</p>
                 </div>
-                <div class="bg-surface-container-low p-10 rounded-xl border border-outline-variant/20 hover:shadow-lg transition-all">
-                    <span class="material-symbols-outlined text-primary text-4xl mb-6">monitoring</span>
+                <div class="bg-surface-container-low p-12 rounded-[2.5rem] border border-outline-variant/20 hover:shadow-2xl transition-all group">
+                    <Icon name="icon_27_chart" size={48} class="text-primary mb-8" animate={true} />
                     <h3 class="font-bold text-xl font-headline mb-4">Proactive Monitoring</h3>
-                    <p class="text-on-surface-variant text-sm leading-relaxed">Our approach goes beyond reactive support. We monitor system performance, identify potential risks early, and take preventive actions to ensure long-term stability.</p>
+                    <p class="text-on-surface-variant text-sm leading-relaxed font-light">Our approach goes beyond reactive support. We monitor system performance, identify potential risks early, and take preventive actions.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CTA -->
-    <section class="py-20">
-        <div class="max-w-5xl mx-auto px-8">
-            <div class="bg-primary rounded-md p-12 text-center relative overflow-hidden">
-                <h2 class="text-3xl font-bold font-headline text-white mb-4">Accelerate Your Digital Transformation</h2>
-                <p class="text-white/70 mb-8">Future-proof your business processes with SAP and OpenText integration.</p>
-                <div class="flex justify-center">
-                    <a href="/en/contact" class="bg-white text-primary px-8 py-3 rounded-md font-bold hover:bg-surface-container-low transition-colors shadow-lg">Contact Us</a>
+    <section class="py-24 px-8">
+        <div class="max-w-5xl mx-auto">
+            <div class="bg-primary rounded-[3rem] p-16 text-center relative overflow-hidden shadow-2xl">
+                <div class="absolute -top-24 -left-24 w-64 h-64 bg-white/10 rounded-full blur-[80px]"></div>
+                <div class="absolute -bottom-24 -right-24 w-64 h-64 bg-white/10 rounded-full blur-[80px]"></div>
+                
+                <h2 class="text-3xl md:text-5xl font-bold font-headline text-white mb-8 relative z-10">Accelerate Your Transformation</h2>
+                <p class="text-xl text-white/70 mb-12 relative z-10 max-w-2xl mx-auto font-light leading-relaxed">Future-proof your business processes with SAP and OpenText integration.</p>
+                <div class="flex justify-center relative z-10">
+                    <a href="/en/contact" class="group flex items-center gap-3 bg-on-background text-white px-12 py-5 rounded-2xl font-bold hover:bg-black transition-all shadow-xl hover:-translate-y-1">
+                        Contact Us Today
+                        <Icon name="icon_17_share" size={20} class="rotate-[-45deg] group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                    </a>
                 </div>
             </div>
         </div>

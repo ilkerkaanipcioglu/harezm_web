@@ -70,6 +70,12 @@
   --primary-faded: hsla(var(--h), var(--s), var(--l), 0.15);
 }
 
+/* Dark Mode Readability Boost */
+[data-theme="dark"] {
+  --primary: hsl(var(--h), var(--s), calc(var(--l) + 25%));
+  --primary-faded: hsla(var(--h), var(--s), calc(var(--l) + 25%), 0.15);
+}
+
 [data-state="hover"]      { --l: calc(var(--l) + 4%); }
 [data-state="active"]     { --l: calc(var(--l) + 8%); }
 [data-state="processing"] {

@@ -81,6 +81,22 @@ const variantClass = `art-variant-${variant}`;
     filter: grayscale(1);
   }
 
+  /* === Dark Mode Filters === */
+  /* Siyah mürekkep çizgileri görünür yapmak için invert(1) uyguluyoruz.
+     Ancak renkleri bozmamak için hue-rotate(180deg) ile ana rengi yerine döndürüyoruz. */
+  :global([data-theme="dark"]) .art-variant-brand img {
+    filter: invert(1) hue-rotate(180deg) hue-rotate(280deg) saturate(1.2);
+  }
+  :global([data-theme="dark"]) .art-variant-minimal img {
+    filter: invert(1) hue-rotate(180deg) hue-rotate(280deg) saturate(0.4) brightness(1.02);
+  }
+  :global([data-theme="dark"]) .art-variant-secondary img {
+    filter: invert(1) hue-rotate(180deg) hue-rotate(150deg) saturate(0.8);
+  }
+  :global([data-theme="dark"]) .art-variant-bw img {
+    filter: invert(1);
+  }
+
   /* Boyutlar */
   .art-sm { width: 120px; height: 120px; }
   .art-md { width: 200px; height: 200px; }
