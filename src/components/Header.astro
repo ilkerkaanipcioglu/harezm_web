@@ -42,7 +42,7 @@ const otherLang = lang === 'tr' ? 'EN' : 'TR';
             <div class="relative group h-full flex items-center">
                 <button class={`flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium transition-colors duration-200 cursor-default ${isActivePath('/urunler') ? 'text-primary font-semibold' : 'text-text-70 group-hover:text-text-main'}`}>
                     {lang === 'tr' ? 'Çözümlerımız' : 'Solutions'}
-                    <Icon name="icon_17_share" size={14} class="rotate-90 text-text-40 group-hover:rotate-[-90deg] transition-transform duration-300" />
+                    <Icon name="icon_50_orchestrator" size={14} class="rotate-90 text-text-40 group-hover:rotate-[270deg] transition-transform duration-300" />
                 </button>
                 
                 <!-- Mega Menu Panel -->
@@ -115,7 +115,7 @@ const otherLang = lang === 'tr' ? 'EN' : 'TR';
             <div class="relative group h-full flex items-center">
                 <button class={`flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium transition-colors duration-200 cursor-default ${isActivePath('/hizmetler') ? 'text-primary font-semibold' : 'text-text-70 group-hover:text-text-main'}`}>
                     {lang === 'tr' ? 'Hizmetlerimiz' : 'Services'}
-                    <Icon name="icon_17_share" size={14} class="rotate-90 text-text-40 group-hover:rotate-[-90deg] transition-transform duration-300" />
+                    <Icon name="icon_50_orchestrator" size={14} class="rotate-90 text-text-40 group-hover:rotate-[270deg] transition-transform duration-300" />
                 </button>
                 
                 <div class="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0 translate-y-3 transition-all duration-300 z-[60]">
@@ -127,7 +127,7 @@ const otherLang = lang === 'tr' ? 'EN' : 'TR';
                             <!-- Col 1 -->
                             <div>
                                 <h4 class="text-[11px] font-bold tracking-widest text-[#26A5E4] uppercase mb-5 flex items-center gap-2">
-                                    <Icon name="icon_14_edit" size={16} /> {lang === 'tr' ? 'Mimari Danışmanlık' : 'Architecture'}
+                                    <Icon name="icon_14_edit" size={24} /> {lang === 'tr' ? 'Mimari Danışmanlık' : 'Architecture'}
                                 </h4>
                                 <ul class="space-y-3.5">
                                     <li><a href={getLocalePath('/s4hana', lang)} class="text-[14px] text-text-main hover:text-primary transition-colors font-semibold">{lang === 'tr' ? 'S/4HANA Dönüşümü' : 'S/4HANA Transition'}</a></li>
@@ -142,7 +142,7 @@ const otherLang = lang === 'tr' ? 'EN' : 'TR';
                             <!-- Col 2 -->
                             <div>
                                 <h4 class="text-[11px] font-bold tracking-widest text-[#26A5E4] uppercase mb-5 flex items-center gap-2">
-                                    <Icon name="icon_01_home" size={16} /> {lang === 'tr' ? 'Modüler Uzmanlık' : 'Modular Expertise'}
+                                    <Icon name="icon_01_home" size={24} /> {lang === 'tr' ? 'Modüler Uzmanlık' : 'Modular Expertise'}
                                 </h4>
                                 <ul class="space-y-3.5">
                                     <li><a href={getLocalePath('/sap-refx', lang)} class="text-[14px] text-text-main hover:text-primary transition-colors font-medium">{lang === 'tr' ? 'Gayrimenkul ve İhtilaf (RE-FX)' : 'Real Estate (RE-FX)'}</a></li>
@@ -177,7 +177,7 @@ const otherLang = lang === 'tr' ? 'EN' : 'TR';
             <div class="relative group h-full flex items-center">
                 <button class={`flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium transition-colors duration-200 cursor-default ${(isActivePath('/hakkimizda') || isActivePath('/sektorler') || isActivePath('/insight')) ? 'text-primary font-semibold' : 'text-text-70 group-hover:text-text-main'}`}>
                     {lang === 'tr' ? 'Kurumsal' : 'Corporate'}
-                    <Icon name="icon_17_share" size={14} class="rotate-90 text-text-40 group-hover:rotate-[-90deg] transition-transform duration-300" />
+                    <Icon name="icon_50_orchestrator" size={14} class="rotate-90 text-text-40 group-hover:rotate-[270deg] transition-transform duration-300" />
                 </button>
                 
                 <div class="absolute top-full -translate-x-2/3 pt-4 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0 translate-y-3 transition-all duration-300 z-[60]">
@@ -185,7 +185,7 @@ const otherLang = lang === 'tr' ? 'EN' : 'TR';
                     <div class="bg-bg/95 shadow-[0_16px_50px_rgba(0,0,0,0.15)] border border-border rounded-2xl w-[500px] flex overflow-hidden backdrop-blur-3xl p-8 grid grid-cols-2 gap-8">
                         <div>
                             <h4 class="text-[11px] font-bold tracking-widest text-text-40 uppercase mb-5 flex items-center gap-2">
-                                <Icon name="icon_01_home" size={16} /> {lang === 'tr' ? 'Hakkımızda' : 'About Us'}
+                                <Icon name="icon_01_home" size={24} /> {lang === 'tr' ? 'Hakkımızda' : 'About Us'}
                             </h4>
                             <ul class="space-y-3.5">
                                 <li><a href={getLocalePath('/hakkimizda', lang)} class="text-[14px] text-text-main hover:text-primary transition-colors font-semibold">{lang === 'tr' ? 'Biz Kimiz?' : 'Who We Are'}</a></li>
@@ -195,7 +195,7 @@ const otherLang = lang === 'tr' ? 'EN' : 'TR';
                         </div>
                         <div>
                             <h4 class="text-[11px] font-bold tracking-widest text-text-40 uppercase mb-5 flex items-center gap-2">
-                                <Icon name="icon_14_edit" size={16} /> {lang === 'tr' ? 'İçerik & Yasal' : 'Insights & Legal'}
+                                <Icon name="icon_14_edit" size={24} /> {lang === 'tr' ? 'İçerik & Yasal' : 'Insights & Legal'}
                             </h4>
                             <ul class="space-y-3.5">
                                 <li><a href={getLocalePath('/insight', lang)} class="text-[14px] text-text-main hover:text-primary transition-colors font-medium">Harezm Insight</a></li>
@@ -218,9 +218,9 @@ const otherLang = lang === 'tr' ? 'EN' : 'TR';
             <!-- Lang Dropdown (Desktop) -->
             <div class="relative group hidden lg:flex h-full items-center">
                 <button class="flex items-center gap-1.5 px-2 py-2 rounded-lg text-sm font-medium text-text-70 group-hover:text-text-main hover:bg-bg2 transition-colors duration-200">
-                    <Icon name="icon_17_share" size={18} />
+                    <Icon name="icon_23_eye_view" size={18} />
                     {lang === 'tr' ? 'TR' : 'EN'}
-                    <Icon name="icon_17_share" size={14} class="rotate-90 text-text-40 group-hover:rotate-[-90deg] transition-transform duration-300" />
+                    <Icon name="icon_50_orchestrator" size={14} class="rotate-90 text-text-40 group-hover:rotate-[270deg] transition-transform duration-300" />
                 </button>
                 <div class="absolute top-full right-0 pt-4 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0 translate-y-3 transition-all duration-300 z-[60]">
                     <div class="absolute -top-4 right-0 w-full h-4"></div>
