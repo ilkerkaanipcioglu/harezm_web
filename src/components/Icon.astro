@@ -65,17 +65,18 @@ try {
       viewBox = viewBoxMatch[1];
     }
 
-    // Clean up the SVG for inlining
+    // Clean up and Normalize SVG for inlining
     svgContent = content
       .replace(/<svg[^>]*>/, '') 
       .replace(/<\/svg>/, '')    
       .replace(/width="[^"]*"/g, '') 
       .replace(/height="[^"]*"/g, '')
-      // Remove background fills (common white/off-white values used in the vectorizer)
-      .replace(/fill="#f8f8f8"/gi, 'fill="none"')
-      .replace(/fill="#ffffff"/gi, 'fill="none"')
-      .replace(/stroke="#f8f8f8"/gi, 'stroke="none"')
-      .replace(/stroke="#ffffff"/gi, 'stroke="none"');
+      // Remove any background-like shapes (large rects/circles that might have fills)
+      .replace(/<rect[^>]*fill="(?!none)[^"]*"[^>]*\/>/gi, '')
+      .replace(/<circle[^>]*fill="(?!none)[^"]*"[^>]*\/>/gi, '')
+      // Force currentColor on all paths/shapes to make them respond to CSS text-color
+      .replace(/fill="(?!none)[^"]*"/gi, 'fill="currentColor"')
+      .replace(/stroke="(?!none)[^"]*"/gi, 'stroke="currentColor"');
 
     // Variable Injection (Inherit logic from existing Icon.astro but refined)
     if (!isSystemIcon) {
