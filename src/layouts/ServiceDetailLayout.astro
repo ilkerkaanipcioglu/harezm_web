@@ -58,7 +58,7 @@ const {
             </div>
             
             <h1 class="display-lg text-4xl md:text-5xl lg:text-h1 mb-6 max-w-4xl">{title}</h1>
-            <p class="text-text-70 text-lg md:text-xl font-light max-w-2xl leading-relaxed">{description}</p>
+            <p class="text-text-70 text-lg md:text-xl max-w-4xl leading-relaxed">{description}</p>
         </div>
     </header>
 
@@ -73,7 +73,7 @@ const {
                         <span class="text-text-40 font-serif text-5xl opacity-30 mt-1">01</span>
                         <div>
                             <h2 class="text-2xl md:text-3xl mb-6 font-medium">{problemTitle}</h2>
-                            <div class="prose prose-lg prose-invert max-w-none text-text-70 font-light leading-relaxed">
+                            <div class="prose prose-lg prose-invert max-w-none text-text-70 leading-relaxed">
                                 <p>{problemText}</p>
                             </div>
                         </div>
@@ -88,7 +88,7 @@ const {
                         <span class="text-primary font-serif text-5xl opacity-40 mt-1">02</span>
                         <div>
                             <h2 class="text-2xl md:text-3xl mb-6 font-medium text-primary">{solutionTitle}</h2>
-                            <div class="prose prose-lg prose-invert max-w-none text-text-main font-light leading-relaxed">
+                            <div class="prose prose-lg prose-invert max-w-none text-text-main leading-relaxed">
                                 <p>{solutionText}</p>
                             </div>
                         </div>
@@ -105,9 +105,9 @@ const {
                             <h2 class="text-2xl md:text-3xl mb-6 font-medium">{resultTitle}</h2>
                             <div class="glass-card p-8 rounded-2xl border-l-4 border-l-teal relative overflow-hidden">
                                 <div class="absolute right-4 bottom-4 opacity-10 pointer-events-none">
-                                    <Icon name="icon_27_chart" size={120} />
+                                    <Icon name="icon_62_nakit_ak_cash_flow" size={120} />
                                 </div>
-                                <div class="relative z-10 prose prose-lg prose-invert max-w-none text-text-70 font-light leading-relaxed">
+                                <div class="relative z-10 prose prose-lg prose-invert max-w-none text-text-70 leading-relaxed">
                                     <p>{resultText}</p>
                                 </div>
                             </div>
@@ -120,7 +120,7 @@ const {
             {insightContent && (
                 <section class="mt-24">
                     <div class="glass-card p-10 rounded-2xl border border-border-main relative overflow-hidden bg-bg2">
-                        <Icon name="icon_08_chat" size={40} class="text-primary opacity-20 mb-6 block" />
+                        <Icon name="icon_08_chat_message" size={40} class="text-primary opacity-20 mb-6 block" />
                         {insightTitle && (
                             <h3 class="text-xs font-medium tracking-widest text-primary uppercase mb-6">{insightTitle}</h3>
                         )}
@@ -128,7 +128,7 @@ const {
                             "{insightContent}"
                         </p>
                         <div class="flex items-center gap-4 relative z-10 mt-8 pt-6 border-t border-border-main/50">
-                            <Icon name="icon_05_settings" size={24} class="text-teal" />
+                            <Icon name="icon_05_settings_gear" size={24} class="text-teal" />
                             <div>
                                 <h4 class="text-sm font-medium text-text-main">Harezm Insight Series</h4>
                                 <span class="text-xs text-text-70 uppercase tracking-widest">Finansal Mimari Vizyonu</span>
@@ -184,9 +184,9 @@ const {
 
     <!-- Bottom CTA -->
     <section class="py-24 bg-bg2 border-t border-border-main flex justify-center text-center px-8">
-        <div class="max-w-2xl">
+        <div class="max-w-5xl mx-auto">
             <h2 class="text-3xl font-medium mb-6">Mimari Değişim Başlasın</h2>
-            <p class="text-text-70 font-light mb-8">Finansal operasyonlarınızı otomatize etmek ve sistemlerinizi geleceğe hazırlamak için ilk adımı atın.</p>
+            <p class="text-text-70 mb-8">Finansal operasyonlarınızı otomatize etmek ve sistemlerinizi geleceğe hazırlamak için ilk adımı atın.</p>
             <a href="/iletisim" class="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-lg font-medium hover:bg-primary-hover transition-colors">
                 Görüşme Ayarla <Icon name="icon_17_share" size={16} class="rotate-[-45deg]" />
             </a>

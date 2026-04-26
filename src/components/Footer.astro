@@ -70,7 +70,7 @@ const { lang = 'tr' } = Astro.props;
                 </a>
                 {/* 4 - Email */}
                 <a href="mailto:info@harezm.com.tr" class="w-10 h-10 rounded-xl bg-bg3 border border-border-main flex items-center justify-center text-text-40 hover:bg-primary hover:text-white transition-colors" title="Email">
-                    <Icon name="icon_09_mail" size={18} />
+                    <Icon name="icon_09_mail_email" size={18} />
                 </a>
             </div>
         </div>
@@ -81,27 +81,27 @@ const { lang = 'tr' } = Astro.props;
             <span class="font-medium text-text-70 tracking-widest uppercase text-[10px]">Harezm Ecosystem</span>
             
             <a href="https://www.linkedin.com/showcase/agentandbot/" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors flex items-center gap-1.5 grayscale opacity-70 hover:grayscale-0 hover:opacity-100">
-                <Icon name="icon_08_chat" size={14} /> AgentAndBot
+                <Icon name="icon_08_chat_message" size={14} /> AgentAndBot
             </a>
             
             <span class="opacity-20 hidden md:inline">•</span>
             <a href={getLocalePath('/urunler', lang)} class="hover:text-primary transition-colors flex items-center gap-1.5 grayscale opacity-70 hover:grayscale-0 hover:opacity-100">
-                <Icon name="icon_05_settings" size={14} /> e-Someting
+                <Icon name="icon_05_settings_gear" size={14} /> e-Someting
             </a>
             
             <span class="opacity-20 hidden md:inline">•</span>
             <a href={getLocalePath('/sap-cash-management', lang)} class="hover:text-primary transition-colors flex items-center gap-1.5 grayscale opacity-70 hover:grayscale-0 hover:opacity-100">
-                <Icon name="icon_18_lock" size={14} /> {lang === 'tr' ? 'Nakit Yönetimi' : 'Cash Management'}
+                <Icon name="icon_20_lock_security" size={14} /> {lang === 'tr' ? 'Nakit Yönetimi' : 'Cash Management'}
             </a>
             
             <span class="opacity-20 hidden md:inline">•</span>
             <span class="hover:text-primary transition-colors flex items-center gap-1.5 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 cursor-default">
-                <Icon name="icon_05_settings" size={14} /> {lang === 'tr' ? 'SAP Paketleri' : 'SAP Packages'}
+                <Icon name="icon_05_settings_gear" size={14} /> {lang === 'tr' ? 'SAP Paketleri' : 'SAP Packages'}
             </span>
             
             <span class="opacity-20 hidden md:inline">•</span>
             <span class="hover:text-primary transition-colors flex items-center gap-1.5 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 cursor-default">
-                <Icon name="icon_05_settings" size={14} /> {lang === 'tr' ? 'Diğer ERP Entegrasyonları' : 'Other ERP Integrations'}
+                <Icon name="icon_05_settings_gear" size={14} /> {lang === 'tr' ? 'Diğer ERP Entegrasyonları' : 'Other ERP Integrations'}
             </span>
         </div>
 

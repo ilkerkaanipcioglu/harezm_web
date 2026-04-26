@@ -1,0 +1,25 @@
+import { c as createComponent } from './astro-component_oCQm8Jw4.mjs';
+import 'piccolore';
+import { r as renderComponent, a as renderTemplate } from './prerender_BIeJtcx-.mjs';
+import { $ as $$ServiceDetailLayout } from './ServiceDetailLayout_B0gMs5uZ.mjs';
+
+const $$SapRefx = createComponent(($$result, $$props, $$slots) => {
+  return renderTemplate`${renderComponent($$result, "ServiceDetailLayout", $$ServiceDetailLayout, { "title": "SAP Gayrimenkul Yönetimi (RE-FX)", "description": "Gayrimenkul portföyünüzü tek merkezden yönetin, süreçlerinizi uçtan uca optimize edin.", "icon": "real_estate_agent", "problemTitle": "Gayrimenkul Operasyonlarının Zorluğu", "problemText": "Bankacılık, perakende, AVM ve gayrimenkul yatırım ortaklığı gibi yüksek hacimli sektörlerde çok sayıda şube, mağaza ve birimin kira sözleşmelerini, periyodik artış oranlarını ve alt kiralama operasyonlarını manuel süreçlerle yürütmek hatalara, kaçaklara ve maliyet kayıplarına neden olur.", "solutionTitle": "Merkezi ve Entegre Yapı", "solutionText": "SAP RE-FX çözümü ile tüm gayrimenkul operasyonlarınızı merkezi, şeffaf ve hatasız bir yapıya dönüştürüyoruz. SAP FI ve CO modülleri ile tam entegre çalışarak yatırım yönetimi, alan (m²) takibi, kira kontratları, ciro üzerinden kira hesaplamaları ve bakım/onarım süreçlerini tek bir mimaride otomatize ediyoruz.", "resultTitle": "Güçlü Finansal Kontrol ve %100 Uyum", "resultText": "Manuel süreçleri ve kira veri girişi hatalarını ortadan kaldırarak operasyonel iş yükünde %80 azalma sağlar. IFRS 16 / ASC 842 hesaplamalarını, yeniden değerleme ve finansal işlemleri hatasız yöneterek zamanınızı operasyona değil, veriye dayalı stratejik karar almaya ayırmanızı sağlar.", "insightTitle": "03 · SAP RE-FX", "insightContent": "Kira portföyleri, kurumsal bilançolarda sessiz sedasız en karmaşık uyum zorluklarından biri haline geldi. IFRS 16 ve ASC 842, neredeyse tüm kira işlemlerinin varlık ve yükümlülük olarak muhasebeleştirilmesini zorunlu kılıyor; bu değişiklik sektörler genelinde raporlanan kaldıraç oranını, FAVÖK'ü ve kredi sözleşmesi hesaplamalarını doğrudan etkiliyor. SAP RE-FX, bu karmaşıklığı ölçekte yönetmek için mimari temeli sağlar: otomatik amortisman tabloları, farklı raporlama standartları için paralel muhasebe ve her sözleşmesel olayın tam denetim izi. Uyumun ötesinde modül, ESG gerekliliklerini karşılamak üzere de gelişiyor — CSRD raporlama yükümlülüklerini yerine getirmek amacıyla varlık bazında enerji tüketimi ve karbon ayak izi takibi yapılabiliyor. IoT entegrasyonu görünürlüğü daha da artırıyor; bina yönetim sistemleri gerçek zamanlı tesis verisi için doğrudan SAP'a bağlanıyor. Büyük kira veya gayrimenkul portföyüne sahip ve RE-FX'i yalnızca bir uyum aracı değil stratejik bir sistem olarak konumlandıran şirketler, portföy optimizasyonu ve maliyet kontrolünde somut avantajlar elde ediyor.", "tags": ["Yatırım ve Portföy Yönetimi", "M² Bazlı Yönetim", "Kira Kontratları", "Bakım ve Onarım", "IFRS 16 Uyum"], "relatedServices": [
+    { title: "SAP FI, CO & Material Ledger", href: "/hizmetler" },
+    { title: "SAP S/4HANA Dönüşüm", href: "/s4hana" }
+  ] })}`;
+}, "B:/DEV/HAREZM_EKOSISTEMI/harezm._web/src/pages/sap-refx.astro", void 0);
+
+const $$file = "B:/DEV/HAREZM_EKOSISTEMI/harezm._web/src/pages/sap-refx.astro";
+const $$url = "/sap-refx";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+    __proto__: null,
+    default: $$SapRefx,
+    file: $$file,
+    url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };

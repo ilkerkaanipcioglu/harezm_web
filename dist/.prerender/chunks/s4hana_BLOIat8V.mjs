@@ -1,0 +1,25 @@
+import { c as createComponent } from './astro-component_oCQm8Jw4.mjs';
+import 'piccolore';
+import { r as renderComponent, a as renderTemplate } from './prerender_BIeJtcx-.mjs';
+import { $ as $$ServiceDetailLayout } from './ServiceDetailLayout_B0gMs5uZ.mjs';
+
+const $$S4Hana = createComponent(($$result, $$props, $$slots) => {
+  return renderTemplate`${renderComponent($$result, "ServiceDetailLayout", $$ServiceDetailLayout, { "title": "S/4HANA Cloud Geçişi", "description": "Tüm iş süreçlerinizi bulut tabanlı tek bir platformda toplayarak maksimum verimlilik ve hız sağlayın.", "icon": "rocket_launch", "problemTitle": "Yenilikçi ERP İhtiyacı", "problemText": "Geleneksel on-premise ERP sistemleri günümüzün hızla değişen iş modellerine ayak uydurmakta yetersiz kalıyor. Şirketler, yüksek bakım maliyetleri, karmaşık donanım gereksinimleri ve veri adaları arasında karar alma süreçlerinde çevikliklerini kaybediyor.", "solutionTitle": "Grow ve Rise ile Kesintisiz Geçiş", "solutionText": "Harezm olarak S/4HANA dönüşümünüzü iki model etrafında inşa ediyoruz: Greenfield dönüşümler için standart iş süreçlerine uyan Public Edition (Grow with SAP) ve mevcut sistemlerini buluta taşırken tam özelleştirme isteyenler için Private Edition (Rise with SAP).", "resultTitle": "Geleceğe Hazır Mimari ve Ölçülebilir Performans", "resultText": "Kurumsal mimarinizin kalbine S/4HANA Cloud'u yerleştirerek yapay zeka (Joule) ve analitik bileşenlerini anında kullanmaya başlayın. Geçiş sonrasında %40'a varan daha düşük Toplam Sahip Olma Maliyeti (TCO) ve %60 daha hızlı finansal kapanış (Fast Close) süreleriyle rekabette öne geçin.", "insightTitle": "01 · SAP STRATEGY", "insightContent": "Kurumsal yazılım dünyası, son yirmi yılın en köklü mimari dönüşümünü yaşıyor. SAP'nin Clean Core stratejisi, ERP sistemlerinin nasıl inşa edildiğini ve sürdürüldüğünü yeniden tanımlıyor: çekirdek standart kalıyor, tüm özelleştirmeler SAP Business Technology Platform üzerinde konumlanıyor. Bu ayrışma bir kısıtlama değil — yapısal bir avantajdır. Bu yaklaşımı benimseyen şirketler daha hızlı güncelleme, daha düşük bakım maliyeti ve olgunlaştıkça yapay zeka yeteneklerini hazmedebilecek bir temel kazanır. ECC desteğinin 2027'de sona ermesiyle geçiş penceresi daralıyor. S/4HANA geçişini zoraki bir yükseltme değil, modernleşme fırsatı olarak gören organizasyonlar, önümüzdeki on yıla rekabetçi bir mimariyle girecek. Harezm bu geçişleri finansal sonuçları merkeze alarak tasarlar: maliyet kontrolü, veri sürekliliği ve operasyonel finansta sıfır kesinti.", "tags": ["Grow with SAP", "Rise with SAP", "Public Edition", "Private Edition", "Greenfield", "Brownfield"], "relatedServices": [
+    { title: "SAP FI, CO & Material Ledger", href: "/hizmetler" },
+    { title: "SAP Treasury and Risk Management", href: "/sap-trm" }
+  ] })}`;
+}, "B:/DEV/HAREZM_EKOSISTEMI/harezm._web/src/pages/s4hana.astro", void 0);
+
+const $$file = "B:/DEV/HAREZM_EKOSISTEMI/harezm._web/src/pages/s4hana.astro";
+const $$url = "/s4hana";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+    __proto__: null,
+    default: $$S4Hana,
+    file: $$file,
+    url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };

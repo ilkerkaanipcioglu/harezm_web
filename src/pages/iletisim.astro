@@ -1,13 +1,81 @@
+---
 import Layout from '../layouts/Layout.astro';
 import Icon from '../components/Icon.astro';
+import { t } from '../i18n/utils';
+const lang = 'tr' as const;
+---
 <Layout title="İletişim | Harezm" description="Harezm Technology iletişim bilgileri, adres ve ofis lokasyonlarımız. SAP projeleriniz ve finansal teknoloji ihtiyaçlarınız için bize ulaşın.">
     <section class="pt-40 pb-32 px-8 bg-surface text-center">
-        <div class="max-w-4xl mx-auto flex flex-col items-center">
-            <span class="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary font-bold text-xs tracking-widest uppercase mb-6">BİZE ULAŞIN</span>
-            <h1 class="display-lg text-5xl md:text-6xl font-bold font-headline mb-6 text-on-background">Doğru Yaklaşımı Birlikte Değerlendirelim.</h1>
-            <p class="text-xl text-on-surface-variant mb-16 leading-relaxed font-light max-w-2xl mx-auto">
-                Sizin için en doğru finansal dönüşüm stratejisini planlayalım. Kurumsal SAP ve AI destekli altyapı hedefleriniz için doğrudan yetkililerimizle görüşün.
+        <div class="max-w-container mx-auto flex flex-col items-center">
+            <span class="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary font-bold text-xs tracking-widest uppercase mb-6">{t('contactBizUlasin', lang)}</span>
+            <h1 class="display-lg text-5xl md:text-6xl font-bold font-headline mb-6 text-on-background">{t('contactTitle', lang)}</h1>
+            <p class="text-xl text-on-surface-variant mb-16 leading-relaxed max-w-4xl mx-auto">
+                {t('contactDesc', lang)}
             </p>
+            
+            <!-- Contact Form -->
+            <div class="w-full max-w-5xl mx-auto mb-24 text-left">
+                <div class="bg-surface-container-low p-8 md:p-12 rounded-3xl border border-outline-variant/30 shadow-xl relative overflow-hidden">
+                    <div id="form-success" class="hidden text-center py-12">
+                        <div class="w-20 h-20 bg-primary/10 text-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                            <span class="material-symbols-outlined text-4xl">check_circle</span>
+                        </div>
+                        <h3 class="text-2xl font-bold font-headline mb-4">Mesajınız İletildi!</h3>
+                        <p class="text-on-surface-variant mb-8">En kısa sürede size dönüş yapacağız.</p>
+                        <button onclick="window.location.reload()" class="text-primary font-bold hover:underline">Yeni bir mesaj gönder</button>
+                    </div>
+
+                    <form id="contact-form" class="space-y-6">
+                        <input type="hidden" name="domain" value="harezm.com" />
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label for="name" class="text-xs font-bold text-primary uppercase tracking-widest">{t('contactFormName', lang)}</label>
+                                <input type="text" id="name" name="name" required class="w-full bg-surface border border-outline-variant/30 rounded-xl px-4 py-4 focus:border-primary outline-none transition-all" placeholder={t('contactFormNamePh', lang)} data-fs-field />
+                            </div>
+                            <div class="space-y-2">
+                                <label for="company" class="text-xs font-bold text-primary uppercase tracking-widest">{t('contactFormCompany', lang)}</label>
+                                <input type="text" id="company" name="company" required class="w-full bg-surface border border-outline-variant/30 rounded-xl px-4 py-4 focus:border-primary outline-none transition-all" placeholder={t('contactFormCompanyPh', lang)} data-fs-field />
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label for="email" class="text-xs font-bold text-primary uppercase tracking-widest">{t('contactFormEmail', lang)}</label>
+                                <input type="email" id="email" name="email" required class="w-full bg-surface border border-outline-variant/30 rounded-xl px-4 py-4 focus:border-primary outline-none transition-all" placeholder={t('contactFormEmailPh', lang)} data-fs-field />
+                            </div>
+                            <div class="space-y-2">
+                                <label for="projectType" class="text-xs font-bold text-primary uppercase tracking-widest">{t('contactFormType', lang)}</label>
+                                <select id="projectType" name="projectType" required class="w-full bg-surface border border-outline-variant/30 rounded-xl px-4 py-4 focus:border-primary outline-none transition-all data-fs-field">
+                                    <option value="">Seçiniz...</option>
+                                    <option value={t('contactFormOpt1', lang)}>{t('contactFormOpt1', lang)}</option>
+                                    <option value={t('contactFormOpt2', lang)}>{t('contactFormOpt2', lang)}</option>
+                                    <option value={t('contactFormOpt3', lang)}>{t('contactFormOpt3', lang)}</option>
+                                    <option value={t('contactFormOpt4', lang)}>{t('contactFormOpt4', lang)}</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label for="message" class="text-xs font-bold text-primary uppercase tracking-widest">{t('contactFormMsg', lang)}</label>
+                            <textarea id="message" name="message" required rows="5" class="w-full bg-surface border border-outline-variant/30 rounded-xl px-4 py-4 focus:border-primary outline-none transition-all resize-none" placeholder={t('contactFormMsgPh', lang)} data-fs-field></textarea>
+                        </div>
+
+                        <div id="form-error" class="hidden p-4 rounded-xl bg-error/10 border border-error/20 text-error text-sm text-center" data-fs-error>
+                            Bir hata oluştu, lütfen tekrar deneyin.
+                        </div>
+
+                        <button type="submit" id="submit-btn" class="w-full bg-primary text-on-primary py-5 rounded-xl font-bold hover:brightness-110 transition-all flex items-center justify-center gap-3 group disabled:opacity-50" data-fs-submit-btn>
+                            <span>{t('contactFormSubmit', lang)}</span>
+                            <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">send</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="w-full border-t border-outline-variant/20 pt-16 mb-12 text-center">
+                <h2 class="text-2xl font-bold font-headline mb-2 text-on-background">Alternatif İletişim Kanalları</h2>
+                <p class="text-on-surface-variant font-light">Form doldurmak istemezseniz, bize doğrudan ulaşabilirsiniz.</p>
+            </div>
             
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 w-full">
                 <!-- WhatsApp -->
@@ -40,14 +108,43 @@ import Icon from '../components/Icon.astro';
                 <!-- E-posta -->
                 <a href="mailto:info@harezm.com.tr" class="bg-surface-container-low p-10 rounded-3xl border border-outline-variant/30 hover:border-primary/50 hover:-translate-y-2 hover:shadow-xl transition-all group flex flex-col items-center justify-center text-center">
                     <div class="w-16 h-16 rounded-2xl bg-primary/10 text-primary mb-6 flex justify-center items-center group-hover:bg-primary group-hover:text-white transition-colors">
-                        <Icon name="icon_09_mail" size={32} animate />
+                        <Icon name="icon_09_mail_email" size={32} animate />
                     </div>
                     <h3 class="text-2xl font-bold font-headline text-on-background mb-3">E-posta</h3>
                     <p class="text-on-surface-variant text-sm font-medium tracking-wide group-hover:text-primary transition-colors">Resmi Talepler &rarr;</p>
                 </a>
             </div>
             
-            <div class="mt-20 max-w-2xl mx-auto opacity-70 border-t border-outline-variant/20 pt-10">
+            <div class="mt-20 max-w-4xl mx-auto opacity-70 border-t border-outline-variant/20 pt-10">
                 <p class="text-sm text-on-surface-variant italic mb-4">"Mesajlarınız doğrudan teknik mimarlarımıza iletilmektedir. Klasik bir çağrı merkezi bekleme sırası yerine hızla doğru çözüm uzmanına ulaşırsınız."</p>
             </div>
+        </div>
+    </section>
+    <script is:inline>
+      window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+      
+      const setupForm = () => {
+        const form = document.querySelector('#contact-form');
+        const successDiv = document.querySelector('#form-success');
+        const errorDiv = document.querySelector('#form-error');
+
+        if (form) {
+            formspree('initForm', { 
+                formElement: '#contact-form', 
+                formId: 'mqewoajg',
+                onSuccess: () => {
+                    form.classList.add('hidden');
+                    successDiv.classList.remove('hidden');
+                },
+                onError: (errors) => {
+                    errorDiv.classList.remove('hidden');
+                }
+            });
+        }
+      };
+
+      document.addEventListener('astro:page-load', setupForm);
+      setupForm();
+    </script>
+    <script src="https://unpkg.com/@formspree/ajax@1" defer is:inline></script>
 </Layout>

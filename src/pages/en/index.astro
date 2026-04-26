@@ -2,9 +2,6 @@
 import Layout from '../../layouts/Layout.astro';
 import Icon from '../../components/Icon.astro';
 
-const modernOfficeImg = '/assets/Modern_office_building_202603240057.jpeg';
-const womanAnalyzingImg = '/assets/Woman_analyzing_data_202603240057.jpeg';
-const meetingGif = '/assets/Ekranda_trkiyeden_balanan_bir_toplant_odas.gif';
 const lang = 'en' as const;
 ---
 
@@ -18,7 +15,7 @@ const lang = 'en' as const;
             <!-- Left Content (7/12) -->
             <div class="lg:col-span-7 animate-fade-up">
                 <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface text-text-70 text-label mb-8 border border-border">
-                    <Icon name="icon_24_check_done" size={14} />
+                    <Icon name="icon_25_check_confirm" size={14} />
                     SAP FINANCE ARCHITECTURE · ISTANBUL
                 </div>
                 
@@ -26,7 +23,7 @@ const lang = 'en' as const;
                     SAP'ı tasarlarız. Türkiye'ye entegre ederiz.<br/> <em class="text-primary italic font-normal">Tek Elden.</em>
                 </h1>
                 
-                <p class="text-text-70 text-body-lg mb-10 font-light max-w-text">
+                <p class="text-text-70 text-body-lg mb-10 max-w-text">
                     Danışmanlık değil, mimari üretiyoruz. Şirketinizin finansal gerçeğini tasarlıyor; SAP danışmanlığını, e-Dönüşümü, yapay zekayı ve banka entegrasyonlarını tek bir mimari altında birleştiriyoruz.
                 </p>
                 
@@ -47,7 +44,7 @@ const lang = 'en' as const;
                 
                 <!-- TMS 29 Badge -->
                 <div class="mb-8 p-4 rounded-xl border border-border bg-bg/40 backdrop-blur-md flex items-start gap-3 relative z-10 group cursor-default hover:border-primary/40 transition-colors">
-                    <Icon name="icon_18_lock" size={20} class="text-primary group-hover:scale-110 transition-transform" />
+                    <Icon name="icon_20_lock_security" size={20} class="text-primary group-hover:scale-110 transition-transform" />
                     <div>
                         <p class="text-[10px] text-primary font-bold tracking-widest uppercase mb-1">Zorunlu Uyumluluk</p>
                         <p class="text-sm text-text-main font-medium">TMS 29 Enflasyon Muhasebesi</p>
@@ -70,7 +67,7 @@ const lang = 'en' as const;
 
                 <div class="pt-6 border-t border-border flex items-center justify-between relative z-10">
                     <div class="flex items-center gap-3">
-                        <Icon name="icon_05_settings" size={20} class="text-teal" />
+                        <Icon name="icon_05_settings_gear" size={20} class="text-teal" />
                         <div>
                             <p class="text-label text-text-40">End-to-End SAP Consulting</p>
                             <p class="text-sm text-text-70 font-medium">Finansal Teknoloji Çözümleri</p>
@@ -91,14 +88,16 @@ const lang = 'en' as const;
                     <p class="text-text-70 text-body-lg font-light mb-6">
                         Harezm’in yaklaşımı tek bir sistem kurmak değil, finansal mimariyi doğru kurmaktır. SAP FI, AA, RE-FX ve yatırım yönetimi gibi çekirdek modüller bu yapının merkezinde yer alır.
                     </p>
-                    <p class="text-text-70 text-body-lg font-light">
+                    <p class="text-text-70 text-body-lg">
                         Bu çekirdeği banka entegrasyonları, e-dönüşüm çözümleri, yapay zeka ve özel geliştirilmiş portallar ile tamamlarız. Tüm katmanlar birlikte çalışır ve <strong class="text-text-main font-medium">sistem tek bir yapı gibi davranır.</strong>
                     </p>
                 </div>
                 <!-- Image/Diagram -->
                 <div class="relative group rounded-2xl overflow-hidden border border-border bg-bg2 shadow-md animate-fade-left delay-2">
                     <div class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors z-10 mix-blend-overlay"></div>
-                    <img src={modernOfficeImg} alt="Harezm Finansal Mimari" class="w-full h-auto object-cover scale-105 group-hover:scale-100 transition-transform duration-700" />
+                    <div class="w-full h-[360px] flex items-center justify-center bg-[radial-gradient(circle_at_30%_30%,_var(--color-primary)_0%,_transparent_35%),_linear-gradient(135deg,_var(--color-bg)_0%,_var(--color-bg2)_100%)]">
+                        <Icon name="icon_48_memory_agent" size={220} variant="illu" class="text-teal opacity-90 group-hover:scale-105 transition-transform duration-700" />
+                    </div>
                 </div>
             </div>
         </div>
@@ -129,9 +128,9 @@ const lang = 'en' as const;
         </div>
     </section>
 
-    <!-- Section removed to avoid visual duplication with the following GIF -->
+    <!-- Section removed to avoid visual duplication with the following image -->
 
-    <!-- Risk & Global (With GIF) -->
+    <!-- Risk & Global -->
     <section class="py-24 px-8 md:px-12 bg-bg2 relative box-border border-b border-border-main">
         <div class="max-w-container mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
             <div class="md:col-span-6 lg:col-span-5">
@@ -151,8 +150,9 @@ const lang = 'en' as const;
             <div class="md:col-span-6 lg:col-span-7">
                 <div class="rounded-2xl overflow-hidden border border-border shadow-xl relative group">
                     <div class="absolute inset-0 bg-gradient-to-t from-bg2/80 via-transparent to-transparent z-10"></div>
-                    <!-- GIF Overlay for Global Reach -->
-                    <img src={meetingGif} alt="Global SAP Rollout" class="w-full aspect-video object-cover group-hover:scale-105 transition-transform duration-700" />
+                    <div class="w-full aspect-video bg-[radial-gradient(circle_at_30%_30%,_var(--color-primary)_0%,_transparent_35%),_linear-gradient(135deg,_var(--color-bg)_0%,_var(--color-bg2)_100%)] flex items-center justify-center">
+                        <Icon name="icon_48_memory_agent" size={180} variant="illu" class="text-teal opacity-90 group-hover:scale-105 transition-transform duration-700" />
+                    </div>
                     <div class="absolute bottom-6 left-6 z-20">
                         <p class="text-lg font-serif text-text-main">Türkiye'den Dünyaya</p>
                         <p class="text-sm text-text-70 font-light drop-shadow-md">Kesintisiz ve uyumlu veri akışı</p>
@@ -167,7 +167,7 @@ const lang = 'en' as const;
         <div class="max-w-container mx-auto">
             <div class="mb-16 max-w-text">
                 <h2 class="display-lg text-3xl md:text-h2 mb-6">Finansal sistemler mühendislik gerektirir</h2>
-                <p class="text-text-70 text-body-lg font-light">
+                <p class="text-text-70 text-body-lg">
                     SAP danışmanlığının ötesinde: iş süreçlerinizin kalbini tasarlıyor, veri egemenliğinizi koruyuyor ve her finansal hareketi kontrol altında tutuyoruz.
                 </p>
             </div>
@@ -197,7 +197,7 @@ const lang = 'en' as const;
                 <div class="glass-card p-8 rounded-2xl group flex flex-col justify-between">
                     <div>
                         <div class="w-12 h-12 rounded-xl border border-border flex items-center justify-center mb-6 bg-bg group-hover:border-teal/30 transition-colors">
-                            <Icon name="icon_27_chart" size={24} class="text-teal" />
+                            <Icon name="icon_62_nakit_ak_cash_flow" size={24} class="text-teal" />
                         </div>
                         <h3 class="text-h4 mb-4">Hazine & Risk Yönetimi</h3>
                         <p class="text-text-70 text-body-sm font-light mb-8">
@@ -216,7 +216,7 @@ const lang = 'en' as const;
                 <div class="glass-card p-8 rounded-2xl group flex flex-col justify-between">
                     <div>
                         <div class="w-12 h-12 rounded-xl border border-border flex items-center justify-center mb-6 bg-bg group-hover:border-teal/30 transition-colors">
-                            <Icon name="icon_18_lock" size={24} class="text-teal" />
+                            <Icon name="icon_20_lock_security" size={24} class="text-teal" />
                         </div>
                         <h3 class="text-h4 mb-4">Uyum & Vergi Mimarisi</h3>
                         <p class="text-text-70 text-body-sm font-light mb-8">
@@ -236,7 +236,7 @@ const lang = 'en' as const;
                 <div class="glass-card p-8 rounded-2xl group flex flex-col justify-between">
                     <div>
                         <div class="w-12 h-12 rounded-xl border border-border flex items-center justify-center mb-6 bg-bg group-hover:border-teal/30 transition-colors">
-                            <Icon name="icon_15_upload" size={24} class="text-teal" />
+                            <Icon name="icon_16_upload" size={24} class="text-teal" />
                         </div>
                         <h3 class="text-h4 mb-4">Bulut & Platform</h3>
                         <p class="text-text-70 text-body-sm font-light mb-8">
@@ -255,7 +255,7 @@ const lang = 'en' as const;
                 <div class="glass-card p-8 rounded-2xl group flex flex-col justify-between">
                     <div>
                         <div class="w-12 h-12 rounded-xl border border-border flex items-center justify-center mb-6 bg-bg group-hover:border-teal/30 transition-colors">
-                            <Icon name="icon_19_camera" size={24} class="text-teal" />
+                            <Icon name="icon_11_camera" size={24} class="text-teal" />
                         </div>
                         <h3 class="text-h4 mb-4">AI & Otomasyon</h3>
                          <p class="text-text-70 text-body-sm font-light mb-8">
@@ -274,7 +274,7 @@ const lang = 'en' as const;
                 <div class="glass-card p-8 rounded-2xl group flex flex-col justify-between">
                     <div>
                         <div class="w-12 h-12 rounded-xl border border-border flex items-center justify-center mb-6 bg-bg group-hover:border-teal/30 transition-colors">
-                            <Icon name="icon_20_location" size={24} class="text-teal" />
+                            <Icon name="icon_01_home" size={24} class="text-teal" />
                         </div>
                         <h3 class="text-h4 mb-4">Global Roll-out & AMS</h3>
                         <p class="text-text-70 text-body-sm font-light mb-8">
@@ -301,7 +301,7 @@ const lang = 'en' as const;
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[100px] pointer-events-none"></div>
 
         <div class="max-w-container mx-auto text-center relative z-10">
-            <Icon name="icon_08_chat" size={80} class="text-border mb-12 opacity-50 mx-auto" />
+            <Icon name="icon_08_chat_message" size={80} class="text-border mb-12 opacity-50 mx-auto" />
             <h2 class="font-serif text-4xl md:text-5xl lg:text-h1 mb-12 leading-[1.1] max-w-[1000px] mx-auto tracking-tight">
                 <span class="text-text-70">CFO kontrolü sağlar. CTO sistemi kurar.</span><br/>
                 <span class="bg-clip-text text-transparent bg-gradient-to-r from-teal to-primary">Harezm ikisini birleştirir.</span> <br/>
@@ -332,7 +332,7 @@ const lang = 'en' as const;
                 <div class="lg:col-span-7 flex flex-col gap-6">
                     <div class="glass-card p-8 rounded-2xl flex flex-col md:flex-row gap-6 md:items-center group">
                         <div class="w-12 h-12 rounded-xl border border-border flex items-center justify-center shrink-0 bg-bg">
-                            <Icon name="icon_15_upload" size={24} class="text-teal" />
+                            <Icon name="icon_16_upload" size={24} class="text-teal" />
                         </div>
                         <div>
                             <h3 class="text-xl font-medium mb-2 text-text-main group-hover:text-teal transition-colors">SAP e-Tahsilat</h3>
@@ -342,7 +342,7 @@ const lang = 'en' as const;
                     
                     <div class="glass-card p-8 rounded-2xl flex flex-col md:flex-row gap-6 md:items-center group">
                         <div class="w-12 h-12 rounded-xl border border-border flex items-center justify-center shrink-0 bg-bg">
-                            <Icon name="icon_18_lock" size={24} class="text-teal" />
+                            <Icon name="icon_20_lock_security" size={24} class="text-teal" />
                         </div>
                         <div>
                             <h3 class="text-xl font-medium mb-2 text-text-main group-hover:text-teal transition-colors">Banka Entegrasyon Hub</h3>
@@ -372,7 +372,7 @@ const lang = 'en' as const;
 
                     <div class="glass-card p-8 rounded-2xl flex flex-col md:flex-row gap-6 md:items-center group">
                         <div class="w-12 h-12 rounded-xl border border-border flex items-center justify-center shrink-0 bg-bg">
-                            <Icon name="icon_09_mail" size={24} class="text-teal" />
+                            <Icon name="icon_09_mail_email" size={24} class="text-teal" />
                         </div>
                         <div>
                             <h3 class="text-xl font-medium mb-2 text-text-main group-hover:text-teal transition-colors">e-Devlet Paketi</h3>
@@ -398,31 +398,31 @@ const lang = 'en' as const;
                 <div class="relative pl-10 md:pl-16 group">
                     <div class="absolute -left-[17px] top-0 w-8 h-8 rounded-full bg-bg2 border border-border-main flex items-center justify-center text-xs font-medium text-text-40 group-hover:text-teal group-hover:border-teal transition-colors shadow-[0_0_0_8px_var(--bg)]">01</div>
                     <h3 class="text-2xl font-serif mb-3 group-hover:text-teal transition-colors">API-First Mimari</h3>
-                    <p class="text-text-70 font-light leading-relaxed max-w-2xl">Tüm sistemler API ile konuşur. Vendor bağımlılığı sona erer. Gelecekteki her entegrasyon daha hızlı kurulur.</p>
+                    <p class="text-text-70 leading-relaxed max-w-4xl">Tüm sistemler API ile konuşur. Vendor bağımlılığı sona erer. Gelecekteki her entegrasyon daha hızlı kurulur.</p>
                 </div>
                 
                 <div class="relative pl-10 md:pl-16 group">
                     <div class="absolute -left-[17px] top-0 w-8 h-8 rounded-full bg-bg2 border border-border-main flex items-center justify-center text-xs font-medium text-text-40 group-hover:text-teal group-hover:border-teal transition-colors shadow-[0_0_0_8px_var(--bg)]">02</div>
                     <h3 class="text-2xl font-serif mb-3 group-hover:text-teal transition-colors">SAP BTP & Entegrasyon</h3>
-                    <p class="text-text-70 font-light leading-relaxed max-w-2xl">SAP ve SAP dışı sistemlerin merkezi orkestrasyonu. Noktadan noktaya geçici çözümler (spaghetti mimari) ve veri çoğaltması tamamen ortadan kalkar.</p>
+                    <p class="text-text-70 leading-relaxed max-w-4xl">SAP ve SAP dışı sistemlerin merkezi orkestrasyonu. Noktadan noktaya geçici çözümler (spaghetti mimari) ve veri çoğaltması tamamen ortadan kalkar.</p>
                 </div>
 
                 <div class="relative pl-10 md:pl-16 group">
                     <div class="absolute -left-[17px] top-0 w-8 h-8 rounded-full bg-bg2 border border-border-main flex items-center justify-center text-xs font-medium text-text-40 group-hover:text-teal group-hover:border-teal transition-colors shadow-[0_0_0_8px_var(--bg)]">03</div>
                     <h3 class="text-2xl font-serif mb-3 group-hover:text-teal transition-colors">Data Sovereignty</h3>
-                    <p class="text-text-70 font-light leading-relaxed max-w-2xl">Veriniz okyanus ötesine gitmez. Kontrol %100 sizde kalır. KVKK ve GDPR uyumu sonradan eklenen yamalar değil, baştan mimariye gömülü standartlardır.</p>
+                    <p class="text-text-70 leading-relaxed max-w-4xl">Veriniz okyanus ötesine gitmez. Kontrol %100 sizde kalır. KVKK ve GDPR uyumu sonradan eklenen yamalar değil, baştan mimariye gömülü standartlardır.</p>
                 </div>
 
                 <div class="relative pl-10 md:pl-16 group">
                     <div class="absolute -left-[17px] top-0 w-8 h-8 rounded-full bg-bg2 border border-border-main flex items-center justify-center text-xs font-medium text-text-40 group-hover:text-teal group-hover:border-teal transition-colors shadow-[0_0_0_8px_var(--bg)]">04</div>
                     <h3 class="text-2xl font-serif mb-3 group-hover:text-teal transition-colors">AI-Ready Pipeline</h3>
-                    <p class="text-text-70 font-light leading-relaxed max-w-2xl">Machine learning ve predictive analytics için hazır, temiz, tekilleştirilmiş ve standartlaştırılmış veri mimarisi. Yapay zeka projeleriniz veriye takılmaz.</p>
+                    <p class="text-text-70 leading-relaxed max-w-4xl">Machine learning ve predictive analytics için hazır, temiz, tekilleştirilmiş ve standartlaştırılmış veri mimarisi. Yapay zeka projeleriniz veriye takılmaz.</p>
                 </div>
 
                 <div class="relative pl-10 md:pl-16 group">
                     <div class="absolute -left-[17px] top-0 w-8 h-8 rounded-full bg-bg2 border border-border-main flex items-center justify-center text-xs font-medium text-text-40 group-hover:text-teal group-hover:border-teal transition-colors shadow-[0_0_0_8px_var(--bg)]">05</div>
                     <h3 class="text-2xl font-serif mb-3 group-hover:text-teal transition-colors">Zero Trust Security</h3>
-                    <p class="text-text-70 font-light leading-relaxed max-w-2xl">Kimlik doğrulama, mikro-segmentasyon ve rol bazlı erişim kontrolü (RBAC). Sistemdeki her hareket izlenir ve loglanır, denetim izi (audit trail) eksiksizdir.</p>
+                    <p class="text-text-70 leading-relaxed max-w-4xl">Kimlik doğrulama, mikro-segmentasyon ve rol bazlı erişim kontrolü (RBAC). Sistemdeki her hareket izlenir ve loglanır, denetim izi (audit trail) eksiksizdir.</p>
                 </div>
             </div>
         </div>
@@ -440,7 +440,7 @@ const lang = 'en' as const;
                 <div class="border-t-2 border-border-main hover:border-primary bg-bg hover:bg-bg3 transition-all p-6 md:p-8 rounded-xl group">
                     <div class="flex justify-between items-start mb-6">
                         <div class="text-label text-text-40 group-hover:text-primary transition-colors">01</div>
-                        <Icon name="icon_12_star" size={24} class="text-text-40 group-hover:text-primary transition-colors opacity-50" />
+                        <Icon name="icon_12_gallery_photos" size={24} class="text-text-40 group-hover:text-primary transition-colors opacity-50" />
                     </div>
                     <h3 class="text-xl font-medium mb-3 group-hover:text-primary transition-colors">İlaç & Sağlık</h3>
                     <p class="text-text-70 font-light text-sm">Sıkı regülasyon, çok katmanlı maliyet yapısı ve uluslararası raporlama gereksinimleri.</p>
@@ -450,7 +450,7 @@ const lang = 'en' as const;
                 <div class="border-t-2 border-border-main hover:border-primary bg-bg hover:bg-bg3 transition-all p-6 md:p-8 rounded-xl group">
                     <div class="flex justify-between items-start mb-6">
                         <div class="text-label text-text-40 group-hover:text-primary transition-colors">02</div>
-                        <Icon name="icon_07_send" size={24} class="text-text-40 group-hover:text-primary transition-colors opacity-50 rotate-[-45deg]" />
+                        <Icon name="icon_07_send_arrow" size={24} class="text-text-40 group-hover:text-primary transition-colors opacity-50 rotate-[-45deg]" />
                     </div>
                     <h3 class="text-xl font-medium mb-3 group-hover:text-primary transition-colors">Savunma & Havacılık</h3>
                     <p class="text-text-70 font-light text-sm">Proje muhasebesi, maliyet kontrolü ve gizlilik gerektiren finansal mimariler.</p>
@@ -470,7 +470,7 @@ const lang = 'en' as const;
                 <div class="border-t-2 border-border-main hover:border-primary bg-bg hover:bg-bg3 transition-all p-6 md:p-8 rounded-xl group">
                     <div class="flex justify-between items-start mb-6">
                         <div class="text-label text-text-40 group-hover:text-primary transition-colors">04</div>
-                        <Icon name="icon_12_star" size={24} class="text-text-40 group-hover:text-primary transition-colors opacity-50" />
+                        <Icon name="icon_12_gallery_photos" size={24} class="text-text-40 group-hover:text-primary transition-colors opacity-50" />
                     </div>
                     <h3 class="text-xl font-medium mb-3 group-hover:text-primary transition-colors">Enerji & Utilities</h3>
                     <p class="text-text-70 font-light text-sm">Çoklu para birimi, emtia riski ve uzun vadeli sözleşme muhasebesi.</p>
@@ -480,7 +480,7 @@ const lang = 'en' as const;
                 <div class="border-t-2 border-border-main hover:border-primary bg-bg hover:bg-bg3 transition-all p-6 md:p-8 rounded-xl group">
                     <div class="flex justify-between items-start mb-6">
                         <div class="text-label text-text-40 group-hover:text-primary transition-colors">05</div>
-                        <Icon name="icon_05_settings" size={24} class="text-text-40 group-hover:text-primary transition-colors opacity-50" />
+                        <Icon name="icon_05_settings_gear" size={24} class="text-text-40 group-hover:text-primary transition-colors opacity-50" />
                     </div>
                     <h3 class="text-xl font-medium mb-3 group-hover:text-primary transition-colors">Otomotiv & OEM</h3>
                     <p class="text-text-70 font-light text-sm">Tedarik zinciri finansmanı, dealer network yönetimi ve global roll-out.</p>
@@ -504,20 +504,24 @@ const lang = 'en' as const;
                 Görüşme Talep Et
             </a>
 
-            <div class="flex flex-col md:flex-row flex-wrap justify-center gap-8 md:gap-16 text-white/80 text-sm font-light">
+            <div class="flex flex-col md:flex-row flex-wrap justify-center gap-8 md:gap-16 text-white/80 text-sm">
                 <div class="flex items-center gap-2">
-                    <Icon name="icon_09_mail" size={14} />
+                    <Icon name="icon_09_mail_email" size={14} />
                     info@harezm.com
                 </div>
                 <div class="flex items-center gap-2">
-                    <Icon name="icon_20_location" size={14} />
+                    <Icon name="icon_01_home" size={14} />
                     Istanbul, Türkiye — Global Operasyonlar
                 </div>
                 <div class="flex items-center gap-2">
-                    <Icon name="icon_24_check_done" size={14} />
+                    <Icon name="icon_25_check_confirm" size={14} />
                     SAP FI · CO · TRM · BTP · AI
                 </div>
             </div>
+        </div>
+    </section>
+</Layout>
+iv>
         </div>
     </section>
 </Layout>

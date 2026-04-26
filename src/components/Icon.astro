@@ -33,24 +33,9 @@ if (isSystemIcon) {
   const brandSuffix = brand === 'lesstupid' ? 'l' : 'e';
   const variantSuffix = selectedVariant;
   
-  // V3 Logic: 
-  // 1. Try brand-specific path first: public/icons/icon_01_home_l_nav.svg
-  // 2. Fallback to generic path under icons/: public/icons/icon_01_home_nav.svg
-  
-  const brandedName = `${name}_${brandSuffix}_${variantSuffix}.svg`;
-  const genericName = `${name}_${variantSuffix}.svg`;
-  
-  const brandedPath = path.join(process.cwd(), 'public', 'icons', brandedName);
-  const genericPath = path.join(process.cwd(), 'public', 'icons', genericName);
-
-  if (fs.existsSync(brandedPath)) {
-    finalPath = brandedPath;
-  } else if (fs.existsSync(genericPath)) {
-    finalPath = genericPath;
-  } else {
-    // Deep fallback to original generated structure just in case
-    finalPath = path.join(process.cwd(), 'public', 'icons', 'generated', 'svg', brand, selectedVariant, brandedName);
-  }
+  // V3 Logic: Single source of truth
+  const fileName = `${name}_${brandSuffix}_${variantSuffix}.svg`;
+  finalPath = path.join(process.cwd(), 'public', 'icons', fileName);
 } else {
   // Legacy Fallback
   finalPath = path.join(process.cwd(), 'public', 'icons', `${name}.svg`);
