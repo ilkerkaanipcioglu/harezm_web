@@ -29,15 +29,29 @@ let finalPath = '';
 const isSystemIcon = name.startsWith('icon_');
 
 if (isSystemIcon) {
-  // Brand Suffix Mapping
   const brandSuffix = brand === 'lesstupid' ? 'l' : 'e';
   const variantSuffix = selectedVariant;
   
-  // V3 Logic: Single source of truth
-  const fileName = `${name}_${brandSuffix}_${variantSuffix}.svg`;
-  finalPath = path.join(process.cwd(), 'public', 'icons', fileName);
+  // Cascading fallback: brand+variant → variant only → base icon
+  const candidates = [
+    `${name}_${brandSuffix}_${variantSuffix}.svg`,  // icon_01_home_l_nav.svg
+    `${name}_${variantSuffix}.svg`,                  // icon_01_home_nav.svg
+    `${name}.svg`,                                    // icon_01_home.svg
+  ];
+  
+  const iconsDir = path.join(process.cwd(), 'public', 'icons');
+  finalPath = ''; // will be set by first match
+  for (const candidate of candidates) {
+    const candidatePath = path.join(iconsDir, candidate);
+    if (fs.existsSync(candidatePath)) {
+      finalPath = candidatePath;
+      break;
+    }
+  }
+  if (!finalPath) {
+    finalPath = path.join(iconsDir, candidates[0]); // for error reporting
+  }
 } else {
-  // Legacy Fallback
   finalPath = path.join(process.cwd(), 'public', 'icons', `${name}.svg`);
 }
 
@@ -58,7 +72,12 @@ try {
       .replace(/<svg[^>]*>/, '') 
       .replace(/<\/svg>/, '')    
       .replace(/width="[^"]*"/g, '') 
-      .replace(/height="[^"]*"/g, '');
+      .replace(/height="[^"]*"/g, '')
+      // Remove background fills (common white/off-white values used in the vectorizer)
+      .replace(/fill="#f8f8f8"/gi, 'fill="none"')
+      .replace(/fill="#ffffff"/gi, 'fill="none"')
+      .replace(/stroke="#f8f8f8"/gi, 'stroke="none"')
+      .replace(/stroke="#ffffff"/gi, 'stroke="none"');
 
     // Variable Injection (Inherit logic from existing Icon.astro but refined)
     if (!isSystemIcon) {
