@@ -1,38 +1,41 @@
 ---
 // ThemeToggle.astro — Dark/Light switch with localStorage persistence
-import Icon from './Icon.astro';
 ---
 <button
   class="theme-toggle-btn w-9 h-9 flex-shrink-0 rounded-lg flex items-center justify-center text-text-70 hover:text-text-main hover:bg-bg2 transition-colors cursor-pointer"
   aria-label="Toggle theme"
   title="Toggle dark/light theme"
 >
-  <!-- Star icon (shown in dark mode, to switch to light) -->
+  <!-- Sun Icon (shown in dark mode, to switch to light) -->
   <div class="theme-icon-sun">
-    <Icon name="icon_12_gallery_photos" size={20} />
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
   </div>
-  <!-- Clock icon (shown in light mode, to switch to dark) -->
+  <!-- Moon Icon (shown in light mode, to switch to dark) -->
   <div class="theme-icon-moon hidden">
-    <Icon name="icon_10_calendar" size={20} />
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
   </div>
 </button>
 
 <style>
   [data-theme="light"] .theme-icon-sun { display: none; }
-  [data-theme="light"] .theme-icon-moon { display: inline; }
-  [data-theme="dark"] .theme-icon-sun  { display: inline; }
+  [data-theme="light"] .theme-icon-moon { display: flex; }
+  [data-theme="dark"] .theme-icon-sun  { display: flex; }
   [data-theme="dark"] .theme-icon-moon  { display: none; }
 </style>
 
 <script>
-  const toggles = document.querySelectorAll('.theme-toggle-btn');
-  toggles.forEach(toggle => {
-    toggle.addEventListener('click', () => {
-      const html = document.documentElement;
-      const current = html.getAttribute('data-theme');
-      const next = current === 'dark' ? 'light' : 'dark';
-      html.setAttribute('data-theme', next);
-      localStorage.setItem('harezm-theme', next);
+  function initTheme() {
+    const toggles = document.querySelectorAll('.theme-toggle-btn');
+    toggles.forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        const html = document.documentElement;
+        const current = html.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('harezm-theme', next);
+      });
     });
-  });
+  }
+  initTheme();
+  document.addEventListener('astro:page-load', initTheme);
 </script>
