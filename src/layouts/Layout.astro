@@ -19,8 +19,50 @@ const {
   image = '/images/logo/darktheme_logo.svg'
 } = Astro.props;
 
-// Use site setting or fallback to 'https://harezm.com'
-const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://harezm.com');
+const normalizedTitle = title
+  .replace(/\s*\|\s*Harezm Technology\s*$/i, '')
+  .replace(/\s*\|\s*Harezm\s*$/i, '')
+  .trim();
+const siteOrigin = Astro.site?.toString() || 'https://harezm.com';
+const canonicalURL = new URL(Astro.url.pathname, siteOrigin);
+const normalizedImage = new URL(image, canonicalURL.origin).href;
+const currentPath = Astro.url.pathname;
+
+const trToEnPathMap = {
+  '/': '/en/',
+  '/hakkimizda': '/en/about',
+  '/iletisim': '/en/contact',
+  '/cerez-politikasi': '/en/cookie-policy',
+  '/gizlilik-politikasi': '/en/privacy-policy',
+  '/hizmetler': '/en/services',
+  '/danismanlik': '/en/consulting',
+  '/urunler': '/en/products',
+  '/insight': '/en/insight',
+  '/lokalizasyon': '/en/rollout'
+};
+
+const enToTrPathMap = {
+  '/en/': '/',
+  '/en/about': '/hakkimizda',
+  '/en/contact': '/iletisim',
+  '/en/cookie-policy': '/cerez-politikasi',
+  '/en/privacy-policy': '/gizlilik-politikasi',
+  '/en/services': '/hizmetler',
+  '/en/consulting': '/danismanlik',
+  '/en/products': '/urunler',
+  '/en/insight': '/insight',
+  '/en/rollout': '/lokalizasyon'
+};
+
+const trAltPath = currentPath.startsWith('/en/')
+  ? (enToTrPathMap[currentPath] || currentPath.replace(/^\/en/, '') || '/')
+  : currentPath;
+const enAltPath = currentPath.startsWith('/en/')
+  ? currentPath
+  : (trToEnPathMap[currentPath] || `/en${currentPath === '/' ? '/' : currentPath}`);
+
+const trAltUrl = new URL(trAltPath, canonicalURL.origin).href;
+const enAltUrl = new URL(enAltPath, canonicalURL.origin).href;
 ---
 
 <!DOCTYPE html>
@@ -28,35 +70,40 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://harezm.c
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{title} | Harezm Technology</title>
+    <title>{normalizedTitle} | Harezm Technology</title>
     <meta name="description" content={description} />
     
     <!-- SEO / Canonical -->
     <link rel="canonical" href={canonicalURL.href} />
+    <link rel="alternate" hreflang="tr" href={trAltUrl} />
+    <link rel="alternate" hreflang="en" href={enAltUrl} />
+    <link rel="alternate" hreflang="x-default" href="https://harezm.com/" />
     <meta name="robots" content="index, follow" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalURL.href} />
-    <meta property="og:title" content={`${title} | Harezm Technology`} />
+    <meta property="og:title" content={`${normalizedTitle} | Harezm Technology`} />
     <meta property="og:description" content={description} />
     <!-- Ensure absolute URL for social images -->
-    <meta property="og:image" content={new URL(image, canonicalURL.origin).href} />
+    <meta property="og:image" content={normalizedImage} />
+    <meta property="og:image:alt" content={`${normalizedTitle} | Harezm Technology`} />
+    <meta property="og:locale" content={lang === 'tr' ? 'tr_TR' : 'en_US'} />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content={canonicalURL.href} />
-    <meta property="twitter:title" content={`${title} | Harezm Technology`} />
+    <meta property="twitter:title" content={`${normalizedTitle} | Harezm Technology`} />
     <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content={new URL(image, canonicalURL.origin).href} />
+    <meta property="twitter:image" content={normalizedImage} />
 
     <!-- JSON-LD Structure for AI & Search Engines -->
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Harezm Technology",
-      "url": canonicalURL.href,
-      "logo": new URL(image, canonicalURL.origin).href,
+      "url": canonicalURL.origin,
+      "logo": normalizedImage,
       "description": description,
       "sameAs": [
         "https://www.linkedin.com/company/harezm/"

@@ -1,8 +1,6 @@
 User-agent: *
 Allow: /
 
-# AI Araştırma ve Yanıt Botları İçin (ChatGPT, Perplexity, Claude, Google)
-# Bilgilerimizin AI sistemlerinde doğru kaynağa referans verilerek çıkması için izin verilir.
 User-agent: GPTBot
 Allow: /
 
@@ -21,4 +19,4 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
-# Sınırlama yapılmayan taze ve semantik içerik sunulmaktadır.
+Sitemap: https://harezm.com/sitemap.xml
