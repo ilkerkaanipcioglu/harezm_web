@@ -1,0 +1,54 @@
+{
+  "currentExhibition": {
+    "id": "absurd-design-2026-04",
+    "artist": "",
+    "studio": "lesstupid",
+    "movement": "El Çizimi İllüstrasyon",
+    "movementEn": "Hand-drawn Illustration",
+    "period": "Nisan 2026",
+    "periodEn": "April 2026",
+    "description": "El çizimi, minimal ve absürd illüstrasyonlar. Siyah mürekkep çizgileri ve tek renk splash ile karakterize edilen, sıra dışı bir görsel dil.",
+    "descriptionEn": "Hand-drawn, minimal and absurd illustrations. A distinctive visual language characterized by black ink strokes and single-color paint splashes.",
+    "link": "https://absurd.design",
+    "license": "Free for personal & commercial use with attribution",
+    "illustrations": [
+      {
+        "id": "vision",
+        "file": "vision.png",
+        "title": "Vizyon",
+        "titleEn": "Vision"
+      },
+      {
+        "id": "workspace",
+        "file": "workspace.png",
+        "title": "Çalışma Alanı",
+        "titleEn": "Workspace"
+      },
+      {
+        "id": "growth",
+        "file": "growth.png",
+        "title": "Büyüme",
+        "titleEn": "Growth"
+      },
+      {
+        "id": "connection",
+        "file": "connection.png",
+        "title": "Bağlantı",
+        "titleEn": "Connection"
+      },
+      {
+        "id": "strategy",
+        "file": "strategy.png",
+        "title": "Strateji",
+        "titleEn": "Strategy"
+      },
+      {
+        "id": "innovation",
+        "file": "innovation.png",
+        "title": "İnovasyon",
+        "titleEn": "Innovation"
+      }
+    ]
+  },
+  "archive": []
+}

@@ -1,0 +1,291 @@
+# ============================================================
+# HAREZM ECOSYSTEM — DESIGN SYSTEM MANIFEST
+# Tek kaynak. Tüm platformlar buradan beslenir.
+# ============================================================
+
+# ------------------------------------------------------------
+# 1. GLOBAL ENVIRONMENT
+# ------------------------------------------------------------
+
+[global]
+bg_light = "#F5F4F2"
+bg_dark  = "#1A1A1A"
+
+# ------------------------------------------------------------
+# 2. FONTS
+# ------------------------------------------------------------
+
+[fonts.primary]
+family  = "Inter"
+source  = "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+weights = [400, 500, 600, 700]
+role    = "ui"          # buton, etiket, body text
+
+[fonts.display]
+family  = "Syne"
+source  = "https://fonts.googleapis.com/css2?family=Syne:wght@700;800&display=swap"
+weights = [700, 800]
+role    = "heading"     # büyük başlıklar, hero
+
+[fonts.mono]
+family  = "JetBrains Mono"
+source  = "https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap"
+weights = [400, 500]
+role    = "code"        # kod blokları, teknik içerik
+
+# Platforma özel CSS çıktısı:
+# --font-ui:      "Inter", sans-serif;
+# --font-display: "Syne", sans-serif;
+# --font-mono:    "JetBrains Mono", monospace;
+
+# ------------------------------------------------------------
+# 3. BRAND COLORS (HSL — runtime token)
+# ------------------------------------------------------------
+
+[brands.ipcioglu]
+h     = 355
+s     = 78
+l     = 56
+role  = "human"
+# açık temada direkt metin: geçer (~4.6:1)
+
+[brands.harezm]
+h     = 324
+s     = 71
+l     = 30
+role  = "knowledge"
+# açık temada direkt metin: geçer (~9.2:1)
+
+[brands.eny]
+h     = 247
+s     = 67
+l     = 59
+role  = "product"
+# açık temada metin YASAK — light_technique kullan
+
+[brands.agent]
+h     = 256
+s     = 100
+l     = 73
+role  = "ai"
+# açık temada metin YASAK — light_technique kullan
+
+[brands.eany-core]
+h     = 72
+s     = 98
+l     = 54
+role  = "gateway"
+
+[brands.eany-online]
+h     = 355
+s     = 78
+l     = 56
+role  = "tools"
+
+[brands.eany-info]
+h     = 324
+s     = 71
+l     = 30
+role  = "content"
+
+# ------------------------------------------------------------
+# 4. STATE RULES
+# ------------------------------------------------------------
+
+[states]
+hover_l_delta  = 4
+active_l_delta = 8
+
+[states.processing]
+h = 186
+s = 100
+l = 50
+
+[states.error]
+h = 0
+
+# ------------------------------------------------------------
+# 5. LIGHT THEME CONTRAST RULES
+# ------------------------------------------------------------
+# Metin olarak kullanıldığında kontrast sorunu olan brand'ler
+# için zorunlu teknik belirtilir.
+
+[light_contrast.eny]
+technique     = "chip_or_accent"   # black chip / lime accent + dark text
+forbidden     = "plain_text"        # düz metin yasak
+accent_color  = "hsl(67, 67%, 59%)"
+chip_bg       = "#111"
+
+[light_contrast.agent]
+technique     = "chip_or_accent"
+forbidden     = "plain_text"
+chip_bg       = "#111"
+
+# ------------------------------------------------------------
+# 6. LOGOS
+# (her pillar'ın kendi SVG'si — path referansı)
+# ------------------------------------------------------------
+
+[logos.ipcioglu]
+svg      = "/assets/logos/ipcioglu.svg"
+dark_svg = "/assets/logos/ipcioglu-dark.svg"   # opsiyonel: dark variant
+min_size = "24px"
+clearspace = "8px"    # logo etrafında minimum boşluk
+
+[logos.harezm]
+svg      = "/assets/logos/harezm.svg"
+dark_svg = "/assets/logos/harezm-dark.svg"
+min_size = "24px"
+clearspace = "8px"
+
+[logos.eny]
+svg      = "/assets/logos/eny.svg"
+dark_svg = "/assets/logos/eny-dark.svg"
+min_size = "20px"
+clearspace = "6px"
+
+[logos.agent]
+svg      = "/assets/logos/agentandbot.svg"
+dark_svg = "/assets/logos/agentandbot-dark.svg"
+min_size = "24px"
+clearspace = "8px"
+
+# ------------------------------------------------------------
+# 7. ICONS
+# (AI üretimli SVG ikonlar — brand token ile renklendiriliyor)
+# ------------------------------------------------------------
+
+[icons]
+source_dir  = "/assets/icons/"
+format      = "svg"
+color_mode  = "currentColor"   # SVG içinde fill="currentColor" — CSS'den renk alır
+naming      = "{brand}-{name}" # örn: eny-check, harezm-book, agent-pulse
+
+# AI üretim kuralları (prompt şablonu):
+# - Stroke tabanlı, fill değil
+# - viewBox="0 0 24 24"
+# - fill="none", stroke="currentColor"
+# - stroke-width="1.5"
+# - stroke-linecap="round", stroke-linejoin="round"
+# - Gradient, shadow, filter YOK
+
+[icons.sets]
+ipcioglu = "/assets/icons/ipcioglu/"   # insan, aile, güven temalı
+harezm   = "/assets/icons/harezm/"     # bilgi, sistem, otorite temalı
+eny      = "/assets/icons/eny/"        # ürün, platform, sistem temalı
+agent    = "/assets/icons/agent/"      # AI, otomasyon, agent temalı
+shared   = "/assets/icons/shared/"     # tüm pillar'larda kullanılabilir
+
+# ------------------------------------------------------------
+# 8. SPACING & RADIUS (opsiyonel genişleme)
+# ------------------------------------------------------------
+
+[spacing]
+base = 4    # 4px grid — tüm spacing değerleri katı olacak
+
+[radius]
+sm  = 4
+md  = 8
+lg  = 12
+xl  = 16
+pill = 9999
+
+# ============================================================
+# MANIFEST KULLANIM KURALLARI
+# ============================================================
+#
+# 1. Bu dosya edit edilince build script çalıştırılır.
+# 2. Build script şunları üretir:
+#    - tokens.css  → Astro (CSS custom props + @import Google Fonts)
+#    - tokens.ex   → Elixir (module attributes)
+#    - tokens.rs   → Rust (const structs)
+#    - tokens.json → Figma / mobil / üçüncü taraf
+#
+# 3. İkon ekleme akışı:
+#    a. AI ile SVG üret (yukarıdaki AI üretim kurallarına uy)
+#    b. /assets/icons/{brand}/ klasörüne kaydet
+#    c. manifest.toml'a referans ekle (opsiyonel)
+#    d. currentColor ile otomatik brand rengi alır
+#
+# 4. Yeni platform eklemek = build script'e yeni çıktı eklemek
+# ============================================================
+
+# ------------------------------------------------------------
+# 9. PROJECTS & AUTOMATION CHANNELS
+# ------------------------------------------------------------
+
+[projects.eany_com]
+name   = "e-any.com"
+path   = "E-ANY/e-any.com"
+type   = "astro"
+brand  = "global"
+
+[projects.eany_info]
+name   = "e-any.info"
+path   = "E-ANY/e-any.info"
+type   = "astro"
+brand  = "global"
+
+[projects.eany_online]
+name   = "e-any.online"
+path   = "E-ANY/e-any.online"
+type   = "astro"
+brand  = "global"
+
+[projects.ipcioglu_main]
+name   = "ipcioglu.com"
+path   = "ipcioglu/ipcioglu.com"
+type   = "astro"
+brand  = "global"
+
+[projects.ipcioglu_blog]
+name   = "ilkerkaan.ipcioglu.com"
+path   = "ipcioglu/ilkerkaan.ipcioglu.com"
+type   = "astro"
+brand  = "global"
+
+[projects.eny_tr]
+name   = "eny.com.tr"
+path   = "eny.com.tr"
+type   = "astro"
+brand  = "eny"
+suffix = "_e_"
+
+[projects.harezm_web]
+name   = "HAREZM"
+path   = "HAREZM"
+type   = "astro"
+brand  = "lesstupid"
+suffix = "_l_"
+
+[projects.governance_core]
+name   = "governance_core"
+path   = "ai_agentandbot/agentandbot/governance_core"
+type   = "phoenix"
+brand  = "global"
+
+[projects.africa_ecommerce]
+name   = "lescommerce-diy-marketplace"
+path   = "LesCommerce/diy-marketplace-elixir/backend"
+type   = "phoenix"
+brand  = "eny"
+
+[projects.diydiy_storefront]
+name   = "diydiy-storefront"
+path   = "LesCommerce/diy-marketplace-elixir/storefront"
+type   = "nextjs"
+brand  = "eny"
+
+[projects.africa_ecommerce_backend]
+name   = "lescommerce-quick-commerce"
+path   = "LesCommerce/quick-commerce-elixir/backend"
+type   = "phoenix"
+brand  = "eny"
+
+[projects.africaecommerce_storefront]
+name   = "lescommerce-astro-storefront"
+path   = "LesCommerce/quick-commerce-elixir/storefront"
+type   = "astro"
+brand  = "eny"
+
+# ============================================================
