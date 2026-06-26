@@ -228,7 +228,7 @@ brand  = "global"
 
 [projects.eany_online]
 name   = "e-any.online"
-path   = "E-ANY/e-any.online"
+path   = "LesTupid/e-any.online"
 type   = "astro"
 brand  = "global"
 
@@ -260,31 +260,31 @@ suffix = "_l_"
 
 [projects.governance_core]
 name   = "governance_core"
-path   = "ai_agentandbot/agentandbot/governance_core"
+path   = "LesTupid/les_ai/agentandbot/governance_core"
 type   = "phoenix"
 brand  = "global"
 
 [projects.africa_ecommerce]
 name   = "lescommerce-diy-marketplace"
-path   = "LesCommerce/diy-marketplace-elixir/backend"
+path   = "LesTupid/Les_Commerce/commerce-backend"
 type   = "phoenix"
 brand  = "eny"
 
 [projects.diydiy_storefront]
 name   = "diydiy-storefront"
-path   = "LesCommerce/diy-marketplace-elixir/storefront"
+path   = "LesTupid/Les_Commerce/diy-marketplace-elixir/storefront"
 type   = "nextjs"
 brand  = "eny"
 
 [projects.africa_ecommerce_backend]
 name   = "lescommerce-quick-commerce"
-path   = "LesCommerce/quick-commerce-elixir/backend"
+path   = "LesTupid/Les_Commerce/commerce-backend"
 type   = "phoenix"
 brand  = "eny"
 
 [projects.africaecommerce_storefront]
 name   = "lescommerce-astro-storefront"
-path   = "LesCommerce/quick-commerce-elixir/storefront"
+path   = "LesTupid/Les_Commerce/quick-commerce-elixir/storefront"
 type   = "astro"
 brand  = "eny"
 
