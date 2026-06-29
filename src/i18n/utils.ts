@@ -15,6 +15,8 @@ export function t(key: TranslationKey, lang: Lang): string {
 export function getLocalePath(path: string, lang: Lang): string {
   if (lang === 'tr') return path;
   
+  const cleanPath = path.endsWith('/') && path !== '/' ? path.slice(0, -1) : path;
+  
   // Map TR paths to EN paths
   const pathMap: Record<string, string> = {
     '/': '/en/',
@@ -35,10 +37,11 @@ export function getLocalePath(path: string, lang: Lang): string {
     '/gizlilik-politikasi': '/en/privacy-policy',
     '/cerez-politikasi': '/en/cookie-policy',
   };
-  return pathMap[path] || `/en${path}`;
+  return pathMap[cleanPath] || `/en${path}`;
 }
 
 export function getAlternateLangPath(currentPath: string, currentLang: Lang): string {
+  const cleanPath = currentPath.endsWith('/') && currentPath !== '/' ? currentPath.slice(0, -1) : currentPath;
   if (currentLang === 'tr') {
     // TR → EN
     const map: Record<string, string> = {
@@ -60,7 +63,7 @@ export function getAlternateLangPath(currentPath: string, currentLang: Lang): st
       '/gizlilik-politikasi': '/en/privacy-policy',
       '/cerez-politikasi': '/en/cookie-policy',
     };
-    return map[currentPath] || `/en${currentPath}`;
+    return map[cleanPath] || `/en${cleanPath}`;
   } else {
     // EN → TR
     const map: Record<string, string> = {
@@ -83,6 +86,6 @@ export function getAlternateLangPath(currentPath: string, currentLang: Lang): st
       '/en/privacy-policy': '/gizlilik-politikasi',
       '/en/cookie-policy': '/cerez-politikasi',
     };
-    return map[currentPath] || currentPath.replace('/en', '');
+    return map[cleanPath] || cleanPath.replace('/en', '');
   }
 }

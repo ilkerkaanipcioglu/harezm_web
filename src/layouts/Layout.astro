@@ -54,12 +54,14 @@ const enToTrPathMap = {
   '/en/rollout': '/lokalizasyon'
 };
 
-const trAltPath = currentPath.startsWith('/en/')
-  ? (enToTrPathMap[currentPath] || currentPath.replace(/^\/en/, '') || '/')
-  : currentPath;
-const enAltPath = currentPath.startsWith('/en/')
-  ? currentPath
-  : (trToEnPathMap[currentPath] || `/en${currentPath === '/' ? '/' : currentPath}`);
+const cleanPath = currentPath.endsWith('/') && currentPath !== '/' ? currentPath.slice(0, -1) : currentPath;
+
+const trAltPath = cleanPath.startsWith('/en/')
+  ? (enToTrPathMap[cleanPath] || cleanPath.replace(/^\/en/, '') || '/')
+  : cleanPath;
+const enAltPath = cleanPath.startsWith('/en/')
+  ? cleanPath
+  : (trToEnPathMap[cleanPath] || `/en${cleanPath === '/' ? '/' : cleanPath}`);
 
 const trAltUrl = new URL(trAltPath, canonicalURL.origin).href;
 const enAltUrl = new URL(enAltPath, canonicalURL.origin).href;
