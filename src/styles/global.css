@@ -24,6 +24,10 @@
   --text-70:   rgba(248, 250, 252, 0.70);
   --text-40:   rgba(248, 250, 252, 0.40);
   --border:    #333333; 
+  --border-2:  #444444;
+  --card-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.4);
+  --bg-card:   rgba(36, 36, 36, 0.6);
+  --bg-card-hover: rgba(51, 51, 51, 0.75);
   --nav-bg:    rgba(26, 26, 26, 0.88);
   color-scheme: dark;
 }
@@ -38,6 +42,10 @@
   --text-70:   rgba(26,28,31,0.65);
   --text-40:   rgba(26,28,31,0.40);
   --border:    #DDDBD8;  
+  --border-2:  #C5C3C0;
+  --card-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+  --bg-card:   rgba(237, 236, 234, 0.55);
+  --bg-card-hover: rgba(221, 219, 216, 0.7);
   --nav-bg:    rgba(245, 244, 242, 0.95);
   color-scheme: light;
 }
