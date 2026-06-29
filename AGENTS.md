@@ -1,4 +1,4 @@
-﻿# DOX framework - HAREZM
+# DOX framework - HAREZM
 
 - DOX is a highly performant AGENTS.md hierarchy installed here.
 - Agent must follow DOX instructions across any edits.
@@ -40,6 +40,14 @@ Update parent docs when parent-level structure, ownership, workflow, or child in
 - **Audience**: External business audience
 - **Technology**: Astro, Tailwind, TypeScript/Node
 - **GitHub**: [`https://github.com/ilkerkaanipcioglu/harezm_web`](`https://github.com/ilkerkaanipcioglu/harezm_web`)
+
+## Form Integration
+
+- **Trigger**: Activepieces Webhook at `https://cloud.activepieces.com/api/v1/webhooks/2UNdS2U2oQRd5PaLtgINz`
+- **Actions**:
+  - Google Docs: Creates a new document for each submission (`create_document`).
+  - Gmail: Sends form submission email to `info@harezm.com.tr`.
+- **Note**: Fully configured and active. Submissions trigger Google Docs creation and Gmail notifications.
 
 ## Workspace Index
 
