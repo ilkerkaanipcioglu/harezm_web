@@ -46,7 +46,7 @@ Update parent docs when parent-level structure, ownership, workflow, or child in
 - **Trigger**: Activepieces Webhook at `https://cloud.activepieces.com/api/v1/webhooks/2UNdS2U2oQRd5PaLtgINz`
 - **Actions**:
   - Google Docs: Creates a new document for each submission (`create_document`).
-  - Gmail: Sends form submission email to `info@harezm.com.tr`.
+  - Gmail: Sends form submission email to `info@harezm.com`.
 - **Note**: Fully configured and active. Submissions trigger Google Docs creation and Gmail notifications.
 
 ## Workspace Index
